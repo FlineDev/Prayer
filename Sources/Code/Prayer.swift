@@ -1,0 +1,41 @@
+//
+//  Prayer.swift
+//  Prayer
+//
+//  Created by Cihat Gündüz on 09.01.17.
+//  Copyright © 2017 Flinesoft. All rights reserved.
+//
+
+import Foundation
+
+/// The "physical, mental, and spiritual act of worship that is observed five times every day at prescribed times."
+/// - Wikipedia (https://en.wikipedia.org/wiki/Salah)
+class Prayer {
+    // MARK: - Stored Instance Properties
+
+    let rakat: Rakat
+
+
+    // MARK: - Initializers
+
+    /// Creates a new prayer automatically based on the number of rakat.
+    /// Currently the logic covers creating the five daily prayers.
+    ///
+    /// - Parameters:
+    ///   - rakatCount: The number of rakats to be included in the prayer.
+    init(rakatCount: UInt) {
+        self.rakat = {
+            var rakat: Rakat = []
+            for num in 1...rakatCount {
+                let rakah = Rakah(
+                    isBeginningOfPrayer:            num == 1,
+                    includesStandingRecitation:     num <= 2,
+                    includesSittingRecitation:      num % 2 == 0 || num == rakatCount,
+                    isEndOfPrayer:                  num == rakatCount
+                )
+                rakat.append(rakah)
+            }
+            return rakat
+        }()
+    }
+}

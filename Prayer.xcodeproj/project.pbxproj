@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A16484D31E243898008EC78C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Assets.xcassets */; };
+		A1494AE51E25970C00286EBF /* 01_Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AE41E25970C00286EBF /* 01_Takbir.txt */; };
+		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
 		A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C51E243898008EC78C /* LaunchScreen.storyboard */; };
 		A16484D81E243898008EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C71E243898008EC78C /* Main.storyboard */; };
 		A16484DD1E2438A2008EC78C /* PrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484D01E243898008EC78C /* PrayerUITests.swift */; };
 		A16484DE1E2438AA008EC78C /* PrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484CB1E243898008EC78C /* PrayerTests.swift */; };
+		A16484E31E243AAC008EC78C /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Prayer.swift */; };
+		A16484E51E243B5F008EC78C /* Rakah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E41E243B5F008EC78C /* Rakah.swift */; };
+		A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E61E25503C008EC78C /* RakahComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1494AE41E25970C00286EBF /* 01_Takbir.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 01_Takbir.txt; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A16484BE1E243898008EC78C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A16484BE1E243898008EC78C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A16484C01E243898008EC78C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16484C11E243898008EC78C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A16484C31E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		A16484CD1E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484D01E243898008EC78C /* PrayerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerUITests.swift; sourceTree = "<group>"; };
 		A16484D21E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16484E21E243AAC008EC78C /* Prayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		A16484E41E243B5F008EC78C /* Rakah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rakah.swift; sourceTree = "<group>"; };
+		A16484E61E25503C008EC78C /* RakahComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1494AE31E2596B200286EBF /* SpokenTexts */ = {
+			isa = PBXGroup;
+			children = (
+				A1494AE41E25970C00286EBF /* 01_Takbir.txt */,
+			);
+			path = SpokenTexts;
+			sourceTree = "<group>";
+		};
 		A16484821E243834008EC78C = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +124,8 @@
 		A16484BD1E243898008EC78C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A16484BE1E243898008EC78C /* Assets.xcassets */,
+				A1494AE31E2596B200286EBF /* SpokenTexts */,
+				A16484BE1E243898008EC78C /* Images.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -116,6 +133,9 @@
 		A16484BF1E243898008EC78C /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				A16484DF1E243A81008EC78C /* Model */,
+				A16484E01E243A89008EC78C /* View */,
+				A16484E11E243A8D008EC78C /* Controller */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
 				A16484C11E243898008EC78C /* ViewController.swift */,
 			);
@@ -187,6 +207,30 @@
 				A16484D21E243898008EC78C /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A16484DF1E243A81008EC78C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A16484E21E243AAC008EC78C /* Prayer.swift */,
+				A16484E41E243B5F008EC78C /* Rakah.swift */,
+				A16484E61E25503C008EC78C /* RakahComponent.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A16484E01E243A89008EC78C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A16484E11E243A8D008EC78C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +343,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1494AE51E25970C00286EBF /* 01_Takbir.txt in Resources */,
 				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
-				A16484D31E243898008EC78C /* Assets.xcassets in Resources */,
+				A16484D31E243898008EC78C /* Images.xcassets in Resources */,
 				A16484D81E243898008EC78C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,8 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16484E31E243AAC008EC78C /* Prayer.swift in Sources */,
+				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484D51E243898008EC78C /* ViewController.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
+				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
