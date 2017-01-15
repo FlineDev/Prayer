@@ -2,11 +2,12 @@
 //  Rakah.swift
 //  Prayer
 //
-//  Created by Cihat Gündüz (Privat) on 09.01.17.
+//  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
 import Foundation
+import HandySwift
 
 /// "Arabic: ركعة‎‎ rakʿah, plural: ركعات rakaʿāt"
 /// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
@@ -39,11 +40,22 @@ class Rakah {
         var components: [RakahComponent] = []
 
         if isBeginningOfPrayer {
-            
+            components.append(RakahComponent(.takbir))
+            components.append(RakahComponent(.openingSupplication))
+            components.append(RakahComponent(.taawwudh))
         }
 
-        // TODO: not yet implemented
-        return []
+        components.append(RakahComponent(.recitationTheOpening))
+
+        if includesStandingRecitation {
+            let randomFileName = Component.availableRecitationFileNames.sample()!
+            let standingRecitation = RakahComponent(.recitation(fileName: randomFileName))
+            components.append(standingRecitation)
+        }
+
+        // TODO: not yet completed
+
+        return components
     }
 }
 
@@ -52,5 +64,15 @@ class Rakah {
 extension Rakah {
     enum Component {
         case takbir
+        case openingSupplication
+        case taawwudh // also known as: Aʿūdhu bi-llāh
+        case recitationTheOpening // also known as: Al-Fatiha
+        case recitation(fileName: String)
+
+        static let availableRecitationFileNames = [
+            "103_The-Flight-of-Time", "104_The-Slanderer", "105_The-Elephant", "106_Quraysh", "107_Assistance",
+            "108_Good-in-Abundance", "109_Those-Who-Deny-the-Truth", "110_Succour", "111_The-Twisted-Strands",
+            "112_The-Declaration-of-Gods-Perfection", "113_The-Rising-Dawn", "114_Men"
+        ]
     }
 }

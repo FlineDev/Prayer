@@ -1,0 +1,5 @@
+# The Swift (and Objective-C) testing framework.
+github "Quick/Quick"
+
+# A Matcher Framework for Swift and Objective-C
+github "Quick/Nimble"

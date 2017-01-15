@@ -1,6 +1,6 @@
 //
-//  Prayer.swift
-//  Prayer
+//  Salah.swift
+//  Salah
 //
 //  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
@@ -10,7 +10,7 @@ import Foundation
 
 /// The "physical, mental, and spiritual act of worship that is observed five times every day at prescribed times."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Salah)
-class Prayer {
+class Salah {
     // MARK: - Stored Instance Properties
 
     let rakat: Rakat
