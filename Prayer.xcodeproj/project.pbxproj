@@ -38,6 +38,7 @@
 		A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */; };
 		A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BA71E2C628300286EBF /* Rabbanagh.txt */; };
 		A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BAE1E2C693C00286EBF /* Salam.txt */; };
+		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
 		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
@@ -164,6 +165,9 @@
 		A1494BAD1E2C693C00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Salam.txt; sourceTree = "<group>"; };
 		A1494BAF1E2C693D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Salam.txt; sourceTree = "<group>"; };
 		A1494BB01E2C693E00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BB41E2EBF4F00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BB61E2EBF5200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BB71E2EBF5200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				A16484C31E243898008EC78C /* Info.plist */,
+				A1494BB51E2EBF4F00286EBF /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
+				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
 				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
@@ -557,6 +563,7 @@
 				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
 				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
 				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
+				A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */,
 				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
 				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
 				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
@@ -613,6 +620,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = BartyCrouch;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR\" -l \"$PROJECT_DIR\" -a -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -891,6 +912,16 @@
 				A1494BB01E2C693E00286EBF /* tr */,
 			);
 			name = Salam.txt;
+			sourceTree = "<group>";
+		};
+		A1494BB51E2EBF4F00286EBF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BB41E2EBF4F00286EBF /* en */,
+				A1494BB61E2EBF5200286EBF /* de */,
+				A1494BB71E2EBF5200286EBF /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		A16484C51E243898008EC78C /* LaunchScreen.storyboard */ = {
