@@ -39,6 +39,8 @@
 		A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BA71E2C628300286EBF /* Rabbanagh.txt */; };
 		A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BAE1E2C693C00286EBF /* Salam.txt */; };
 		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
+		A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */; };
+		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
 		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
@@ -168,6 +170,13 @@
 		A1494BB41E2EBF4F00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BB61E2EBF5200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BB71E2EBF5200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BBA1E2ED3C600286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A1494BBC1E2ED3C900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Prayer.storyboard; sourceTree = "<group>"; };
+		A1494BC31E2ED5D000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC51E2ED5D100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC71E2ED5D200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,7 +353,7 @@
 			children = (
 				A16484DF1E243A81008EC78C /* Model */,
 				A16484E01E243A89008EC78C /* View */,
-				A16484E11E243A8D008EC78C /* Controller */,
+				A16484E11E243A8D008EC78C /* View Controller */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
 				A16484C11E243898008EC78C /* ViewController.swift */,
 			);
@@ -365,6 +374,7 @@
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
 				A16484C71E243898008EC78C /* Main.storyboard */,
+				A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -436,11 +446,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		A16484E11E243A8D008EC78C /* Controller */ = {
+		A16484E11E243A8D008EC78C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
 			);
-			name = Controller;
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,6 +597,7 @@
 				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
 				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
 				A16484D81E243898008EC78C /* Main.storyboard in Resources */,
+				A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR\" -l \"$PROJECT_DIR\" -a -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -645,6 +657,7 @@
 				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484D51E243898008EC78C /* ViewController.swift in Sources */,
+				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 			);
@@ -924,12 +937,24 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BC01E2ED5CF00286EBF /* Base */,
+				A1494BC31E2ED5D000286EBF /* en */,
+				A1494BC51E2ED5D100286EBF /* de */,
+				A1494BC71E2ED5D200286EBF /* tr */,
+			);
+			name = Prayer.storyboard;
+			sourceTree = "<group>";
+		};
 		A16484C51E243898008EC78C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A16484C61E243898008EC78C /* Base */,
 				A1494AE61E25A9CE00286EBF /* de */,
 				A1494AE81E25A9D500286EBF /* tr */,
+				A1494BBC1E2ED3C900286EBF /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -940,6 +965,7 @@
 				A16484C81E243898008EC78C /* Base */,
 				A1494AE71E25A9CE00286EBF /* de */,
 				A1494AE91E25A9D500286EBF /* tr */,
+				A1494BBA1E2ED3C600286EBF /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
