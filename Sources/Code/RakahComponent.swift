@@ -24,71 +24,75 @@ class RakahComponent {
     let name: String
     let spokenTextLines: [String]
 
+    let l10n = L10n.RakahComponent.self
+
 
     // MARK: - Initializers
 
     init(_ component: Rakah.Component) {
         switch component {
         case .takbir:
-            name = NSLocalizedString("RAKAH_COMPONENT.TAKBIR.NAME", comment: "")
+            name = l10n.Takbir.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
         case .openingSupplication:
-            name = NSLocalizedString("RAKAH_COMPONENT.OPENING_SUPPLICATION.NAME", comment: "")
+            name = l10n.OpeningSupplication.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Opening-Supplication")
         case .taawwudh:
-            name = NSLocalizedString("RAKAH_COMPONENT.TAAWWUDH.NAME", comment: "")
+            name = l10n.Taawwudh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Taawwudh")
         case .recitation(fileName: let fileName):
+            let l10n = L10n.Recitation.self
+
             switch fileName {
             case "001_The-Opening":
-                name = NSLocalizedString("RECITATION.THE_OPENING.NAME", comment: "")
+                name = l10n.TheOpening.name
             case "103_The-Flight-of-Time":
-                name = NSLocalizedString("RECITATION.THE_FLIGHT_OF_TIME.NAME", comment: "")
+                name = l10n.TheFlightOfTime.name
             case "104_The-Slanderer":
-                name = NSLocalizedString("RECITATION.THE_SLANDERER.NAME", comment: "")
+                name = l10n.TheSlanderer.name
             case "105_The-Elephant":
-                name = NSLocalizedString("RECITATION.THE_ELEPHANT.NAME", comment: "")
+                name = l10n.TheElephant.name
             case "106_Quraysh":
-                name = NSLocalizedString("RECITATION.QURAYSH.NAME", comment: "")
+                name = l10n.Quraysh.name
             case "107_Assistance":
-                name = NSLocalizedString("RECITATION.ASSISTANCE.NAME", comment: "")
+                name = l10n.Assistance.name
             case "108_Good-in-Abundance":
-                name = NSLocalizedString("RECITATION.GOOD_IN_ABUNDANCE.NAME", comment: "")
+                name = l10n.GoodInAbundance.name
             case "109_Those-Who-Deny-the-Truth":
-                name = NSLocalizedString("RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME", comment: "")
+                name = l10n.ThoseWhoDenyTheTruth.name
             case "110_Succour":
-                name = NSLocalizedString("RECITATION.SUCCOUR.NAME", comment: "")
+                name = l10n.Succour.name
             case "111_The-Twisted-Strands":
-                name = NSLocalizedString("RECITATION.THE_TWISTED_STRANDS", comment: "")
+                name = l10n.TheTwistedStrands.name
             case "112_The-Declaration-of-Gods-Perfection":
-                name = NSLocalizedString("RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME", comment: "")
+                name = l10n.TheDecleratiionOfGodsPerfection.name
             case "113_The-Rising-Dawn":
-                name = NSLocalizedString("RECITATION.THE_RISING_DAWN.NAME", comment: "")
+                name = l10n.TheRisingDawn.name
             case "114_Men":
-                name = NSLocalizedString("RECITATION.MEN.NAME", comment: "")
+                name = l10n.Men.name
             default: preconditionFailure()
             }
             spokenTextLines = RakahComponent.readLinesFromFile(named: fileName)
         case .ruku:
-            name = NSLocalizedString("RAKAH_COMPONENT.RUKU.NAME", comment: "")
+            name = l10n.Ruku.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Ruku")
         case .straighteningUp:
-            name = NSLocalizedString("RAKAH_COMPONENT.STRAIGHTENING_UP.NAME", comment: "")
+            name = l10n.StraighteningUp.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
         case .sajdah:
-            name = NSLocalizedString("RAKAH_COMPONENT.SAJDAH.NAME", comment: "")
+            name = l10n.Sajdah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
         case .tashahhud:
-            name = NSLocalizedString("RAKAH_COMPONENT.TASHAHHUD.NAME", comment: "")
+            name = l10n.Tashahhud.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Tashahhud")
         case .salatulIbrahimiyyah:
-            name = NSLocalizedString("RAKAH_COMPONENT.SALATUL_IBRAHIMIYYAH.NAME", comment: "")
+            name = l10n.SalatulIbrahimiyyah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salatul-Ibrahimiyyah")
         case .rabbanagh:
-            name = NSLocalizedString("RAKAH_COMPONENT.RABBANAGH.NAME", comment: "")
+            name = l10n.Rabbanagh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
         case .salam:
-            name = NSLocalizedString("RAKAH_COMPONENT.SALAM.NAME", comment: "")
+            name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
         }
     }

@@ -41,6 +41,8 @@
 		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
 		A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */; };
 		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
+		A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Localizations.swift */; };
+		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
 		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
@@ -177,6 +179,8 @@
 		A1494BC51E2ED5D100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Prayer.strings; sourceTree = "<group>"; };
 		A1494BC71E2ED5D200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Prayer.strings; sourceTree = "<group>"; };
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
+		A1494BCC1E2ED79500286EBF /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
+		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +309,15 @@
 			path = Recitations;
 			sourceTree = "<group>";
 		};
+		A1494BCB1E2ED79500286EBF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A1494BCC1E2ED79500286EBF /* Localizations.swift */,
+				A1494BCD1E2ED79500286EBF /* Storyboards.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A16484821E243834008EC78C = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 				A16484BF1E243898008EC78C /* Code */,
 				A16484BD1E243898008EC78C /* Assets */,
 				A16484C41E243898008EC78C /* User Interface */,
+				A1494BCB1E2ED79500286EBF /* Constants */,
 				A16484C21E243898008EC78C /* Supporting Files */,
 			);
 			path = Sources;
@@ -465,6 +479,7 @@
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
 				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
+				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
@@ -647,6 +662,20 @@
 			shellPath = /bin/sh;
 			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
 		};
+		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t dot-syntax-swift3 -o \"$PROJECT_DIR/Sources/Constants/Localizations.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -654,10 +683,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484D51E243898008EC78C /* ViewController.swift in Sources */,
 				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
+				A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 			);
