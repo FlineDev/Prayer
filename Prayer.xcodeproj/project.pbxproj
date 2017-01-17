@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1494AEA1E25A9F000286EBF /* 01_Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AEC1E25A9F000286EBF /* 01_Takbir.txt */; };
+		A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AEC1E25A9F000286EBF /* Takbir.txt */; };
 		A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AF31E27F47800286EBF /* HandySwift.framework */; };
 		A1494AFE1E27F5C100286EBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; };
 		A1494AFF1E27F5C800286EBF /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,8 +16,8 @@
 		A1494B041E27F60400286EBF /* SalahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B031E27F60400286EBF /* SalahSpec.swift */; };
 		A1494B061E27F64600286EBF /* RakahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B051E27F64600286EBF /* RakahSpec.swift */; };
 		A1494B081E27F65000286EBF /* RakahComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B071E27F65000286EBF /* RakahComponentSpec.swift */; };
-		A1494B0B1E2869B500286EBF /* 02_Opening-Supplication.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B0D1E2869B500286EBF /* 02_Opening-Supplication.txt */; };
-		A1494B121E28762B00286EBF /* 03_Taawwudh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B141E28762B00286EBF /* 03_Taawwudh.txt */; };
+		A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */; };
+		A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B141E28762B00286EBF /* Taawwudh.txt */; };
 		A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B211E29452B00286EBF /* 001_The-Opening.txt */; };
 		A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B2C1E2B071100286EBF /* 114_Men.txt */; };
 		A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B331E2B085500286EBF /* 113_The-Rising-Dawn.txt */; };
@@ -31,6 +31,13 @@
 		A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B6B1E2B12FD00286EBF /* 105_The-Elephant.txt */; };
 		A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B721E2B156500286EBF /* 104_The-Slanderer.txt */; };
 		A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B791E2B17D100286EBF /* 103_The-Flight-of-Time.txt */; };
+		A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B801E2BF47400286EBF /* Ruku.txt */; };
+		A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B871E2C300C00286EBF /* Straightening-Up.txt */; };
+		A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B8E1E2C31B900286EBF /* Sajdah.txt */; };
+		A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B971E2C49C500286EBF /* Tashahhud.txt */; };
+		A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */; };
+		A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BA71E2C628300286EBF /* Rabbanagh.txt */; };
+		A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BAE1E2C693C00286EBF /* Salam.txt */; };
 		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
@@ -79,9 +86,9 @@
 		A1494AE71E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AE91E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
-		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/01_Takbir.txt; sourceTree = "<group>"; };
-		A1494AED1E25A9F100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/01_Takbir.txt; sourceTree = "<group>"; };
-		A1494AEE1E25A9F200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/01_Takbir.txt; sourceTree = "<group>"; };
+		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
+		A1494AED1E25A9F100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Takbir.txt; sourceTree = "<group>"; };
+		A1494AEE1E25A9F200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Takbir.txt; sourceTree = "<group>"; };
 		A1494AF01E27F3F000286EBF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A1494AF11E27F44B00286EBF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1494AF31E27F47800286EBF /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
@@ -91,12 +98,12 @@
 		A1494B031E27F60400286EBF /* SalahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalahSpec.swift; sourceTree = "<group>"; };
 		A1494B051E27F64600286EBF /* RakahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahSpec.swift; sourceTree = "<group>"; };
 		A1494B071E27F65000286EBF /* RakahComponentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponentSpec.swift; sourceTree = "<group>"; };
-		A1494B0C1E2869B500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/02_Opening-Supplication.txt"; sourceTree = "<group>"; };
-		A1494B0E1E2869B600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/02_Opening-Supplication.txt"; sourceTree = "<group>"; };
-		A1494B0F1E2869B700286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/02_Opening-Supplication.txt"; sourceTree = "<group>"; };
-		A1494B131E28762B00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/03_Taawwudh.txt; sourceTree = "<group>"; };
-		A1494B151E28762C00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/03_Taawwudh.txt; sourceTree = "<group>"; };
-		A1494B161E28762D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/03_Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B0C1E2869B500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B0E1E2869B600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B0F1E2869B700286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B131E28762B00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B151E28762C00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B161E28762D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Taawwudh.txt; sourceTree = "<group>"; };
 		A1494B221E29452B00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
 		A1494B231E29452B00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
 		A1494B241E29452B00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
@@ -136,6 +143,27 @@
 		A1494B781E2B17D100286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
 		A1494B7A1E2B17D300286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
 		A1494B7B1E2B17D300286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
+		A1494B7F1E2BF47400286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B811E2BF47500286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B821E2BF47500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B861E2C300C00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B881E2C300D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B891E2C300D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B8D1E2C31B900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B8F1E2C31BB00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B901E2C31BB00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B961E2C49C500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B981E2C49C600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B991E2C49C800286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B9D1E2C574A00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA11E2C575D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA21E2C575F00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA61E2C628300286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BA81E2C628400286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BA91E2C628400286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BAD1E2C693C00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BAF1E2C693D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BB01E2C693E00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Salam.txt; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,9 +212,16 @@
 		A1494AE31E2596B200286EBF /* SpokenTexts */ = {
 			isa = PBXGroup;
 			children = (
-				A1494AEC1E25A9F000286EBF /* 01_Takbir.txt */,
-				A1494B0D1E2869B500286EBF /* 02_Opening-Supplication.txt */,
-				A1494B141E28762B00286EBF /* 03_Taawwudh.txt */,
+				A1494AEC1E25A9F000286EBF /* Takbir.txt */,
+				A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */,
+				A1494B141E28762B00286EBF /* Taawwudh.txt */,
+				A1494B801E2BF47400286EBF /* Ruku.txt */,
+				A1494B871E2C300C00286EBF /* Straightening-Up.txt */,
+				A1494B8E1E2C31B900286EBF /* Sajdah.txt */,
+				A1494B971E2C49C500286EBF /* Tashahhud.txt */,
+				A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */,
+				A1494BA71E2C628300286EBF /* Rabbanagh.txt */,
+				A1494BAE1E2C693C00286EBF /* Salam.txt */,
 			);
 			path = SpokenTexts;
 			sourceTree = "<group>";
@@ -519,12 +554,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */,
-				A1494B0B1E2869B500286EBF /* 02_Opening-Supplication.txt in Resources */,
-				A1494AEA1E25A9F000286EBF /* 01_Takbir.txt in Resources */,
+				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
+				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
+				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
 				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
 				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
+				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
+				A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */,
 				A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */,
 				A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */,
+				A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */,
 				A1494B541E2B0F8900286EBF /* 108_Good-in-Abundance.txt in Resources */,
 				A1494B3F1E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt in Resources */,
 				A1494B4D1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt in Resources */,
@@ -532,10 +571,13 @@
 				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
 				A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */,
 				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
-				A1494B121E28762B00286EBF /* 03_Taawwudh.txt in Resources */,
+				A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */,
+				A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */,
+				A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */,
 				A16484D31E243898008EC78C /* Images.xcassets in Resources */,
 				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
 				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
+				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
 				A16484D81E243898008EC78C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,34 +663,34 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1494AEC1E25A9F000286EBF /* 01_Takbir.txt */ = {
+		A1494AEC1E25A9F000286EBF /* Takbir.txt */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1494AEB1E25A9F000286EBF /* en */,
 				A1494AED1E25A9F100286EBF /* de */,
 				A1494AEE1E25A9F200286EBF /* tr */,
 			);
-			name = 01_Takbir.txt;
+			name = Takbir.txt;
 			sourceTree = "<group>";
 		};
-		A1494B0D1E2869B500286EBF /* 02_Opening-Supplication.txt */ = {
+		A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1494B0C1E2869B500286EBF /* en */,
 				A1494B0E1E2869B600286EBF /* de */,
 				A1494B0F1E2869B700286EBF /* tr */,
 			);
-			name = "02_Opening-Supplication.txt";
+			name = "Opening-Supplication.txt";
 			sourceTree = "<group>";
 		};
-		A1494B141E28762B00286EBF /* 03_Taawwudh.txt */ = {
+		A1494B141E28762B00286EBF /* Taawwudh.txt */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1494B131E28762B00286EBF /* en */,
 				A1494B151E28762C00286EBF /* de */,
 				A1494B161E28762D00286EBF /* tr */,
 			);
-			name = 03_Taawwudh.txt;
+			name = Taawwudh.txt;
 			sourceTree = "<group>";
 		};
 		A1494B211E29452B00286EBF /* 001_The-Opening.txt */ = {
@@ -779,6 +821,76 @@
 				A1494B7B1E2B17D300286EBF /* tr */,
 			);
 			name = "103_The-Flight-of-Time.txt";
+			sourceTree = "<group>";
+		};
+		A1494B801E2BF47400286EBF /* Ruku.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B7F1E2BF47400286EBF /* en */,
+				A1494B811E2BF47500286EBF /* de */,
+				A1494B821E2BF47500286EBF /* tr */,
+			);
+			name = Ruku.txt;
+			sourceTree = "<group>";
+		};
+		A1494B871E2C300C00286EBF /* Straightening-Up.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B861E2C300C00286EBF /* en */,
+				A1494B881E2C300D00286EBF /* de */,
+				A1494B891E2C300D00286EBF /* tr */,
+			);
+			name = "Straightening-Up.txt";
+			sourceTree = "<group>";
+		};
+		A1494B8E1E2C31B900286EBF /* Sajdah.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B8D1E2C31B900286EBF /* en */,
+				A1494B8F1E2C31BB00286EBF /* de */,
+				A1494B901E2C31BB00286EBF /* tr */,
+			);
+			name = Sajdah.txt;
+			sourceTree = "<group>";
+		};
+		A1494B971E2C49C500286EBF /* Tashahhud.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B961E2C49C500286EBF /* en */,
+				A1494B981E2C49C600286EBF /* de */,
+				A1494B991E2C49C800286EBF /* tr */,
+			);
+			name = Tashahhud.txt;
+			sourceTree = "<group>";
+		};
+		A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B9D1E2C574A00286EBF /* en */,
+				A1494BA11E2C575D00286EBF /* de */,
+				A1494BA21E2C575F00286EBF /* tr */,
+			);
+			name = "Salatul-Ibrahimiyyah.txt";
+			sourceTree = "<group>";
+		};
+		A1494BA71E2C628300286EBF /* Rabbanagh.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BA61E2C628300286EBF /* en */,
+				A1494BA81E2C628400286EBF /* de */,
+				A1494BA91E2C628400286EBF /* tr */,
+			);
+			name = Rabbanagh.txt;
+			sourceTree = "<group>";
+		};
+		A1494BAE1E2C693C00286EBF /* Salam.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BAD1E2C693C00286EBF /* en */,
+				A1494BAF1E2C693D00286EBF /* de */,
+				A1494BB01E2C693E00286EBF /* tr */,
+			);
+			name = Salam.txt;
 			sourceTree = "<group>";
 		};
 		A16484C51E243898008EC78C /* LaunchScreen.storyboard */ = {

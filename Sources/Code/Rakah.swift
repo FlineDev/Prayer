@@ -45,15 +45,33 @@ class Rakah {
             components.append(RakahComponent(.taawwudh))
         }
 
-        components.append(RakahComponent(.recitationTheOpening))
+        components.append(RakahComponent(.recitation(fileName: "001_The-Opening")))
 
         if includesStandingRecitation {
-            let randomFileName = Component.availableRecitationFileNames.sample()!
+            let randomFileName =  Component.nonOpeningRecitationFileNames.sample()!
             let standingRecitation = RakahComponent(.recitation(fileName: randomFileName))
             components.append(standingRecitation)
         }
 
-        // TODO: not yet completed
+        components.append(RakahComponent(.takbir))
+        components.append(RakahComponent(.ruku))
+        components.append(RakahComponent(.straighteningUp))
+
+        2.times {
+            components.append(RakahComponent(.takbir))
+            components.append(RakahComponent(.sajdah))
+            components.append(RakahComponent(.takbir))
+        }
+
+        if includesSittingRecitation {
+            components.append(RakahComponent(.tashahhud))
+        }
+
+        if isEndOfPrayer {
+            components.append(RakahComponent(.salatulIbrahimiyyah))
+            components.append(RakahComponent(.rabbanagh))
+            2.times { components.append(RakahComponent(.salam)) }
+        }
 
         return components
     }
@@ -65,14 +83,31 @@ extension Rakah {
     enum Component {
         case takbir
         case openingSupplication
-        case taawwudh // also known as: Aʿūdhu bi-llāh
-        case recitationTheOpening // also known as: Al-Fatiha
+        case taawwudh
         case recitation(fileName: String)
+        case ruku
+        case straighteningUp // from Ruku
+        case sajdah
+        case tashahhud
+        case salatulIbrahimiyyah
+        case rabbanagh
+        case salam
 
-        static let availableRecitationFileNames = [
+        static let theOpeningRecitationFileName = "001_The-Opening"
+
+        static let nonOpeningRecitationFileNames = [
             "103_The-Flight-of-Time", "104_The-Slanderer", "105_The-Elephant", "106_Quraysh", "107_Assistance",
             "108_Good-in-Abundance", "109_Those-Who-Deny-the-Truth", "110_Succour", "111_The-Twisted-Strands",
             "112_The-Declaration-of-Gods-Perfection", "113_The-Rising-Dawn", "114_Men"
         ]
+
+        static var all: [Component] {
+            let nonQuranicComponents: [Component] = [
+                .takbir, .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
+                .salatulIbrahimiyyah, .rabbanagh, .salam
+            ]
+            let recitations = ([theOpeningRecitationFileName] + nonOpeningRecitationFileNames).map { Component.recitation(fileName: $0) }
+            return nonQuranicComponents + recitations
+        }
     }
 }

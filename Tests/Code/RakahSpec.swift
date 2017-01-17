@@ -13,6 +13,11 @@ import Nimble
 
 class RakahSpec: QuickSpec {
     override func spec() {
-        // TODO: not yet implemented
+        it("has the correct components count for beginning rakah") {
+            let rakah = Rakah(isBeginningOfPrayer: true, includesStandingRecitation: true, includesSittingRecitation: false, isEndOfPrayer: false)
+            let components = rakah.components()
+
+            expect(components.count).to(equal(12))
+        }
     }
 }
