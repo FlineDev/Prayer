@@ -57,6 +57,13 @@ struct StoryboardScene {
   }
   enum Prayer: StoryboardSceneType {
     static let storyboardName = "Prayer"
+
+    static func initialViewController() -> PrayerViewController {
+      guard let vc = storyboard().instantiateInitialViewController() as? PrayerViewController else {
+        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+      }
+      return vc
+    }
   }
 }
 

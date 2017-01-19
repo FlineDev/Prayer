@@ -12,6 +12,14 @@ import Foundation
 
 enum L10n {
 
+  enum PrayerView {
+
+    enum Countdown {
+      /// Countdown
+      static let name = L10n.tr("PRAYER_VIEW.COUNTDOWN.NAME")
+    }
+  }
+
   enum RakahComponent {
 
     enum OpeningSupplication {

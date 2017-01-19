@@ -17,7 +17,20 @@ class ViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction func didPressStartButton() {
-        // open prayer view
+        guard let text = rakatCountInputField.text, let rakatCount = UInt(text) else { return }
+
+        let prayerViewCtrl = StoryboardScene.Prayer.initialViewController()
+        let navCtrl = UINavigationController(rootViewController: prayerViewCtrl)
+        present(navCtrl, animated: true) {
+            let salah = Salah(rakatCount: rakatCount)
+            prayerViewCtrl.startSalah(salah)
+        }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+
+        self.view.endEditing(false)
     }
 }
 

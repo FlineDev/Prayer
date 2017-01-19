@@ -26,14 +26,19 @@ class Salah {
     init(rakatCount: UInt) {
         self.rakat = {
             var rakat: Rakat = []
+            var usedStandingRecitationFileNames: [String] = []
             for num in 1...rakatCount {
                 let rakah = Rakah(
                     isBeginningOfPrayer:            num == 1,
                     includesStandingRecitation:     num <= 2,
                     includesSittingRecitation:      num % 2 == 0 || num == rakatCount,
-                    isEndOfPrayer:                  num == rakatCount
+                    isEndOfPrayer:                  num == rakatCount,
+                    excludeStandingRecitationNames: usedStandingRecitationFileNames
                 )
                 rakat.append(rakah)
+                if let standingRecitationFileName = rakah.standingRecitationFileName {
+                    usedStandingRecitationFileNames.append(standingRecitationFileName)
+                }
             }
             return rakat
         }()

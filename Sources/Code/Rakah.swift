@@ -18,19 +18,27 @@ typealias Rakat = [Rakah]
 class Rakah {
     // MARK: - Stored Instance Properties
 
-    let isBeginningOfPrayer: Bool
-    let includesStandingRecitation: Bool
-    let includesSittingRecitation: Bool
-    let isEndOfPrayer: Bool
+    private let isBeginningOfPrayer: Bool
+    private let includesStandingRecitation: Bool
+    private let includesSittingRecitation: Bool
+    private let isEndOfPrayer: Bool
+    let standingRecitationFileName: String?
 
 
     // MARK: - Initializers
 
-    init(isBeginningOfPrayer: Bool, includesStandingRecitation: Bool, includesSittingRecitation: Bool, isEndOfPrayer: Bool) {
+    init(isBeginningOfPrayer: Bool, includesStandingRecitation: Bool, includesSittingRecitation: Bool, isEndOfPrayer: Bool, excludeStandingRecitationNames: [String] = []) {
         self.isBeginningOfPrayer = isBeginningOfPrayer
         self.includesStandingRecitation = includesStandingRecitation
         self.includesSittingRecitation = includesSittingRecitation
         self.isEndOfPrayer = isEndOfPrayer
+
+        if includesStandingRecitation {
+            let allowedStandingRecitationNames = Component.nonOpeningRecitationFileNames.filter { !excludeStandingRecitationNames.contains($0) }
+            self.standingRecitationFileName = allowedStandingRecitationNames.sample()
+        } else {
+            self.standingRecitationFileName = nil
+        }
     }
 
 
@@ -40,7 +48,7 @@ class Rakah {
         var components: [RakahComponent] = []
 
         if isBeginningOfPrayer {
-            components.append(RakahComponent(.takbir))
+            components.append(RakahComponent(.takbir(.up)))
             components.append(RakahComponent(.openingSupplication))
             components.append(RakahComponent(.taawwudh))
         }
@@ -48,19 +56,18 @@ class Rakah {
         components.append(RakahComponent(.recitation(fileName: "001_The-Opening")))
 
         if includesStandingRecitation {
-            let randomFileName =  Component.nonOpeningRecitationFileNames.sample()!
-            let standingRecitation = RakahComponent(.recitation(fileName: randomFileName))
+            let standingRecitation = RakahComponent(.recitation(fileName: standingRecitationFileName!))
             components.append(standingRecitation)
         }
 
-        components.append(RakahComponent(.takbir))
+        components.append(RakahComponent(.takbir(.down)))
         components.append(RakahComponent(.ruku))
         components.append(RakahComponent(.straighteningUp))
 
         2.times {
-            components.append(RakahComponent(.takbir))
+            components.append(RakahComponent(.takbir(.down)))
             components.append(RakahComponent(.sajdah))
-            components.append(RakahComponent(.takbir))
+            components.append(RakahComponent(.takbir(.up)))
         }
 
         if includesSittingRecitation {
@@ -81,7 +88,7 @@ class Rakah {
 
 extension Rakah {
     enum Component {
-        case takbir
+        case takbir(TakbirType)
         case openingSupplication
         case taawwudh
         case recitation(fileName: String)
@@ -103,11 +110,16 @@ extension Rakah {
 
         static var all: [Component] {
             let nonQuranicComponents: [Component] = [
-                .takbir, .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
+                .takbir(.up), .takbir(.down), .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
                 .salatulIbrahimiyyah, .rabbanagh, .salam
             ]
             let recitations = ([theOpeningRecitationFileName] + nonOpeningRecitationFileNames).map { Component.recitation(fileName: $0) }
             return nonQuranicComponents + recitations
+        }
+
+        enum TakbirType {
+            case up
+            case down
         }
     }
 }

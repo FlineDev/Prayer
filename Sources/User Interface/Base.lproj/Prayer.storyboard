@@ -1,31 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTb-Em-gV9">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="vOr-J9-Zv5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jze-Z3-Feq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="eaD-gD-qaH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W1w-2K-J1P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cTb-Em-gV9" kind="relationship" relationship="rootViewController" id="9HO-kc-Hrg"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-291" y="168"/>
+        </scene>
+        <!--Prayer View Controller-->
         <scene sceneID="Hdj-Zt-egq">
             <objects>
-                <viewController id="cTb-Em-gV9" sceneMemberID="viewController">
+                <viewController id="cTb-Em-gV9" customClass="PrayerViewController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fOl-mh-tsy"/>
                         <viewControllerLayoutGuide type="bottom" id="YkE-dX-Isc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L2T-1l-blY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the name of God, The Most Gracious, The Dispenser of Grace:  #bc-ignore!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-rQ-1e9">
+                                <rect key="frame" x="20" y="307" width="984" height="219"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God is greater! #bc-ignore!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FY-aU-bF0">
+                                <rect key="frame" x="20" y="72" width="984" height="154"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All praise is due to God alone, the Sustainer of all the worlds,  #bc-ignore!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkD-ph-EMg">
+                                <rect key="frame" x="20" y="595" width="984" height="153"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-6I-x6u">
+                                <rect key="frame" x="480" y="531" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Bpa-kc-a7l"/>
+                                    <constraint firstAttribute="width" constant="64" id="gfB-Iq-QYa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-6R-veV">
+                                <rect key="frame" x="480" y="243" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="GoN-bV-SOl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="ftg-bq-HFW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="rDX-pX-dwC"/>
+                                    <constraint firstAttribute="width" constant="64" id="yAM-Bt-XdV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="centerY" secondItem="L2T-1l-blY" secondAttribute="centerY" constant="32" id="6tG-AH-S24"/>
+                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="20" id="7NC-fl-KUH"/>
+                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="top" secondItem="oVp-6R-veV" secondAttribute="bottom" id="9Gl-Q6-d1s"/>
+                            <constraint firstAttribute="trailing" secondItem="0FY-aU-bF0" secondAttribute="trailing" constant="20" id="Jcg-76-2Zs"/>
+                            <constraint firstItem="JkD-ph-EMg" firstAttribute="top" secondItem="BJn-6I-x6u" secondAttribute="bottom" id="LwH-QA-ubh"/>
+                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:35" id="Nno-7T-h2q"/>
+                            <constraint firstAttribute="trailing" secondItem="JkD-ph-EMg" secondAttribute="trailing" constant="20" id="Vfh-Nc-FJ2"/>
+                            <constraint firstItem="0FY-aU-bF0" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="20" id="WOy-qY-dBB"/>
+                            <constraint firstItem="YkE-dX-Isc" firstAttribute="top" secondItem="JkD-ph-EMg" secondAttribute="bottom" constant="20" id="Xsu-0M-Vii"/>
+                            <constraint firstItem="0FY-aU-bF0" firstAttribute="top" secondItem="fOl-mh-tsy" secondAttribute="bottom" constant="8" id="YO3-qr-MWr"/>
+                            <constraint firstItem="0FY-aU-bF0" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:50" id="drm-86-DDr"/>
+                            <constraint firstItem="BJn-6I-x6u" firstAttribute="centerX" secondItem="L2T-1l-blY" secondAttribute="centerX" id="f1E-tq-cWz"/>
+                            <constraint firstAttribute="trailing" secondItem="P5c-rQ-1e9" secondAttribute="trailing" constant="20" id="m44-RO-rK1"/>
+                            <constraint firstItem="oVp-6R-veV" firstAttribute="centerX" secondItem="L2T-1l-blY" secondAttribute="centerX" id="oOY-pc-UIS"/>
+                            <constraint firstItem="JkD-ph-EMg" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:50" id="wNx-3r-fZ4"/>
+                            <constraint firstItem="JkD-ph-EMg" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="20" id="wWS-1W-Ozi"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pIa-Kb-5Qy">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="5Zh-8T-lub">
+                            <connections>
+                                <action selector="doneButtonPressed" destination="cTb-Em-gV9" id="6Y7-5e-hRP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentLineLabel" destination="P5c-rQ-1e9" id="izq-F2-N1H"/>
+                        <outlet property="currentMovementIconView" destination="oVp-6R-veV" id="s3R-K7-dVK"/>
+                        <outlet property="nextLineLabel" destination="JkD-ph-EMg" id="mTr-w8-Keb"/>
+                        <outlet property="nextMovementIconView" destination="BJn-6I-x6u" id="v46-Pz-dFT"/>
+                        <outlet property="previousLineLabel" destination="0FY-aU-bF0" id="KEO-42-gxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hET-xH-14z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="146"/>
+            <point key="canvasLocation" x="439.453125" y="167.96875"/>
         </scene>
     </scenes>
 </document>
