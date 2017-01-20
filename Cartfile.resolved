@@ -1,0 +1,4 @@
+github "Flinesoft/HandySwift" "1.4.1"
+github "Quick/Nimble" "v5.1.1"
+github "Quick/Quick" "v1.0.0"
+github "radex/SwiftyTimer" "2.0.0"

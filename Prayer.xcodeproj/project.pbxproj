@@ -7,13 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A16484D31E243898008EC78C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Assets.xcassets */; };
+		A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AEC1E25A9F000286EBF /* Takbir.txt */; };
+		A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AF31E27F47800286EBF /* HandySwift.framework */; };
+		A1494AFE1E27F5C100286EBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; };
+		A1494AFF1E27F5C800286EBF /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1494B001E27F5CB00286EBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AFA1E27F5A200286EBF /* Nimble.framework */; };
+		A1494B011E27F5CD00286EBF /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A1494AFA1E27F5A200286EBF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1494B041E27F60400286EBF /* SalahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B031E27F60400286EBF /* SalahSpec.swift */; };
+		A1494B061E27F64600286EBF /* RakahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B051E27F64600286EBF /* RakahSpec.swift */; };
+		A1494B081E27F65000286EBF /* RakahComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B071E27F65000286EBF /* RakahComponentSpec.swift */; };
+		A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */; };
+		A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B141E28762B00286EBF /* Taawwudh.txt */; };
+		A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B211E29452B00286EBF /* 001_The-Opening.txt */; };
+		A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B2C1E2B071100286EBF /* 114_Men.txt */; };
+		A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B331E2B085500286EBF /* 113_The-Rising-Dawn.txt */; };
+		A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B3A1E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt */; };
+		A1494B3F1E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B411E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt */; };
+		A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B481E2B0D0900286EBF /* 110_Succour.txt */; };
+		A1494B4D1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B4F1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt */; };
+		A1494B541E2B0F8900286EBF /* 108_Good-in-Abundance.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B561E2B0F8900286EBF /* 108_Good-in-Abundance.txt */; };
+		A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B5D1E2B106300286EBF /* 107_Assistance.txt */; };
+		A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B641E2B11FB00286EBF /* 106_Quraysh.txt */; };
+		A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B6B1E2B12FD00286EBF /* 105_The-Elephant.txt */; };
+		A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B721E2B156500286EBF /* 104_The-Slanderer.txt */; };
+		A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B791E2B17D100286EBF /* 103_The-Flight-of-Time.txt */; };
+		A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B801E2BF47400286EBF /* Ruku.txt */; };
+		A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B871E2C300C00286EBF /* Straightening-Up.txt */; };
+		A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B8E1E2C31B900286EBF /* Sajdah.txt */; };
+		A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B971E2C49C500286EBF /* Tashahhud.txt */; };
+		A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */; };
+		A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BA71E2C628300286EBF /* Rabbanagh.txt */; };
+		A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BAE1E2C693C00286EBF /* Salam.txt */; };
+		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
+		A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */; };
+		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
+		A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Localizations.swift */; };
+		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
+		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
+		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
-		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
+		A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* SettingsViewController.swift */; };
 		A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C51E243898008EC78C /* LaunchScreen.storyboard */; };
-		A16484D81E243898008EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C71E243898008EC78C /* Main.storyboard */; };
+		A16484D81E243898008EC78C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C71E243898008EC78C /* Settings.storyboard */; };
 		A16484DD1E2438A2008EC78C /* PrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484D01E243898008EC78C /* PrayerUITests.swift */; };
-		A16484DE1E2438AA008EC78C /* PrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484CB1E243898008EC78C /* PrayerTests.swift */; };
+		A16484E31E243AAC008EC78C /* Salah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Salah.swift */; };
+		A16484E51E243B5F008EC78C /* Rakah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E41E243B5F008EC78C /* Rakah.swift */; };
+		A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E61E25503C008EC78C /* RakahComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,20 +72,132 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A1494AF91E27F58600286EBF /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1494AFF1E27F5C800286EBF /* Quick.framework in Carthage */,
+				A1494B011E27F5CD00286EBF /* Nimble.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A1494AE61E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A1494AE71E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Settings.strings; sourceTree = "<group>"; };
+		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A1494AE91E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Settings.strings; sourceTree = "<group>"; };
+		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
+		A1494AED1E25A9F100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Takbir.txt; sourceTree = "<group>"; };
+		A1494AEE1E25A9F200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Takbir.txt; sourceTree = "<group>"; };
+		A1494AF01E27F3F000286EBF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		A1494AF11E27F44B00286EBF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		A1494AF31E27F47800286EBF /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		A1494AF61E27F52B00286EBF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		A1494AFA1E27F5A200286EBF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		A1494AFD1E27F5C100286EBF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		A1494B031E27F60400286EBF /* SalahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalahSpec.swift; sourceTree = "<group>"; };
+		A1494B051E27F64600286EBF /* RakahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahSpec.swift; sourceTree = "<group>"; };
+		A1494B071E27F65000286EBF /* RakahComponentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponentSpec.swift; sourceTree = "<group>"; };
+		A1494B0C1E2869B500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B0E1E2869B600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B0F1E2869B700286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
+		A1494B131E28762B00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B151E28762C00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B161E28762D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Taawwudh.txt; sourceTree = "<group>"; };
+		A1494B221E29452B00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
+		A1494B231E29452B00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
+		A1494B241E29452B00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/001_The-Opening.txt"; sourceTree = "<group>"; };
+		A1494B2B1E2B071100286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/114_Men.txt; sourceTree = "<group>"; };
+		A1494B2D1E2B071200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/114_Men.txt; sourceTree = "<group>"; };
+		A1494B2E1E2B071300286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/114_Men.txt; sourceTree = "<group>"; };
+		A1494B321E2B085500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/113_The-Rising-Dawn.txt"; sourceTree = "<group>"; };
+		A1494B341E2B085700286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/113_The-Rising-Dawn.txt"; sourceTree = "<group>"; };
+		A1494B351E2B085800286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/113_The-Rising-Dawn.txt"; sourceTree = "<group>"; };
+		A1494B391E2B0A0000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/112_The-Declaration-of-Gods-Perfection.txt"; sourceTree = "<group>"; };
+		A1494B3B1E2B0A0100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/112_The-Declaration-of-Gods-Perfection.txt"; sourceTree = "<group>"; };
+		A1494B3C1E2B0A0200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/112_The-Declaration-of-Gods-Perfection.txt"; sourceTree = "<group>"; };
+		A1494B401E2B0BAF00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/111_The-Twisted-Strands.txt"; sourceTree = "<group>"; };
+		A1494B421E2B0BB000286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/111_The-Twisted-Strands.txt"; sourceTree = "<group>"; };
+		A1494B431E2B0BB100286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/111_The-Twisted-Strands.txt"; sourceTree = "<group>"; };
+		A1494B471E2B0D0900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/110_Succour.txt; sourceTree = "<group>"; };
+		A1494B491E2B0D0B00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/110_Succour.txt; sourceTree = "<group>"; };
+		A1494B4A1E2B0D0B00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/110_Succour.txt; sourceTree = "<group>"; };
+		A1494B4E1E2B0E1A00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/109_Those-Who-Deny-the-Truth.txt"; sourceTree = "<group>"; };
+		A1494B501E2B0E1C00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/109_Those-Who-Deny-the-Truth.txt"; sourceTree = "<group>"; };
+		A1494B511E2B0E1D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/109_Those-Who-Deny-the-Truth.txt"; sourceTree = "<group>"; };
+		A1494B551E2B0F8900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/108_Good-in-Abundance.txt"; sourceTree = "<group>"; };
+		A1494B571E2B0F8B00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/108_Good-in-Abundance.txt"; sourceTree = "<group>"; };
+		A1494B581E2B0F8C00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/108_Good-in-Abundance.txt"; sourceTree = "<group>"; };
+		A1494B5C1E2B106300286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/107_Assistance.txt; sourceTree = "<group>"; };
+		A1494B5E1E2B106500286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/107_Assistance.txt; sourceTree = "<group>"; };
+		A1494B5F1E2B106600286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/107_Assistance.txt; sourceTree = "<group>"; };
+		A1494B631E2B11FB00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/106_Quraysh.txt; sourceTree = "<group>"; };
+		A1494B651E2B11FD00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/106_Quraysh.txt; sourceTree = "<group>"; };
+		A1494B661E2B11FD00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/106_Quraysh.txt; sourceTree = "<group>"; };
+		A1494B6A1E2B12FD00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/105_The-Elephant.txt"; sourceTree = "<group>"; };
+		A1494B6C1E2B131000286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/105_The-Elephant.txt"; sourceTree = "<group>"; };
+		A1494B6D1E2B131100286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/105_The-Elephant.txt"; sourceTree = "<group>"; };
+		A1494B711E2B156500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/104_The-Slanderer.txt"; sourceTree = "<group>"; };
+		A1494B731E2B156800286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/104_The-Slanderer.txt"; sourceTree = "<group>"; };
+		A1494B741E2B156900286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/104_The-Slanderer.txt"; sourceTree = "<group>"; };
+		A1494B781E2B17D100286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
+		A1494B7A1E2B17D300286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
+		A1494B7B1E2B17D300286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/103_The-Flight-of-Time.txt"; sourceTree = "<group>"; };
+		A1494B7F1E2BF47400286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B811E2BF47500286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B821E2BF47500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Ruku.txt; sourceTree = "<group>"; };
+		A1494B861E2C300C00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B881E2C300D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B891E2C300D00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Straightening-Up.txt"; sourceTree = "<group>"; };
+		A1494B8D1E2C31B900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B8F1E2C31BB00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B901E2C31BB00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Sajdah.txt; sourceTree = "<group>"; };
+		A1494B961E2C49C500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B981E2C49C600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B991E2C49C800286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Tashahhud.txt; sourceTree = "<group>"; };
+		A1494B9D1E2C574A00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA11E2C575D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA21E2C575F00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Salatul-Ibrahimiyyah.txt"; sourceTree = "<group>"; };
+		A1494BA61E2C628300286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BA81E2C628400286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BA91E2C628400286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Rabbanagh.txt; sourceTree = "<group>"; };
+		A1494BAD1E2C693C00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BAF1E2C693D00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BB01E2C693E00286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Salam.txt; sourceTree = "<group>"; };
+		A1494BB41E2EBF4F00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BB61E2EBF5200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BB71E2EBF5200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1494BBA1E2ED3C600286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
+		A1494BBC1E2ED3C900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Prayer.storyboard; sourceTree = "<group>"; };
+		A1494BC31E2ED5D000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC51E2ED5D100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC71E2ED5D200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Prayer.strings; sourceTree = "<group>"; };
+		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
+		A1494BCC1E2ED79500286EBF /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
+		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* PrayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A16484BE1E243898008EC78C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A16484BE1E243898008EC78C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A16484C01E243898008EC78C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A16484C11E243898008EC78C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A16484C11E243898008EC78C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A16484C31E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484C61E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A16484C81E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A16484CB1E243898008EC78C /* PrayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTests.swift; sourceTree = "<group>"; };
+		A16484C81E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		A16484CD1E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484D01E243898008EC78C /* PrayerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerUITests.swift; sourceTree = "<group>"; };
 		A16484D21E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16484E21E243AAC008EC78C /* Salah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salah.swift; sourceTree = "<group>"; };
+		A16484E41E243B5F008EC78C /* Rakah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rakah.swift; sourceTree = "<group>"; };
+		A16484E61E25503C008EC78C /* RakahComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
+				A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +214,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1494AFE1E27F5C100286EBF /* Quick.framework in Frameworks */,
+				A1494B001E27F5CB00286EBF /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +229,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1494AE31E2596B200286EBF /* SpokenTexts */ = {
+			isa = PBXGroup;
+			children = (
+				A1494AEC1E25A9F000286EBF /* Takbir.txt */,
+				A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */,
+				A1494B141E28762B00286EBF /* Taawwudh.txt */,
+				A1494B801E2BF47400286EBF /* Ruku.txt */,
+				A1494B871E2C300C00286EBF /* Straightening-Up.txt */,
+				A1494B8E1E2C31B900286EBF /* Sajdah.txt */,
+				A1494B971E2C49C500286EBF /* Tashahhud.txt */,
+				A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */,
+				A1494BA71E2C628300286EBF /* Rabbanagh.txt */,
+				A1494BAE1E2C693C00286EBF /* Salam.txt */,
+			);
+			path = SpokenTexts;
+			sourceTree = "<group>";
+		};
+		A1494AEF1E27F3DF00286EBF /* Root Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1494AF01E27F3F000286EBF /* Cartfile */,
+				A1494AF61E27F52B00286EBF /* Cartfile.private */,
+				A1494AF11E27F44B00286EBF /* Cartfile.resolved */,
+			);
+			name = "Root Files";
+			sourceTree = "<group>";
+		};
+		A1494AF21E27F46200286EBF /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				A1494AF81E27F56300286EBF /* App */,
+				A1494AF71E27F55D00286EBF /* Tests */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		A1494AF71E27F55D00286EBF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A1494AFD1E27F5C100286EBF /* Quick.framework */,
+				A1494AFA1E27F5A200286EBF /* Nimble.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		A1494AF81E27F56300286EBF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
+				A1494AF31E27F47800286EBF /* HandySwift.framework */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		A1494B021E27F5E200286EBF /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				A1494B031E27F60400286EBF /* SalahSpec.swift */,
+				A1494B051E27F64600286EBF /* RakahSpec.swift */,
+				A1494B071E27F65000286EBF /* RakahComponentSpec.swift */,
+			);
+			name = Specs;
+			sourceTree = "<group>";
+		};
+		A1494B201E29452B00286EBF /* Recitations */ = {
+			isa = PBXGroup;
+			children = (
+				A1494B211E29452B00286EBF /* 001_The-Opening.txt */,
+				A1494B791E2B17D100286EBF /* 103_The-Flight-of-Time.txt */,
+				A1494B721E2B156500286EBF /* 104_The-Slanderer.txt */,
+				A1494B6B1E2B12FD00286EBF /* 105_The-Elephant.txt */,
+				A1494B641E2B11FB00286EBF /* 106_Quraysh.txt */,
+				A1494B5D1E2B106300286EBF /* 107_Assistance.txt */,
+				A1494B561E2B0F8900286EBF /* 108_Good-in-Abundance.txt */,
+				A1494B4F1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt */,
+				A1494B481E2B0D0900286EBF /* 110_Succour.txt */,
+				A1494B411E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt */,
+				A1494B3A1E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt */,
+				A1494B331E2B085500286EBF /* 113_The-Rising-Dawn.txt */,
+				A1494B2C1E2B071100286EBF /* 114_Men.txt */,
+			);
+			path = Recitations;
+			sourceTree = "<group>";
+		};
+		A1494BCB1E2ED79500286EBF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A1494BCC1E2ED79500286EBF /* Localizations.swift */,
+				A1494BCD1E2ED79500286EBF /* Storyboards.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A16484821E243834008EC78C = {
 			isa = PBXGroup;
 			children = (
+				A1494AEF1E27F3DF00286EBF /* Root Files */,
 				A16484BC1E243898008EC78C /* Sources */,
 				A16484C91E243898008EC78C /* Tests */,
 				A16484CE1E243898008EC78C /* UI Tests */,
 				A164848C1E243834008EC78C /* Products */,
+				A1494AF21E27F46200286EBF /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +350,7 @@
 				A16484BF1E243898008EC78C /* Code */,
 				A16484BD1E243898008EC78C /* Assets */,
 				A16484C41E243898008EC78C /* User Interface */,
+				A1494BCB1E2ED79500286EBF /* Constants */,
 				A16484C21E243898008EC78C /* Supporting Files */,
 			);
 			path = Sources;
@@ -108,7 +359,9 @@
 		A16484BD1E243898008EC78C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A16484BE1E243898008EC78C /* Assets.xcassets */,
+				A1494B201E29452B00286EBF /* Recitations */,
+				A1494AE31E2596B200286EBF /* SpokenTexts */,
+				A16484BE1E243898008EC78C /* Images.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -116,8 +369,10 @@
 		A16484BF1E243898008EC78C /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				A16484DF1E243A81008EC78C /* Model */,
+				A16484E11E243A8D008EC78C /* View Controller */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
-				A16484C11E243898008EC78C /* ViewController.swift */,
+				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -126,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				A16484C31E243898008EC78C /* Info.plist */,
+				A1494BB51E2EBF4F00286EBF /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -134,7 +390,8 @@
 			isa = PBXGroup;
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
-				A16484C71E243898008EC78C /* Main.storyboard */,
+				A16484C71E243898008EC78C /* Settings.storyboard */,
+				A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -151,7 +408,7 @@
 		A16484CA1E243898008EC78C /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				A16484CB1E243898008EC78C /* PrayerTests.swift */,
+				A1494B021E27F5E200286EBF /* Specs */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -189,6 +446,24 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A16484DF1E243A81008EC78C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A16484E21E243AAC008EC78C /* Salah.swift */,
+				A16484E41E243B5F008EC78C /* Rakah.swift */,
+				A16484E61E25503C008EC78C /* RakahComponent.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A16484E11E243A8D008EC78C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +471,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A16484B31E243834008EC78C /* Build configuration list for PBXNativeTarget "Prayer" */;
 			buildPhases = (
+				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
+				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
+				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -216,6 +494,7 @@
 				A164849B1E243834008EC78C /* Sources */,
 				A164849C1E243834008EC78C /* Frameworks */,
 				A164849D1E243834008EC78C /* Resources */,
+				A1494AF91E27F58600286EBF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -263,6 +542,7 @@
 					A164849E1E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A164848A1E243834008EC78C;
 					};
@@ -281,6 +561,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				tr,
 			);
 			mainGroup = A16484821E243834008EC78C;
 			productRefGroup = A164848C1E243834008EC78C /* Products */;
@@ -299,9 +581,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */,
+				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
+				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
+				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
+				A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */,
+				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
+				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
+				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
+				A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */,
+				A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */,
+				A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */,
+				A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */,
+				A1494B541E2B0F8900286EBF /* 108_Good-in-Abundance.txt in Resources */,
+				A1494B3F1E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt in Resources */,
+				A1494B4D1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt in Resources */,
+				A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */,
+				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
+				A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */,
 				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
-				A16484D31E243898008EC78C /* Assets.xcassets in Resources */,
-				A16484D81E243898008EC78C /* Main.storyboard in Resources */,
+				A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */,
+				A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */,
+				A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */,
+				A16484D31E243898008EC78C /* Images.xcassets in Resources */,
+				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
+				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
+				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
+				A16484D81E243898008EC78C /* Settings.storyboard in Resources */,
+				A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,13 +628,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1494AF51E27F49200286EBF /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = BartyCrouch;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/Sources\" -l \"$PROJECT_DIR/Sources\" -a -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+		};
+		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t dot-syntax-swift3 -o \"$PROJECT_DIR/Sources/Constants/Localizations.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A16484871E243834008EC78C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16484D51E243898008EC78C /* ViewController.swift in Sources */,
+				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
+				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
+				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
+				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
+				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
+				A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
+				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +695,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16484DE1E2438AA008EC78C /* PrayerTests.swift in Sources */,
+				A1494B061E27F64600286EBF /* RakahSpec.swift in Sources */,
+				A1494B081E27F65000286EBF /* RakahComponentSpec.swift in Sources */,
+				A1494B041E27F60400286EBF /* SalahSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,20 +725,277 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A1494AEC1E25A9F000286EBF /* Takbir.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494AEB1E25A9F000286EBF /* en */,
+				A1494AED1E25A9F100286EBF /* de */,
+				A1494AEE1E25A9F200286EBF /* tr */,
+			);
+			name = Takbir.txt;
+			sourceTree = "<group>";
+		};
+		A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B0C1E2869B500286EBF /* en */,
+				A1494B0E1E2869B600286EBF /* de */,
+				A1494B0F1E2869B700286EBF /* tr */,
+			);
+			name = "Opening-Supplication.txt";
+			sourceTree = "<group>";
+		};
+		A1494B141E28762B00286EBF /* Taawwudh.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B131E28762B00286EBF /* en */,
+				A1494B151E28762C00286EBF /* de */,
+				A1494B161E28762D00286EBF /* tr */,
+			);
+			name = Taawwudh.txt;
+			sourceTree = "<group>";
+		};
+		A1494B211E29452B00286EBF /* 001_The-Opening.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B221E29452B00286EBF /* de */,
+				A1494B231E29452B00286EBF /* en */,
+				A1494B241E29452B00286EBF /* tr */,
+			);
+			name = "001_The-Opening.txt";
+			sourceTree = "<group>";
+		};
+		A1494B2C1E2B071100286EBF /* 114_Men.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B2B1E2B071100286EBF /* en */,
+				A1494B2D1E2B071200286EBF /* de */,
+				A1494B2E1E2B071300286EBF /* tr */,
+			);
+			name = 114_Men.txt;
+			sourceTree = "<group>";
+		};
+		A1494B331E2B085500286EBF /* 113_The-Rising-Dawn.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B321E2B085500286EBF /* en */,
+				A1494B341E2B085700286EBF /* de */,
+				A1494B351E2B085800286EBF /* tr */,
+			);
+			name = "113_The-Rising-Dawn.txt";
+			sourceTree = "<group>";
+		};
+		A1494B3A1E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B391E2B0A0000286EBF /* en */,
+				A1494B3B1E2B0A0100286EBF /* de */,
+				A1494B3C1E2B0A0200286EBF /* tr */,
+			);
+			name = "112_The-Declaration-of-Gods-Perfection.txt";
+			sourceTree = "<group>";
+		};
+		A1494B411E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B401E2B0BAF00286EBF /* en */,
+				A1494B421E2B0BB000286EBF /* de */,
+				A1494B431E2B0BB100286EBF /* tr */,
+			);
+			name = "111_The-Twisted-Strands.txt";
+			sourceTree = "<group>";
+		};
+		A1494B481E2B0D0900286EBF /* 110_Succour.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B471E2B0D0900286EBF /* en */,
+				A1494B491E2B0D0B00286EBF /* de */,
+				A1494B4A1E2B0D0B00286EBF /* tr */,
+			);
+			name = 110_Succour.txt;
+			sourceTree = "<group>";
+		};
+		A1494B4F1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B4E1E2B0E1A00286EBF /* en */,
+				A1494B501E2B0E1C00286EBF /* de */,
+				A1494B511E2B0E1D00286EBF /* tr */,
+			);
+			name = "109_Those-Who-Deny-the-Truth.txt";
+			sourceTree = "<group>";
+		};
+		A1494B561E2B0F8900286EBF /* 108_Good-in-Abundance.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B551E2B0F8900286EBF /* en */,
+				A1494B571E2B0F8B00286EBF /* de */,
+				A1494B581E2B0F8C00286EBF /* tr */,
+			);
+			name = "108_Good-in-Abundance.txt";
+			sourceTree = "<group>";
+		};
+		A1494B5D1E2B106300286EBF /* 107_Assistance.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B5C1E2B106300286EBF /* en */,
+				A1494B5E1E2B106500286EBF /* de */,
+				A1494B5F1E2B106600286EBF /* tr */,
+			);
+			name = 107_Assistance.txt;
+			sourceTree = "<group>";
+		};
+		A1494B641E2B11FB00286EBF /* 106_Quraysh.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B631E2B11FB00286EBF /* en */,
+				A1494B651E2B11FD00286EBF /* de */,
+				A1494B661E2B11FD00286EBF /* tr */,
+			);
+			name = 106_Quraysh.txt;
+			sourceTree = "<group>";
+		};
+		A1494B6B1E2B12FD00286EBF /* 105_The-Elephant.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B6A1E2B12FD00286EBF /* en */,
+				A1494B6C1E2B131000286EBF /* de */,
+				A1494B6D1E2B131100286EBF /* tr */,
+			);
+			name = "105_The-Elephant.txt";
+			sourceTree = "<group>";
+		};
+		A1494B721E2B156500286EBF /* 104_The-Slanderer.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B711E2B156500286EBF /* en */,
+				A1494B731E2B156800286EBF /* de */,
+				A1494B741E2B156900286EBF /* tr */,
+			);
+			name = "104_The-Slanderer.txt";
+			sourceTree = "<group>";
+		};
+		A1494B791E2B17D100286EBF /* 103_The-Flight-of-Time.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B781E2B17D100286EBF /* en */,
+				A1494B7A1E2B17D300286EBF /* de */,
+				A1494B7B1E2B17D300286EBF /* tr */,
+			);
+			name = "103_The-Flight-of-Time.txt";
+			sourceTree = "<group>";
+		};
+		A1494B801E2BF47400286EBF /* Ruku.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B7F1E2BF47400286EBF /* en */,
+				A1494B811E2BF47500286EBF /* de */,
+				A1494B821E2BF47500286EBF /* tr */,
+			);
+			name = Ruku.txt;
+			sourceTree = "<group>";
+		};
+		A1494B871E2C300C00286EBF /* Straightening-Up.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B861E2C300C00286EBF /* en */,
+				A1494B881E2C300D00286EBF /* de */,
+				A1494B891E2C300D00286EBF /* tr */,
+			);
+			name = "Straightening-Up.txt";
+			sourceTree = "<group>";
+		};
+		A1494B8E1E2C31B900286EBF /* Sajdah.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B8D1E2C31B900286EBF /* en */,
+				A1494B8F1E2C31BB00286EBF /* de */,
+				A1494B901E2C31BB00286EBF /* tr */,
+			);
+			name = Sajdah.txt;
+			sourceTree = "<group>";
+		};
+		A1494B971E2C49C500286EBF /* Tashahhud.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B961E2C49C500286EBF /* en */,
+				A1494B981E2C49C600286EBF /* de */,
+				A1494B991E2C49C800286EBF /* tr */,
+			);
+			name = Tashahhud.txt;
+			sourceTree = "<group>";
+		};
+		A1494B9E1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494B9D1E2C574A00286EBF /* en */,
+				A1494BA11E2C575D00286EBF /* de */,
+				A1494BA21E2C575F00286EBF /* tr */,
+			);
+			name = "Salatul-Ibrahimiyyah.txt";
+			sourceTree = "<group>";
+		};
+		A1494BA71E2C628300286EBF /* Rabbanagh.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BA61E2C628300286EBF /* en */,
+				A1494BA81E2C628400286EBF /* de */,
+				A1494BA91E2C628400286EBF /* tr */,
+			);
+			name = Rabbanagh.txt;
+			sourceTree = "<group>";
+		};
+		A1494BAE1E2C693C00286EBF /* Salam.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BAD1E2C693C00286EBF /* en */,
+				A1494BAF1E2C693D00286EBF /* de */,
+				A1494BB01E2C693E00286EBF /* tr */,
+			);
+			name = Salam.txt;
+			sourceTree = "<group>";
+		};
+		A1494BB51E2EBF4F00286EBF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BB41E2EBF4F00286EBF /* en */,
+				A1494BB61E2EBF5200286EBF /* de */,
+				A1494BB71E2EBF5200286EBF /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1494BC01E2ED5CF00286EBF /* Base */,
+				A1494BC31E2ED5D000286EBF /* en */,
+				A1494BC51E2ED5D100286EBF /* de */,
+				A1494BC71E2ED5D200286EBF /* tr */,
+			);
+			name = Prayer.storyboard;
+			sourceTree = "<group>";
+		};
 		A16484C51E243898008EC78C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A16484C61E243898008EC78C /* Base */,
+				A1494AE61E25A9CE00286EBF /* de */,
+				A1494AE81E25A9D500286EBF /* tr */,
+				A1494BBC1E2ED3C900286EBF /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		A16484C71E243898008EC78C /* Main.storyboard */ = {
+		A16484C71E243898008EC78C /* Settings.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A16484C81E243898008EC78C /* Base */,
+				A1494AE71E25A9CE00286EBF /* de */,
+				A1494AE91E25A9D500286EBF /* tr */,
+				A1494BBA1E2ED3C600286EBF /* en */,
 			);
-			name = Main.storyboard;
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -386,6 +1005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -436,6 +1056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -480,6 +1101,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
@@ -493,6 +1118,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
@@ -506,11 +1135,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
@@ -521,7 +1156,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
