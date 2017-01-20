@@ -123,6 +123,11 @@ class PrayerViewController: UIViewController {
         nextLineLabel.text = nil
     }
 
+    private func clearIcons() {
+        currentMovementIconView.image = nil
+        nextMovementIconView.image = nil
+    }
+
     private func playCountDown(completion: @escaping () -> Void) {
         title = L10n.PrayerView.Countdown.name
         countDown = 5
@@ -172,7 +177,7 @@ class PrayerViewController: UIViewController {
         guard currentRakahIndex != 0 || currentComponentIndex != 0 || currentSpokenTextLine != 0 else { return }
 
         if currentSpokenTextLine == 0 {
-            currentMovementIconView.image = self.salah.rakat[currentRakahIndex].components()[currentComponentIndex].movementIcon
+            currentMovementIconView.image = self.salah.rakat[currentRakahIndex].components()[currentComponentIndex].movementIcon?.withRenderingMode(.alwaysTemplate)
         } else {
             currentMovementIconView.image = nil
         }
@@ -189,7 +194,7 @@ class PrayerViewController: UIViewController {
             }()
 
             if let nextComponent = nextComponent {
-                nextMovementIconView.image = nextComponent.movementIcon
+                nextMovementIconView.image = nextComponent.movementIcon?.withRenderingMode(.alwaysTemplate)
             } else {
                 nextMovementIconView.image = nil
             }

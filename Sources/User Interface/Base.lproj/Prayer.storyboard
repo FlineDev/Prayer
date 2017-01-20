@@ -56,15 +56,17 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-6I-x6u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-6I-x6u">
                                 <rect key="frame" x="20" y="639" width="64" height="64"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="LH3-D5-ItX"/>
                                     <constraint firstAttribute="width" constant="64" id="nfd-NO-teY"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-6R-veV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-6R-veV">
                                 <rect key="frame" x="20" y="352" width="64" height="64"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="2bk-Wn-uN5"/>
                                     <constraint firstAttribute="width" constant="64" id="z4v-YO-bnw"/>
@@ -111,4 +113,8 @@
             <point key="canvasLocation" x="439.453125" y="167.96875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="down_arrow" width="171" height="171"/>
+        <image name="up_arrow" width="64" height="64"/>
+    </resources>
 </document>
