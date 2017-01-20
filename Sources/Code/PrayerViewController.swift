@@ -168,6 +168,8 @@ class PrayerViewController: UIViewController {
     }
 
     private func updateIcons() {
+        guard currentRakahIndex != 0 || currentComponentIndex != 0 || currentSpokenTextLine != 0 else { return }
+
         if currentSpokenTextLine == 0 {
             currentMovementIconView.image = self.salah.rakat[currentRakahIndex].components()[currentComponentIndex].movementIcon
         } else {
@@ -190,6 +192,8 @@ class PrayerViewController: UIViewController {
             } else {
                 nextMovementIconView.image = nil
             }
+        } else {
+            nextMovementIconView.image = nil
         }
     }
 
