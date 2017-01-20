@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Number of Rakat"; ObjectID = "kJ4-5A-IjL"; */
+"kJ4-5A-IjL.text" = "Number of Rakat";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "kmz-N6-I8x"; */
+"kmz-N6-I8x.normalTitle" = "Start";
+
+/* Class = "UISegmentedControl"; NfP-WA-irn.segmentTitles[0] = "Slow"; ObjectID = "NfP-WA-irn"; */
+"NfP-WA-irn.segmentTitles[0]" = "Slow";
+
+/* Class = "UISegmentedControl"; NfP-WA-irn.segmentTitles[1] = "Normal"; ObjectID = "NfP-WA-irn"; */
+"NfP-WA-irn.segmentTitles[1]" = "Normal";
+
+/* Class = "UISegmentedControl"; NfP-WA-irn.segmentTitles[2] = "Fast"; ObjectID = "NfP-WA-irn"; */
+"NfP-WA-irn.segmentTitles[2]" = "Fast";
+
+/* Class = "UILabel"; text = "Text Speed"; ObjectID = "o47-hG-NDR"; */
+"o47-hG-NDR.text" = "Text speed";

@@ -15,8 +15,8 @@ typealias Duration = DispatchTimeInterval
 class RakahComponent {
     // MARK: - Stored Type Properties
 
-    static let lineChangeDuration = Duration.milliseconds(1_000)
-    static let durationPerCharacter = Duration.milliseconds(50)
+    static let lineChangeDuration = Duration.milliseconds(1_250)
+    static let durationPerCharacter = Duration.milliseconds(55)
 
 
     // MARK: - Stored Instance Properties
@@ -119,11 +119,15 @@ class RakahComponent {
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
             needsMovement = false
             movementIcon = nil
-        case .salam:
+        case .salam(let type):
             name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
             needsMovement = true
-            movementIcon = nil
+            
+            switch type {
+            case .right: movementIcon = #imageLiteral(resourceName: "right_arrow")
+            case .left: movementIcon = #imageLiteral(resourceName: "left_arrow")
+            }
         }
     }
 

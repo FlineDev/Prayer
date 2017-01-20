@@ -14,6 +14,7 @@ class PrayerViewController: UIViewController {
     // MARK: - Stored Instance Properties
 
     private var salah: Salah!
+    private var textSpeedFactor: Double!
     private var countDown: Int? {
         didSet {
             if let countDown = countDown {
@@ -22,22 +23,13 @@ class PrayerViewController: UIViewController {
         }
     }
     private var currentTimer: Timer?
-    private var currentRakahIndex = 0 {
-        didSet {
-            print("didSet currentRakahIndex to \(currentRakahIndex)")
-        }
-    }
+    private var currentRakahIndex = 0
     private var currentComponentIndex = 0 {
         didSet {
             title = salah.rakat[currentRakahIndex].components()[currentComponentIndex].name
-            print("didSet currentComponentIndex to \(currentComponentIndex)")
         }
     }
-    private var currentSpokenTextLine = 0 {
-        didSet {
-            print("didSet currentSpokenTextLine to \(currentSpokenTextLine)")
-        }
-    }
+    private var currentSpokenTextLine = 0
 
 
     // MARK: - Computed Instance Properties
@@ -89,6 +81,7 @@ class PrayerViewController: UIViewController {
         super.viewWillAppear(animated)
 
         clearLabels()
+        clearIcons()
     }
 
     deinit {
@@ -96,8 +89,10 @@ class PrayerViewController: UIViewController {
         currentTimer = nil
     }
 
-    func startSalah(_ salah: Salah) {
+    func start(salah: Salah, textSpeedFactor: Double) {
         self.salah = salah
+        self.textSpeedFactor = textSpeedFactor
+
         clearLabels()
         nextLineLabel.text = salah.rakat.first!.components().first!.spokenTextLines.first!
 
@@ -109,7 +104,7 @@ class PrayerViewController: UIViewController {
             self.updateIcons()
             self.title = self.salah.rakat[self.currentRakahIndex].components()[self.currentComponentIndex].name
             let duration = RakahComponent.lineChangeDuration.timeInterval + self.salah.rakat[0].components().first!.spokenTextLines.first!.estimatedReadingTime
-            delay(bySeconds: duration) {
+            delay(bySeconds: duration / textSpeedFactor) {
                 self.progressPrayer {
                     self.presentingViewController?.dismiss(animated: true, completion: nil)
                 }
@@ -145,8 +140,6 @@ class PrayerViewController: UIViewController {
     private func progressPrayer(completion: @escaping () -> Void) {
         if moveOnToNextLine() {
             if let currentLineText = currentLineText {
-                print("Starting timer with estimated Reading time: \(currentLineText.estimatedReadingTime)")
-
                 let duration: TimeInterval = {
                     if currentSpokenTextLine == 0 && self.salah.rakat[currentRakahIndex].components()[currentComponentIndex].needsMovement {
                         return RakahComponent.lineChangeDuration.timeInterval + currentLineText.estimatedReadingTime
@@ -155,7 +148,7 @@ class PrayerViewController: UIViewController {
                     }
                 }()
 
-                Timer.after(duration) {
+                Timer.after(duration / textSpeedFactor) {
                     self.progressPrayer(completion: completion)
                 }
             }

@@ -1,17 +1,18 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  Prayer
 //
-//  Created by Cihat Gündüz (Privat) on 09.01.17.
+//  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBOutlets
 
     @IBOutlet var rakatCountInputField: UITextField!
+    @IBOutlet var textSpeedSegmentedControl: UISegmentedControl!
 
 
     // MARK: - IBActions
@@ -23,7 +24,8 @@ class ViewController: UIViewController {
         let navCtrl = UINavigationController(rootViewController: prayerViewCtrl)
         present(navCtrl, animated: true) {
             let salah = Salah(rakatCount: rakatCount)
-            prayerViewCtrl.startSalah(salah)
+            let textSpeedFactor: Double = 1.0 + Double(self.textSpeedSegmentedControl.selectedSegmentIndex - 1) * 0.33
+            prayerViewCtrl.start(salah: salah, textSpeedFactor: textSpeedFactor)
         }
     }
 
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
 
         self.view.endEditing(false)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(false)
+        return true
     }
 }
 

@@ -46,9 +46,9 @@
 		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
 		A16484D31E243898008EC78C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16484BE1E243898008EC78C /* Images.xcassets */; };
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
-		A16484D51E243898008EC78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* ViewController.swift */; };
+		A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* SettingsViewController.swift */; };
 		A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C51E243898008EC78C /* LaunchScreen.storyboard */; };
-		A16484D81E243898008EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C71E243898008EC78C /* Main.storyboard */; };
+		A16484D81E243898008EC78C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C71E243898008EC78C /* Settings.storyboard */; };
 		A16484DD1E2438A2008EC78C /* PrayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484D01E243898008EC78C /* PrayerUITests.swift */; };
 		A16484E31E243AAC008EC78C /* Salah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Salah.swift */; };
 		A16484E51E243B5F008EC78C /* Rakah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E41E243B5F008EC78C /* Rakah.swift */; };
@@ -89,9 +89,9 @@
 
 /* Begin PBXFileReference section */
 		A1494AE61E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A1494AE71E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		A1494AE71E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Settings.strings; sourceTree = "<group>"; };
 		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A1494AE91E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		A1494AE91E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Settings.strings; sourceTree = "<group>"; };
 		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
 		A1494AED1E25A9F100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Takbir.txt; sourceTree = "<group>"; };
 		A1494AEE1E25A9F200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Takbir.txt; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		A1494BB41E2EBF4F00286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BB61E2EBF5200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BB71E2EBF5200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1494BBA1E2ED3C600286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A1494BBA1E2ED3C600286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
 		A1494BBC1E2ED3C900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Prayer.storyboard; sourceTree = "<group>"; };
 		A1494BC31E2ED5D000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Prayer.strings; sourceTree = "<group>"; };
@@ -188,10 +188,10 @@
 		A16484AA1E243834008EC78C /* PrayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484BE1E243898008EC78C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A16484C01E243898008EC78C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A16484C11E243898008EC78C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A16484C11E243898008EC78C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A16484C31E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484C61E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A16484C81E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A16484C81E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		A16484CD1E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484D01E243898008EC78C /* PrayerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerUITests.swift; sourceTree = "<group>"; };
 		A16484D21E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -370,10 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				A16484DF1E243A81008EC78C /* Model */,
-				A16484E01E243A89008EC78C /* View */,
 				A16484E11E243A8D008EC78C /* View Controller */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
-				A16484C11E243898008EC78C /* ViewController.swift */,
+				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -391,7 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
-				A16484C71E243898008EC78C /* Main.storyboard */,
+				A16484C71E243898008EC78C /* Settings.storyboard */,
 				A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */,
 			);
 			path = "User Interface";
@@ -457,13 +456,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		A16484E01E243A89008EC78C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		A16484E11E243A8D008EC78C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,11 +471,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A16484B31E243834008EC78C /* Build configuration list for PBXNativeTarget "Prayer" */;
 			buildPhases = (
+				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
+				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
-				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
-				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
@@ -615,7 +607,7 @@
 				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
 				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
 				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
-				A16484D81E243898008EC78C /* Main.storyboard in Resources */,
+				A16484D81E243898008EC78C /* Settings.storyboard in Resources */,
 				A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +683,7 @@
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
-				A16484D51E243898008EC78C /* ViewController.swift in Sources */,
+				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
 				A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
@@ -995,7 +987,7 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		A16484C71E243898008EC78C /* Main.storyboard */ = {
+		A16484C71E243898008EC78C /* Settings.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A16484C81E243898008EC78C /* Base */,
@@ -1003,7 +995,7 @@
 				A1494AE91E25A9D500286EBF /* tr */,
 				A1494BBA1E2ED3C600286EBF /* en */,
 			);
-			name = Main.storyboard;
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

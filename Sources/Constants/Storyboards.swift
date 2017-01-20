@@ -45,21 +45,21 @@ struct StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }
-  enum Main: StoryboardSceneType {
-    static let storyboardName = "Main"
-
-    static func initialViewController() -> ViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? ViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
-  }
   enum Prayer: StoryboardSceneType {
     static let storyboardName = "Prayer"
 
     static func initialViewController() -> PrayerViewController {
       guard let vc = storyboard().instantiateInitialViewController() as? PrayerViewController else {
+        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+      }
+      return vc
+    }
+  }
+  enum Settings: StoryboardSceneType {
+    static let storyboardName = "Settings"
+
+    static func initialViewController() -> SettingsViewController {
+      guard let vc = storyboard().instantiateInitialViewController() as? SettingsViewController else {
         fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
       }
       return vc
