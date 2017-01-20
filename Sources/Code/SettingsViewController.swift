@@ -34,9 +34,11 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         let l10n = self.l10n.ChangeLanguageSheet.self
 
         let sheetCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .actionSheet)
-        for languageCode in supportedLanguageCodes {
+
+        for languageCode in Bundle.main.localizations.filter({ $0 != "Base" }) {
+
             let action = UIAlertAction(title: Locale.current.localizedString(forLanguageCode: languageCode), style: .default) { _ in
-                self.changeToLanguage(langCode: languageCode)
+                self.changeToLanguage(languageCode)
             }
             sheetCtrl.addAction(action)
         }
@@ -52,7 +54,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Stores Instance Properties
 
-    private let supportedLanguageCodes = ["en", "de", "tr"]
     private let l10n = L10n.Settings.self
 
 
@@ -64,7 +65,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(false)
     }
 
-    func changeToLanguage(langCode: String) {
+    func changeToLanguage(_ langCode: String) {
         if Locale.current.languageCode != langCode {
             let l10n = self.l10n.ConfirmAlert.self
 
