@@ -66,13 +66,14 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
 
     func changeToLanguage(_ langCode: String) {
-        if Locale.current.languageCode != langCode {
+        if Bundle.main.preferredLocalizations.first != langCode {
             let l10n = self.l10n.ConfirmAlert.self
 
             let confirmAlertCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .alert)
 
             let confirmAction = UIAlertAction(title: l10n.Action.confirm, style: .destructive) { _ in
                 UserDefaults.standard.set([langCode], forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
             }
             confirmAlertCtrl.addAction(confirmAction)
