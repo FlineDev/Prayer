@@ -107,10 +107,11 @@ class PrayerViewController: UIViewController {
 
             self.updateLabels()
             self.updateIcons()
+            self.title = self.salah.rakat[self.currentRakahIndex].components()[self.currentComponentIndex].name
             let duration = RakahComponent.lineChangeDuration.timeInterval + self.salah.rakat[0].components().first!.spokenTextLines.first!.estimatedReadingTime
             delay(bySeconds: duration) {
                 self.progressPrayer {
-                    // TODO: show something nice after prayer completed
+                    self.presentingViewController?.dismiss(animated: true, completion: nil)
                 }
             }
         }
