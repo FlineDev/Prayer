@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="width" constant="152" id="faV-8w-5Jb"/>
                                     <constraint firstAttribute="height" constant="30" id="q7x-WH-OAq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="didPressStartButton" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="fH5-Cg-8lF"/>
@@ -77,10 +77,23 @@
                                     <segment title="Fast"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mt-8G-mTR">
+                                <rect key="frame" x="234.5" y="172" width="300" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6tE-Vu-xac"/>
+                                    <constraint firstAttribute="width" constant="300" id="Xo9-BX-00t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change language"/>
+                                <connections>
+                                    <action selector="didPressChangeLanguageButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vwu-DO-px5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kmz-N6-I8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Sx-Ur-7eb"/>
+                            <constraint firstItem="4mt-8G-mTR" firstAttribute="top" secondItem="o47-hG-NDR" secondAttribute="bottom" constant="8" id="ISI-FQ-16a"/>
                             <constraint firstItem="o47-hG-NDR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UPd-b2-MPG"/>
                             <constraint firstItem="eHR-EL-C3b" firstAttribute="leading" secondItem="kJ4-5A-IjL" secondAttribute="trailing" constant="8" id="VyM-ZO-EqZ"/>
                             <constraint firstItem="o47-hG-NDR" firstAttribute="top" secondItem="kJ4-5A-IjL" secondAttribute="bottom" constant="8" id="W6J-3h-o6j"/>
@@ -91,10 +104,12 @@
                             <constraint firstItem="eHR-EL-C3b" firstAttribute="centerY" secondItem="kJ4-5A-IjL" secondAttribute="centerY" id="dNb-nR-2tY"/>
                             <constraint firstItem="NfP-WA-irn" firstAttribute="centerY" secondItem="o47-hG-NDR" secondAttribute="centerY" id="gmp-5y-7Od"/>
                             <constraint firstItem="kJ4-5A-IjL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="l87-xY-fbm"/>
+                            <constraint firstItem="4mt-8G-mTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lEh-th-HFR"/>
                             <constraint firstItem="kJ4-5A-IjL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pFR-Qk-Ywi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeLanguageButton" destination="4mt-8G-mTR" id="IzT-Ze-ObR"/>
                         <outlet property="rakatCountInputField" destination="eHR-EL-C3b" id="IiM-ip-yaT"/>
                         <outlet property="textSpeedSegmentedControl" destination="NfP-WA-irn" id="4Mb-Jf-GIh"/>
                     </connections>

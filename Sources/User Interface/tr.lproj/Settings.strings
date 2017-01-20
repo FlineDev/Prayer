@@ -12,7 +12,10 @@
 "NfP-WA-irn.segmentTitles[1]" = "Normal";
 
 /* Class = "UISegmentedControl"; NfP-WA-irn.segmentTitles[2] = "Fast"; ObjectID = "NfP-WA-irn"; */
-"NfP-WA-irn.segmentTitles[2]" = "Çabuk";
+"NfP-WA-irn.segmentTitles[2]" = "Hızlı";
 
 /* Class = "UILabel"; text = "Text Speed"; ObjectID = "o47-hG-NDR"; */
 "o47-hG-NDR.text" = "Metin hızı";
+
+/* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "4mt-8G-mTR"; */
+"4mt-8G-mTR.normalTitle" = "Dili değiştir";

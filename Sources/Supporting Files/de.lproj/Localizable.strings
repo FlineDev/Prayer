@@ -70,3 +70,24 @@
 
 /* No comment provided by engineer. */
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Jene, welche die Wahrheit leugnen";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Ändere die Sprache der App und ihrer Inhalte.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Wähle Sprache";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Jetzt beenden";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.MESSAGE" = "Damit die Sprache der App geändert werden kann, muss sie beendet und von dir wieder gestartet werden.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.TITLE" = "App-Neustart notwendig";

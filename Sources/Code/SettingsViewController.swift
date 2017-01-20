@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var rakatCountInputField: UITextField!
     @IBOutlet var textSpeedSegmentedControl: UISegmentedControl!
+    @IBOutlet var changeLanguageButton: UIButton!
 
 
     // MARK: - IBActions
@@ -29,10 +30,57 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    @IBAction func didPressChangeLanguageButton() {
+        let l10n = self.l10n.ChangeLanguageSheet.self
+
+        let sheetCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .actionSheet)
+        for languageCode in supportedLanguageCodes {
+            let action = UIAlertAction(title: Locale.current.localizedString(forLanguageCode: languageCode), style: .default) { _ in
+                self.changeToLanguage(langCode: languageCode)
+            }
+            sheetCtrl.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(title: l10n.Action.cancel, style: .cancel, handler: nil)
+        sheetCtrl.addAction(cancelAction)
+
+        sheetCtrl.popoverPresentationController?.sourceView = self.view
+        sheetCtrl.popoverPresentationController?.sourceRect = self.changeLanguageButton.frame
+        present(sheetCtrl, animated: true, completion: nil)
+    }
+
+
+    // MARK: - Stores Instance Properties
+
+    private let supportedLanguageCodes = ["en", "de", "tr"]
+    private let l10n = L10n.Settings.self
+
+
+    // MARK: - Instance Methods
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
         self.view.endEditing(false)
+    }
+
+    func changeToLanguage(langCode: String) {
+        if Locale.current.languageCode != langCode {
+            let l10n = self.l10n.ConfirmAlert.self
+
+            let confirmAlertCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .alert)
+
+            let confirmAction = UIAlertAction(title: l10n.Action.confirm, style: .destructive) { _ in
+                UserDefaults.standard.set([langCode], forKey: "AppleLanguages")
+                exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
+            }
+            confirmAlertCtrl.addAction(confirmAction)
+
+            let cancelAction = UIAlertAction(title: l10n.Action.cancel, style: .cancel, handler: nil)
+            confirmAlertCtrl.addAction(cancelAction)
+
+            present(confirmAlertCtrl, animated: true, completion: nil)
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -140,6 +140,35 @@ enum L10n {
       static let name = L10n.tr("RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME")
     }
   }
+
+  enum Settings {
+
+    enum ChangeLanguageSheet {
+      /// Change language of this app including its content.
+      static let message = L10n.tr("SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE")
+      /// Choose language
+      static let title = L10n.tr("SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE")
+
+      enum Action {
+        /// Cancel
+        static let cancel = L10n.tr("SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL")
+      }
+    }
+
+    enum ConfirmAlert {
+      /// In order to change the language, the App must be closed and reopened by you.
+      static let message = L10n.tr("SETTINGS.CONFIRM_ALERT.MESSAGE")
+      /// App restart required
+      static let title = L10n.tr("SETTINGS.CONFIRM_ALERT.TITLE")
+
+      enum Action {
+        /// Cancel
+        static let cancel = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.CANCEL")
+        /// Close now
+        static let confirm = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM")
+      }
+    }
+  }
 }
 
 extension L10n {

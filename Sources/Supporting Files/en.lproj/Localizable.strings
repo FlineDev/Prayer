@@ -70,3 +70,24 @@
 
 /* No comment provided by engineer. */
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Those Who Deny The Truth";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "Cancel";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Change language of this app including its content.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Choose language";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Cancel";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.MESSAGE" = "In order to change the language, the App must be closed and reopened by you.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.TITLE" = "App restart required";

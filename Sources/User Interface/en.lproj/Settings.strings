@@ -16,3 +16,6 @@
 
 /* Class = "UILabel"; text = "Text Speed"; ObjectID = "o47-hG-NDR"; */
 "o47-hG-NDR.text" = "Text speed";
+
+/* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "4mt-8G-mTR"; */
+"4mt-8G-mTR.normalTitle" = "Change language";

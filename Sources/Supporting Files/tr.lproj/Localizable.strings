@@ -70,3 +70,24 @@
 
 /* No comment provided by engineer. */
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "İnkarcılar";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "İptal";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Appin ve içindekilerin dilini değiştir.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Dil seç";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "İptal";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Şimdi kapat";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.MESSAGE" = "Appin dili değişmesi için kapatılması ve tekrar senden açılması gerekiyor.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.TITLE" = "Yeniden başlatma gerekiyor";
