@@ -67,6 +67,9 @@ class PrayerViewController: UIViewController {
     @IBOutlet var currentMovementIconView: UIImageView!
     @IBOutlet var nextMovementIconView: UIImageView!
 
+    @IBOutlet var currentLineComponentSeparator: UIView!
+    @IBOutlet var nextLineComponentSeparator: UIView!
+
 
     // MARK: - IBActions
 
@@ -82,6 +85,7 @@ class PrayerViewController: UIViewController {
 
         clearLabels()
         clearIcons()
+        clearSeparators()
     }
 
     deinit {
@@ -102,6 +106,8 @@ class PrayerViewController: UIViewController {
 
             self.updateLabels()
             self.updateIcons()
+            self.updateSeparators()
+
             self.title = self.salah.rakat[self.currentRakahIndex].components()[self.currentComponentIndex].name
             let duration = RakahComponent.lineChangeDuration.timeInterval + self.salah.rakat[0].components().first!.spokenTextLines.first!.estimatedReadingTime
             delay(bySeconds: duration / textSpeedFactor) {
@@ -121,6 +127,11 @@ class PrayerViewController: UIViewController {
     private func clearIcons() {
         currentMovementIconView.image = nil
         nextMovementIconView.image = nil
+    }
+
+    private func clearSeparators() {
+        currentLineComponentSeparator.isHidden = true
+        nextLineComponentSeparator.isHidden = true
     }
 
     private func playCountDown(completion: @escaping () -> Void) {
@@ -158,6 +169,7 @@ class PrayerViewController: UIViewController {
 
         updateLabels()
         updateIcons()
+        updateSeparators()
     }
 
     private func updateLabels() {
@@ -194,6 +206,11 @@ class PrayerViewController: UIViewController {
         } else {
             nextMovementIconView.image = nil
         }
+    }
+
+    private func updateSeparators() {
+        currentLineComponentSeparator.isHidden = currentSpokenTextLine != 0
+        nextLineComponentSeparator.isHidden = currentSpokenTextLine + 1 != salah.rakat[currentRakahIndex].components()[currentComponentIndex].spokenTextLines.count
     }
 
     private func moveOnToNextLine() -> Bool {
