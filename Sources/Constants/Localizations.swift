@@ -155,6 +155,18 @@ enum L10n {
       }
     }
 
+    enum ChangeMovementSoundSheet {
+      /// Change the instrument for the sound played on movements during prayer.
+      static let message = L10n.tr("SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE")
+      /// Choose movement instrument
+      static let title = L10n.tr("SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")
+
+      enum Action {
+        /// Cancel
+        static let cancel = L10n.tr("SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL")
+      }
+    }
+
     enum ConfirmAlert {
       /// In order to change the language, the App must be closed and reopened by you.
       static let message = L10n.tr("SETTINGS.CONFIRM_ALERT.MESSAGE")

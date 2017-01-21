@@ -81,6 +81,15 @@
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Choose language";
 
 /* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "Cancel";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Change the instrument for the sound played on movements during prayer.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
+
+/* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Cancel";
 
 /* No comment provided by engineer. */

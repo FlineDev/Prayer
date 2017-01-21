@@ -81,6 +81,15 @@
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Wähle Sprache";
 
 /* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Ändere das Instrument des Tons, welches bei Bewegungen beim Gebet abgespielt wird.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Wähle Instrument für Bewegungston";
+
+/* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Abbrechen";
 
 /* No comment provided by engineer. */

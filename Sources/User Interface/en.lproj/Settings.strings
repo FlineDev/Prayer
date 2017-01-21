@@ -19,3 +19,6 @@
 
 /* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "4mt-8G-mTR"; */
 "4mt-8G-mTR.normalTitle" = "Change language";
+
+/* Class = "UIButton"; normalTitle = "Change movement sound"; ObjectID = "EVU-iC-kg5"; */
+"EVU-iC-kg5.normalTitle" = "Change movement sound";

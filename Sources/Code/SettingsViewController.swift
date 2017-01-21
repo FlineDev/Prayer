@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var rakatCountInputField: UITextField!
     @IBOutlet var textSpeedSegmentedControl: UISegmentedControl!
     @IBOutlet var changeLanguageButton: UIButton!
+    @IBOutlet var movementSoundButton: UIButton!
 
 
     // MARK: - IBActions
@@ -51,6 +52,27 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         present(sheetCtrl, animated: true, completion: nil)
     }
 
+    @IBAction func didPressMovementSoundButton() {
+        let l10n = self.l10n.ChangeLanguageSheet.self
+        let sheetCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .actionSheet)
+
+        for instrument in RakahComponent.movementSoundInstruments {
+            let style: UIAlertActionStyle = instrument == RakahComponent.movementSoundInstrument ? .destructive : .default
+            
+            let action = UIAlertAction(title: instrument, style: style) { _ in
+                self.changeMovementSound(to: instrument)
+            }
+            sheetCtrl.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(title: l10n.Action.cancel, style: .cancel, handler: nil)
+        sheetCtrl.addAction(cancelAction)
+
+        sheetCtrl.popoverPresentationController?.sourceView = self.view
+        sheetCtrl.popoverPresentationController?.sourceRect = self.movementSoundButton.frame
+        present(sheetCtrl, animated: true, completion: nil)
+    }
+
 
     // MARK: - Stores Instance Properties
 
@@ -83,6 +105,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
             present(confirmAlertCtrl, animated: true, completion: nil)
         }
+    }
+
+    func changeMovementSound(to instrument: String) {
+        RakahComponent.movementSoundInstrument = instrument
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -17,6 +17,27 @@ class RakahComponent {
 
     static let lineChangeDuration = Duration.milliseconds(1_250)
     static let durationPerCharacter = Duration.milliseconds(55)
+    static let movementSoundInstruments = [
+        "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
+        "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth"
+    ]
+
+
+    // MARK: - Computed Type Properties
+
+    static var movementSoundInstrument: String {
+        get {
+            if let instrument = UserDefaults.standard.string(forKey: "MovementSoundInstrument") {
+                return instrument
+            }
+            return "Baroque Organ"
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "MovementSoundInstrument")
+            UserDefaults.standard.synchronize()
+        }
+
+    }
 
 
     // MARK: - Stored Instance Properties
@@ -25,6 +46,7 @@ class RakahComponent {
     let spokenTextLines: [String]
     let needsMovement: Bool
     let movementIcon: UIImage?
+    let movementSoundUrl: URL?
 
     let l10n = L10n.RakahComponent.self
 
@@ -32,18 +54,31 @@ class RakahComponent {
     // MARK: - Initializers
 
     init(_ component: Rakah.Component) {
+        var subdirectory: String? = nil
+
         switch component {
         case .takbir(let type):
             name = l10n.Takbir.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
             needsMovement = true
+
             switch type {
+            case .enclosing:
+                movementIcon = nil
+                subdirectory = "G-Short"
             case .up:
                 movementIcon = #imageLiteral(resourceName: "up_arrow")
+                subdirectory = "E-Short"
+            case .upSpecial:
+                movementIcon = #imageLiteral(resourceName: "up_arrow")
+                subdirectory = "E-Long"
             case .down:
                 movementIcon = #imageLiteral(resourceName: "down_arrow")
+                subdirectory = "C-Short"
+            case .downSpecial:
+                movementIcon = #imageLiteral(resourceName: "down_arrow")
+                subdirectory = "C-Long"
             }
-
         case .openingSupplication:
             name = l10n.OpeningSupplication.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Opening-Supplication")
@@ -99,6 +134,7 @@ class RakahComponent {
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
             needsMovement = true
             movementIcon = #imageLiteral(resourceName: "up_arrow")
+            subdirectory = "E-Short"
         case .sajdah:
             name = l10n.Sajdah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
@@ -123,11 +159,22 @@ class RakahComponent {
             name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
             needsMovement = true
+            subdirectory = "G-Short"
             
             switch type {
             case .right: movementIcon = #imageLiteral(resourceName: "right_arrow")
             case .left: movementIcon = #imageLiteral(resourceName: "left_arrow")
             }
+        }
+
+        if let subdirectory = subdirectory {
+            movementSoundUrl = Bundle.main.url(
+                forResource: RakahComponent.movementSoundInstrument,
+                withExtension: "caf",
+                subdirectory: subdirectory
+            )
+        } else {
+            movementSoundUrl = nil
         }
     }
 

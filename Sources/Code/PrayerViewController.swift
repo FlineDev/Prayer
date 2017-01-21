@@ -9,6 +9,7 @@
 import UIKit
 import HandySwift
 import SwiftyTimer
+import AVFoundation
 
 class PrayerViewController: UIViewController {
     // MARK: - Stored Instance Properties
@@ -88,7 +89,9 @@ class PrayerViewController: UIViewController {
         clearSeparators()
     }
 
-    deinit {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
         currentTimer?.invalidate()
         currentTimer = nil
     }
@@ -107,8 +110,12 @@ class PrayerViewController: UIViewController {
             self.updateLabels()
             self.updateIcons()
             self.updateSeparators()
+            if let soundUrl = self.salah.rakat[self.currentRakahIndex].components()[self.currentComponentIndex].movementSoundUrl {
+                self.playSound(at: soundUrl)
+            }
 
             self.title = self.salah.rakat[self.currentRakahIndex].components()[self.currentComponentIndex].name
+
             let duration = RakahComponent.lineChangeDuration.timeInterval + self.salah.rakat[0].components().first!.spokenTextLines.first!.estimatedReadingTime
             delay(bySeconds: duration / textSpeedFactor) {
                 self.progressPrayer {
@@ -159,7 +166,7 @@ class PrayerViewController: UIViewController {
                     }
                 }()
 
-                Timer.after(duration / textSpeedFactor) {
+                currentTimer = Timer.after(duration / textSpeedFactor) {
                     self.progressPrayer(completion: completion)
                 }
             }
@@ -227,6 +234,17 @@ class PrayerViewController: UIViewController {
             return false
         }
 
+        if let soundUrl = salah.rakat[currentRakahIndex].components()[currentComponentIndex].movementSoundUrl, currentSpokenTextLine == 0 {
+            playSound(at: soundUrl)
+        }
         return true
+    }
+
+    private var audioPlayer: AVAudioPlayer?
+
+    private func playSound(at url: URL) {
+        audioPlayer = try! AVAudioPlayer(contentsOf: url)
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.play()
     }
 }

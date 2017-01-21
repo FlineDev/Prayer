@@ -72,7 +72,7 @@
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "İnkarcılar";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "İptal";
+"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "İptal et";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Appin ve içindekilerin dilini değiştir.";
@@ -81,7 +81,16 @@
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Dil seç";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "İptal";
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "İptal et";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Namaz sırasında harketlerde oynayan tonun enstrumanı değiştir.";
+
+/* No comment provided by engineer. */
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Hareket tonun enstrumanını seç";
+
+/* No comment provided by engineer. */
+"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "İptal et";
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Şimdi kapat";

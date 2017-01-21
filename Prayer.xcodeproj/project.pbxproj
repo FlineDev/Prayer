@@ -53,6 +53,11 @@
 		A16484E31E243AAC008EC78C /* Salah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Salah.swift */; };
 		A16484E51E243B5F008EC78C /* Rakah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E41E243B5F008EC78C /* Rakah.swift */; };
 		A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E61E25503C008EC78C /* RakahComponent.swift */; };
+		A1701D641E33CE420080C0A1 /* E-Long in Resources */ = {isa = PBXBuildFile; fileRef = A1701D5F1E33CE420080C0A1 /* E-Long */; };
+		A1701D661E33CE420080C0A1 /* C-Long in Resources */ = {isa = PBXBuildFile; fileRef = A1701D611E33CE420080C0A1 /* C-Long */; };
+		A1701D671E33CE420080C0A1 /* C-Short in Resources */ = {isa = PBXBuildFile; fileRef = A1701D621E33CE420080C0A1 /* C-Short */; };
+		A1701D681E33CE420080C0A1 /* G-Short in Resources */ = {isa = PBXBuildFile; fileRef = A1701D631E33CE420080C0A1 /* G-Short */; };
+		A1701D6A1E33E7300080C0A1 /* E-Short in Resources */ = {isa = PBXBuildFile; fileRef = A1701D691E33E7300080C0A1 /* E-Short */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +203,11 @@
 		A16484E21E243AAC008EC78C /* Salah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salah.swift; sourceTree = "<group>"; };
 		A16484E41E243B5F008EC78C /* Rakah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rakah.swift; sourceTree = "<group>"; };
 		A16484E61E25503C008EC78C /* RakahComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponent.swift; sourceTree = "<group>"; };
+		A1701D5F1E33CE420080C0A1 /* E-Long */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "E-Long"; sourceTree = "<group>"; };
+		A1701D611E33CE420080C0A1 /* C-Long */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "C-Long"; sourceTree = "<group>"; };
+		A1701D621E33CE420080C0A1 /* C-Short */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "C-Short"; sourceTree = "<group>"; };
+		A1701D631E33CE420080C0A1 /* G-Short */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "G-Short"; sourceTree = "<group>"; };
+		A1701D691E33E7300080C0A1 /* E-Short */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "E-Short"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +369,7 @@
 		A16484BD1E243898008EC78C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A1701CF41E33CDC70080C0A1 /* Audio */,
 				A1494B201E29452B00286EBF /* Recitations */,
 				A1494AE31E2596B200286EBF /* SpokenTexts */,
 				A16484BE1E243898008EC78C /* Images.xcassets */,
@@ -372,7 +383,6 @@
 				A16484DF1E243A81008EC78C /* Model */,
 				A16484E11E243A8D008EC78C /* View Controller */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
-				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -459,9 +469,30 @@
 		A16484E11E243A8D008EC78C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
 			);
 			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		A1701CF41E33CDC70080C0A1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A1701CF51E33CDC70080C0A1 /* Movement Sounds */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A1701CF51E33CDC70080C0A1 /* Movement Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A1701D5F1E33CE420080C0A1 /* E-Long */,
+				A1701D691E33E7300080C0A1 /* E-Short */,
+				A1701D611E33CE420080C0A1 /* C-Long */,
+				A1701D621E33CE420080C0A1 /* C-Short */,
+				A1701D631E33CE420080C0A1 /* G-Short */,
+			);
+			path = "Movement Sounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,11 +616,15 @@
 				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
 				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
 				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
+				A1701D641E33CE420080C0A1 /* E-Long in Resources */,
 				A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */,
 				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
+				A1701D671E33CE420080C0A1 /* C-Short in Resources */,
 				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
+				A1701D661E33CE420080C0A1 /* C-Long in Resources */,
 				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
 				A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */,
+				A1701D6A1E33E7300080C0A1 /* E-Short in Resources */,
 				A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */,
 				A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */,
 				A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */,
@@ -599,6 +634,7 @@
 				A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */,
 				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
 				A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */,
+				A1701D681E33CE420080C0A1 /* G-Short in Resources */,
 				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
 				A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */,
 				A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */,

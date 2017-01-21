@@ -19,7 +19,7 @@ class RakahSpec: QuickSpec {
             let randomRecitation = "RR"
             let expectedComponentNames = [
                 "Takbīr", "Opening Supplication", "Ta'awwudh", "The Opening", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
-                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr"
+                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr"
             ]
 
             expect(rakah.components().count).to(equal(expectedComponentNames.count))
