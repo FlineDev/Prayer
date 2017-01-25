@@ -17,10 +17,6 @@ class RakahComponent {
 
     static let lineChangeDuration = Duration.milliseconds(1_250)
     static let durationPerCharacter = Duration.milliseconds(55)
-    static let movementSoundInstruments = [
-        "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
-        "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth"
-    ]
 
 
     // MARK: - Computed Type Properties

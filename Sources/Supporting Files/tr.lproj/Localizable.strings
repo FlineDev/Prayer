@@ -72,19 +72,13 @@
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "İnkarcılar";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "İptal et";
+"SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Arayüz dili";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Appin ve içindekilerin dilini değiştir.";
+"SETTINGS.APP_SECTION.TITLE" = "App ayarları";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Dil seç";
-
-/* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "İptal et";
-
-/* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Namaz sırasında harketlerde oynayan tonun enstrumanı değiştir.";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Hareket tonun enstrumanını seç";
@@ -100,3 +94,21 @@
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.TITLE" = "Yeniden başlatma gerekiyor";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Değişen metin hızı";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Değişmeyen metin hızı";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket sesin enstrümanı";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rekat sayısı";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.TITLE" = "Namaz ayarları";
+
+/* No comment provided by engineer. */
+"SETTINGS.TITLE" = "Ayarlar";

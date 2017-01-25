@@ -1,4 +1,8 @@
+github "xmartlabs/Eureka" "2.0.0-beta.1"
 github "Flinesoft/HandySwift" "1.4.1"
 github "Quick/Nimble" "v5.1.1"
 github "Quick/Quick" "v1.0.0"
+github "SwiftyBeaver/SwiftyBeaver" "1.1.1"
 github "radex/SwiftyTimer" "2.0.0"
+github "radex/SwiftyUserDefaults" "3.0.1"
+git "git@github.com:Dschee/Imperio.git" "a020bd1bb1349b95e694a1d2f2141e26ce776c0e"

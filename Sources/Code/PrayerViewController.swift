@@ -11,7 +11,7 @@ import HandySwift
 import SwiftyTimer
 import AVFoundation
 
-class PrayerViewController: UIViewController {
+class PrayerViewController: BrandedViewController {
     // MARK: - Stored Instance Properties
 
     private var salah: Salah!

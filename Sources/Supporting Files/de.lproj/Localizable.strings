@@ -72,19 +72,13 @@
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Jene, welche die Wahrheit leugnen";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "Abbrechen";
+"SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Interface-Sprache";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Ändere die Sprache der App und ihrer Inhalte.";
+"SETTINGS.APP_SECTION.TITLE" = "App-Einstellungen";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Wähle Sprache";
-
-/* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "Abbrechen";
-
-/* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Ändere das Instrument des Tons, welches bei Bewegungen beim Gebet abgespielt wird.";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Wähle Instrument für Bewegungston";
@@ -100,3 +94,21 @@
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.TITLE" = "App-Neustart notwendig";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Textgeschwindigkeit für wechselnden Text";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Textgeschwindigkeit für unveränderte Texte";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Bewegungssound-Instrument";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Anzahl der Rakat";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.TITLE" = "Gebetseinstellungen";
+
+/* No comment provided by engineer. */
+"SETTINGS.TITLE" = "Einstellungen";
