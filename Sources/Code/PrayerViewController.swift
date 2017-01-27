@@ -23,9 +23,11 @@ class PrayerViewController: BrandedViewController, Coordinatable {
     var viewModel: PrayerViewModel! {
         didSet {
             title = viewModel.currentComponentName
+            
             updateLineLabels()
             updateArrowLabels()
-//            updateSeparators()
+            updateSeparators()
+
             if let movementSoundUrl = viewModel.movementSoundUrl {
                 AudioPlayer.shared.playSound(at: movementSoundUrl)
             }
@@ -43,9 +45,8 @@ class PrayerViewController: BrandedViewController, Coordinatable {
     @IBOutlet var currentArrowLabel: UILabel!
     @IBOutlet var nextArrowLabel: UILabel!
 
-    // TODO: make separators work again
-//    @IBOutlet var currentLineComponentSeparator: UIView!
-//    @IBOutlet var nextLineComponentSeparator: UIView!
+    @IBOutlet var currentLineComponentSeparator: UIImageView!
+    @IBOutlet var nextLineComponentSeparator: UIImageView!
 
 
     // MARK: - Instance Methods
@@ -65,7 +66,7 @@ class PrayerViewController: BrandedViewController, Coordinatable {
 
         clearLineLabels()
         clearArrowLabels()
-//        clearSeparators()
+        clearSeparators()
     }
 
     private func clearLineLabels() {
@@ -81,10 +82,10 @@ class PrayerViewController: BrandedViewController, Coordinatable {
         nextArrowLabel.text = " "
     }
 
-//    private func clearSeparators() {
-//        currentLineComponentSeparator.isHidden = true
-//        nextLineComponentSeparator.isHidden = true
-//    }
+    private func clearSeparators() {
+        currentLineComponentSeparator.isHidden = true
+        nextLineComponentSeparator.isHidden = true
+    }
 
     private func updateLineLabels() {
         previousLineLabel.text = viewModel.previousLine ?? " "
@@ -98,8 +99,10 @@ class PrayerViewController: BrandedViewController, Coordinatable {
         nextArrowLabel.text = (viewModel.nextArrow?.rawValue ?? "") + " "
     }
 
-//    private func updateSeparators() {
-//        currentLineComponentSeparator.isHidden = !viewModel.currentIsComponentBeginning
-//        nextLineComponentSeparator.isHidden = !viewModel.nextIsComponentBeginning
-//    }
+    private func updateSeparators() {
+        if viewModel.previousLine != nil || viewModel.nextLine != nil {
+            currentLineComponentSeparator.isHidden = !viewModel.currentIsComponentBeginning
+            nextLineComponentSeparator.isHidden = !viewModel.nextIsComponentBeginning
+        }
+    }
 }
