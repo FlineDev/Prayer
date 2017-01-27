@@ -19,7 +19,25 @@ class RakahSpec: QuickSpec {
             let randomRecitation = "RR"
             let expectedComponentNames = [
                 "Takbīr", "Opening Supplication", "Ta'awwudh", "The Opening", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
-                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr"
+                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr"
+            ]
+
+            expect(rakah.components().count).to(equal(expectedComponentNames.count))
+            for (i, component) in rakah.components().enumerated() {
+                // skip comparison for random recitations
+                if expectedComponentNames[i] == randomRecitation { continue }
+                expect(component.name).to(equal(expectedComponentNames[i]))
+            }
+        }
+
+        it("has the correct components count for ending rakah") {
+            let rakah = Rakah(isBeginningOfPrayer: false, includesStandingRecitation: false, includesSittingRecitation: true, isEndOfPrayer: true)
+
+            let randomRecitation = "RR"
+            let expectedComponentNames = [
+                "The Opening", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
+                "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm", "Salâm"
             ]
 
             expect(rakah.components().count).to(equal(expectedComponentNames.count))

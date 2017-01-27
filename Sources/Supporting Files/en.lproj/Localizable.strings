@@ -72,31 +72,46 @@
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Those Who Deny The Truth";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.ACTION.CANCEL" = "Cancel";
+"SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Interface language";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_LANGUAGE_SHEET.MESSAGE" = "Change language of this app including its content.";
+"SETTINGS.APP_SECTION.TITLE" = "App Settings";
 
 /* No comment provided by engineer. */
 "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Choose language";
 
 /* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.ACTION.CANCEL" = "Cancel";
-
-/* No comment provided by engineer. */
-"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.MESSAGE" = "Change the instrument for the sound played on movements during prayer.";
-
-/* No comment provided by engineer. */
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Cancel";
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
+"SETTINGS.CONFIRM_ALERT.ACTION.LATER" = "Later";
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.MESSAGE" = "In order to change the language, the App must be closed and reopened by you.";
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.TITLE" = "App restart required";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Changing text speed";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Fixed texts speed";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rakat count";
+
+/* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.TITLE" = "Prayer Settings";
+
+/* No comment provided by engineer. */
+"SETTINGS.START_BUTTON.TITLE" = "Start prayer";
+
+/* No comment provided by engineer. */
+"SETTINGS.TITLE" = "Settings";

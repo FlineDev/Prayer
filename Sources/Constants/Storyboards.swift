@@ -55,16 +55,6 @@ struct StoryboardScene {
       return vc
     }
   }
-  enum Settings: StoryboardSceneType {
-    static let storyboardName = "Settings"
-
-    static func initialViewController() -> SettingsViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? SettingsViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
-  }
 }
 
 struct StoryboardSegue {
