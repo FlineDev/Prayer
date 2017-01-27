@@ -28,6 +28,12 @@ class PrayerViewController: BrandedViewController, Coordinatable {
             updateArrowLabels()
             updateSeparators()
 
+            if viewModel.isChapterName {
+                currentLineLabel.textColor = Color(named: .secondary)
+            } else {
+                currentLineLabel.textColor = UIColor.black
+            }
+
             if let movementSoundUrl = viewModel.movementSoundUrl {
                 AudioPlayer.shared.playSound(at: movementSoundUrl)
             }

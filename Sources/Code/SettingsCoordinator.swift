@@ -14,6 +14,7 @@ enum SettingsAction {
     case setRakat(Int)
     case setFixedPartSpeed(Double)
     case setChangingPartSpeed(Double)
+    case setShowChagingTextName(Bool)
     case changeLanguage(String)
     case confirmRestart
     case chooseInstrument(String)
@@ -51,6 +52,8 @@ class SettingsCoordinator: AppCoordinator {
                 weakSelf?.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
             case .setChangingPartSpeed(let changingPartSpeed):
                 weakSelf?.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+            case .setShowChagingTextName(let showName):
+                weakSelf?.settingsViewModel.showChangingTextName = showName
             case .changeLanguage(let langCode):
                 weakSelf?.settingsViewModel.interfaceLanguageCode = langCode
                 weakSelf?.settingsViewCtrl.showRestartConfirmDialog()
@@ -81,6 +84,7 @@ class SettingsCoordinator: AppCoordinator {
             salah: salah,
             fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
             changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
+            showChangingTextName: settingsViewModel.showChangingTextName,
             movementSoundInstrument: settingsViewModel.movementSoundInstrument
         )
 

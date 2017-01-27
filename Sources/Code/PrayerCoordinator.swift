@@ -8,6 +8,7 @@
 
 import UIKit
 import Imperio
+import HandySwift
 
 enum PrayerAction {
     case doneButtonPressed
@@ -19,6 +20,7 @@ class PrayerCoordinator: Coordinator {
     private let salah: Salah
     private let fixedTextSpeedsFactor: Double
     private let changingTextSpeedFactor: Double
+    private let showChangingTextName: Bool
     private let movementSoundInstrument: String
 
     private var prayerState: PrayerState!
@@ -38,10 +40,11 @@ class PrayerCoordinator: Coordinator {
     // MARK: - Initializers
 
     init(presentingViewController: UIViewController, salah: Salah, fixedTextSpeedsFactor: Double,
-         changingTextSpeedFactor: Double, movementSoundInstrument: String) {
+         changingTextSpeedFactor: Double, showChangingTextName: Bool, movementSoundInstrument: String) {
         self.salah = salah
         self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
         self.changingTextSpeedFactor = changingTextSpeedFactor
+        self.showChangingTextName = showChangingTextName
         self.movementSoundInstrument = movementSoundInstrument
 
         super.init(presentingViewController: presentingViewController)
@@ -85,7 +88,7 @@ class PrayerCoordinator: Coordinator {
         return PrayerViewModel(
             currentComponentName: L10n.PrayerView.Countdown.name,
             previousArrow: nil, previousLine: nil, currentArrow: nil,
-            currentLine: "\(count)", currentIsComponentBeginning: false,
+            currentLine: "\(count)", isChapterName: false, currentIsComponentBeginning: false,
             nextArrow: nil, nextLine: nil, nextIsComponentBeginning: true,
             movementSoundUrl: nil
         )
@@ -108,6 +111,32 @@ class PrayerCoordinator: Coordinator {
     func progressPrayer() {
         timer = Timer.after(prayerState.currentLineReadingTime) {
             if self.prayerState.moveToNextLine() {
+                let viewModel = self.prayerState.prayerViewModel()
+
+                // show changing text info if chosen
+                if self.showChangingTextName && viewModel.currentIsComponentBeginning {
+                    if let chapterNum = self.prayerState.currentRecitationChapterNum {
+                        let infoViewModel = PrayerViewModel(
+                            currentComponentName: viewModel.currentComponentName, previousArrow: viewModel.previousArrow,
+                            previousLine: viewModel.previousLine, currentArrow: viewModel.currentArrow,
+                            currentLine: "📖\(chapterNum): \(viewModel.currentComponentName)", isChapterName: true,
+                            currentIsComponentBeginning: viewModel.currentIsComponentBeginning,
+                            nextArrow: viewModel.nextArrow, nextLine: viewModel.nextLine,
+                            nextIsComponentBeginning: viewModel.nextIsComponentBeginning,
+                            movementSoundUrl: viewModel.movementSoundUrl
+                        )
+                        self.prayerViewCtrl.viewModel = infoViewModel
+
+                        let rememberTime: TimeInterval = 1.0
+                        let waitTime = infoViewModel.currentLine.estimatedReadingTime + rememberTime
+                        delay(bySeconds: waitTime) {
+                            self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
+                            self.progressPrayer()
+                        }
+                        return
+                    }
+                }
+
                 self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
                 self.progressPrayer()
             } else {

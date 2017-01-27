@@ -63,6 +63,8 @@ class PrayerState {
         return AudioPlayer.shared.movementSoundUrl(name: movementSound, instrument: movementSoundInstrument)
     }
 
+    var currentRecitationChapterNum: Int? { return currentComponent.chapterNumber }
+
     private var nextRakah: Rakah? {
         guard rakatIndex + 1 < salah.rakat.count else { return nil }
         return salah.rakat[rakatIndex + 1]
@@ -121,6 +123,7 @@ class PrayerState {
             previousLine: previousLine,
             currentArrow: currentArrow,
             currentLine: currentLine,
+            isChapterName: false,
             currentIsComponentBeginning: lineIndex == 0,
             nextArrow: nextArrow,
             nextLine: nextLine,

@@ -99,6 +99,9 @@
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Zeitfaktor wechselnder Text";
 
 /* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name für wechselnden Text";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Zeitfaktor unveränderte Texte";
 
 /* No comment provided by engineer. */
