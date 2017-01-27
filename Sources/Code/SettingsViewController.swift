@@ -42,6 +42,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         super.viewDidLoad()
 
         title = NSLocalizedString("SETTINGS.TITLE", comment: "")
+        tableView?.backgroundColor = Color(named: .background).change(.brightness, to: 0.95)
 
         let appSection = Section(l10n.AppSection.title)
             <<< ActionSheetRow<String>() { row in
@@ -97,7 +98,11 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
 
         let startSection = Section()
             <<< ButtonRow() { row in
-                row.title = "Start"
+                row.title = L10n.Settings.StartButton.title
+            }.cellSetup { (cell, _) in
+                cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightSemibold)
+            }.cellUpdate { (cell, _) in
+                cell.textLabel?.textColor = Color(named: .accent)
             }.onCellSelection { (_, _) in
                 self.coordinate(.startPrayer)
             }

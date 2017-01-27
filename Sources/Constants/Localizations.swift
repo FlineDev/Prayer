@@ -203,6 +203,11 @@ enum L10n {
         static let title = L10n.tr("SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE")
       }
     }
+
+    enum StartButton {
+      /// Start prayer
+      static let title = L10n.tr("SETTINGS.START_BUTTON.TITLE")
+    }
   }
 }
 
