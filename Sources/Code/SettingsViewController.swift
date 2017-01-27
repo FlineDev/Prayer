@@ -86,6 +86,13 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
                 let speed = Double(rowValue)
                 self.coordinate(.setChangingPartSpeed(speed))
             }
+            <<< SwitchRow() { row in
+                row.title = l10n.PrayerSection.ChangingTextName.title
+                row.value = viewModel.showChangingTextName
+            }.onChange { row in
+                guard let rowValue = row.value else { log.error("Show changing text name had nil value."); return }
+                self.coordinate(.setShowChagingTextName(rowValue))
+            }
             <<< PushRow<String>() { row in
                 row.title = l10n.PrayerSection.MovementSoundInstrument.title
                 row.options = SettingsViewModel.availableMovementSoundInstruments

@@ -13,6 +13,7 @@ extension DefaultsKeys {
     static let rakatCount = DefaultsKey<Int?>("RakatCount")
     static let fixedTextsSpeedFactor = DefaultsKey<Double?>("FixedTextsSpeedFactor")
     static let changingTextSpeedFactor = DefaultsKey<Double?>("ChangingTextSpeedFactor")
+    static let showChangingTextName = DefaultsKey<Bool?>("ShowChangingTextName")
     static let interfaceLanguageCode = DefaultsKey<[String]?>("AppleLanguages") // see http://stackoverflow.com/a/9939963/3451975
     static let movementSoundInstrument = DefaultsKey<String?>("MovementSoundInstrument")
 }
@@ -43,6 +44,11 @@ class SettingsViewModel {
     var changingTextSpeedFactor: Double {
         get { guard let doubleValue = Defaults[.changingTextSpeedFactor] else { return 1.0 }; return doubleValue }
         set { Defaults[.changingTextSpeedFactor] = newValue }
+    }
+
+    var showChangingTextName: Bool {
+        get { guard let boolValue = Defaults[.showChangingTextName] else { return false }; return boolValue }
+        set { Defaults[.showChangingTextName] = newValue }
     }
 
     private var currentLangCode: String { return Bundle.main.preferredLocalizations.first! }

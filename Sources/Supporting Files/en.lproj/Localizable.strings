@@ -99,6 +99,9 @@
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Changing text speed";
 
 /* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Changing text name";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Fixed texts speed";
 
 /* No comment provided by engineer. */

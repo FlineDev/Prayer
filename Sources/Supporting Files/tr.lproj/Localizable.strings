@@ -99,6 +99,9 @@
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Değişen metin hızı";
 
 /* No comment provided by engineer. */
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Değişen metin adı";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Değişmeyen metin hızı";
 
 /* No comment provided by engineer. */

@@ -188,6 +188,11 @@ enum L10n {
         static let title = L10n.tr("SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE")
       }
 
+      enum ChangingTextName {
+        /// Changing text name
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
+      }
+
       enum FixedTexts {
         /// Fixed texts speed
         static let title = L10n.tr("SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE")
