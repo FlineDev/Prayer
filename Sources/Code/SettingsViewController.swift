@@ -60,6 +60,10 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             <<< IntRow() { row in
                 row.title = l10n.PrayerSection.RakatCount.title
                 row.value = viewModel.rakatCount
+            }.onCellHighlightChanged { (cell, row) in
+                if cell.textField.isFirstResponder {
+                    row.value = nil
+                }
             }.onChange { row in
                 guard let rowValue = row.value else { log.error("Rakat row had nil value."); return }
                 self.coordinate(.setRakat(rowValue))
