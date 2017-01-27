@@ -122,48 +122,4 @@ class PrayerCoordinator: Coordinator {
         timer = nil
         UIApplication.shared.isIdleTimerDisabled = false
     }
-
-
-//    func finish() {
-//        currentTimer?.invalidate()
-//        currentTimer = nil
-//    }
-//
-//    private var currentTimer: Timer?
-//    private var currentRakahIndex = 0
-//    private var currentComponentIndex = 0 {
-//        didSet {
-//            title = salah.rakat[currentRakahIndex].components()[currentComponentIndex].name
-//        }
-//    }
-//    private var currentSpokenTextLine = 0
-//
-//
-//
-//    private func progressPrayer(completion: @escaping () -> Void) {
-//        if moveOnToNextLine() {
-//            if let currentLineText = currentLineText {
-//                let duration: TimeInterval = {
-//                    if currentSpokenTextLine == 0 && self.salah.rakat[currentRakahIndex].components()[currentComponentIndex].needsMovement {
-//                        return RakahComponent.lineChangeDuration.timeInterval + currentLineText.estimatedReadingTime
-//                    } else {
-//                        return currentLineText.estimatedReadingTime
-//                    }
-//                }()
-//
-//
-//                currentTimer = Timer.after(duration / textSpeedFactor) {
-//                    self.progressPrayer(completion: completion)
-//                }
-//            }
-//        } else {
-//            completion()
-//        }
-//
-//        updateLabels()
-//        updateIcons()
-//        updateSeparators()
-//    }
-//    
-
 }
