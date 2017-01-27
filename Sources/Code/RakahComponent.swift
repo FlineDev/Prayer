@@ -15,7 +15,6 @@ typealias Duration = DispatchTimeInterval
 class RakahComponent {
     // MARK: - Stored Type Properties
 
-    static let lineChangeDuration = Duration.milliseconds(1_250)
     static let durationPerCharacter = Duration.milliseconds(55)
 
 
@@ -32,7 +31,6 @@ class RakahComponent {
             UserDefaults.standard.set(newValue, forKey: "MovementSoundInstrument")
             UserDefaults.standard.synchronize()
         }
-
     }
 
 
@@ -196,6 +194,7 @@ class RakahComponent {
             chapterNumber = nil
         }
     }
+
 
     // MARK: - Type Methods
 

@@ -8,13 +8,18 @@
 
 import UIKit
 
-enum Position {
-    case standing
-    case bending
-    case sitting
-    case worship
-    case salamRight
-    case salamLeft
+enum Position: Int {
+    // NOTE: Values reflect the approximate head position in centimeters
+    case standing   = 180
+    case bending    = 120
+    case sitting    = 50
+    case worship    = 10
+    case salamRight = 49
+    case salamLeft  = 51
+
+    // MARK: - Type Properties
+
+    private static let baseMovementDuration = Duration.milliseconds(1_400)
 
 
     // MARK: - Case Methods
@@ -41,6 +46,13 @@ enum Position {
         }
 
         return nil
+    }
+
+    func movementDuration(forChangingTo newPosition: Position) -> TimeInterval {
+        if abs(self.rawValue - newPosition.rawValue) > 100 {
+            return 1.5 * Position.baseMovementDuration.timeInterval
+        }
+        return Position.baseMovementDuration.timeInterval
     }
 }
 
