@@ -18,10 +18,10 @@ class BrandedNavigationController: UINavigationController {
     }
 
     override var shouldAutorotate: Bool {
-        return visibleViewController!.shouldAutorotate
+        return topViewController!.shouldAutorotate
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return visibleViewController!.supportedInterfaceOrientations
+        return topViewController!.supportedInterfaceOrientations
     }
 }
