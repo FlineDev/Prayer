@@ -100,6 +100,9 @@ class PrayerCoordinator: Coordinator {
         )
         prayerViewCtrl.viewModel = prayerState.prayerViewModel()
         progressPrayer()
+
+        // prevent screen from locking
+        UIApplication.shared.isIdleTimerDisabled = true
     }
 
     func progressPrayer() {
@@ -117,6 +120,7 @@ class PrayerCoordinator: Coordinator {
     func cleanup() {
         timer?.invalidate()
         timer = nil
+        UIApplication.shared.isIdleTimerDisabled = false
     }
 
 
