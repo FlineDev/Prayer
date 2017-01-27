@@ -16,4 +16,12 @@ class BrandedNavigationController: UINavigationController {
 
         Branding.shared.setupViewControllerAppearance(self)
     }
+
+    override var shouldAutorotate: Bool {
+        return visibleViewController!.shouldAutorotate
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return visibleViewController!.supportedInterfaceOrientations
+    }
 }

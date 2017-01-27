@@ -59,6 +59,22 @@ class PrayerViewController: BrandedViewController, Coordinatable {
         navigationItem.rightBarButtonItem = doneItem
     }
 
+    override var shouldAutorotate: Bool { return false }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        switch UIApplication.shared.statusBarOrientation {
+        case .portrait:
+            return .portrait
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
+        case .landscapeLeft:
+            return .landscapeLeft
+        case .landscapeRight:
+            return .landscapeRight
+        default:
+            return .all
+        }
+    }
+
     func doneButtonPressed() { coordinate(.doneButtonPressed) }
 
     override func viewWillAppear(_ animated: Bool) {
