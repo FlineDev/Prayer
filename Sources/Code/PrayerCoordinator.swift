@@ -118,12 +118,10 @@ class PrayerCoordinator: Coordinator {
                     if let chapterNum = self.prayerState.currentRecitationChapterNum {
                         let infoViewModel = PrayerViewModel(
                             currentComponentName: viewModel.currentComponentName, previousArrow: viewModel.previousArrow,
-                            previousLine: viewModel.previousLine, currentArrow: viewModel.currentArrow,
+                            previousLine: viewModel.previousLine, currentArrow: nil,
                             currentLine: "📖\(chapterNum): \(viewModel.currentComponentName)", isChapterName: true,
-                            currentIsComponentBeginning: viewModel.currentIsComponentBeginning,
-                            nextArrow: viewModel.nextArrow, nextLine: viewModel.nextLine,
-                            nextIsComponentBeginning: viewModel.nextIsComponentBeginning,
-                            movementSoundUrl: viewModel.movementSoundUrl
+                            currentIsComponentBeginning: true, nextArrow: nil, nextLine: viewModel.currentLine,
+                            nextIsComponentBeginning: false, movementSoundUrl: viewModel.movementSoundUrl
                         )
                         self.prayerViewCtrl.viewModel = infoViewModel
 
