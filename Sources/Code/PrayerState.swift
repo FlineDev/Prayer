@@ -52,7 +52,7 @@ class PrayerState {
         var readingTime = currentLine.estimatedReadingTime / readingSpeedupFactor
 
         if lineIndex == 0 && currentComponent.needsMovement {
-            readingTime += RakahComponent.lineChangeDuration.timeInterval // TODO: move out of RakahComponent!
+            readingTime += previousPositon.movementDuration(forChangingTo: currentPosition)
         }
 
         return readingTime
