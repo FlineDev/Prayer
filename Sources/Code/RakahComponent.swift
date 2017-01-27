@@ -39,6 +39,7 @@ class RakahComponent {
     // MARK: - Stored Instance Properties
 
     let name: String
+    let chapterNumber: Int?
     let spokenTextLines: [String]
     let needsMovement: Bool
     let position: Position
@@ -58,6 +59,7 @@ class RakahComponent {
             needsMovement = true
             position = pos
             isChangingText = false
+            chapterNumber = nil
 
             if longSitting {
                 movementSound = "E-Long"
@@ -77,6 +79,7 @@ class RakahComponent {
             position = .standing
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .taawwudh:
             name = l10n.Taawwudh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Taawwudh")
@@ -84,35 +87,49 @@ class RakahComponent {
             position = .standing
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .recitation(fileName: let fileName):
             let l10n = L10n.Recitation.self
 
             switch fileName {
             case "001_The-Opening":
+                chapterNumber = 1
                 name = l10n.TheOpening.name
             case "103_The-Flight-of-Time":
+                chapterNumber = 103
                 name = l10n.TheFlightOfTime.name
             case "104_The-Slanderer":
+                chapterNumber = 104
                 name = l10n.TheSlanderer.name
             case "105_The-Elephant":
+                chapterNumber = 105
                 name = l10n.TheElephant.name
             case "106_Quraysh":
+                chapterNumber = 106
                 name = l10n.Quraysh.name
             case "107_Assistance":
+                chapterNumber = 107
                 name = l10n.Assistance.name
             case "108_Good-in-Abundance":
+                chapterNumber = 108
                 name = l10n.GoodInAbundance.name
             case "109_Those-Who-Deny-the-Truth":
+                chapterNumber = 109
                 name = l10n.ThoseWhoDenyTheTruth.name
             case "110_Succour":
+                chapterNumber = 110
                 name = l10n.Succour.name
             case "111_The-Twisted-Strands":
+                chapterNumber = 111
                 name = l10n.TheTwistedStrands.name
             case "112_The-Declaration-of-Gods-Perfection":
+                chapterNumber = 112
                 name = l10n.TheDecleratiionOfGodsPerfection.name
             case "113_The-Rising-Dawn":
+                chapterNumber = 113
                 name = l10n.TheRisingDawn.name
             case "114_Men":
+                chapterNumber = 114
                 name = l10n.Men.name
             default: preconditionFailure()
             }
@@ -128,6 +145,7 @@ class RakahComponent {
             position = .bending
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .straighteningUp:
             name = l10n.StraighteningUp.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
@@ -135,6 +153,7 @@ class RakahComponent {
             position = .standing
             movementSound = "E-Short"
             isChangingText = false
+            chapterNumber = nil
         case .sajdah:
             name = l10n.Sajdah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
@@ -142,6 +161,7 @@ class RakahComponent {
             position = .worship
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .tashahhud:
             name = l10n.Tashahhud.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Tashahhud")
@@ -149,6 +169,7 @@ class RakahComponent {
             position = .sitting
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .salatulIbrahimiyyah:
             name = l10n.SalatulIbrahimiyyah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salatul-Ibrahimiyyah")
@@ -156,6 +177,7 @@ class RakahComponent {
             position = .sitting
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .rabbanagh:
             name = l10n.Rabbanagh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
@@ -163,6 +185,7 @@ class RakahComponent {
             position = .sitting
             movementSound = nil
             isChangingText = false
+            chapterNumber = nil
         case .salam(let pos):
             name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
@@ -170,6 +193,7 @@ class RakahComponent {
             movementSound = "G-Short"
             isChangingText = false
             position = pos
+            chapterNumber = nil
         }
     }
 

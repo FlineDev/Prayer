@@ -84,6 +84,7 @@ class SettingsCoordinator: AppCoordinator {
             salah: salah,
             fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
             changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
+            showChangingTextName: settingsViewModel.showChangingTextName,
             movementSoundInstrument: settingsViewModel.movementSoundInstrument
         )
 
