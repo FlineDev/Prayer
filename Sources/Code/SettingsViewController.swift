@@ -66,8 +66,8 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             <<< SliderRow() { row in
                 row.title = l10n.PrayerSection.FixedTexts.title
                 row.value = Float(viewModel.fixedTextsSpeedFactor)
-                row.minimumValue = 0.25
-                row.maximumValue = 4.0
+                row.minimumValue = 0.5
+                row.maximumValue = 2.0
                 row.steps = UInt((row.maximumValue - row.minimumValue) / 0.05)
             }.onChange { row in
                 guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
@@ -77,8 +77,8 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             <<< SliderRow() { row in
                 row.title = l10n.PrayerSection.ChangingText.title
                 row.value = Float(viewModel.changingTextSpeedFactor)
-                row.minimumValue = 0.25
-                row.maximumValue = 4.0
+                row.minimumValue = 0.5
+                row.maximumValue = 2.0
                 row.steps = UInt((row.maximumValue - row.minimumValue) / 0.05)
             }.onChange { row in
                 guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
@@ -98,7 +98,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         let startSection = Section()
             <<< ButtonRow() { row in
                 row.title = "Start"
-            }.onChange { _ in
+            }.onCellSelection { (_, _) in
                 self.coordinate(.startPrayer)
             }
         form.append(startSection)
@@ -107,18 +107,18 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
 
     // MARK: - Instance Methods
 
-    func showConfirmDialog(forLanguageChange langCode: String) {
+    func showRestartConfirmDialog() {
         let l10n = self.l10n.ConfirmAlert.self
 
         let confirmAlertCtrl = UIAlertController(title: l10n.title, message: l10n.message, preferredStyle: .alert)
 
         let confirmAction = UIAlertAction(title: l10n.Action.confirm, style: .destructive) { _ in
-            self.coordinate(.confirmLanguageChange(langCode))
+            self.coordinate(.confirmRestart)
         }
         confirmAlertCtrl.addAction(confirmAction)
 
-        let cancelAction = UIAlertAction(title: l10n.Action.cancel, style: .cancel, handler: nil)
-        confirmAlertCtrl.addAction(cancelAction)
+        let laterAction = UIAlertAction(title: l10n.Action.later, style: .cancel, handler: nil)
+        confirmAlertCtrl.addAction(laterAction)
 
         present(confirmAlertCtrl, animated: true, completion: nil)
     }

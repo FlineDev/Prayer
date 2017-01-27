@@ -1,144 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTb-Em-gV9">
-    <device id="ipad9_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gp9-NW-NNQ">
+    <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="vOr-J9-Zv5">
-            <objects>
-                <navigationController id="eaD-gD-qaH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W1w-2K-J1P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cTb-Em-gV9" kind="relationship" relationship="rootViewController" id="9HO-kc-Hrg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jze-Z3-Feq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-291" y="168"/>
-        </scene>
         <!--Prayer View Controller-->
-        <scene sceneID="Hdj-Zt-egq">
+        <scene sceneID="Ruq-sT-d4E">
             <objects>
-                <viewController id="cTb-Em-gV9" customClass="PrayerViewController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gp9-NW-NNQ" customClass="PrayerViewController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fOl-mh-tsy"/>
-                        <viewControllerLayoutGuide type="bottom" id="YkE-dX-Isc"/>
+                        <viewControllerLayoutGuide type="top" id="412-9a-0bj"/>
+                        <viewControllerLayoutGuide type="bottom" id="4V3-eo-NF4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L2T-1l-blY">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <view key="view" contentMode="scaleToFill" id="7UV-4X-BDj">
+                        <rect key="frame" x="0.0" y="64" width="1366" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the name of God, The Most Gracious, The Dispenser of Grace:  #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-rQ-1e9">
-                                <rect key="frame" x="104" y="275" width="900" height="219"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God is greater! #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FY-aU-bF0">
-                                <rect key="frame" x="104" y="72" width="900" height="154"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All praise is due to God alone, the Sustainer of all the worlds,  #bc-ignore!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkD-ph-EMg">
-                                <rect key="frame" x="104" y="595" width="900" height="153"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-6I-x6u">
-                                <rect key="frame" x="20" y="639" width="64" height="64"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="LH3-D5-ItX"/>
-                                    <constraint firstAttribute="width" constant="64" id="nfd-NO-teY"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-6R-veV">
-                                <rect key="frame" x="20" y="352" width="64" height="64"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="2bk-Wn-uN5"/>
-                                    <constraint firstAttribute="width" constant="64" id="z4v-YO-bnw"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-Hs-E1M">
-                                <rect key="frame" x="104" y="574" width="256" height="1"/>
-                                <color key="backgroundColor" red="0.69411764710000001" green="0.78039215689999997" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="vSf-ok-IS4"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-Hp-bP9">
-                                <rect key="frame" x="104" y="254" width="256" height="1"/>
-                                <color key="backgroundColor" red="0.69411764710000001" green="0.78039215689999997" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="NED-5E-k8E"/>
-                                    <constraint firstAttribute="height" constant="1" id="WPj-Ij-xav"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-Kl-VJt">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="960"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6KQ-zZ-19x">
+                                        <rect key="frame" x="20" y="10" width="1326" height="277.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o45-ce-Jad">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="277.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="62"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="400" verticalCompressionResistancePriority="400" text="All praise is due to God alone, the Sustainer of all the worlds," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-2h-xh7">
+                                                <rect key="frame" x="15" y="0.0" width="1311" height="277.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="54"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cnv-4X-Y4z">
+                                        <rect key="frame" x="20" y="307.5" width="1326" height="318.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↓ " lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-vA-dz9">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="318.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="500" text="In the name of God, The Most Gracious, The Dispenser of Grace:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpF-sR-yLO">
+                                                <rect key="frame" x="63" y="0.0" width="1263" height="318.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NgH-gP-L94">
+                                        <rect key="frame" x="20" y="646" width="1326" height="304"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→ " lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbh-cg-HzJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="304"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="62"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" text="All praise is due to God alone, the Sustainer of all the worlds," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kq9-9u-4eW">
+                                                <rect key="frame" x="63" y="0.0" width="1263" height="304"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="54"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="10" left="20" bottom="10" right="20"/>
+                                <variation key="widthClass=compact" spacing="8">
+                                    <edgeInsets key="layoutMargins" top="4" left="8" bottom="4" right="8"/>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JkD-ph-EMg" firstAttribute="leading" secondItem="BJn-6I-x6u" secondAttribute="trailing" constant="20" id="1co-h4-B1o"/>
-                            <constraint firstItem="JkD-ph-EMg" firstAttribute="top" secondItem="pEJ-Hs-E1M" secondAttribute="bottom" constant="20" id="4It-Rq-ku5"/>
-                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="centerY" secondItem="L2T-1l-blY" secondAttribute="centerY" id="6tG-AH-S24"/>
-                            <constraint firstItem="u6E-Hp-bP9" firstAttribute="width" secondItem="L2T-1l-blY" secondAttribute="width" multiplier="1:4" id="C2J-9y-KUG"/>
-                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="top" secondItem="u6E-Hp-bP9" secondAttribute="bottom" constant="20" id="Co5-B5-qnE"/>
-                            <constraint firstAttribute="trailing" secondItem="0FY-aU-bF0" secondAttribute="trailing" constant="20" id="Jcg-76-2Zs"/>
-                            <constraint firstItem="oVp-6R-veV" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="20" id="MTV-TR-qSA"/>
-                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:35" id="Nno-7T-h2q"/>
-                            <constraint firstItem="BJn-6I-x6u" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="20" id="V1K-JR-DRS"/>
-                            <constraint firstItem="oVp-6R-veV" firstAttribute="centerY" secondItem="P5c-rQ-1e9" secondAttribute="centerY" id="VIs-oP-gxX"/>
-                            <constraint firstAttribute="trailing" secondItem="JkD-ph-EMg" secondAttribute="trailing" constant="20" id="Vfh-Nc-FJ2"/>
-                            <constraint firstItem="0FY-aU-bF0" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leading" constant="104" id="WOy-qY-dBB"/>
-                            <constraint firstItem="YkE-dX-Isc" firstAttribute="top" secondItem="JkD-ph-EMg" secondAttribute="bottom" constant="20" id="Xsu-0M-Vii"/>
-                            <constraint firstItem="0FY-aU-bF0" firstAttribute="top" secondItem="fOl-mh-tsy" secondAttribute="bottom" constant="8" id="YO3-qr-MWr"/>
-                            <constraint firstItem="0FY-aU-bF0" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:50" id="drm-86-DDr"/>
-                            <constraint firstItem="BJn-6I-x6u" firstAttribute="centerY" secondItem="JkD-ph-EMg" secondAttribute="centerY" id="eao-V9-rtc"/>
-                            <constraint firstItem="P5c-rQ-1e9" firstAttribute="leading" secondItem="oVp-6R-veV" secondAttribute="trailing" constant="20" id="eqm-Ge-8bm"/>
-                            <constraint firstItem="pEJ-Hs-E1M" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leadingMargin" constant="84" id="kT8-C3-itb"/>
-                            <constraint firstAttribute="trailing" secondItem="P5c-rQ-1e9" secondAttribute="trailing" constant="20" id="m44-RO-rK1"/>
-                            <constraint firstItem="pEJ-Hs-E1M" firstAttribute="width" secondItem="L2T-1l-blY" secondAttribute="width" multiplier="1:4" id="uqM-87-YP9"/>
-                            <constraint firstItem="JkD-ph-EMg" firstAttribute="height" secondItem="L2T-1l-blY" secondAttribute="height" multiplier="10:50" id="wNx-3r-fZ4"/>
-                            <constraint firstItem="u6E-Hp-bP9" firstAttribute="leading" secondItem="L2T-1l-blY" secondAttribute="leadingMargin" constant="84" id="zli-4i-Qsm"/>
+                            <constraint firstAttribute="trailing" secondItem="oW4-Kl-VJt" secondAttribute="trailing" id="UDg-cX-xqW"/>
+                            <constraint firstItem="oW4-Kl-VJt" firstAttribute="leading" secondItem="7UV-4X-BDj" secondAttribute="leading" id="ciS-9I-j0f"/>
+                            <constraint firstItem="oW4-Kl-VJt" firstAttribute="top" secondItem="7UV-4X-BDj" secondAttribute="top" id="erl-ef-fDN"/>
+                            <constraint firstItem="4V3-eo-NF4" firstAttribute="top" secondItem="oW4-Kl-VJt" secondAttribute="bottom" id="ggZ-LF-Vbz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pIa-Kb-5Qy">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="5Zh-8T-lub">
-                            <connections>
-                                <action selector="doneButtonPressed" destination="cTb-Em-gV9" id="6Y7-5e-hRP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="currentLineComponentSeparator" destination="u6E-Hp-bP9" id="glL-wS-qbi"/>
-                        <outlet property="currentLineLabel" destination="P5c-rQ-1e9" id="izq-F2-N1H"/>
-                        <outlet property="currentMovementIconView" destination="oVp-6R-veV" id="s3R-K7-dVK"/>
-                        <outlet property="nextLineComponentSeparator" destination="pEJ-Hs-E1M" id="jw2-vG-ucT"/>
-                        <outlet property="nextLineLabel" destination="JkD-ph-EMg" id="mTr-w8-Keb"/>
-                        <outlet property="nextMovementIconView" destination="BJn-6I-x6u" id="v46-Pz-dFT"/>
-                        <outlet property="previousLineLabel" destination="0FY-aU-bF0" id="KEO-42-gxS"/>
+                        <outlet property="currentArrowLabel" destination="Cdx-vA-dz9" id="DAa-dP-j3f"/>
+                        <outlet property="currentLineLabel" destination="mpF-sR-yLO" id="HJZ-BG-LLC"/>
+                        <outlet property="nextArrowLabel" destination="hbh-cg-HzJ" id="7zO-mJ-T4S"/>
+                        <outlet property="nextLineLabel" destination="kq9-9u-4eW" id="OPi-IY-k0l"/>
+                        <outlet property="previousArrowLabel" destination="o45-ce-Jad" id="dhf-2w-bNg"/>
+                        <outlet property="previousLineLabel" destination="fLQ-2h-xh7" id="efv-VL-vBK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hET-xH-14z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFM-Es-feH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.453125" y="167.96875"/>
+            <point key="canvasLocation" x="111" y="270"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="down_arrow" width="171" height="171"/>
-        <image name="up_arrow" width="64" height="64"/>
-    </resources>
 </document>

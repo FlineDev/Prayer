@@ -84,10 +84,10 @@
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Hareket tonun enstrumanını seç";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "İptal et";
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Şimdi kapat";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Şimdi kapat";
+"SETTINGS.CONFIRM_ALERT.ACTION.LATER" = "Sonra";
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.MESSAGE" = "Appin dili değişmesi için kapatılması ve tekrar senden açılması gerekiyor.";
@@ -102,7 +102,7 @@
 "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Değişmeyen metin hızı";
 
 /* No comment provided by engineer. */
-"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket sesin enstrümanı";
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket sesi";
 
 /* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rekat sayısı";

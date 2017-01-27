@@ -29,7 +29,6 @@ class Branding {
     }
 
     final func setupViewAppearance(_ view: UIView) {
-        view.backgroundColor = Color(named: .background)
         view.tintColor = Color(named: .accent)
     }
 }

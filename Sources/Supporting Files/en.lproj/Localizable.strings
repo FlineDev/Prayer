@@ -84,10 +84,10 @@
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CANCEL" = "Cancel";
+"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
 
 /* No comment provided by engineer. */
-"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
+"SETTINGS.CONFIRM_ALERT.ACTION.LATER" = "Later";
 
 /* No comment provided by engineer. */
 "SETTINGS.CONFIRM_ALERT.MESSAGE" = "In order to change the language, the App must be closed and reopened by you.";
@@ -102,7 +102,7 @@
 "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Fixed texts speed";
 
 /* No comment provided by engineer. */
-"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound instrument";
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound";
 
 /* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rakat count";

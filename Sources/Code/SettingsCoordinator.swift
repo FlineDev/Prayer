@@ -15,7 +15,7 @@ enum SettingsAction {
     case setFixedPartSpeed(Double)
     case setChangingPartSpeed(Double)
     case changeLanguage(String)
-    case confirmLanguageChange(String)
+    case confirmRestart
     case chooseInstrument(String)
     case startPrayer
 }
@@ -27,6 +27,13 @@ class SettingsCoordinator: AppCoordinator {
     var settingsViewCtrl: SettingsViewController!
 
 
+    // MARK: - Computed Instance Properties
+
+    override var mainViewController: UIViewController? {
+        return settingsViewCtrl
+    }
+
+
     // MARK: - Coordinator Methods
 
     override func start() {
@@ -34,23 +41,28 @@ class SettingsCoordinator: AppCoordinator {
 
         settingsViewModel = SettingsViewModel()
         settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
+
+        weak var weakSelf = self
         settingsViewCtrl?.coordinate = { action in
             switch action {
             case .setRakat(let rakatCount):
-                self.settingsViewModel.rakatCount = rakatCount
+                weakSelf?.settingsViewModel.rakatCount = rakatCount
             case .setFixedPartSpeed(let fixedPartSpeed):
-                self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+                weakSelf?.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
             case .setChangingPartSpeed(let changingPartSpeed):
-                self.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+                weakSelf?.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
             case .changeLanguage(let langCode):
-                self.settingsViewCtrl.showConfirmDialog(forLanguageChange: langCode)
-            case .confirmLanguageChange(let langCode):
-                self.settingsViewModel.interfaceLanguageCode = langCode
+                weakSelf?.settingsViewModel.interfaceLanguageCode = langCode
+                weakSelf?.settingsViewCtrl.showRestartConfirmDialog()
+            case .confirmRestart:
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
             case .chooseInstrument(let instrument):
-                self.settingsViewModel.movementSoundInstrument = instrument
+                weakSelf?.settingsViewModel.movementSoundInstrument = instrument
+                if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
+                    AudioPlayer.shared.playSound(at: moveSoundUrl)
+                }
             case .startPrayer:
-                self.startPrayer()
+                weakSelf?.startPrayer()
             }
         }
 
@@ -62,7 +74,16 @@ class SettingsCoordinator: AppCoordinator {
     // MARK: - Action Methods
 
     func startPrayer() {
-        let prayerCoordinator = PrayerCoordinator(presentingViewController: settingsViewCtrl)
+        let salah = Salah(rakatCount: UInt(settingsViewModel.rakatCount))
+
+        let prayerCoordinator = PrayerCoordinator(
+            presentingViewController: settingsViewCtrl,
+            salah: salah,
+            fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
+            changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
+            movementSoundInstrument: settingsViewModel.movementSoundInstrument
+        )
+
         start(subCoordinator: prayerCoordinator).onFinish {
             // no-op
         }

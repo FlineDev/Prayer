@@ -172,10 +172,10 @@ enum L10n {
       static let title = L10n.tr("SETTINGS.CONFIRM_ALERT.TITLE")
 
       enum Action {
-        /// Cancel
-        static let cancel = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.CANCEL")
         /// Close now
         static let confirm = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM")
+        /// Later
+        static let later = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.LATER")
       }
     }
 
@@ -194,7 +194,7 @@ enum L10n {
       }
 
       enum MovementSoundInstrument {
-        /// Movement sound instrument
+        /// Movement sound
         static let title = L10n.tr("SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE")
       }
 

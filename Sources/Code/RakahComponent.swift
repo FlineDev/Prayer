@@ -41,50 +41,49 @@ class RakahComponent {
     let name: String
     let spokenTextLines: [String]
     let needsMovement: Bool
-    let movementIcon: UIImage?
-    let movementSoundUrl: URL?
+    let position: Position
+    let movementSound: String?
+    let isChangingText: Bool
 
     let l10n = L10n.RakahComponent.self
 
 
     // MARK: - Initializers
 
-    init(_ component: Rakah.Component) {
-        var subdirectory: String? = nil
-
+    init(_ component: Rakah.Component, longSitting: Bool = false) {
         switch component {
-        case .takbir(let type):
+        case .takbir(let pos):
             name = l10n.Takbir.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
             needsMovement = true
+            position = pos
+            isChangingText = false
 
-            switch type {
-            case .enclosing:
-                movementIcon = nil
-                subdirectory = "G-Short"
-            case .up:
-                movementIcon = #imageLiteral(resourceName: "up_arrow")
-                subdirectory = "E-Short"
-            case .upSpecial:
-                movementIcon = #imageLiteral(resourceName: "up_arrow")
-                subdirectory = "E-Long"
-            case .down:
-                movementIcon = #imageLiteral(resourceName: "down_arrow")
-                subdirectory = "C-Short"
-            case .downSpecial:
-                movementIcon = #imageLiteral(resourceName: "down_arrow")
-                subdirectory = "C-Long"
+            if longSitting {
+                movementSound = "E-Long"
+            } else {
+                switch pos {
+                case .bending, .worship:
+                    movementSound = "C-Short"
+                case .standing, .sitting:
+                    movementSound = "E-Short"
+                default: movementSound = nil
+                }
             }
         case .openingSupplication:
             name = l10n.OpeningSupplication.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Opening-Supplication")
             needsMovement = false
-            movementIcon = nil
+            position = .standing
+            movementSound = nil
+            isChangingText = false
         case .taawwudh:
             name = l10n.Taawwudh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Taawwudh")
             needsMovement = false
-            movementIcon = nil
+            position = .standing
+            movementSound = nil
+            isChangingText = false
         case .recitation(fileName: let fileName):
             let l10n = L10n.Recitation.self
 
@@ -119,58 +118,58 @@ class RakahComponent {
             }
             spokenTextLines = RakahComponent.readLinesFromFile(named: fileName)
             needsMovement = false
-            movementIcon = nil
+            position = .standing
+            movementSound = nil
+            isChangingText = fileName != "001_The-Opening"
         case .ruku:
             name = l10n.Ruku.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Ruku")
             needsMovement = false
-            movementIcon = nil
+            position = .bending
+            movementSound = nil
+            isChangingText = false
         case .straighteningUp:
             name = l10n.StraighteningUp.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
             needsMovement = true
-            movementIcon = #imageLiteral(resourceName: "up_arrow")
-            subdirectory = "E-Short"
+            position = .standing
+            movementSound = "E-Short"
+            isChangingText = false
         case .sajdah:
             name = l10n.Sajdah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
             needsMovement = false
-            movementIcon = nil
+            position = .worship
+            movementSound = nil
+            isChangingText = false
         case .tashahhud:
             name = l10n.Tashahhud.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Tashahhud")
             needsMovement = false
-            movementIcon = nil
+            position = .sitting
+            movementSound = nil
+            isChangingText = false
         case .salatulIbrahimiyyah:
             name = l10n.SalatulIbrahimiyyah.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salatul-Ibrahimiyyah")
             needsMovement = false
-            movementIcon = nil
+            position = .sitting
+            movementSound = nil
+            isChangingText = false
         case .rabbanagh:
             name = l10n.Rabbanagh.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
             needsMovement = false
-            movementIcon = nil
-        case .salam(let type):
+            position = .sitting
+            movementSound = nil
+            isChangingText = false
+        case .salam(let pos):
             name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
             needsMovement = true
-            subdirectory = "G-Short"
-            
-            switch type {
-            case .right: movementIcon = #imageLiteral(resourceName: "right_arrow")
-            case .left: movementIcon = #imageLiteral(resourceName: "left_arrow")
-            }
-        }
-
-        if let subdirectory = subdirectory {
-            movementSoundUrl = Bundle.main.url(
-                forResource: RakahComponent.movementSoundInstrument,
-                withExtension: "caf",
-                subdirectory: subdirectory
-            )
-        } else {
-            movementSoundUrl = nil
+            movementSound = "G-Short"
+            isChangingText = false
+            position = pos
         }
     }
 
