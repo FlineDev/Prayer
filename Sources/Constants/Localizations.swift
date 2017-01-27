@@ -140,6 +140,80 @@ enum L10n {
       static let name = L10n.tr("RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME")
     }
   }
+
+  enum Settings {
+    /// Settings
+    static let title = L10n.tr("SETTINGS.TITLE")
+
+    enum AppSection {
+      /// App Settings
+      static let title = L10n.tr("SETTINGS.APP_SECTION.TITLE")
+
+      enum InterfaceLanguage {
+        /// Interface language
+        static let title = L10n.tr("SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE")
+      }
+    }
+
+    enum ChangeLanguageSheet {
+      /// Choose language
+      static let title = L10n.tr("SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE")
+    }
+
+    enum ChangeMovementSoundSheet {
+      /// Choose movement instrument
+      static let title = L10n.tr("SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")
+    }
+
+    enum ConfirmAlert {
+      /// In order to change the language, the App must be closed and reopened by you.
+      static let message = L10n.tr("SETTINGS.CONFIRM_ALERT.MESSAGE")
+      /// App restart required
+      static let title = L10n.tr("SETTINGS.CONFIRM_ALERT.TITLE")
+
+      enum Action {
+        /// Close now
+        static let confirm = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM")
+        /// Later
+        static let later = L10n.tr("SETTINGS.CONFIRM_ALERT.ACTION.LATER")
+      }
+    }
+
+    enum PrayerSection {
+      /// Prayer Settings
+      static let title = L10n.tr("SETTINGS.PRAYER_SECTION.TITLE")
+
+      enum ChangingText {
+        /// Changing text speed
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE")
+      }
+
+      enum ChangingTextName {
+        /// Changing text name
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
+      }
+
+      enum FixedTexts {
+        /// Fixed texts speed
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE")
+      }
+
+      enum MovementSoundInstrument {
+        /// Movement sound
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE")
+      }
+
+      enum RakatCount {
+        /// Rakat count
+        static let title = L10n.tr("SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE")
+      }
+    }
+
+    enum StartButton {
+      /// Start prayer
+      static let title = L10n.tr("SETTINGS.START_BUTTON.TITLE")
+    }
+  }
 }
 
 extension L10n {

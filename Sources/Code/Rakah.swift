@@ -48,7 +48,7 @@ class Rakah {
         var components: [RakahComponent] = []
 
         if isBeginningOfPrayer {
-            components.append(RakahComponent(.takbir(.up)))
+            components.append(RakahComponent(.takbir(.standing)))
             components.append(RakahComponent(.openingSupplication))
             components.append(RakahComponent(.taawwudh))
         }
@@ -60,25 +60,31 @@ class Rakah {
             components.append(standingRecitation)
         }
 
-        components.append(RakahComponent(.takbir(.down)))
+        components.append(RakahComponent(.takbir(.bending)))
         components.append(RakahComponent(.ruku))
         components.append(RakahComponent(.straighteningUp))
 
-        2.times {
-            components.append(RakahComponent(.takbir(.down)))
-            components.append(RakahComponent(.sajdah))
-            components.append(RakahComponent(.takbir(.up)))
-        }
+        components.append(RakahComponent(.takbir(.worship)))
+        components.append(RakahComponent(.sajdah))
+        components.append(RakahComponent(.takbir(.sitting)))
+
+        components.append(RakahComponent(.takbir(.worship)))
+        components.append(RakahComponent(.sajdah))
 
         if includesSittingRecitation {
+            components.append(RakahComponent(.takbir(.sitting), longSitting: true))
             components.append(RakahComponent(.tashahhud))
+        } else {
+            components.append(RakahComponent(.takbir(.standing)))
         }
 
         if isEndOfPrayer {
             components.append(RakahComponent(.salatulIbrahimiyyah))
             components.append(RakahComponent(.rabbanagh))
-            components.append(RakahComponent(.salam(.right)))
-            components.append(RakahComponent(.salam(.left)))
+            components.append(RakahComponent(.salam(.salamRight)))
+            components.append(RakahComponent(.salam(.salamLeft)))
+        } else if includesSittingRecitation {
+            components.append(RakahComponent(.takbir(.standing)))
         }
 
         return components
@@ -89,7 +95,7 @@ class Rakah {
 
 extension Rakah {
     enum Component {
-        case takbir(TakbirType)
+        case takbir(Position)
         case openingSupplication
         case taawwudh
         case recitation(fileName: String)
@@ -99,7 +105,7 @@ extension Rakah {
         case tashahhud
         case salatulIbrahimiyyah
         case rabbanagh
-        case salam(SalamType)
+        case salam(Position)
 
         static let theOpeningRecitationFileName = "001_The-Opening"
 
@@ -111,20 +117,12 @@ extension Rakah {
 
         static var all: [Component] {
             let nonQuranicComponents: [Component] = [
-                .takbir(.up), .takbir(.down), .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
-                .salatulIbrahimiyyah, .rabbanagh, .salam(.right), .salam(.left)
+                .takbir(.standing), .takbir(.bending), .takbir(.sitting), .takbir(.worship),
+                .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
+                .salatulIbrahimiyyah, .rabbanagh, .salam(.salamRight), .salam(.salamLeft)
             ]
             let recitations = ([theOpeningRecitationFileName] + nonOpeningRecitationFileNames).map { Component.recitation(fileName: $0) }
             return nonQuranicComponents + recitations
-        }
-
-        enum TakbirType {
-            case up
-            case down
-        }
-        enum SalamType {
-            case right
-            case left
         }
     }
 }

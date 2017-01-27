@@ -35,7 +35,7 @@ class SalahSpec: QuickSpec {
             // second rakah
             expectedComponentNames = [
                 "The Opening", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
-                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud"
+                "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr"
             ]
 
             expect(salah.rakat[1].components().count).to(equal(expectedComponentNames.count))
