@@ -11,7 +11,7 @@
 		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
-		A1370CD81E368DF300B55D9E /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CD71E368DF300B55D9E /* Globals.swift */; };
+		A1370CD81E368DF300B55D9E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CD71E368DF300B55D9E /* Logger.swift */; };
 		A1370CDB1E368FA600B55D9E /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */; };
 		A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDE1E369E3F00B55D9E /* Branding.swift */; };
 		A1370CE11E369F1400B55D9E /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1370CE01E369F1400B55D9E /* Colors.txt */; };
@@ -116,7 +116,7 @@
 		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
-		A1370CD71E368DF300B55D9E /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		A1370CD71E368DF300B55D9E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		A1370CDE1E369E3F00B55D9E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
 		A1370CE01E369F1400B55D9E /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
@@ -276,13 +276,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1370CD91E368F9000B55D9E /* Coordinators */ = {
+		A11830DC1E58A73100CBE087 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
 				A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */,
-				A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */,
+				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 			);
-			name = Coordinators;
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		A11830DD1E58A73B00CBE087 /* Prayer */ = {
+			isa = PBXGroup;
+			children = (
+				A16484DF1E243A81008EC78C /* Model */,
+				A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */,
+				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
+			);
+			name = Prayer;
 			sourceTree = "<group>";
 		};
 		A1370CDD1E369E2900B55D9E /* Branding */ = {
@@ -444,13 +455,10 @@
 		A16484BF1E243898008EC78C /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CD71E368DF300B55D9E /* Globals.swift */,
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
-				A16484DF1E243A81008EC78C /* Model */,
-				A1D1EFB51E381FBD0029C009 /* View Model */,
-				A1370CD91E368F9000B55D9E /* Coordinators */,
-				A16484E11E243A8D008EC78C /* View Controller */,
-				A1370CDD1E369E2900B55D9E /* Branding */,
+				A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */,
+				A11830DC1E58A73100CBE087 /* Settings */,
+				A11830DD1E58A73B00CBE087 /* Prayer */,
 				A1D1EFBC1E391C560029C009 /* Helpers */,
 			);
 			path = Code;
@@ -535,15 +543,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		A16484E11E243A8D008EC78C /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				A16484C11E243898008EC78C /* SettingsViewController.swift */,
-				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
-			);
-			name = "View Controller";
-			sourceTree = "<group>";
-		};
 		A1701CF41E33CDC70080C0A1 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,21 +563,14 @@
 			path = "Movement Sounds";
 			sourceTree = "<group>";
 		};
-		A1D1EFB51E381FBD0029C009 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
-				A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */,
-			);
-			name = "View Model";
-			sourceTree = "<group>";
-		};
 		A1D1EFBC1E391C560029C009 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A1370CD71E368DF300B55D9E /* Logger.swift */,
 				A1D1EFBD1E391C700029C009 /* AudioPlayer.swift */,
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
 				A1D1EFC31E393F080029C009 /* Countdown.swift */,
+				A1370CDD1E369E2900B55D9E /* Branding */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -828,7 +820,7 @@
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 				A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */,
-				A1370CD81E368DF300B55D9E /* Globals.swift in Sources */,
+				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
 				A1370CE91E37394600B55D9E /* PrayerCoordinator.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
 			);

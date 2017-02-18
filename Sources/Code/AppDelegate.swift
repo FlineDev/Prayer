@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // global configurations
-        Globals.configureLogger()
+        Logger.shared.setup()
         Branding.shared.setupGlobalAppearance()
 
         // load initial coordinator

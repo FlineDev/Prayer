@@ -16,8 +16,15 @@ let log = SwiftyBeaver.self
 
 // MARK: - Helper Class
 
-class Globals {
-    static func configureLogger() {
+class Logger {
+    // MARK: - Stored Type Properties
+
+    static let shared = Logger()
+
+
+    // MARK: - Instance Properties
+
+    func setup() {
         // log to console
         let consoleDestination = ConsoleDestination()
         #if DEBUG
