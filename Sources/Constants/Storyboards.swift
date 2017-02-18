@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import Prayer
 
 // swiftlint:disable file_length
 // swiftlint:disable line_length
@@ -45,11 +46,11 @@ struct StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }
-  enum Prayer: StoryboardSceneType {
-    static let storyboardName = "Prayer"
+  enum PrayerView: StoryboardSceneType {
+    static let storyboardName = "PrayerView"
 
-    static func initialViewController() -> PrayerViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? PrayerViewController else {
+    static func initialViewController() -> Prayer.PrayerViewController {
+      guard let vc = storyboard().instantiateInitialViewController() as? Prayer.PrayerViewController else {
         fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
       }
       return vc

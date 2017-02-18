@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */; };
 		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
@@ -50,7 +51,7 @@
 		A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BA71E2C628300286EBF /* Rabbanagh.txt */; };
 		A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494BAE1E2C693C00286EBF /* Salam.txt */; };
 		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
-		A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */; };
+		A1494BBF1E2ED5CF00286EBF /* PrayerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */; };
 		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
 		A1494BCE1E2ED79500286EBF /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Localizations.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
@@ -111,6 +112,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -206,7 +208,7 @@
 		A1494BB61E2EBF5200286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BB71E2EBF5200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1494BBC1E2ED3C900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Prayer.storyboard; sourceTree = "<group>"; };
+		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PrayerView.storyboard; sourceTree = "<group>"; };
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		A1494BCC1E2ED79500286EBF /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */,
 				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
 				A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */,
+				A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */,
 				A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */,
 				A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */,
 			);
@@ -348,6 +351,7 @@
 				A1370CD01E35831900B55D9E /* Eureka.framework */,
 				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
 				A1494AF31E27F47800286EBF /* HandySwift.framework */,
+				A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -465,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
-				A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */,
+				A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -728,7 +732,7 @@
 				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
 				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
 				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
-				A1494BBF1E2ED5CF00286EBF /* Prayer.storyboard in Resources */,
+				A1494BBF1E2ED5CF00286EBF /* PrayerView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +765,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -1103,12 +1108,12 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		A1494BC11E2ED5CF00286EBF /* Prayer.storyboard */ = {
+		A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1494BC01E2ED5CF00286EBF /* Base */,
 			);
-			name = Prayer.storyboard;
+			name = PrayerView.storyboard;
 			sourceTree = "<group>";
 		};
 		A16484C51E243898008EC78C /* LaunchScreen.storyboard */ = {

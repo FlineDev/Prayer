@@ -9,6 +9,7 @@
 import UIKit
 import Eureka
 import Imperio
+import HandyUIKit
 
 class SettingsViewController: BrandedFormViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation

@@ -15,7 +15,7 @@ typealias Duration = DispatchTimeInterval
 class RakahComponent {
     // MARK: - Stored Type Properties
 
-    static let durationPerCharacter = Duration.milliseconds(55)
+    static let durationPerCharacter = Timespan.milliseconds(55)
 
 
     // MARK: - Computed Type Properties
@@ -201,30 +201,15 @@ class RakahComponent {
     private static func readLinesFromFile(named name: String) -> [String] {
         let spokenTextFilePath = Bundle.main.url(forResource: name, withExtension: "txt")!
         let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
-        return contentString.strip.components(separatedBy: .newlines)
+        return contentString.stripped().components(separatedBy: .newlines)
     }
 }
 
 
 // MARK: - Sub Types
 
-extension Duration {
-    var timeInterval: TimeInterval {
-        switch self {
-        case .seconds(let seconds):
-            return Double(seconds)
-        case .milliseconds(let milliseconds):
-            return Double(milliseconds) / 1_000
-        case .microseconds(let microseconds):
-            return Double(microseconds) / 1_000_000
-        case .nanoseconds(let nanoseconds):
-            return Double(nanoseconds) / 1_000_000_000
-        }
-    }
-}
-
 extension String {
-    var estimatedReadingTime: TimeInterval {
-        return RakahComponent.durationPerCharacter.timeInterval * Double(utf8.count)
+    var estimatedReadingTime: Timespan {
+        return RakahComponent.durationPerCharacter * Double(utf8.count)
     }
 }

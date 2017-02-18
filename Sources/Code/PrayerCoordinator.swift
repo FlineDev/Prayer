@@ -57,7 +57,7 @@ class PrayerCoordinator: Coordinator {
         super.start()
 
         // configure prayer view controller
-        prayerViewCtrl = StoryboardScene.Prayer.initialViewController()
+        prayerViewCtrl = StoryboardScene.PrayerView.initialViewController()
 
         weak var weakSelf = self
         prayerViewCtrl.coordinate = { action in
@@ -125,9 +125,9 @@ class PrayerCoordinator: Coordinator {
                         )
                         self.prayerViewCtrl.viewModel = infoViewModel
 
-                        let rememberTime: TimeInterval = 1.0
+                        let rememberTime = Timespan.milliseconds(1_000)
                         let waitTime = infoViewModel.currentLine.estimatedReadingTime + rememberTime
-                        delay(bySeconds: waitTime) {
+                        delay(by: waitTime) {
                             self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
                             self.progressPrayer()
                         }
