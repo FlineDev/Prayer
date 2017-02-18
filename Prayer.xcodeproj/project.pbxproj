@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */; };
+		A11830E31E5914B000CBE087 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830E11E5914B000CBE087 /* Fabric.framework */; };
+		A11830E41E5914B000CBE087 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830E21E5914B000CBE087 /* Crashlytics.framework */; };
 		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
@@ -113,6 +115,8 @@
 
 /* Begin PBXFileReference section */
 		A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
+		A11830E11E5914B000CBE087 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		A11830E21E5914B000CBE087 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -248,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */,
+				A11830E41E5914B000CBE087 /* Crashlytics.framework in Frameworks */,
 				A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */,
 				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
+				A11830E31E5914B000CBE087 /* Fabric.framework in Frameworks */,
 				A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */,
 				A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */,
 				A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */,
@@ -294,6 +300,15 @@
 				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
 			);
 			name = Prayer;
+			sourceTree = "<group>";
+		};
+		A11830E01E59147D00CBE087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11830E11E5914B000CBE087 /* Fabric.framework */,
+				A11830E21E5914B000CBE087 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A1370CDD1E369E2900B55D9E /* Branding */ = {
@@ -416,6 +431,7 @@
 				A16484CE1E243898008EC78C /* UI Tests */,
 				A164848C1E243834008EC78C /* Products */,
 				A1494AF21E27F46200286EBF /* Carthage */,
+				A11830E01E59147D00CBE087 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -588,6 +604,7 @@
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
 				A1494AF51E27F49200286EBF /* Carthage */,
+				A11830DF1E59142500CBE087 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -745,6 +762,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A11830DF1E59142500CBE087 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e580ef9eb770f235df136c4477a27366e150599b 8b70ff1fee76e2c9ca4c07086dddf0a12ec6364d9936782e879f467a6a80a322";
+		};
 		A1494AF51E27F49200286EBF /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1225,6 +1256,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1242,6 +1274,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
