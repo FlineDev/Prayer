@@ -8,6 +8,7 @@
 
 import UIKit
 import Imperio
+import HandyUIKit
 
 enum FAQAction {
     case doneButtonPressed
