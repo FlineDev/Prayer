@@ -10,6 +10,10 @@ import UIKit
 import Imperio
 import SwiftyUserDefaults
 
+extension DefaultsKeys {
+    static let faqClosed = DefaultsKey<Bool>("faqClosed")
+}
+
 class SettingsCoordinator: AppCoordinator {
     // MARK: - Stored Instance Properties
 
@@ -61,6 +65,10 @@ class SettingsCoordinator: AppCoordinator {
 
         let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
         present(initialViewController: navCtrl)
+
+        if !Defaults[.faqClosed] {
+            showFAQ()
+        }
     }
 
 
@@ -92,6 +100,7 @@ class SettingsCoordinator: AppCoordinator {
         faqViewCtrl.coordinate = { action in
             switch action {
             case .doneButtonPressed:
+                Defaults[.faqClosed] = true
                 faqViewCtrl.dismiss(animated: true, completion: nil)
             }
         }
