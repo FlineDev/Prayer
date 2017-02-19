@@ -13,6 +13,8 @@
 		A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EA1E591EF600CBE087 /* FAQViewController.swift */; };
 		A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */; };
 		A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11830EE1E591FD900CBE087 /* Settings.storyboard */; };
+		A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */; };
+		A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */; };
 		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
@@ -123,6 +125,8 @@
 		A11830EA1E591EF600CBE087 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		A11830EE1E591FD900CBE087 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCollectionViewLayout.swift; sourceTree = "<group>"; };
+		A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 				A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */,
 				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
+				A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */,
+				A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -883,6 +889,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A6A4661E3A819D00A909FF /* Position.swift in Sources */,
+				A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A1370CE31E36A31100B55D9E /* Colors.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
@@ -906,6 +913,7 @@
 				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
 				A1370CE91E37394600B55D9E /* PrayerCoordinator.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
+				A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

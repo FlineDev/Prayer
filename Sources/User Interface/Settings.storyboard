@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -34,9 +34,63 @@
                         <viewControllerLayoutGuide type="bottom" id="S7A-Lu-aon"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EBh-fb-3Gm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iWl-BC-vaA">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="JhH-ja-yAK" customClass="FAQCollectionViewLayout" customModule="Prayer" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FAQCell" id="lBq-Cd-0ox" customClass="FAQCollectionViewCell" customModule="Prayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="199"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOB-QS-GLQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urh-pY-HM7">
+                                                    <rect key="frame" x="0.0" y="65" width="363" height="134"/>
+                                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="JOB-QS-GLQ" firstAttribute="top" secondItem="lBq-Cd-0ox" secondAttribute="top" id="Jn8-e0-Ec9"/>
+                                            <constraint firstAttribute="trailing" secondItem="urh-pY-HM7" secondAttribute="trailing" id="JrX-Da-ZSt"/>
+                                            <constraint firstAttribute="bottom" secondItem="urh-pY-HM7" secondAttribute="bottom" id="ewC-TZ-qnB"/>
+                                            <constraint firstItem="urh-pY-HM7" firstAttribute="leading" secondItem="lBq-Cd-0ox" secondAttribute="leading" id="otm-W0-tkE"/>
+                                            <constraint firstAttribute="trailing" secondItem="JOB-QS-GLQ" secondAttribute="trailing" id="tOv-uP-YYV"/>
+                                            <constraint firstItem="JOB-QS-GLQ" firstAttribute="leading" secondItem="lBq-Cd-0ox" secondAttribute="leading" id="xRn-2J-3KE"/>
+                                        </constraints>
+                                        <size key="customSize" width="363" height="199"/>
+                                        <connections>
+                                            <outlet property="answerLabel" destination="urh-pY-HM7" id="nvn-l9-EhU"/>
+                                            <outlet property="questionLabel" destination="JOB-QS-GLQ" id="OJ1-3O-7mM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Od8-9C-GeY" id="lBa-fL-gWg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iWl-BC-vaA" secondAttribute="trailing" id="cfQ-jf-UrH"/>
+                            <constraint firstItem="iWl-BC-vaA" firstAttribute="leading" secondItem="EBh-fb-3Gm" secondAttribute="leading" id="hi9-vb-NDR"/>
+                            <constraint firstItem="S7A-Lu-aon" firstAttribute="top" secondItem="iWl-BC-vaA" secondAttribute="bottom" id="jAW-Gg-ahb"/>
+                            <constraint firstItem="iWl-BC-vaA" firstAttribute="top" secondItem="EBh-fb-3Gm" secondAttribute="top" id="qG9-Kw-FIZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FAQ" id="BjR-g9-Xdx">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="e2k-QX-mdZ">
@@ -45,10 +99,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="iWl-BC-vaA" id="BFb-HA-8mH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJP-aa-Sdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-470" y="220"/>
+            <point key="canvasLocation" x="-471.875" y="219.7265625"/>
         </scene>
     </scenes>
 </document>
