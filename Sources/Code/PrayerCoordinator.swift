@@ -10,10 +10,6 @@ import UIKit
 import Imperio
 import HandySwift
 
-enum PrayerAction {
-    case doneButtonPressed
-}
-
 class PrayerCoordinator: Coordinator {
     // MARK: - Stored Instance Properties
 
@@ -59,13 +55,12 @@ class PrayerCoordinator: Coordinator {
         // configure prayer view controller
         prayerViewCtrl = StoryboardScene.PrayerView.initialViewController()
 
-        weak var weakSelf = self
-        prayerViewCtrl.coordinate = { action in
+        prayerViewCtrl.coordinate = { [unowned self] action in
             switch action {
             case .doneButtonPressed:
-                weakSelf?.countdown?.cancel()
-                weakSelf?.cleanup()
-                weakSelf?.finish()
+                self.countdown?.cancel()
+                self.cleanup()
+                self.finish()
             }
         }
 

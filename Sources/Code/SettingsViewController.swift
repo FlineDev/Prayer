@@ -11,6 +11,17 @@ import Eureka
 import Imperio
 import HandyUIKit
 
+enum SettingsAction {
+    case setRakat(Int)
+    case setFixedPartSpeed(Double)
+    case setChangingPartSpeed(Double)
+    case setShowChagingTextName(Bool)
+    case changeLanguage(String)
+    case confirmRestart
+    case chooseInstrument(String)
+    case startPrayer
+}
+
 class SettingsViewController: BrandedFormViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
 

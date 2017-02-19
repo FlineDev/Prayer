@@ -11,6 +11,10 @@ import HandySwift
 import SwiftyTimer
 import Imperio
 
+enum PrayerAction {
+    case doneButtonPressed
+}
+
 class PrayerViewController: BrandedViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
 

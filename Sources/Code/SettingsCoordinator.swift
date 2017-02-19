@@ -10,17 +10,6 @@ import UIKit
 import Imperio
 import SwiftyUserDefaults
 
-enum SettingsAction {
-    case setRakat(Int)
-    case setFixedPartSpeed(Double)
-    case setChangingPartSpeed(Double)
-    case setShowChagingTextName(Bool)
-    case changeLanguage(String)
-    case confirmRestart
-    case chooseInstrument(String)
-    case startPrayer
-}
-
 class SettingsCoordinator: AppCoordinator {
     // MARK: - Stored Instance Properties
 
@@ -43,29 +32,28 @@ class SettingsCoordinator: AppCoordinator {
         settingsViewModel = SettingsViewModel()
         settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
 
-        weak var weakSelf = self
-        settingsViewCtrl?.coordinate = { action in
+        settingsViewCtrl?.coordinate = { [unowned self] action in
             switch action {
             case .setRakat(let rakatCount):
-                weakSelf?.settingsViewModel.rakatCount = rakatCount
+                self.settingsViewModel.rakatCount = rakatCount
             case .setFixedPartSpeed(let fixedPartSpeed):
-                weakSelf?.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+                self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
             case .setChangingPartSpeed(let changingPartSpeed):
-                weakSelf?.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+                self.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
             case .setShowChagingTextName(let showName):
-                weakSelf?.settingsViewModel.showChangingTextName = showName
+                self.settingsViewModel.showChangingTextName = showName
             case .changeLanguage(let langCode):
-                weakSelf?.settingsViewModel.interfaceLanguageCode = langCode
-                weakSelf?.settingsViewCtrl.showRestartConfirmDialog()
+                self.settingsViewModel.interfaceLanguageCode = langCode
+                self.settingsViewCtrl.showRestartConfirmDialog()
             case .confirmRestart:
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
             case .chooseInstrument(let instrument):
-                weakSelf?.settingsViewModel.movementSoundInstrument = instrument
+                self.settingsViewModel.movementSoundInstrument = instrument
                 if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
                     AudioPlayer.shared.playSound(at: moveSoundUrl)
                 }
             case .startPrayer:
-                weakSelf?.startPrayer()
+                self.startPrayer()
             }
         }
 
