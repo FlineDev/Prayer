@@ -179,6 +179,16 @@ enum L10n {
       }
     }
 
+    enum Faq {
+      /// FAQ
+      static let title = L10n.tr("SETTINGS.FAQ.TITLE")
+    }
+
+    enum FaqButton {
+      /// FAQ
+      static let title = L10n.tr("SETTINGS.FAQ_BUTTON.TITLE")
+    }
+
     enum PrayerSection {
       /// Prayer Settings
       static let title = L10n.tr("SETTINGS.PRAYER_SECTION.TITLE")

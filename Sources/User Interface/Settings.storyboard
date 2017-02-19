@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Branded Navigation Controller-->
+        <scene sceneID="jDj-b2-Aab">
+            <objects>
+                <navigationController storyboardIdentifier="FAQNavigationController" id="T2I-Aw-B0j" customClass="BrandedNavigationController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMc-l9-vBj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Od8-9C-GeY" kind="relationship" relationship="rootViewController" id="riH-Sy-r9J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0Q-u1-JXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1407" y="220"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="scz-xc-VOD">
+            <objects>
+                <viewController id="Od8-9C-GeY" customClass="FAQViewController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jon-Fu-ZVs"/>
+                        <viewControllerLayoutGuide type="bottom" id="S7A-Lu-aon"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EBh-fb-3Gm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAQ" id="BjR-g9-Xdx">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="e2k-QX-mdZ">
+                            <connections>
+                                <action selector="doneButtonPressed" destination="Od8-9C-GeY" id="PiW-fI-gs2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJP-aa-Sdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="220"/>
+        </scene>
+    </scenes>
+</document>

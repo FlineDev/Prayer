@@ -96,6 +96,12 @@
 "SETTINGS.CONFIRM_ALERT.TITLE" = "Yeniden başlatma gerekiyor";
 
 /* No comment provided by engineer. */
+"SETTINGS.FAQ.TITLE" = "SSS";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Değişen metin hızı";
 
 /* No comment provided by engineer. */

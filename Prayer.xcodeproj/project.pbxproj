@@ -10,6 +10,9 @@
 		A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */; };
 		A11830E31E5914B000CBE087 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830E11E5914B000CBE087 /* Fabric.framework */; };
 		A11830E41E5914B000CBE087 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830E21E5914B000CBE087 /* Crashlytics.framework */; };
+		A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EA1E591EF600CBE087 /* FAQViewController.swift */; };
+		A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */; };
+		A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11830EE1E591FD900CBE087 /* Settings.storyboard */; };
 		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
@@ -117,6 +120,9 @@
 		A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		A11830E11E5914B000CBE087 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		A11830E21E5914B000CBE087 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A11830EA1E591EF600CBE087 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		A11830EE1E591FD900CBE087 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -348,6 +354,8 @@
 			children = (
 				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
 				A16484C11E243898008EC78C /* SettingsViewController.swift */,
+				A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */,
+				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -533,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
+				A11830EE1E591FD900CBE087 /* Settings.storyboard */,
 				A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */,
 			);
 			path = "User Interface";
@@ -750,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */,
+				A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */,
 				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
 				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
 				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
@@ -881,6 +891,7 @@
 				A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */,
 				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
 				A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */,
+				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
 				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
 				A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */,
 				A1D1EFC21E3937FC0029C009 /* PrayerState.swift in Sources */,
@@ -890,6 +901,7 @@
 				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
+				A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */,
 				A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */,
 				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
 				A1370CE91E37394600B55D9E /* PrayerCoordinator.swift in Sources */,

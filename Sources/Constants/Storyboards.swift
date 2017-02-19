@@ -56,6 +56,18 @@ struct StoryboardScene {
       return vc
     }
   }
+  enum Settings: String, StoryboardSceneType {
+    static let storyboardName = "Settings"
+
+    case faqNavigationControllerScene = "FAQNavigationController"
+    static func instantiateFaqNavigationController() -> Prayer.BrandedNavigationController {
+      guard let vc = StoryboardScene.Settings.faqNavigationControllerScene.viewController() as? Prayer.BrandedNavigationController
+      else {
+        fatalError("ViewController 'FAQNavigationController' is not of the expected class Prayer.BrandedNavigationController.")
+      }
+      return vc
+    }
+  }
 }
 
 struct StoryboardSegue {

@@ -54,6 +54,8 @@ class SettingsCoordinator: AppCoordinator {
                 }
             case .startPrayer:
                 self.startPrayer()
+            case .didPressFAQButton:
+                self.showFAQ()
             }
         }
 
@@ -79,5 +81,21 @@ class SettingsCoordinator: AppCoordinator {
         start(subCoordinator: prayerCoordinator).onFinish {
             // no-op
         }
+    }
+
+    func showFAQ() {
+        let faqNavCtrl = StoryboardScene.Settings.instantiateFaqNavigationController()
+        let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController
+
+        faqViewCtrl.viewModel = FAQViewModel(entries: []) // TODO: not yet implemented
+
+        faqViewCtrl.coordinate = { action in
+            switch action {
+            case .doneButtonPressed:
+                faqViewCtrl.dismiss(animated: true, completion: nil)
+            }
+        }
+
+        settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
     }
 }

@@ -96,6 +96,12 @@
 "SETTINGS.CONFIRM_ALERT.TITLE" = "App restart required";
 
 /* No comment provided by engineer. */
+"SETTINGS.FAQ.TITLE" = "FAQ";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_BUTTON.TITLE" = "FAQ";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Changing text speed";
 
 /* No comment provided by engineer. */
