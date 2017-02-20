@@ -124,3 +124,33 @@
 
 /* No comment provided by engineer. */
 "SETTINGS.TITLE" = "Settings";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER" = "";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "";

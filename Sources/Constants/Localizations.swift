@@ -189,6 +189,44 @@ enum L10n {
       static let title = L10n.tr("SETTINGS.FAQ_BUTTON.TITLE")
     }
 
+    enum FaqEntries {
+
+      enum AppMotivation {
+        /// 
+        static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER")
+        /// 
+        static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION")
+      }
+
+      enum IpadReading {
+        /// 
+        static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER")
+        /// 
+        static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION")
+      }
+
+      enum Language {
+        /// 
+        static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER")
+        /// 
+        static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION")
+      }
+
+      enum LanguageMix {
+        /// 
+        static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER")
+        /// 
+        static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION")
+      }
+
+      enum TranslationProblem {
+        /// 
+        static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER")
+        /// 
+        static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION")
+      }
+    }
+
     enum PrayerSection {
       /// Prayer Settings
       static let title = L10n.tr("SETTINGS.PRAYER_SECTION.TITLE")
