@@ -14,7 +14,7 @@ import Nimble
 class RakahComponentSpec: QuickSpec {
     override func spec() {
         it("initializes successully with takbir") {
-            let takbir = RakahComponent(.takbir(.up))
+            let takbir = RakahComponent(.takbir(.standing))
 
             expect(takbir.spokenTextLines.count).to(equal(1))
             expect(takbir.spokenTextLines).to(contain("God is greater"))
