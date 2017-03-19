@@ -9,6 +9,7 @@
 import UIKit
 import Imperio
 import SwiftyUserDefaults
+import SafariServices
 
 extension DefaultsKeys {
     static let faqClosed = DefaultsKey<Bool>("faqClosed")
@@ -40,26 +41,37 @@ class SettingsCoordinator: AppCoordinator {
             switch action {
             case .setRakat(let rakatCount):
                 self.settingsViewModel.rakatCount = rakatCount
+
             case .setFixedPartSpeed(let fixedPartSpeed):
                 self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+
             case .setChangingPartSpeed(let changingPartSpeed):
                 self.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+
             case .setShowChagingTextName(let showName):
                 self.settingsViewModel.showChangingTextName = showName
+
             case .changeLanguage(let langCode):
                 self.settingsViewModel.interfaceLanguageCode = langCode
                 self.settingsViewCtrl.showRestartConfirmDialog()
+
             case .confirmRestart:
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
+
             case .chooseInstrument(let instrument):
                 self.settingsViewModel.movementSoundInstrument = instrument
                 if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
                     AudioPlayer.shared.playSound(at: moveSoundUrl)
                 }
+
             case .startPrayer:
                 self.startPrayer()
+
             case .didPressFAQButton:
                 self.showFAQ()
+
+            case .didPressFeedbackButton:
+                self.showFeedbackCommunity()
             }
         }
 
@@ -113,5 +125,12 @@ class SettingsCoordinator: AppCoordinator {
         }
 
         settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
+    }
+
+    func showFeedbackCommunity() {
+        let communityUrl = URL(string: "https://community.flinesoft.com/c/prayer-app")!
+        let safariViewCtrl = SFSafariViewController(url: communityUrl)
+
+        settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
     }
 }

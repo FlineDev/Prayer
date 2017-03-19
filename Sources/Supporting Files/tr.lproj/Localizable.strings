@@ -132,6 +132,9 @@
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Çeviriler otomatikmen orijinal metnin anlamı değiştirmezmi?";
 
 /* No comment provided by engineer. */
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Geribildirim yolla";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Değişen metin hızı";
 
 /* No comment provided by engineer. */

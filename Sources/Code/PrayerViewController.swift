@@ -11,15 +11,13 @@ import HandySwift
 import SwiftyTimer
 import Imperio
 
-enum PrayerAction {
-    case doneButtonPressed
-}
-
 class PrayerViewController: BrandedViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
 
-    typealias Action = PrayerAction
-    var coordinate: ((PrayerAction) -> Void)!
+    enum Action {
+        case doneButtonPressed
+    }
+    var coordinate: ((PrayerViewController.Action) -> Void)!
 
 
     // MARK: - Stored Instance Properties

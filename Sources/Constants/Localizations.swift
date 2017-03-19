@@ -9,6 +9,7 @@ import Foundation
 // swiftlint:disable nesting
 // swiftlint:disable variable_name
 // swiftlint:disable valid_docs
+// swiftlint:disable type_name
 
 enum L10n {
 
@@ -192,7 +193,7 @@ enum L10n {
     enum FaqEntries {
 
       enum AppMotivation {
-        /// This App currently has two goals:\n1. Becoming aware of what you are actually saying when you pray.\n2. Use the regular prayers to read the Quran.\n\nCurrently the app contains only the last twelve surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a planned solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.\n\nSpecifically, NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
+        /// This App currently has two goals:\n1. Becoming aware of what you are actually saying when you pray.\n2. Use the regular prayers to read the Quran.\n\nCurrently the app contains only the last twelve surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a planned solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.\n\nSpecifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
         static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER")
         /// What is the purpose of this app?
         static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION")
@@ -206,7 +207,7 @@ enum L10n {
       }
 
       enum Language {
-        /// We are convinced that the Quran prescribes regular prayers above all to be aware of God and to remember his guidance. Words that can not be understood neither warn against the wrong path, nor the right path which is, at the end, what the Quran aims to do.\n\nIn any case, we can not imagine that God wants us to merely admire the beauty of the sound of his lyrics five times a day. The Arabic in the Quran may be perfect and supreme in its meaning, but as long as the person doing the prayer has not mastered the Arabic language, his prayers in Arabic are imperfect. Moreover, we do not know a Quran verse which requires prayers to be done in Arabic.
+        /// We are convinced that the Quran prescribes regular prayers above all to be aware of God and to remember his guidance. Words that can not be understood neither warn against the wrong path, nor show the right path which is, at the end, what the Quran aims to do.\n\nIn any case, we can not imagine that God wants us to merely admire the beauty of the sound of his lyrics five times a day. The Arabic in the Quran may be perfect and supreme in its meaning, but as long as the person doing the prayer has not mastered the Arabic language, his prayers in Arabic are imperfect. Moreover, we do not know a Quran verse which requires prayers to be done in Arabic.
         static let answer = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER")
         /// Do prayers not have to be spoken in Arabic, the original language of the Koran?
         static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION")
@@ -225,6 +226,11 @@ enum L10n {
         /// Do translations not necessarily change the meaning of the original text?
         static let question = L10n.tr("SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION")
       }
+    }
+
+    enum FeedbackButton {
+      /// Send Feedback
+      static let title = L10n.tr("SETTINGS.FEEDBACK_BUTTON.TITLE")
     }
 
     enum PrayerSection {
@@ -266,10 +272,12 @@ enum L10n {
 
 extension L10n {
   fileprivate static func tr(_ key: String, _ args: CVarArg...) -> String {
-    let format = NSLocalizedString(key, comment: "")
+    let format = NSLocalizedString(key, bundle: Bundle(for: BundleToken.self), comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }
 }
+
+private final class BundleToken {}
 
 // swiftlint:enable type_body_length
 // swiftlint:enable nesting

@@ -132,6 +132,9 @@
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Ändern Übersetzungen nicht zwangsweise die Bedeutung des Originaltextes?";
 
 /* No comment provided by engineer. */
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback senden";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Zeitfaktor wechselnder Text";
 
 /* No comment provided by engineer. */

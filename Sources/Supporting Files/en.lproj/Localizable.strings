@@ -132,6 +132,9 @@
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Do translations not necessarily change the meaning of the original text?";
 
 /* No comment provided by engineer. */
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Send Feedback";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Changing text speed";
 
 /* No comment provided by engineer. */
