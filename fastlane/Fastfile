@@ -43,7 +43,7 @@ platform :ios do
     # match(type: "appstore")
     snapshot
     # frameit(white: true)
-    gym # Build your app - more options available
+    gym(include_bitcode: true) # Build your app - more options available
     deliver(force: true)
   end
 
