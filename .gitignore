@@ -59,6 +59,8 @@ Carthage/Build
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
 fastlane/report.xml
+Preview.html
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+fastlane/metadata/review_information

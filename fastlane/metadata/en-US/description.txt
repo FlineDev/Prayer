@@ -1,0 +1,13 @@
+You regularly pray your prayers in Arabic, but do not really understand what you're saying?
+
+This app will help you make your prayers in English (or German or Turkish) to make them more meaningful to you. To do this, leave your device lying in front of you during the prayer and simply read the text from there. The app is purposely kept simple and reduced to the basic functions so that it does not contain distracting elements such as animations or advertising. Advertising is not an issue anyway, since the whole code is published with an open source license on GitHub (at https://github.com/Flinesoft/Prayer).
+
+We recommend that you turn off silent mode when using this app (if possible), as the app plays a short tone for up and down movements. The app expects that you already know how a prayer is done. Therefore this app is not suitable for newcomers to prayers.
+
+We hope you find this app useful. If you like it, we would love to receive a rating in the App Store. For questions and suggestions, we have set up a forum: community.flinesoft.com
+There, you will also find our plans for the future and you can even participate in the discussion.
+
+
+Legal Notice:
+The copyrights of the translations belong to their respective authors.
+The Quran translations are taken from "The Message of The Qur'an" by Muhammad Asad.

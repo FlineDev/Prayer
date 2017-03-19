@@ -1,0 +1,23 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
+
+keywords(
+  "en-US" => "Prayer, English, Islam, Muslim",
+  "de-DE" => "Gebet, Deutsch, Islam, Muslim",
+  "tr" => "Namaz, Türkçe, Islam, Müslüman"
+)
+
+copyright "2016-#{Time.now.year} Cihat Gündüz"
+
+name(
+  "de-DE" => "Gebet auf Deutsch",
+  "en-US" => "Prayer in English",
+  "tr" => "Türkçe Namaz"
+)
+
+support_url(
+  "de-DE" => "https://community.flinesoft.com/c/prayer-app",
+  "en-US" => "https://community.flinesoft.com/c/prayer-app",
+  "tr" => "https://community.flinesoft.com/c/prayer-app"
+)
