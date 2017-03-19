@@ -9,12 +9,24 @@
 import UIKit
 import Eureka
 import Imperio
+import HandyUIKit
 
 class SettingsViewController: BrandedFormViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
 
-    typealias Action = SettingsAction
-    var coordinate: ((Action) -> Void)!
+    enum Action {
+        case setRakat(Int)
+        case setFixedPartSpeed(Double)
+        case setChangingPartSpeed(Double)
+        case setShowChagingTextName(Bool)
+        case changeLanguage(String)
+        case confirmRestart
+        case chooseInstrument(String)
+        case startPrayer
+        case didPressFAQButton
+        case didPressFeedbackButton
+    }
+    var coordinate: ((SettingsViewController.Action) -> Void)!
 
 
     // MARK: - Stored Instance Properties
@@ -44,6 +56,17 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         title = NSLocalizedString("SETTINGS.TITLE", comment: "")
         tableView?.backgroundColor = Color(named: .background).change(.brightness, to: 0.95)
 
+        setupAppSection()
+        setupPrayerSection()
+        setupStartSection()
+        setupFAQButton()
+        setupFeedbackButton()
+    }
+
+
+    // MARK: - Instance Methods
+
+    private func setupAppSection() {
         let appSection = Section(l10n.AppSection.title)
             <<< ActionSheetRow<String>() { row in
                 row.title = l10n.AppSection.InterfaceLanguage.title
@@ -53,9 +76,11 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             }.onChange { row in
                 guard let rowValue = row.value else { log.error("Language had nil value."); return }
                 self.coordinate(.changeLanguage(rowValue))
-            }
+        }
         form.append(appSection)
+    }
 
+    private func setupPrayerSection() {
         let prayerSection = Section(l10n.PrayerSection.title)
             <<< IntRow() { row in
                 row.title = l10n.PrayerSection.RakatCount.title
@@ -104,9 +129,11 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             }.onChange { row in
                 guard let rowValue = row.value else { log.error("Instrument had nil value."); return }
                 self.coordinate(.chooseInstrument(rowValue))
-            }
+        }
         form.append(prayerSection)
+    }
 
+    private func setupStartSection() {
         let startSection = Section()
             <<< ButtonRow() { row in
                 row.title = L10n.Settings.StartButton.title
@@ -116,12 +143,26 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
                 cell.textLabel?.textColor = Color(named: .accent)
             }.onCellSelection { (_, _) in
                 self.coordinate(.startPrayer)
-            }
+        }
         form.append(startSection)
     }
 
+    private func setupFAQButton() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: l10n.FaqButton.title, style: .plain, target: self, action: #selector(didPressFAQButton))
+    }
 
-    // MARK: - Instance Methods
+    private func setupFeedbackButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: l10n.FeedbackButton.title, style: .plain,
+                                                            target: self, action: #selector(didPressFeedbackButton))
+    }
+
+    func didPressFAQButton() {
+        coordinate(.didPressFAQButton)
+    }
+
+    func didPressFeedbackButton() {
+        coordinate(.didPressFeedbackButton)
+    }
 
     func showRestartConfirmDialog() {
         let l10n = self.l10n.ConfirmAlert.self

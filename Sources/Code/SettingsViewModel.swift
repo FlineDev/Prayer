@@ -47,7 +47,7 @@ class SettingsViewModel {
     }
 
     var showChangingTextName: Bool {
-        get { guard let boolValue = Defaults[.showChangingTextName] else { return false }; return boolValue }
+        get { guard let boolValue = Defaults[.showChangingTextName] else { return true }; return boolValue }
         set { Defaults[.showChangingTextName] = newValue }
     }
 

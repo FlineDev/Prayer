@@ -35,7 +35,7 @@ class Rakah {
 
         if includesStandingRecitation {
             let allowedStandingRecitationNames = Component.nonOpeningRecitationFileNames.filter { !excludeStandingRecitationNames.contains($0) }
-            self.standingRecitationFileName = allowedStandingRecitationNames.sample()
+            self.standingRecitationFileName = allowedStandingRecitationNames.sample
         } else {
             self.standingRecitationFileName = nil
         }

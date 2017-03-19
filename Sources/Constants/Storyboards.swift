@@ -13,7 +13,7 @@ protocol StoryboardSceneType {
 
 extension StoryboardSceneType {
   static func storyboard() -> UIStoryboard {
-    return UIStoryboard(name: self.storyboardName, bundle: nil)
+    return UIStoryboard(name: self.storyboardName, bundle: Bundle(for: BundleToken.self))
   }
 
   static func initialViewController() -> UIViewController {
@@ -41,21 +41,35 @@ extension UIViewController {
   }
 }
 
-struct StoryboardScene {
+enum StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }
-  enum Prayer: StoryboardSceneType {
-    static let storyboardName = "Prayer"
+  enum PrayerView: StoryboardSceneType {
+    static let storyboardName = "PrayerView"
 
-    static func initialViewController() -> PrayerViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? PrayerViewController else {
+    static func initialViewController() -> Prayer.PrayerViewController {
+      guard let vc = storyboard().instantiateInitialViewController() as? Prayer.PrayerViewController else {
         fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+      }
+      return vc
+    }
+  }
+  enum Settings: String, StoryboardSceneType {
+    static let storyboardName = "Settings"
+
+    case faqNavigationControllerScene = "FAQNavigationController"
+    static func instantiateFaqNavigationController() -> Prayer.BrandedNavigationController {
+      guard let vc = StoryboardScene.Settings.faqNavigationControllerScene.viewController() as? Prayer.BrandedNavigationController
+      else {
+        fatalError("ViewController 'FAQNavigationController' is not of the expected class Prayer.BrandedNavigationController.")
       }
       return vc
     }
   }
 }
 
-struct StoryboardSegue {
+enum StoryboardSegue {
 }
+
+private final class BundleToken {}

@@ -96,6 +96,45 @@
 "SETTINGS.CONFIRM_ALERT.TITLE" = "Yeniden başlatma gerekiyor";
 
 /* No comment provided by engineer. */
+"SETTINGS.FAQ.TITLE" = "SSS";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylediğinin farkında olmak.\n2. Namaz kılarak Kuranı okumak.\n\nŞu anda uygulama sadece Kurandakı son oniki sûre içerir ve namazda ayakda olurken rastgele bır sure seçer, ama bu sadece ilk adımdır. Tüm eksik olan sûreler güncelleştirmeler ile komple edilecektir ki, dua ederken parça parça Kuranı okuyabilesiniz. Uzun sureler için bile bir çözümümüz var.\n\nÖzellikle bu uygulamanın amacı OLMAYAN şey namaz kılışını sıfırdan öğretmektir. Bu uygulama namazdaki duaları yabanci dil (Arapça) yerine, bildiğiniz bir dilden okumaya sahip olmanız için hazırlanmıştır. Şu anda bu diller Türkçe, Almanca ve İngilizce aralarından seçilmektedir.";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Bu soruya sonuçta sadece Tanrımız cevap verebilir, ama biz tüm eleştirmenlere şu soruyu sormak istiyoruz: Eğer namazda konuşulan kelimelerin anlamı bilınmez ise, namazın gerçekten kabul olabileceğini mi düşünüyorsunuz?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Namazda kelimeler iPad den okunulursa, namaz hiç geçerli olabilirmi?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "Biz Kuranın öncelikle bizim içindeki yazan şeylerden haberdar olmamız ve hayatımıza aktarmamız için indiğini düşünüyoruz. Anlamadığımız kelimeler ne bıze yanlış yolu gösterir, nede bizi doğru yola götürür. Fakat bu Kuranın en büyük hedefidir.\n\nBiz inanamıyoruz ki, Allah bizden günde beş vakıt onun kelimelerin güzelliğine dinlememizi istesin. Kurandaki Arapça Allahın bize gönderdiği en doğru mesaj olmasına rağmen, Arapça diline sahip olmayan insanın arapça söğlenmiş olan namazının kabul edilebilindiğine inanamıyoruz. Bu tür bir namazda büyük bir eksiklik vardır. Üstelik bizim bilgimize göre Kuranda namazın Arapça dilde okunması meçbur olduğunu söğleğen ayet bulunmamaktadır.";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "Namaz daki dualar Kuranın asıl dili Arapçadan okunması şart değilmidir?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER" = "Aslında bu uygulamanın hedefi Arapça dilini konuşmadığınız sürece namazda kullanmamak. Kullanım alternatif olarak namazı hala Arapça dilinde devam etmek isterseniz, bu uygulamayı anlamını yandan okuyarak da kullanmanız mümkündür. Bizce bu namazınızı boş yerine zorlaştıracaktır, bu yüzden tavsıyemiz dualarınızı direk bildiginiz dilden okumak. Ancak pek emin olamadıysanız Arapçadan okumak isteğinizi anlıyabiliriz. O zaman \"Değişen metin adı\" ayarını kullanınız.";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION" = "Ben Arapça dua etmeye devam etmek istersem, uygulamayı kullanabilir miyim?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER" = "Biz namazların çok önemli bir şey olduğu için mümkün olduğu kadar doğru yapmak istediğinizi anlıyoruz. Biz de sadece bu sebeple ve dinde aynı metnin anlamından çok farklı görüşlerin hakim olduğunu bildiğimiz için size orijinala yakın kalmayı tercih edıyoruz.\n\nBu nedenle, biz de Kuranın kendisinı okumanızın şart olduğunu düşünerek bu uygulamayı yardım olarak hazırladık. Kuranın içindekilerine başkaların (sözde) hikayelerine dinleyerek onların size \"Kuranın gerçek mesajını\" öğretmesine engel olabilmeniz için Kuranın ta kendisini okumayı öneriyoruz. Onların dediklerinin doğru olup olmadığını sadece böylece ayrım edebileceğinize inanıyoruz.";
+
+/* No comment provided by engineer. */
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Çeviriler otomatikmen orijinal metnin anlamı değiştirmezmi?";
+
+/* No comment provided by engineer. */
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Geribildirim yolla";
+
+/* No comment provided by engineer. */
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Değişen metin hızı";
 
 /* No comment provided by engineer. */

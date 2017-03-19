@@ -1,0 +1,11 @@
+Günde beş vakit namaz kılıyor da Arapça okuduğun için ne dediğini mi anlamıyorsun?
+
+Bu uygulama Türkçe (veya Almanca yada İngilizce) namaz kılmanıza yardımcı olacaktır ki namazlarınızın anlamı olsun. Bunu yapmak için, namazda önünüzde cihazınızı bırakın ve oradan metni okuyarak namazınızı kılın. Uygulamanın kendisi bilerek basit tutulmuştur kı animasyon yada reklam gibi rahatsız edici seyler içermesin. Bu arada bütün kodu GitHub üzerinde bir açık kaynak lisansı ile yayınlanmış durumda (https://github.com/Flinesoft/Prayer) - böylece reklam sorunu hiç çıkmayacaktır.
+
+Biz bu uygulamanın yararlı bulacağını umuyoruz. Eğer sevdığseniz, bize App Store'da bir rating yaparsan seviniriz. Soru ve önerileriniz için, biz bir forum kurduk: community.flinesoft.com
+Orada, bu uygulamanın geleceği için planımızı da bulacaksınız ve hatta tartışmaya katılabilirsiniz.
+
+
+Yasal Uyarı:
+Çevirilerin telif hakklari yazarlarına aittir.
+Kuran çevirileri Muhammed Esedin "Kur'an Mesajı" kitabından alınmıştır.

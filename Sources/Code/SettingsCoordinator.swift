@@ -9,16 +9,10 @@
 import UIKit
 import Imperio
 import SwiftyUserDefaults
+import SafariServices
 
-enum SettingsAction {
-    case setRakat(Int)
-    case setFixedPartSpeed(Double)
-    case setChangingPartSpeed(Double)
-    case setShowChagingTextName(Bool)
-    case changeLanguage(String)
-    case confirmRestart
-    case chooseInstrument(String)
-    case startPrayer
+extension DefaultsKeys {
+    static let faqClosed = DefaultsKey<Bool>("faqClosed")
 }
 
 class SettingsCoordinator: AppCoordinator {
@@ -43,34 +37,50 @@ class SettingsCoordinator: AppCoordinator {
         settingsViewModel = SettingsViewModel()
         settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
 
-        weak var weakSelf = self
-        settingsViewCtrl?.coordinate = { action in
+        settingsViewCtrl?.coordinate = { [unowned self] action in
             switch action {
             case .setRakat(let rakatCount):
-                weakSelf?.settingsViewModel.rakatCount = rakatCount
+                self.settingsViewModel.rakatCount = rakatCount
+
             case .setFixedPartSpeed(let fixedPartSpeed):
-                weakSelf?.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+                self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+
             case .setChangingPartSpeed(let changingPartSpeed):
-                weakSelf?.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+                self.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+
             case .setShowChagingTextName(let showName):
-                weakSelf?.settingsViewModel.showChangingTextName = showName
+                self.settingsViewModel.showChangingTextName = showName
+
             case .changeLanguage(let langCode):
-                weakSelf?.settingsViewModel.interfaceLanguageCode = langCode
-                weakSelf?.settingsViewCtrl.showRestartConfirmDialog()
+                self.settingsViewModel.interfaceLanguageCode = langCode
+                self.settingsViewCtrl.showRestartConfirmDialog()
+
             case .confirmRestart:
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
+
             case .chooseInstrument(let instrument):
-                weakSelf?.settingsViewModel.movementSoundInstrument = instrument
+                self.settingsViewModel.movementSoundInstrument = instrument
                 if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
                     AudioPlayer.shared.playSound(at: moveSoundUrl)
                 }
+
             case .startPrayer:
-                weakSelf?.startPrayer()
+                self.startPrayer()
+
+            case .didPressFAQButton:
+                self.showFAQ()
+
+            case .didPressFeedbackButton:
+                self.showFeedbackCommunity()
             }
         }
 
         let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
         present(initialViewController: navCtrl)
+
+        if !Defaults[.faqClosed] {
+            showFAQ()
+        }
     }
 
 
@@ -91,5 +101,36 @@ class SettingsCoordinator: AppCoordinator {
         start(subCoordinator: prayerCoordinator).onFinish {
             // no-op
         }
+    }
+
+    func showFAQ() {
+        let faqNavCtrl = StoryboardScene.Settings.instantiateFaqNavigationController()
+        let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController
+        let l10n = L10n.Settings.FaqEntries.self
+
+        faqViewCtrl.viewModel = FAQViewModel(entries: [
+            (question: l10n.AppMotivation.question, answer: l10n.AppMotivation.answer),
+            (question: l10n.IpadReading.question, answer: l10n.IpadReading.answer),
+            (question: l10n.Language.question, answer: l10n.Language.answer),
+            (question: l10n.LanguageMix.question, answer: l10n.LanguageMix.answer),
+            (question: l10n.TranslationProblem.question, answer: l10n.TranslationProblem.answer)
+        ])
+
+        faqViewCtrl.coordinate = { action in
+            switch action {
+            case .doneButtonPressed:
+                Defaults[.faqClosed] = true
+                faqViewCtrl.dismiss(animated: true, completion: nil)
+            }
+        }
+
+        settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
+    }
+
+    func showFeedbackCommunity() {
+        let communityUrl = URL(string: "https://community.flinesoft.com/c/prayer-app")!
+        let safariViewCtrl = SFSafariViewController(url: communityUrl)
+
+        settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
     }
 }

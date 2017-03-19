@@ -1,0 +1,13 @@
+Du betest regelmäßig deine Gebete auf Arabisch, verstehst aber nicht wirklich, was du dabei sagst?
+
+Diese App hilft dir, deine Gebete auf Deutsch (oder Türkisch bzw. Englisch) zu machen, damit sie für dich wieder an Bedeutung gewinnen. Hierzu lässt du dein Gerät während des Gebetes vor dir liegen und liest den Text einfach mit. Die App ist absichtlich schlicht gehalten und auf die Grundfunktionen reduziert, damit sie keine ablenkenden Elemente wie Animationen oder Werbung enthält. Werbung ist übrigens sowieso kein Thema, da der gesamte Code mit einer Open Source-Lizenz auf GitHub veröffentlicht ist (unter https://github.com/Flinesoft/Prayer).
+
+Wir empfehlen, dass du beim Beten mit dieser App (sofern möglich) den Lautlos-Modus deines Gerätes ausschaltest, da die App je einen kurzen Ton bei Auf- und Abwärtsbewegungen abspielt. Dass du den Ablauf eines Gebets bereits kennst, wird übrigens voraus gesetzt. Für Gebets-Neulinge ist diese App daher nicht geeignet.
+
+Wir hoffen, dass du diese App nützlich findest. Wenn sie dir gefällt, freuen wir uns über eine entsprechende Bewertung im App Store. Für Fragen und Anregungen haben wir ein Forum eingerichtet: community.flinesoft.com
+Dort findest du auch unsere Pläne für die Zukunft und kannst dich an der Diskussion beteiligen.
+
+
+Rechtliche Hinweise:
+Die Urheberrechte der Übersetzungen gehören den jeweiligen Autoren.
+Die Koran-Übersetzungen sind entnommen aus „Die Botschaft des Koran“ von Muhammad Asad.

@@ -45,12 +45,18 @@ enum ColorName {
 
   var rgbaValue: UInt32 {
     switch self {
-    case .accent: return 0x4da1bdff
-    case .background: return 0xd6d6d6ff
-    case .error: return 0xbd4da1ff
-    case .primary: return 0x001024ff
-    case .secondary: return 0x154f69ff
-    case .success: return 0xa1bd4dff
+    case .accent:
+      return 0x4da1bdff
+    case .background:
+      return 0xd6d6d6ff
+    case .error:
+      return 0xbd4da1ff
+    case .primary:
+      return 0x001024ff
+    case .secondary:
+      return 0x154f69ff
+    case .success:
+      return 0xa1bd4dff
     }
   }
 
