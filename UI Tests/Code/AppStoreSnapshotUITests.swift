@@ -64,12 +64,14 @@ class AppStoreSnapshotUITests: XCTestCase {
     // MARK: - Helper Methods
 
     private func localizedString(key: String) -> String {
-        let localizationBundle = Bundle(path: Bundle(for: AppStoreSnapshotUITests.self).path(forResource: deviceLanguage, ofType: "lproj")!)
+        let language = deviceLanguage.substring(to: deviceLanguage.index(deviceLanguage.startIndex, offsetBy: 2))
+        let localizationBundle = Bundle(path: Bundle(for: AppStoreSnapshotUITests.self).path(forResource: language, ofType: "lproj")!)
         return NSLocalizedString(key, bundle: localizationBundle!, comment: "")
     }
 
     private func localizedTextFileEntry(fileName: String, lineIndex: Int) -> String {
-        let localizationBundle = Bundle(path: Bundle(for: AppStoreSnapshotUITests.self).path(forResource: deviceLanguage, ofType: "lproj")!)!
+        let language = deviceLanguage.substring(to: deviceLanguage.index(deviceLanguage.startIndex, offsetBy: 2))
+        let localizationBundle = Bundle(path: Bundle(for: AppStoreSnapshotUITests.self).path(forResource: language, ofType: "lproj")!)!
         let textFileContent: String = try! String(contentsOfFile: (localizationBundle.path(forResource: fileName, ofType: "txt")!)) // swiftlint:disable:this force_try
         return textFileContent.components(separatedBy: .newlines)[lineIndex]
     }

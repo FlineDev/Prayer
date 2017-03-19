@@ -2,6 +2,7 @@ app_identifier "com.flinesoft.prayer" # The bundle identifier of your app
 apple_id "CihatGuenduez@posteo.de" # Your Apple email address
 
 team_id "767S6EFMJ8"  # Developer Portal Team ID
+itc_team_id "549314"  # iTunes Connect Team ID
 
 # you can even provide different app identifiers, Apple IDs and team names per lane:
 # More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
