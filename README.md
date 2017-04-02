@@ -4,7 +4,6 @@
 </p>
 
 <p align="center">
-
     <a href="https://www.bitrise.io/app/bfed282364a7c368">
         <img src="https://www.bitrise.io/app/bfed282364a7c368.svg?token=NixfnURP7c0U1i_wrjwdjg&branch=stable"
              alt="Build Status">
@@ -23,7 +22,7 @@
         alt="Platforms: iOS">
     <a href="https://github.com/Flinesoft/Prayer/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-GPL-3.0-lightgrey.svg"
-              alt="License: GPL-3.0">
+             alt="License: GPL-3.0">
     </a>
 </p>
 
