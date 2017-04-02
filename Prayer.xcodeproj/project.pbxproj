@@ -143,6 +143,7 @@
 		A1370CE41E36A5D000B55D9E /* BrandedFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandedFormViewController.swift; sourceTree = "<group>"; };
 		A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandedViewController.swift; sourceTree = "<group>"; };
 		A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerCoordinator.swift; sourceTree = "<group>"; };
+		A13B093B1E91AAB3003A375D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A1494AE61E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
@@ -410,6 +411,7 @@
 		A1494AEF1E27F3DF00286EBF /* Root Files */ = {
 			isa = PBXGroup;
 			children = (
+				A13B093B1E91AAB3003A375D /* README.md */,
 				A1494AF01E27F3F000286EBF /* Cartfile */,
 				A1494AF61E27F52B00286EBF /* Cartfile.private */,
 				A1494AF11E27F44B00286EBF /* Cartfile.resolved */,
