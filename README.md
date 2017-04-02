@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg"
         alt="Platforms: iOS">
     <a href="https://github.com/Flinesoft/Prayer/blob/stable/LICENSE.md">
-        <img src="https://img.shields.io/badge/License-GPL-3.0-lightgrey.svg"
+        <img src="https://img.shields.io/badge/License-GPL--3.0-lightgrey.svg"
              alt="License: GPL-3.0">
     </a>
 </p>
