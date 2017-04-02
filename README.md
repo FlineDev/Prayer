@@ -41,6 +41,8 @@ You regularly pray your prayers in Arabic, but do **not really understand** what
 
 This app will help you make your **prayers in English** (or German or Turkish) to make them more meaningful to you. To do this, leave your device lying in front of you during the prayer and simply read the text from there. The app is purposely kept simple and reduced to the basic functions so that it does not contain distracting elements such as animations or advertising.
 
+For more information, checkout our [FAQ section](https://community.flinesoft.com/c/prayer-app/questions) on our Community Forum.
+
 ## Contributing
 
 Contributions are welcome. We do have a [**Community Forum**](https://community.flinesoft.com/c/prayer-app) where you can discuss and exchange ideas about this project. Feel free to post your ideas there or implement an idea yourself and post a pull request – there's a [voted list](https://community.flinesoft.com/c/prayer-app/ideas) of feature requests, and there's also a [list of bugs](https://community.flinesoft.com/c/prayer-app/bugs) for you to get started.
