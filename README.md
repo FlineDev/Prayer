@@ -4,13 +4,14 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/?">
-        <img src="https://www.bitrise.io/app/?.svg?token=?&branch=stable"
+
+    <a href="https://www.bitrise.io/app/bfed282364a7c368">
+        <img src="https://www.bitrise.io/app/bfed282364a7c368.svg?token=NixfnURP7c0U1i_wrjwdjg&branch=stable"
              alt="Build Status">
     </a>
-    <a href="https://codebeat.co/projects/github-com-flinesoft-prayer">
-        <img src="https://codebeat.co/badges/?"
-             alt="codebeat badge">
+    <a href="https://codebeat.co/projects/github-com-flinesoft-prayer-stable">
+        <img src="https://codebeat.co/badges/8c24c2d9-f0c7-4f16-8ab9-ec537fb6af45"
+             alt="Codebeat Badge">
     </a>
     <a href="https://github.com/Flinesoft/Prayer/releases">
         <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
