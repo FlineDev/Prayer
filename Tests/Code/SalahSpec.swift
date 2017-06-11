@@ -1,6 +1,6 @@
 //
 //  SalahSpec.swift
-//  Salah
+//  Prayer
 //
 //  Created by Cihat Gündüz on 12.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
@@ -17,7 +17,7 @@ class SalahSpec: QuickSpec {
             let salah = Salah(rakatCount: 4)
             let randomRecitation = "RR"
 
-            expect(salah.rakat.count).to(equal(4))
+            expect(salah.rakat.count) == 4
 
             // first rakah
             var expectedComponentNames = [
@@ -25,11 +25,11 @@ class SalahSpec: QuickSpec {
                 "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr"
             ]
 
-            expect(salah.rakat[0].components().count).to(equal(expectedComponentNames.count))
+            expect(salah.rakat[0].components().count) == expectedComponentNames.count
             for (i, component) in salah.rakat[0].components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
 
             // second rakah
@@ -38,11 +38,11 @@ class SalahSpec: QuickSpec {
                 "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr"
             ]
 
-            expect(salah.rakat[1].components().count).to(equal(expectedComponentNames.count))
+            expect(salah.rakat[1].components().count) == expectedComponentNames.count
             for (i, component) in salah.rakat[1].components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
 
             // third rakah
@@ -51,11 +51,11 @@ class SalahSpec: QuickSpec {
                 "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr"
             ]
 
-            expect(salah.rakat[2].components().count).to(equal(expectedComponentNames.count))
+            expect(salah.rakat[2].components().count) == expectedComponentNames.count
             for (i, component) in salah.rakat[2].components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
 
             // fourth rakah
@@ -64,11 +64,11 @@ class SalahSpec: QuickSpec {
                 "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm", "Salâm"
             ]
 
-            expect(salah.rakat[3].components().count).to(equal(expectedComponentNames.count))
+            expect(salah.rakat[3].components().count) == expectedComponentNames.count
             for (i, component) in salah.rakat[3].components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
         }
     }

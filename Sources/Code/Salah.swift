@@ -1,6 +1,6 @@
 //
 //  Salah.swift
-//  Salah
+//  Prayer
 //
 //  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
@@ -12,12 +12,9 @@ import Foundation
 /// - Wikipedia (https://en.wikipedia.org/wiki/Salah)
 class Salah {
     // MARK: - Stored Instance Properties
-
     let rakat: Rakat
 
-
     // MARK: - Initializers
-
     /// Creates a new prayer automatically based on the number of rakat.
     /// Currently the logic covers creating the five daily prayers.
     ///
@@ -40,6 +37,7 @@ class Salah {
                     usedStandingRecitationFileNames.append(standingRecitationFileName)
                 }
             }
+
             return rakat
         }()
     }

@@ -16,18 +16,13 @@ enum FAQAction {
 
 class FAQViewController: BrandedViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
-
     typealias Action = FAQAction
     var coordinate: ((FAQAction) -> Void)!
 
-
     // MARK: - IBOutlets
-
     @IBOutlet var collectionView: UICollectionView!
 
-
     // MARK: - Stored Instance Properties
-
     private let l10n = L10n.Settings.Faq.self
     fileprivate let cellReuseIdentifier = "FAQCell"
 
@@ -39,37 +34,32 @@ class FAQViewController: BrandedViewController, Coordinatable {
         }
     }
 
-
     // MARK: - IBAction Methods
-
     @IBAction func doneButtonPressed() {
         coordinate(.doneButtonPressed)
     }
 
-
     // MARK: - View Lifecycle Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = l10n.title
-        (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
+        (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self // swiftlint:disable:this force_cast
     }
 }
 
-
 // MARK: - UICollectionViewDataSource Protocol Implementation
-
 extension FAQViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.entries.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // swiftlint:disable:next force_cast
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! FAQCollectionViewCell
 
-        cell.questionLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).questionLabelFont
-        cell.answerLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).answerLabelFont
+        cell.questionLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).questionLabelFont // swiftlint:disable:this force_cast
+        cell.answerLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).answerLabelFont // swiftlint:disable:this force_cast
 
         cell.questionLabel.attributedText = viewModel.entries[indexPath.item].question.hyphenated()
         cell.answerLabel.attributedText = viewModel.entries[indexPath.item].answer.hyphenated()
@@ -78,9 +68,7 @@ extension FAQViewController: UICollectionViewDataSource {
     }
 }
 
-
 // MARK: - FAQCollectionViewLayoutDelegate Protocol Implementation
-
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
     func question(at indexPath: IndexPath) -> String {
         return viewModel.entries[indexPath.item].question

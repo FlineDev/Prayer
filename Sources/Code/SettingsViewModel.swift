@@ -20,17 +20,14 @@ extension DefaultsKeys {
 
 class SettingsViewModel {
     // MARK: - Stored Instance Properties
-
     static let availableMovementSoundInstruments = [
         "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
         "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth"
     ]
 
-    static let availableLanguageCodes = Bundle.main.localizations.filter({ $0 != "Base" })
-
+    static let availableLanguageCodes = Bundle.main.localizations.filter { $0 != "Base" }
 
     // MARK: - Computed Instance Properties
-
     var rakatCount: Int {
         get { guard let intValue = Defaults[.rakatCount] else { return 4 }; return intValue }
         set { Defaults[.rakatCount] = newValue }

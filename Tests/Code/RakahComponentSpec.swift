@@ -16,7 +16,7 @@ class RakahComponentSpec: QuickSpec {
         it("initializes successully with takbir") {
             let takbir = RakahComponent(.takbir(.standing))
 
-            expect(takbir.spokenTextLines.count).to(equal(1))
+            expect(takbir.spokenTextLines.count) == equal(1)
             expect(takbir.spokenTextLines).to(contain("God is greater"))
         }
 

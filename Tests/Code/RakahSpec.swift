@@ -22,11 +22,11 @@ class RakahSpec: QuickSpec {
                 "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr"
             ]
 
-            expect(rakah.components().count).to(equal(expectedComponentNames.count))
+            expect(rakah.components().count) == expectedComponentNames.count
             for (i, component) in rakah.components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
         }
 
@@ -40,11 +40,11 @@ class RakahSpec: QuickSpec {
                 "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm", "Salâm"
             ]
 
-            expect(rakah.components().count).to(equal(expectedComponentNames.count))
+            expect(rakah.components().count) == expectedComponentNames.count
             for (i, component) in rakah.components().enumerated() {
                 // skip comparison for random recitations
                 if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name).to(equal(expectedComponentNames[i]))
+                expect(component.name) == expectedComponentNames[i]
             }
         }
     }

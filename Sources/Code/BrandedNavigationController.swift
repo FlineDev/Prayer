@@ -10,7 +10,6 @@ import UIKit
 
 class BrandedNavigationController: UINavigationController {
     // MARK: - View Lifecycle Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

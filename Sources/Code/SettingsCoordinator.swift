@@ -17,27 +17,34 @@ extension DefaultsKeys {
 
 class SettingsCoordinator: AppCoordinator {
     // MARK: - Stored Instance Properties
-
+    private let l10n = L10n.Settings.self
     var settingsViewModel: SettingsViewModel!
     var settingsViewCtrl: SettingsViewController!
 
-
     // MARK: - Computed Instance Properties
-
     override var mainViewController: UIViewController? {
         return settingsViewCtrl
     }
 
-
     // MARK: - Coordinator Methods
-
     override func start() {
         super.start()
 
         settingsViewModel = SettingsViewModel()
         settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
 
-        settingsViewCtrl?.coordinate = { [unowned self] action in
+        settingsViewCtrl?.coordinate = handleUserInteraction()
+
+        let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
+        present(initialViewController: navCtrl)
+
+        if !Defaults[.faqClosed] {
+            showFAQ()
+        }
+    }
+
+    fileprivate func handleUserInteraction() -> (SettingsViewController.Action) -> Void { // swiftlint:disable:this cyclomatic_complexity
+        return { [unowned self] action in
             switch action {
             case .setRakat(let rakatCount):
                 self.settingsViewModel.rakatCount = rakatCount
@@ -74,18 +81,9 @@ class SettingsCoordinator: AppCoordinator {
                 self.showFeedbackCommunity()
             }
         }
-
-        let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
-        present(initialViewController: navCtrl)
-
-        if !Defaults[.faqClosed] {
-            showFAQ()
-        }
     }
 
-
     // MARK: - Action Methods
-
     func startPrayer() {
         let salah = Salah(rakatCount: UInt(settingsViewModel.rakatCount))
 
@@ -105,15 +103,15 @@ class SettingsCoordinator: AppCoordinator {
 
     func showFAQ() {
         let faqNavCtrl = StoryboardScene.Settings.instantiateFaqNavigationController()
-        let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController
-        let l10n = L10n.Settings.FaqEntries.self
+        let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController // swiftlint:disable:this force_cast
+        let localL10n = l10n.FaqEntries.self
 
         faqViewCtrl.viewModel = FAQViewModel(entries: [
-            (question: l10n.AppMotivation.question, answer: l10n.AppMotivation.answer),
-            (question: l10n.IpadReading.question, answer: l10n.IpadReading.answer),
-            (question: l10n.Language.question, answer: l10n.Language.answer),
-            (question: l10n.LanguageMix.question, answer: l10n.LanguageMix.answer),
-            (question: l10n.TranslationProblem.question, answer: l10n.TranslationProblem.answer)
+            (question: localL10n.AppMotivation.question, answer: localL10n.AppMotivation.answer),
+            (question: localL10n.IpadReading.question, answer: localL10n.IpadReading.answer),
+            (question: localL10n.Language.question, answer: localL10n.Language.answer),
+            (question: localL10n.LanguageMix.question, answer: localL10n.LanguageMix.answer),
+            (question: localL10n.TranslationProblem.question, answer: localL10n.TranslationProblem.answer)
         ])
 
         faqViewCtrl.coordinate = { action in

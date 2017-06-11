@@ -17,17 +17,15 @@ typealias Rakat = [Rakah]
 /// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
 class Rakah {
     // MARK: - Stored Instance Properties
-
     private let isBeginningOfPrayer: Bool
     private let includesStandingRecitation: Bool
     private let includesSittingRecitation: Bool
     private let isEndOfPrayer: Bool
     let standingRecitationFileName: String?
 
-
     // MARK: - Initializers
-
-    init(isBeginningOfPrayer: Bool, includesStandingRecitation: Bool, includesSittingRecitation: Bool, isEndOfPrayer: Bool, excludeStandingRecitationNames: [String] = []) {
+    init(isBeginningOfPrayer: Bool, includesStandingRecitation: Bool, includesSittingRecitation: Bool,
+         isEndOfPrayer: Bool, excludeStandingRecitationNames: [String] = []) {
         self.isBeginningOfPrayer = isBeginningOfPrayer
         self.includesStandingRecitation = includesStandingRecitation
         self.includesSittingRecitation = includesSittingRecitation
@@ -41,9 +39,7 @@ class Rakah {
         }
     }
 
-
     // MARK: - Instance Methods
-
     func components() -> [RakahComponent] {
         var components: [RakahComponent] = []
 
@@ -92,7 +88,6 @@ class Rakah {
 }
 
 // MARK: - Sub Types
-
 extension Rakah {
     enum Component {
         case takbir(Position)
