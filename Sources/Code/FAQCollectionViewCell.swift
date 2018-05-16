@@ -10,7 +10,6 @@ import UIKit
 
 class FAQCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlets
-
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
 }

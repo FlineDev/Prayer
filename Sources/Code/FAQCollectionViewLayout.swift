@@ -9,48 +9,44 @@
 import UIKit
 import HandyUIKit
 
-protocol FAQCollectionViewLayoutDelegate {
+protocol FAQCollectionViewLayoutDelegate: AnyObject {
     func question(at indexPath: IndexPath) -> String
     func answer(at indexPath: IndexPath) -> String
 }
 
-@IBDesignable class FAQCollectionViewLayout: UICollectionViewLayout {
+@IBDesignable
+class FAQCollectionViewLayout: UICollectionViewLayout {
     // MARK: - Stored Instance Properties
-
     @IBInspectable var preferredItemWidth: Int = 400
     @IBInspectable var gapWidth: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 12
 
-    @IBInspectable var questionLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFontWeightBold)
-    @IBInspectable var answerLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFontWeightRegular)
+    var questionLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+    var answerLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
 
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
     private var contentHeight: CGFloat = 0
 
-    
     // MARK: - IBOutlets
-
-    var delegate: FAQCollectionViewLayoutDelegate!
-
+    weak var delegate: FAQCollectionViewLayoutDelegate?
 
     // MARK: - Computed Instance Properties
-
     var columns: Int {
         var columns = Int(collectionView!.bounds.size.width) / preferredItemWidth
         if Int(collectionView!.bounds.size.width) % preferredItemWidth > preferredItemWidth / 2 {
             columns += 1 // round up
         }
+
         return columns
     }
 
     var itemWidth: CGFloat {
         let columns = self.columns
         let allGapsWidth = CGFloat(columns + 1) * gapWidth
+
         return (collectionView!.bounds.size.width - allGapsWidth) / CGFloat(columns)
     }
 
-
     // MARK: - Instance Methods
-
     override func prepare() {
         guard let collectionView = collectionView else {
             log.info("Skipping FAQ layout preparation."); return
@@ -67,11 +63,11 @@ protocol FAQCollectionViewLayoutDelegate {
         for item in 0..<collectionView.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: item, section: 0)
 
-            let questionHeight = delegate.question(at: indexPath).hyphenated().height(forFixedWidth: itemWidth, font: questionLabelFont)
-            let answerHeight = delegate.answer(at: indexPath).hyphenated().height(forFixedWidth: itemWidth, font: answerLabelFont)
+            let questionHeight = delegate?.question(at: indexPath).hyphenated().height(forFixedWidth: itemWidth, font: questionLabelFont)
+            let answerHeight = delegate?.answer(at: indexPath).hyphenated().height(forFixedWidth: itemWidth, font: answerLabelFont)
             let verticalGaps = gapWidth / 4
 
-            let height = questionHeight + answerHeight + verticalGaps
+            let height = questionHeight! + answerHeight! + verticalGaps
 
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: itemWidth, height: height)

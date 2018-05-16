@@ -14,13 +14,10 @@ import Crashlytics
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Stored Instance Properties
-
     var appCoordinator: AppCoordinator?
     var window: UIWindow?
 
-
     // MARK: - Application Lifecycle Methods
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // global configurations
         Fabric.with([Crashlytics.self])
@@ -37,4 +34,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

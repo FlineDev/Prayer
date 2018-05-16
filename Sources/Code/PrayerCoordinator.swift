@@ -12,7 +12,6 @@ import HandySwift
 
 class PrayerCoordinator: Coordinator {
     // MARK: - Stored Instance Properties
-
     private let salah: Salah
     private let fixedTextSpeedsFactor: Double
     private let changingTextSpeedFactor: Double
@@ -25,16 +24,12 @@ class PrayerCoordinator: Coordinator {
 
     private var timer: Timer?
 
-
     // MARK: - Computed Instance Properties
-
     override var mainViewController: UIViewController? {
         return prayerViewCtrl
     }
 
-
     // MARK: - Initializers
-
     init(presentingViewController: UIViewController, salah: Salah, fixedTextSpeedsFactor: Double,
          changingTextSpeedFactor: Double, showChangingTextName: Bool, movementSoundInstrument: String) {
         self.salah = salah
@@ -46,14 +41,12 @@ class PrayerCoordinator: Coordinator {
         super.init(presentingViewController: presentingViewController)
     }
 
-
     // MARK: - Instance Methods
-
     override func start() {
         super.start()
 
         // configure prayer view controller
-        prayerViewCtrl = StoryboardScene.PrayerView.initialViewController()
+        prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
 
         prayerViewCtrl.coordinate = { [unowned self] action in
             switch action {
@@ -70,6 +63,7 @@ class PrayerCoordinator: Coordinator {
         countdown?.onCount { count in
             self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
         }
+
         countdown?.onFinish { self.startPrayer() }
 
         let navCtrl = BrandedNavigationController(rootViewController: prayerViewCtrl)
@@ -126,6 +120,7 @@ class PrayerCoordinator: Coordinator {
                             self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
                             self.progressPrayer()
                         }
+
                         return
                     }
                 }

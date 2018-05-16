@@ -13,19 +13,17 @@ import Imperio
 
 class PrayerViewController: BrandedViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
-
     enum Action {
         case doneButtonPressed
     }
+
     var coordinate: ((PrayerViewController.Action) -> Void)!
 
-
     // MARK: - Stored Instance Properties
-
     var viewModel: PrayerViewModel! {
         didSet {
             title = viewModel.currentComponentName
-            
+
             updateLineLabels()
             updateArrowLabels()
             updateSeparators()
@@ -42,9 +40,7 @@ class PrayerViewController: BrandedViewController, Coordinatable {
         }
     }
 
-
     // MARK: - IBOutlets
-
     @IBOutlet var previousLineLabel: UILabel!
     @IBOutlet var currentLineLabel: UILabel!
     @IBOutlet var nextLineLabel: UILabel!
@@ -56,9 +52,7 @@ class PrayerViewController: BrandedViewController, Coordinatable {
     @IBOutlet var currentLineComponentSeparator: UIImageView!
     @IBOutlet var nextLineComponentSeparator: UIImageView!
 
-
     // MARK: - Instance Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,18 +66,25 @@ class PrayerViewController: BrandedViewController, Coordinatable {
         switch UIApplication.shared.statusBarOrientation {
         case .portrait:
             return .portrait
+
         case .portraitUpsideDown:
             return .portraitUpsideDown
+
         case .landscapeLeft:
             return .landscapeLeft
+
         case .landscapeRight:
             return .landscapeRight
+
         default:
             return .all
         }
     }
 
-    func doneButtonPressed() { coordinate(.doneButtonPressed) }
+    @objc
+    func doneButtonPressed() {
+        coordinate(.doneButtonPressed)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

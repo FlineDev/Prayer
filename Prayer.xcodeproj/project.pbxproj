@@ -234,6 +234,7 @@
 		A1494BCC1E2ED79500286EBF /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
+		A15CF8211EEC37D8008987C2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A161E36B1E7EF826009C6602 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		A161E36C1E7EF869009C6602 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
@@ -420,6 +421,7 @@
 				A1370CE01E369F1400B55D9E /* Colors.txt */,
 				A161E36B1E7EF826009C6602 /* Gemfile */,
 				A161E36C1E7EF869009C6602 /* Gemfile.lock */,
+				A15CF8211EEC37D8008987C2 /* .swiftlint.yml */,
 				A161E36D1E7EF8B1009C6602 /* fastlane */,
 			);
 			name = "Root Files";
@@ -437,8 +439,8 @@
 		A1494AF71E27F55D00286EBF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A1494AFD1E27F5C100286EBF /* Quick.framework */,
 				A1494AFA1E27F5A200286EBF /* Nimble.framework */,
+				A1494AFD1E27F5C100286EBF /* Quick.framework */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -446,13 +448,13 @@
 		A1494AF81E27F56300286EBF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */,
-				A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */,
-				A1370CD21E368A9300B55D9E /* Imperio.framework */,
 				A1370CD01E35831900B55D9E /* Eureka.framework */,
-				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
 				A1494AF31E27F47800286EBF /* HandySwift.framework */,
 				A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */,
+				A1370CD21E368A9300B55D9E /* Imperio.framework */,
+				A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */,
+				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
+				A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -699,6 +701,7 @@
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
+				A15CF8221EEC3C05008987C2 /* SwiftLint */,
 				A1494AF51E27F49200286EBF /* Carthage */,
 				A11830DF1E59142500CBE087 /* Fabric */,
 			);
@@ -755,24 +758,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Flinesoft;
 				TargetAttributes = {
 					A164848A1E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					A164849E1E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A164848A1E243834008EC78C;
 					};
 					A16484A91E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A164848A1E243834008EC78C;
 					};
@@ -924,6 +929,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t dot-syntax-swift3 -o \"$PROJECT_DIR/Sources/Constants/Localizations.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+		A15CF8221EEC3C05008987C2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1269,15 +1288,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1306,6 +1333,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1320,15 +1348,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1349,6 +1385,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1367,9 +1404,9 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1386,9 +1423,9 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1408,7 +1445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Debug;
@@ -1428,7 +1465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Release;
@@ -1442,7 +1479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Prayer;
 			};
 			name = Debug;
@@ -1456,7 +1493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Prayer;
 			};
 			name = Release;

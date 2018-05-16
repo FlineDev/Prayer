@@ -11,12 +11,9 @@ import HandySwift
 
 class Branding {
     // MARK: - Stored  Type Properties
-
     static let shared = Branding()
 
-
     // MARK: - Instance Methods
-
     final func setupGlobalAppearance() {
         UIApplication.shared.keyWindow?.tintColor = Color(named: .primary)
     }
@@ -24,7 +21,7 @@ class Branding {
     final func setupViewControllerAppearance(_ viewController: UIViewController) {
         viewController.navigationController?.navigationBar.barTintColor = Color(named: .background).change(.brightness, to: 0.9)
         viewController.navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: Color(named: .secondary)
+            NSAttributedStringKey.foregroundColor: Color(named: .secondary)
         ]
 
         self.setupViewAppearance(viewController.view)

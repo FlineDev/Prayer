@@ -1,75 +1,74 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
+// swiftlint:disable sorted_imports
 import Foundation
 import UIKit
 
+// swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
-// swiftlint:disable line_length
-// swiftlint:disable type_body_length
 
-protocol StoryboardSceneType {
+internal protocol StoryboardType {
   static var storyboardName: String { get }
 }
 
-extension StoryboardSceneType {
-  static func storyboard() -> UIStoryboard {
+internal extension StoryboardType {
+  static var storyboard: UIStoryboard {
     return UIStoryboard(name: self.storyboardName, bundle: Bundle(for: BundleToken.self))
   }
+}
 
-  static func initialViewController() -> UIViewController {
-    guard let vc = storyboard().instantiateInitialViewController() else {
-      fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+internal struct SceneType<T: Any> {
+  internal let storyboard: StoryboardType.Type
+  internal let identifier: String
+
+  internal func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+      fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
     }
-    return vc
+    return controller
   }
 }
 
-extension StoryboardSceneType where Self: RawRepresentable, Self.RawValue == String {
-  func viewController() -> UIViewController {
-    return Self.storyboard().instantiateViewController(withIdentifier: self.rawValue)
-  }
-  static func viewController(identifier: Self) -> UIViewController {
-    return identifier.viewController()
+internal struct InitialSceneType<T: Any> {
+  internal let storyboard: StoryboardType.Type
+
+  internal func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
+      fatalError("ViewController is not of the expected class \(T.self).")
+    }
+    return controller
   }
 }
 
-protocol StoryboardSegueType: RawRepresentable { }
+internal protocol SegueType: RawRepresentable { }
 
-extension UIViewController {
-  func perform<S: StoryboardSegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
+internal extension UIViewController {
+  func perform<S: SegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
     performSegue(withIdentifier: segue.rawValue, sender: sender)
   }
 }
 
-enum StoryboardScene {
-  enum LaunchScreen: StoryboardSceneType {
-    static let storyboardName = "LaunchScreen"
-  }
-  enum PrayerView: StoryboardSceneType {
-    static let storyboardName = "PrayerView"
+// swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
+internal enum StoryboardScene {
+  internal enum LaunchScreen: StoryboardType {
+    internal static let storyboardName = "LaunchScreen"
 
-    static func initialViewController() -> Prayer.PrayerViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? Prayer.PrayerViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
+    internal static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
   }
-  enum Settings: String, StoryboardSceneType {
-    static let storyboardName = "Settings"
+  internal enum PrayerView: StoryboardType {
+    internal static let storyboardName = "PrayerView"
 
-    case faqNavigationControllerScene = "FAQNavigationController"
-    static func instantiateFaqNavigationController() -> Prayer.BrandedNavigationController {
-      guard let vc = StoryboardScene.Settings.faqNavigationControllerScene.viewController() as? Prayer.BrandedNavigationController
-      else {
-        fatalError("ViewController 'FAQNavigationController' is not of the expected class Prayer.BrandedNavigationController.")
-      }
-      return vc
-    }
+    internal static let initialScene = InitialSceneType<Prayer.PrayerViewController>(storyboard: PrayerView.self)
+  }
+  internal enum Settings: StoryboardType {
+    internal static let storyboardName = "Settings"
+
+    internal static let faqNavigationController = SceneType<Prayer.BrandedNavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
   }
 }
 
-enum StoryboardSegue {
+internal enum StoryboardSegue {
 }
+// swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 
 private final class BundleToken {}
