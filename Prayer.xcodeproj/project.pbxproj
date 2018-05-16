@@ -930,7 +930,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t dot-syntax-swift3 -o \"$PROJECT_DIR/Sources/Constants/Localizations.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift3 -o \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen storyboards \"$PROJECT_DIR/Sources\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Storyboards.swift\"\n    swiftgen strings \"$PROJECT_DIR/Sources/Supporting Files/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/Sources/Constants/Localizations.swift\"\n    swiftgen colors \"$PROJECT_DIR/Colors.txt\" -t swift4 -o \"$PROJECT_DIR/Sources/Constants/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		A15CF8221EEC3C05008987C2 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
