@@ -1,10 +1,9 @@
 //
-//  SnapshotHelper.swift
-//  Example
+//  Created by Cihat Gündüz on 19.03.17.
+//  Copyright © 2017 Flinesoft. All rights reserved.
 //
-//  Created by Felix Krause on 10/8/15.
-//  Copyright © 2015 Felix Krause. All rights reserved.
-//
+
+// swiftlint:disable swiftybeaver_logging
 
 import Foundation
 import XCTest
@@ -26,7 +25,6 @@ func snapshot(_ name: String, waitForLoadingIndicator: Bool = true) {
 }
 
 open class Snapshot: NSObject {
-
     open class func setupSnapshot(_ app: XCUIApplication) {
         setLanguage(app)
         setLocale(app)
@@ -34,10 +32,7 @@ open class Snapshot: NSObject {
     }
 
     class func setLanguage(_ app: XCUIApplication) {
-        guard let prefix = pathPrefix() else {
-            return
-        }
-
+        guard let prefix = pathPrefix() else { return }
         let path = prefix.appendingPathComponent("language.txt")
 
         do {
@@ -50,10 +45,7 @@ open class Snapshot: NSObject {
     }
 
     class func setLocale(_ app: XCUIApplication) {
-        guard let prefix = pathPrefix() else {
-            return
-        }
-
+        guard let prefix = pathPrefix() else { return }
         let path = prefix.appendingPathComponent("locale.txt")
 
         do {
@@ -62,16 +54,16 @@ open class Snapshot: NSObject {
         } catch {
             print("Couldn't detect/set locale...")
         }
+
         if locale.isEmpty {
             locale = Locale(identifier: deviceLanguage).identifier
         }
+
         app.launchArguments += ["-AppleLocale", "\"\(locale)\""]
     }
 
     class func setLaunchArguments(_ app: XCUIApplication) {
-        guard let prefix = pathPrefix() else {
-            return
-        }
+        guard let prefix = pathPrefix() else { return }
 
         let path = prefix.appendingPathComponent("snapshot-launch_arguments.txt")
         app.launchArguments += ["-FASTLANE_SNAPSHOT", "YES", "-ui_testing"]
@@ -79,10 +71,11 @@ open class Snapshot: NSObject {
         do {
             let launchArguments = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
             let regex = try NSRegularExpression(pattern: "(\\\".+?\\\"|\\S+)", options: [])
-            let matches = regex.matches(in: launchArguments, options: [], range: NSRange(location:0, length:launchArguments.characters.count))
+            let matches = regex.matches(in: launchArguments, options: [], range: NSRange(location: 0, length: launchArguments.count))
             let results = matches.map { result -> String in
                 (launchArguments as NSString).substring(with: result.range)
             }
+
             app.launchArguments += results
         } catch {
             print("Couldn't detect/set launch_arguments...")
@@ -101,7 +94,7 @@ open class Snapshot: NSObject {
         #if os(tvOS)
             XCUIApplication().childrenMatchingType(.Browser).count
         #else
-            XCUIDevice.shared().orientation = .unknown
+            XCUIDevice.shared.orientation = .unknown
         #endif
     }
 
@@ -122,6 +115,7 @@ open class Snapshot: NSObject {
         if let path = ProcessInfo().environment["SIMULATOR_HOST_HOME"] as NSString? {
             return path.appendingPathComponent("Library/Caches/tools.fastlane") as NSString?
         }
+
         print("Couldn't find Snapshot configuration files at ~/Library/Caches/tools.fastlane")
         return nil
     }
@@ -133,6 +127,7 @@ extension XCUIElement {
         if whiteListedLoaders.contains(self.identifier) {
             return false
         }
+
         return self.frame.size == CGSize(width: 10, height: 20)
     }
 }
