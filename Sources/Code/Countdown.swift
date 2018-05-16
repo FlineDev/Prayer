@@ -1,13 +1,10 @@
 //
-//  Countdown.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 25.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import SwiftyTimer
+import UIKit
 
 class Countdown {
     // MARK: - Stored Instance Properties

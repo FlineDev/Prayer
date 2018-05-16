@@ -1,7 +1,4 @@
 //
-//  AppStoreSnapshotUITests.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 19.03.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //

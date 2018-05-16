@@ -1,13 +1,10 @@
 //
-//  RakahComponent.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 10.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import HandySwift
+import UIKit
 
 typealias Duration = DispatchTimeInterval
 
@@ -43,7 +40,7 @@ class RakahComponent {
     // MARK: - Initializers
     init(_ component: Rakah.Component, longSitting: Bool = false) { // swiftlint:disable:this cyclomatic_complexity function_body_length
         switch component {
-        case .takbir(let pos):
+        case let .takbir(pos):
             name = l10n.Takbir.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
             needsMovement = true
@@ -204,7 +201,7 @@ class RakahComponent {
             isChangingText = false
             chapterNumber = nil
 
-        case .salam(let pos):
+        case let .salam(pos):
             name = l10n.Salam.name
             spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
             needsMovement = true

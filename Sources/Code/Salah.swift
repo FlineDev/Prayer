@@ -1,7 +1,4 @@
 //
-//  Salah.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //

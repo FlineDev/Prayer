@@ -1,15 +1,12 @@
 //
-//  SettingsViewController.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import Eureka
-import Imperio
 import HandyUIKit
+import Imperio
+import UIKit
 
 class SettingsViewController: BrandedFormViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation

@@ -1,15 +1,12 @@
 //
-//  PrayerViewController.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 17.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import HandySwift
-import SwiftyTimer
 import Imperio
+import SwiftyTimer
+import UIKit
 
 class PrayerViewController: BrandedViewController, Coordinatable {
     // MARK: - Coordinatable Protocol Implementation
@@ -41,16 +38,16 @@ class PrayerViewController: BrandedViewController, Coordinatable {
     }
 
     // MARK: - IBOutlets
-    @IBOutlet var previousLineLabel: UILabel!
-    @IBOutlet var currentLineLabel: UILabel!
-    @IBOutlet var nextLineLabel: UILabel!
+    @IBOutlet private var previousLineLabel: UILabel!
+    @IBOutlet private var currentLineLabel: UILabel!
+    @IBOutlet private var nextLineLabel: UILabel!
 
-    @IBOutlet var previousArrowLabel: UILabel!
-    @IBOutlet var currentArrowLabel: UILabel!
-    @IBOutlet var nextArrowLabel: UILabel!
+    @IBOutlet private var previousArrowLabel: UILabel!
+    @IBOutlet private var currentArrowLabel: UILabel!
+    @IBOutlet private var nextArrowLabel: UILabel!
 
-    @IBOutlet var currentLineComponentSeparator: UIImageView!
-    @IBOutlet var nextLineComponentSeparator: UIImageView!
+    @IBOutlet private var currentLineComponentSeparator: UIImageView!
+    @IBOutlet private var nextLineComponentSeparator: UIImageView!
 
     // MARK: - Instance Methods
     override func viewDidLoad() {

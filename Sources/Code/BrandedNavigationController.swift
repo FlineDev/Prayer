@@ -1,7 +1,4 @@
 //
-//  BrandedNavigationController.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 25.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //

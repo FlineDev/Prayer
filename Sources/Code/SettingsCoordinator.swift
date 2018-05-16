@@ -1,15 +1,12 @@
 //
-//  SettingsCoordinator.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 23.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import Imperio
-import SwiftyUserDefaults
 import SafariServices
+import SwiftyUserDefaults
+import UIKit
 
 extension DefaultsKeys {
     static let faqClosed = DefaultsKey<Bool>("faqClosed")
@@ -46,26 +43,26 @@ class SettingsCoordinator: AppCoordinator {
     fileprivate func handleUserInteraction() -> (SettingsViewController.Action) -> Void { // swiftlint:disable:this cyclomatic_complexity
         return { [unowned self] action in
             switch action {
-            case .setRakat(let rakatCount):
+            case let .setRakat(rakatCount):
                 self.settingsViewModel.rakatCount = rakatCount
 
-            case .setFixedPartSpeed(let fixedPartSpeed):
+            case let .setFixedPartSpeed(fixedPartSpeed):
                 self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
 
-            case .setChangingPartSpeed(let changingPartSpeed):
+            case let .setChangingPartSpeed(changingPartSpeed):
                 self.settingsViewModel.changingTextSpeedFactor = changingPartSpeed
 
-            case .setShowChagingTextName(let showName):
+            case let .setShowChagingTextName(showName):
                 self.settingsViewModel.showChangingTextName = showName
 
-            case .changeLanguage(let langCode):
+            case let .changeLanguage(langCode):
                 self.settingsViewModel.interfaceLanguageCode = langCode
                 self.settingsViewCtrl.showRestartConfirmDialog()
 
             case .confirmRestart:
                 exit(EXIT_SUCCESS) // see http://stackoverflow.com/a/9939963/3451975
 
-            case .chooseInstrument(let instrument):
+            case let .chooseInstrument(instrument):
                 self.settingsViewModel.movementSoundInstrument = instrument
                 if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
                     AudioPlayer.shared.playSound(at: moveSoundUrl)

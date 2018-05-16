@@ -1,14 +1,11 @@
 //
-//  FAQViewController.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 19.02.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
-import Imperio
 import HandyUIKit
+import Imperio
+import UIKit
 
 enum FAQAction {
     case doneButtonPressed
@@ -20,7 +17,7 @@ class FAQViewController: BrandedViewController, Coordinatable {
     var coordinate: ((FAQAction) -> Void)!
 
     // MARK: - IBOutlets
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
 
     // MARK: - Stored Instance Properties
     private let l10n = L10n.Settings.Faq.self

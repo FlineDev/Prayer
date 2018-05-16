@@ -1,15 +1,12 @@
 //
-//  AppDelegate.swift
-//  Prayer
-//
 //  Created by Cihat Gündüz on 09.01.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import UIKit
-import Imperio
-import Fabric
 import Crashlytics
+import Fabric
+import Imperio
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
