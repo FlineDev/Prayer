@@ -312,9 +312,9 @@
 		A11830DC1E58A73100CBE087 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				A11830E81E591AD100CBE087 /* Controller */,
 				A11830E71E591ACD00CBE087 /* Model */,
 				A11830E91E591AD600CBE087 /* View */,
-				A11830E81E591AD100CBE087 /* Controller */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -322,9 +322,9 @@
 		A11830DD1E58A73B00CBE087 /* Prayer */ = {
 			isa = PBXGroup;
 			children = (
+				A11830E61E591AB900CBE087 /* Controller */,
 				A16484DF1E243A81008EC78C /* Model */,
 				A11830E51E591AB500CBE087 /* View */,
-				A11830E61E591AB900CBE087 /* Controller */,
 			);
 			name = Prayer;
 			sourceTree = "<group>";
@@ -332,8 +332,8 @@
 		A11830E01E59147D00CBE087 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A11830E11E5914B000CBE087 /* Fabric.framework */,
 				A11830E21E5914B000CBE087 /* Crashlytics.framework */,
+				A11830E11E5914B000CBE087 /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,8 +341,8 @@
 		A11830E51E591AB500CBE087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */,
 				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
+				A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -373,12 +373,12 @@
 		A11830E91E591AD600CBE087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
-				A16484C11E243898008EC78C /* SettingsViewController.swift */,
-				A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */,
-				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
-				A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */,
 				A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */,
+				A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */,
+				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
+				A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */,
+				A16484C11E243898008EC78C /* SettingsViewController.swift */,
+				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -386,10 +386,10 @@
 		A1370CDD1E369E2900B55D9E /* Branding */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CDE1E369E3F00B55D9E /* Branding.swift */,
 				A1370CE41E36A5D000B55D9E /* BrandedFormViewController.swift */,
-				A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */,
 				A1D1EFBA1E3833960029C009 /* BrandedNavigationController.swift */,
+				A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */,
+				A1370CDE1E369E3F00B55D9E /* Branding.swift */,
 			);
 			name = Branding;
 			sourceTree = "<group>";
@@ -546,11 +546,11 @@
 		A16484BC1E243898008EC78C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A16484BF1E243898008EC78C /* Code */,
 				A16484BD1E243898008EC78C /* Assets */,
-				A16484C41E243898008EC78C /* User Interface */,
+				A16484BF1E243898008EC78C /* Code */,
 				A1494BCB1E2ED79500286EBF /* Constants */,
 				A16484C21E243898008EC78C /* Supporting Files */,
+				A16484C41E243898008EC78C /* User Interface */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -570,9 +570,9 @@
 			isa = PBXGroup;
 			children = (
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
-				A11830DC1E58A73100CBE087 /* Settings */,
-				A11830DD1E58A73B00CBE087 /* Prayer */,
 				A1D1EFBC1E391C560029C009 /* Helpers */,
+				A11830DD1E58A73B00CBE087 /* Prayer */,
+				A11830DC1E58A73100CBE087 /* Settings */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -590,8 +590,8 @@
 			isa = PBXGroup;
 			children = (
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
-				A11830EE1E591FD900CBE087 /* Settings.storyboard */,
 				A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */,
+				A11830EE1E591FD900CBE087 /* Settings.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -651,11 +651,11 @@
 		A16484DF1E243A81008EC78C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1A6A4651E3A819D00A909FF /* Position.swift */,
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
-				A16484E21E243AAC008EC78C /* Salah.swift */,
 				A16484E41E243B5F008EC78C /* Rakah.swift */,
 				A16484E61E25503C008EC78C /* RakahComponent.swift */,
-				A1A6A4651E3A819D00A909FF /* Position.swift */,
+				A16484E21E243AAC008EC78C /* Salah.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -683,10 +683,10 @@
 		A1D1EFBC1E391C560029C009 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CD71E368DF300B55D9E /* Logger.swift */,
 				A1D1EFBD1E391C700029C009 /* AudioPlayer.swift */,
-				A1D1EFC31E393F080029C009 /* Countdown.swift */,
 				A1370CDD1E369E2900B55D9E /* Branding */,
+				A1D1EFC31E393F080029C009 /* Countdown.swift */,
+				A1370CD71E368DF300B55D9E /* Logger.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
