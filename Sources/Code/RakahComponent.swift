@@ -41,7 +41,6 @@ class RakahComponent {
     let l10n = L10n.RakahComponent.self
 
     // MARK: - Initializers
-    // swiftlint:disable long_switch_case
     init(_ component: Rakah.Component, longSitting: Bool = false) { // swiftlint:disable:this cyclomatic_complexity function_body_length
         switch component {
         case .takbir(let pos):
@@ -215,7 +214,6 @@ class RakahComponent {
             chapterNumber = nil
         }
     }
-    // swiftlint:enable long_switch_case
 
     // MARK: - Type Methods
     private static func readLinesFromFile(named name: String) -> [String] {

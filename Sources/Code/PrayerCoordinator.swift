@@ -46,7 +46,7 @@ class PrayerCoordinator: Coordinator {
         super.start()
 
         // configure prayer view controller
-        prayerViewCtrl = StoryboardScene.PrayerView.initialViewController()
+        prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
 
         prayerViewCtrl.coordinate = { [unowned self] action in
             switch action {

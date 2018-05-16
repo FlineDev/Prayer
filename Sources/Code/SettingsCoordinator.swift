@@ -102,7 +102,7 @@ class SettingsCoordinator: AppCoordinator {
     }
 
     func showFAQ() {
-        let faqNavCtrl = StoryboardScene.Settings.instantiateFaqNavigationController()
+        let faqNavCtrl = StoryboardScene.Settings.faqNavigationController.instantiate()
         let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController // swiftlint:disable:this force_cast
         let localL10n = l10n.FaqEntries.self
 

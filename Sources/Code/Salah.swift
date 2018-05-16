@@ -26,10 +26,10 @@ class Salah {
             var usedStandingRecitationFileNames: [String] = []
             for num in 1...rakatCount {
                 let rakah = Rakah(
-                    isBeginningOfPrayer:            num == 1,
-                    includesStandingRecitation:     num <= 2,
-                    includesSittingRecitation:      num % 2 == 0 || num == rakatCount,
-                    isEndOfPrayer:                  num == rakatCount,
+                    isBeginningOfPrayer: num == 1,
+                    includesStandingRecitation: num <= 2,
+                    includesSittingRecitation: num % 2 == 0 || num == rakatCount,
+                    isEndOfPrayer: num == rakatCount,
                     excludeStandingRecitationNames: usedStandingRecitationFileNames
                 )
                 rakat.append(rakah)

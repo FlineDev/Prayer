@@ -26,10 +26,10 @@ class SalahSpec: QuickSpec {
             ]
 
             expect(salah.rakat[0].components().count) == expectedComponentNames.count
-            for (i, component) in salah.rakat[0].components().enumerated() {
+            for (index, component) in salah.rakat[0].components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
 
             // second rakah
@@ -39,10 +39,10 @@ class SalahSpec: QuickSpec {
             ]
 
             expect(salah.rakat[1].components().count) == expectedComponentNames.count
-            for (i, component) in salah.rakat[1].components().enumerated() {
+            for (index, component) in salah.rakat[1].components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
 
             // third rakah
@@ -52,10 +52,10 @@ class SalahSpec: QuickSpec {
             ]
 
             expect(salah.rakat[2].components().count) == expectedComponentNames.count
-            for (i, component) in salah.rakat[2].components().enumerated() {
+            for (index, component) in salah.rakat[2].components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
 
             // fourth rakah
@@ -65,10 +65,10 @@ class SalahSpec: QuickSpec {
             ]
 
             expect(salah.rakat[3].components().count) == expectedComponentNames.count
-            for (i, component) in salah.rakat[3].components().enumerated() {
+            for (index, component) in salah.rakat[3].components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
         }
     }

@@ -21,7 +21,7 @@ class Branding {
     final func setupViewControllerAppearance(_ viewController: UIViewController) {
         viewController.navigationController?.navigationBar.barTintColor = Color(named: .background).change(.brightness, to: 0.9)
         viewController.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor.rawValue: Color(named: .secondary)
+            NSAttributedStringKey.foregroundColor: Color(named: .secondary)
         ]
 
         self.setupViewAppearance(viewController.view)

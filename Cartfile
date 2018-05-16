@@ -1,20 +1,20 @@
 # Handy Swift features that didn't make it into the Swift standard library.
-github "Flinesoft/HandySwift" "work/swift4"
+github "Flinesoft/HandySwift" ~> 2.6
 
 # Handy UI features that should have been part of UIKit in the first place.
-github "Flinesoft/HandyUIKit" "work/swift4"
+github "Flinesoft/HandyUIKit" ~> 1.7
 
 # Swifty API for NSTimer
 github "radex/SwiftyTimer" ~> 2.0
 
 # Elegant iOS form builder in Swift
-github "xmartlabs/Eureka" "swift-4"
+github "xmartlabs/Eureka" ~> 4.1
 
 # Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
 github "Flinesoft/Imperio" ~> 1.0
 
 # Convenient logging during development & release in Swift
-github "SwiftyBeaver/SwiftyBeaver" ~> 1.1
+github "SwiftyBeaver/SwiftyBeaver" ~> 1.5
 
 # Modern Swift API for NSUserDefaults
-github "Dschee/SwiftyUserDefaults" "master"
+github "radex/SwiftyUserDefaults" ~> 3.0

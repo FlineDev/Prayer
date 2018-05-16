@@ -93,12 +93,6 @@ custom_rules:
     name: "Logging Prefix"
     message: "Don't use logging prefixes with log.verbose/debug/info/warning/error – done automatically."
     severity: warning
-  long_switch_case:
-    included: ".*.swift"
-    regex: 'case (?:let )?\.[^\n]+\n((?!\s*switch)[^\n\}]+\n){5,}?\s*(case|\})'
-    name: "Long Switch Cases"
-    message: "Use a maximum of 3 lines within each case."
-    severity: warning
   multiple_closure_params:
     included: ".*.swift"
     regex: '\} *\) *\{'

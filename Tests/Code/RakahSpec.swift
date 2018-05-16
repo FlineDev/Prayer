@@ -23,10 +23,10 @@ class RakahSpec: QuickSpec {
             ]
 
             expect(rakah.components().count) == expectedComponentNames.count
-            for (i, component) in rakah.components().enumerated() {
+            for (index, component) in rakah.components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
         }
 
@@ -41,10 +41,10 @@ class RakahSpec: QuickSpec {
             ]
 
             expect(rakah.components().count) == expectedComponentNames.count
-            for (i, component) in rakah.components().enumerated() {
+            for (index, component) in rakah.components().enumerated() {
                 // skip comparison for random recitations
-                if expectedComponentNames[i] == randomRecitation { continue }
-                expect(component.name) == expectedComponentNames[i]
+                if expectedComponentNames[index] == randomRecitation { continue }
+                expect(component.name) == expectedComponentNames[index]
             }
         }
     }
