@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/bfed282364a7c368">
-        <img src="https://www.bitrise.io/app/bfed282364a7c368.svg?token=NixfnURP7c0U1i_wrjwdjg&branch=stable"
+    <a href="https://app.bitrise.io/app/bfed282364a7c368">
+        <img src="https://app.bitrise.io/app/bfed282364a7c368/status.svg?token=NixfnURP7c0U1i_wrjwdjg&branch=stable"
              alt="Build Status">
     </a>
     <a href="https://codebeat.co/projects/github-com-flinesoft-prayer-stable">
