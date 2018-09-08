@@ -17,22 +17,22 @@ class SettingsViewModel {
 
     // MARK: - Computed Instance Properties
     var rakatCount: Int {
-        get { guard let intValue = Defaults[.rakatCount] else { return 4 }; return intValue }
+        get { return Defaults[.rakatCount] }
         set { Defaults[.rakatCount] = newValue }
     }
 
     var fixedTextsSpeedFactor: Double {
-        get { guard let doubleValue = Defaults[.fixedTextsSpeedFactor] else { return 1.0 }; return doubleValue }
+        get { return Defaults[.fixedTextsSpeedFactor] }
         set { Defaults[.fixedTextsSpeedFactor] = newValue }
     }
 
     var changingTextSpeedFactor: Double {
-        get { guard let doubleValue = Defaults[.changingTextSpeedFactor] else { return 1.0 }; return doubleValue }
+        get { return Defaults[.changingTextSpeedFactor] }
         set { Defaults[.changingTextSpeedFactor] = newValue }
     }
 
     var showChangingTextName: Bool {
-        get { guard let boolValue = Defaults[.showChangingTextName] else { return true }; return boolValue }
+        get { return Defaults[.showChangingTextName] }
         set { Defaults[.showChangingTextName] = newValue }
     }
 
@@ -43,19 +43,19 @@ class SettingsViewModel {
         set { Defaults[.interfaceLanguageCode] = [newValue]; Defaults.synchronize() }
     }
 
-    private var defaultInstrument: String { return SettingsViewModel.availableMovementSoundInstruments.first! }
-
     var movementSoundInstrument: String {
-        get { guard let instrument = Defaults[.movementSoundInstrument] else { return defaultInstrument }; return instrument }
+        get { return Defaults[.movementSoundInstrument] }
         set { Defaults[.movementSoundInstrument] = newValue }
     }
 }
 
 extension DefaultsKeys {
-    static let rakatCount = DefaultsKey<Int?>("RakatCount")
-    static let fixedTextsSpeedFactor = DefaultsKey<Double?>("FixedTextsSpeedFactor")
-    static let changingTextSpeedFactor = DefaultsKey<Double?>("ChangingTextSpeedFactor")
-    static let showChangingTextName = DefaultsKey<Bool?>("ShowChangingTextName")
+    private static var defaultInstrument: String { return SettingsViewModel.availableMovementSoundInstruments.first! }
+
+    static let rakatCount = DefaultsKey<Int>("RakatCount", defaultValue: 4)
+    static let fixedTextsSpeedFactor = DefaultsKey<Double>("FixedTextsSpeedFactor", defaultValue: 1.0)
+    static let changingTextSpeedFactor = DefaultsKey<Double>("ChangingTextSpeedFactor", defaultValue: 1.0)
+    static let showChangingTextName = DefaultsKey<Bool>("ShowChangingTextName", defaultValue: true)
     static let interfaceLanguageCode = DefaultsKey<[String]?>("AppleLanguages") // see http://stackoverflow.com/a/9939963/3451975
-    static let movementSoundInstrument = DefaultsKey<String?>("MovementSoundInstrument")
+    static let movementSoundInstrument = DefaultsKey<String>("MovementSoundInstrument", defaultValue: defaultInstrument)
 }

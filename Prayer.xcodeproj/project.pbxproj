@@ -604,8 +604,8 @@
 		A16484BC1E243898008EC78C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A11783F221445E3A00B41A1A /* Resources */,
 				A16484BF1E243898008EC78C /* Sources */,
+				A11783F221445E3A00B41A1A /* Resources */,
 				A16484C21E243898008EC78C /* SupportingFiles */,
 				A1494BCB1E2ED79500286EBF /* Generated */,
 			);
