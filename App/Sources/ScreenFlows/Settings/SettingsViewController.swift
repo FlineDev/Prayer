@@ -20,7 +20,6 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         case chooseInstrument(String)
         case startPrayer
         case didPressFAQButton
-        case didPressFeedbackButton
     }
 
     var coordinate: ((SettingsViewController.Action) -> Void)!
@@ -52,7 +51,6 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         setupPrayerSection()
         setupStartSection()
         setupFAQButton()
-        setupFeedbackButton()
     }
 
     // MARK: - Instance Methods
@@ -162,23 +160,9 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: l10n.FaqButton.title, style: .plain, target: self, action: #selector(didPressFAQButton))
     }
 
-    private func setupFeedbackButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: l10n.FeedbackButton.title,
-            style: .plain,
-            target: self,
-            action: #selector(didPressFeedbackButton)
-        )
-    }
-
     @objc
     func didPressFAQButton() {
         coordinate(.didPressFAQButton)
-    }
-
-    @objc
-    func didPressFeedbackButton() {
-        coordinate(.didPressFeedbackButton)
     }
 
     func showRestartConfirmDialog() {

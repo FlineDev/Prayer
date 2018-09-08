@@ -69,9 +69,6 @@ class SettingsCoordinator: AppCoordinator {
 
             case .didPressFAQButton:
                 self.showFAQ()
-
-            case .didPressFeedbackButton:
-                self.showFeedbackCommunity()
             }
         }
     }
@@ -119,13 +116,6 @@ class SettingsCoordinator: AppCoordinator {
         }
 
         settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
-    }
-
-    func showFeedbackCommunity() {
-        let communityUrl = URL(string: "https://community.flinesoft.com/c/prayer-app")!
-        let safariViewCtrl = SFSafariViewController(url: communityUrl)
-
-        settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
     }
 }
 
