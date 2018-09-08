@@ -8,13 +8,13 @@ github "Flinesoft/HandyUIKit" ~> 1.7
 github "radex/SwiftyTimer" ~> 2.0
 
 # Elegant iOS form builder in Swift
-github "xmartlabs/Eureka" ~> 4.1
+github "xmartlabs/Eureka" ~> 4.2
 
 # Keep the screen flow and data handling logic out of your view controllers – let them handle view-stuff only.
 github "Flinesoft/Imperio" ~> 1.0
 
 # Convenient logging during development & release in Swift
-github "SwiftyBeaver/SwiftyBeaver" ~> 1.5
+github "SwiftyBeaver/SwiftyBeaver" ~> 1.6
 
 # Modern Swift API for NSUserDefaults
-github "radex/SwiftyUserDefaults" ~> 3.0
+github "radex/SwiftyUserDefaults" "4.0.0-alpha.1"

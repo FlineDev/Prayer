@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A164848A1E243834008EC78C"
-               BuildableName = "Prayer.app"
-               BlueprintName = "Prayer"
+               BuildableName = "App.app"
+               BlueprintName = "App"
                ReferencedContainer = "container:Prayer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,22 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A164849E1E243834008EC78C"
-               BuildableName = "PrayerTests.xctest"
-               BlueprintName = "PrayerTests"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Prayer.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A16484A91E243834008EC78C"
-               BuildableName = "PrayerUITests.xctest"
-               BlueprintName = "PrayerUITests"
+               BuildableName = "UITests.xctest"
+               BlueprintName = "UITests"
                ReferencedContainer = "container:Prayer.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -53,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "Prayer.app"
-            BlueprintName = "Prayer"
+            BuildableName = "App.app"
+            BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "Prayer.app"
-            BlueprintName = "Prayer"
+            BuildableName = "App.app"
+            BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +99,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "Prayer.app"
-            BlueprintName = "Prayer"
+            BuildableName = "App.app"
+            BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

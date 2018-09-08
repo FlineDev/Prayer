@@ -1,0 +1,10 @@
+# Ignore RxSwift variant of Moya
+scheme "RxBlocking-iOS"
+scheme "RxCocoa-iOS"
+scheme "RxSwift-iOS"
+scheme "RxTests-iOS"
+scheme "RxMoya"
+
+# Ignore ReactiveSwift variant of Moya
+scheme "ReactiveSwift-iOS"
+scheme "ReactiveMoya"
