@@ -21,7 +21,7 @@ class Salah {
         self.rakat = {
             var rakat: Rakat = []
             var usedStandingRecitationFileNames: [String] = []
-            for num in 1...rakatCount {
+            for num in 1 ... rakatCount {
                 let rakah = Rakah(
                     isBeginningOfPrayer: num == 1,
                     includesStandingRecitation: num <= 2,

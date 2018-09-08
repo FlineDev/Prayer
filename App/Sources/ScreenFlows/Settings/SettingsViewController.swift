@@ -36,6 +36,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         super.init(style: .grouped)
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -163,8 +164,10 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
 
     private func setupFeedbackButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: l10n.FeedbackButton.title, style: .plain,
-            target: self, action: #selector(didPressFeedbackButton)
+            title: l10n.FeedbackButton.title,
+            style: .plain,
+            target: self,
+            action: #selector(didPressFeedbackButton)
         )
     }
 

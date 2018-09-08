@@ -12,9 +12,9 @@ class PrayerState {
     private let fixedTextsSpeedFactor: Double
     private let movementSoundInstrument: String
 
-    private var rakatIndex = 0
-    private var componentIndex = 0
-    private var lineIndex = 0
+    private var rakatIndex: Int = 0
+    private var componentIndex: Int = 0
+    private var lineIndex: Int = 0
 
     var previousArrow: Position.Arrow?
     var previousLine: String?

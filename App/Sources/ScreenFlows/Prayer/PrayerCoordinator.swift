@@ -27,8 +27,14 @@ class PrayerCoordinator: Coordinator {
     }
 
     // MARK: - Initializers
-    init(presentingViewController: UIViewController, salah: Salah, fixedTextSpeedsFactor: Double,
-         changingTextSpeedFactor: Double, showChangingTextName: Bool, movementSoundInstrument: String) {
+    init(
+        presentingViewController: UIViewController,
+        salah: Salah,
+        fixedTextSpeedsFactor: Double,
+        changingTextSpeedFactor: Double,
+        showChangingTextName: Bool,
+        movementSoundInstrument: String
+    ) {
         self.salah = salah
         self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
         self.changingTextSpeedFactor = changingTextSpeedFactor
@@ -64,18 +70,29 @@ class PrayerCoordinator: Coordinator {
         countdown?.onFinish { self.startPrayer() }
 
         let navCtrl = BrandedNavigationController(rootViewController: prayerViewCtrl)
-        present(navCtrl, style: .modal(completion: {
-            self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
-            self.countdown?.start()
-        }))
+        present(
+            navCtrl,
+            style: .modal(
+                completion: {
+                    self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
+                    self.countdown?.start()
+                }
+            )
+        )
     }
 
     func countdownViewModel(count: Int) -> PrayerViewModel {
         return PrayerViewModel(
             currentComponentName: L10n.PrayerView.Countdown.name,
-            previousArrow: nil, previousLine: nil, currentArrow: nil,
-            currentLine: "\(count)", isChapterName: false, currentIsComponentBeginning: false,
-            nextArrow: nil, nextLine: nil, nextIsComponentBeginning: true,
+            previousArrow: nil,
+            previousLine: nil,
+            currentArrow: nil,
+            currentLine: "\(count)",
+            isChapterName: false,
+            currentIsComponentBeginning: false,
+            nextArrow: nil,
+            nextLine: nil,
+            nextIsComponentBeginning: true,
             movementSoundUrl: nil
         )
     }
@@ -103,11 +120,17 @@ class PrayerCoordinator: Coordinator {
                 if self.showChangingTextName && viewModel.currentIsComponentBeginning {
                     if let chapterNum = self.prayerState.currentRecitationChapterNum {
                         let infoViewModel = PrayerViewModel(
-                            currentComponentName: viewModel.currentComponentName, previousArrow: viewModel.previousArrow,
-                            previousLine: viewModel.previousLine, currentArrow: nil,
-                            currentLine: "📖\(chapterNum): \(viewModel.currentComponentName)", isChapterName: true,
-                            currentIsComponentBeginning: true, nextArrow: nil, nextLine: viewModel.currentLine,
-                            nextIsComponentBeginning: false, movementSoundUrl: viewModel.movementSoundUrl
+                            currentComponentName: viewModel.currentComponentName,
+                            previousArrow: viewModel.previousArrow,
+                            previousLine: viewModel.previousLine,
+                            currentArrow: nil,
+                            currentLine: "📖\(chapterNum): \(viewModel.currentComponentName)",
+                            isChapterName: true,
+                            currentIsComponentBeginning: true,
+                            nextArrow: nil,
+                            nextLine: viewModel.currentLine,
+                            nextIsComponentBeginning: false,
+                            movementSoundUrl: viewModel.movementSoundUrl
                         )
                         self.prayerViewCtrl.viewModel = infoViewModel
 

@@ -14,13 +14,10 @@ protocol FAQCollectionViewLayoutDelegate: AnyObject {
 @IBDesignable
 class FAQCollectionViewLayout: UICollectionViewLayout {
     // MARK: - Stored Instance Properties
-    @IBInspectable var preferredItemWidth: Int = 400
-    @IBInspectable var gapWidth: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 12
+    var questionLabelFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+    var answerLabelFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
 
-    var questionLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
-    var answerLabelFont: UIFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
-
-    private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
+    private var cachedLayoutAttributes: [UICollectionViewLayoutAttributes] = []
     private var contentHeight: CGFloat = 0
 
     // MARK: - IBOutlets
@@ -43,6 +40,10 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
         return (collectionView!.bounds.size.width - allGapsWidth) / CGFloat(columns)
     }
 
+    // MARK: - IBInspectables
+    @IBInspectable var preferredItemWidth: Int = 400
+    @IBInspectable var gapWidth: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 12
+
     // MARK: - Instance Methods
     override func prepare() {
         guard let collectionView = collectionView else {
@@ -52,12 +53,12 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
         let itemWidth = self.itemWidth
         let columns = self.columns
 
-        var xOffsets: [CGFloat] = (0..<columns).map { CGFloat($0) * (CGFloat(itemWidth) + gapWidth) + gapWidth }
+        var xOffsets: [CGFloat] = (0 ..< columns).map { CGFloat($0) * (CGFloat(itemWidth) + gapWidth) + gapWidth }
         var yOffsets = [CGFloat](repeating: gapWidth, count: columns)
         var column: Int = 0
         contentHeight = 0
 
-        for item in 0..<collectionView.numberOfItems(inSection: 0) {
+        for item in 0 ..< collectionView.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: item, section: 0)
 
             let questionHeight = delegate?.question(at: indexPath).hyphenated().height(forFixedWidth: itemWidth, font: questionLabelFont)

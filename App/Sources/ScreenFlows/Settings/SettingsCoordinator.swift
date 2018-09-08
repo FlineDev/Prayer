@@ -8,10 +8,6 @@ import SafariServices
 import SwiftyUserDefaults
 import UIKit
 
-extension DefaultsKeys {
-    static let faqClosed = DefaultsKey<Bool>("faqClosed")
-}
-
 class SettingsCoordinator: AppCoordinator {
     // MARK: - Stored Instance Properties
     private let l10n = L10n.Settings.self
@@ -104,13 +100,15 @@ class SettingsCoordinator: AppCoordinator {
         let faqViewCtrl = faqNavCtrl.topViewController as! FAQViewController // swiftlint:disable:this force_cast
         let localL10n = l10n.FaqEntries.self
 
-        faqViewCtrl.viewModel = FAQViewModel(entries: [
-            (question: localL10n.AppMotivation.question, answer: localL10n.AppMotivation.answer),
-            (question: localL10n.IpadReading.question, answer: localL10n.IpadReading.answer),
-            (question: localL10n.Language.question, answer: localL10n.Language.answer),
-            (question: localL10n.LanguageMix.question, answer: localL10n.LanguageMix.answer),
-            (question: localL10n.TranslationProblem.question, answer: localL10n.TranslationProblem.answer)
-        ])
+        faqViewCtrl.viewModel = FAQViewModel(
+            entries: [
+                (question: localL10n.AppMotivation.question, answer: localL10n.AppMotivation.answer),
+                (question: localL10n.IpadReading.question, answer: localL10n.IpadReading.answer),
+                (question: localL10n.Language.question, answer: localL10n.Language.answer),
+                (question: localL10n.LanguageMix.question, answer: localL10n.LanguageMix.answer),
+                (question: localL10n.TranslationProblem.question, answer: localL10n.TranslationProblem.answer)
+            ]
+        )
 
         faqViewCtrl.coordinate = { action in
             switch action {
@@ -129,4 +127,8 @@ class SettingsCoordinator: AppCoordinator {
 
         settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
     }
+}
+
+extension DefaultsKeys {
+    static let faqClosed = DefaultsKey<Bool>("faqClosed")
 }

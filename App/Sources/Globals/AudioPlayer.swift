@@ -5,7 +5,7 @@
 
 import AVFoundation
 
-class AudioPlayer {
+final class AudioPlayer {
     // MARK: - Stored Type Properties
     static let shared = AudioPlayer()
 

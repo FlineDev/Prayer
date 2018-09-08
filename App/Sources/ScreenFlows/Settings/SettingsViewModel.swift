@@ -6,23 +6,14 @@
 import SwiftyUserDefaults
 import UIKit
 
-extension DefaultsKeys {
-    static let rakatCount = DefaultsKey<Int?>("RakatCount")
-    static let fixedTextsSpeedFactor = DefaultsKey<Double?>("FixedTextsSpeedFactor")
-    static let changingTextSpeedFactor = DefaultsKey<Double?>("ChangingTextSpeedFactor")
-    static let showChangingTextName = DefaultsKey<Bool?>("ShowChangingTextName")
-    static let interfaceLanguageCode = DefaultsKey<[String]?>("AppleLanguages") // see http://stackoverflow.com/a/9939963/3451975
-    static let movementSoundInstrument = DefaultsKey<String?>("MovementSoundInstrument")
-}
-
 class SettingsViewModel {
     // MARK: - Stored Instance Properties
-    static let availableMovementSoundInstruments = [
+    static let availableMovementSoundInstruments: [String] = [
         "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
         "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth"
     ]
 
-    static let availableLanguageCodes = Bundle.main.localizations.filter { $0 != "Base" }
+    static let availableLanguageCodes: [String] = Bundle.main.localizations.filter { $0 != "Base" }
 
     // MARK: - Computed Instance Properties
     var rakatCount: Int {
@@ -58,4 +49,13 @@ class SettingsViewModel {
         get { guard let instrument = Defaults[.movementSoundInstrument] else { return defaultInstrument }; return instrument }
         set { Defaults[.movementSoundInstrument] = newValue }
     }
+}
+
+extension DefaultsKeys {
+    static let rakatCount = DefaultsKey<Int?>("RakatCount")
+    static let fixedTextsSpeedFactor = DefaultsKey<Double?>("FixedTextsSpeedFactor")
+    static let changingTextSpeedFactor = DefaultsKey<Double?>("ChangingTextSpeedFactor")
+    static let showChangingTextName = DefaultsKey<Bool?>("ShowChangingTextName")
+    static let interfaceLanguageCode = DefaultsKey<[String]?>("AppleLanguages") // see http://stackoverflow.com/a/9939963/3451975
+    static let movementSoundInstrument = DefaultsKey<String?>("MovementSoundInstrument")
 }

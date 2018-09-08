@@ -21,8 +21,13 @@ class Rakah {
     let standingRecitationFileName: String?
 
     // MARK: - Initializers
-    init(isBeginningOfPrayer: Bool, includesStandingRecitation: Bool, includesSittingRecitation: Bool,
-         isEndOfPrayer: Bool, excludeStandingRecitationNames: [String] = []) {
+    init(
+        isBeginningOfPrayer: Bool,
+        includesStandingRecitation: Bool,
+        includesSittingRecitation: Bool,
+        isEndOfPrayer: Bool,
+        excludeStandingRecitationNames: [String] = []
+    ) {
         self.isBeginningOfPrayer = isBeginningOfPrayer
         self.includesStandingRecitation = includesStandingRecitation
         self.includesSittingRecitation = includesSittingRecitation
@@ -99,9 +104,9 @@ extension Rakah {
         case rabbanagh
         case salam(Position)
 
-        static let theOpeningRecitationFileName = "001_The-Opening"
+        static let theOpeningRecitationFileName: String = "001_The-Opening"
 
-        static let nonOpeningRecitationFileNames = [
+        static let nonOpeningRecitationFileNames: [String] = [
             "103_The-Flight-of-Time", "104_The-Slanderer", "105_The-Elephant", "106_Quraysh", "107_Assistance",
             "108_Good-in-Abundance", "109_Those-Who-Deny-the-Truth", "110_Succour", "111_The-Twisted-Strands",
             "112_The-Declaration-of-Gods-Perfection", "113_The-Rising-Dawn", "114_Men"

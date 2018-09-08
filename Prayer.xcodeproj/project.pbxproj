@@ -61,7 +61,7 @@
 		A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Strings.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
 		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
-		A161E3721E7EFA78009C6602 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */; };
+		A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* Snapshot.swift */; };
 		A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */; };
 		A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
 		A161E3871E7F1D81009C6602 /* 001_The-Opening.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B211E29452B00286EBF /* 001_The-Opening.txt */; };
@@ -237,7 +237,7 @@
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		A161E36F1E7EF8B1009C6602 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		A161E3701E7EFA30009C6602 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
-		A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		A161E3711E7EFA78009C6602 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
 		A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotUITests.swift; sourceTree = "<group>"; };
 		A161E3891E7F3DC0009C6602 /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deliverfile; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -574,7 +574,7 @@
 		A161E3731E7EFA7B009C6602 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */,
+				A161E3711E7EFA78009C6602 /* Snapshot.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -997,7 +997,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */,
-				A161E3721E7EFA78009C6602 /* SnapshotHelper.swift in Sources */,
+				A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,7 +1408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_NAME = Prayer;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1428,7 +1428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_NAME = Prayer;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1448,7 +1448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Debug;
@@ -1468,7 +1468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Release;
@@ -1482,7 +1482,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Prayer;
 			};
 			name = Debug;
@@ -1496,7 +1496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Prayer;
 			};
 			name = Release;

@@ -21,7 +21,7 @@ class FAQViewController: BrandedViewController, Coordinatable {
 
     // MARK: - Stored Instance Properties
     private let l10n = L10n.Settings.Faq.self
-    fileprivate let cellReuseIdentifier = "FAQCell"
+    fileprivate let cellReuseIdentifier: String = "FAQCell"
 
     var viewModel: FAQViewModel! {
         didSet {
@@ -31,17 +31,17 @@ class FAQViewController: BrandedViewController, Coordinatable {
         }
     }
 
-    // MARK: - IBAction Methods
-    @IBAction func doneButtonPressed() {
-        coordinate(.doneButtonPressed)
-    }
-
     // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = l10n.title
         (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self // swiftlint:disable:this force_cast
+    }
+
+    // MARK: - IBAction Methods
+    @IBAction private func doneButtonPressed() {
+        coordinate(.doneButtonPressed)
     }
 }
 

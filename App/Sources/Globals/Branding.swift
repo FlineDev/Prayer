@@ -6,7 +6,7 @@
 import HandySwift
 import UIKit
 
-class Branding {
+final class Branding {
     // MARK: - Stored  Type Properties
     static let shared = Branding()
 
@@ -18,7 +18,7 @@ class Branding {
     final func setupViewControllerAppearance(_ viewController: UIViewController) {
         viewController.navigationController?.navigationBar.barTintColor = Color.Theme.barBackground
         viewController.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: Color.Theme.secondary
+            NSAttributedString.Key.foregroundColor: Color.Theme.secondary
         ]
 
         self.setupViewAppearance(viewController.view)
