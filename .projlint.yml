@@ -1,0 +1,173 @@
+shared_variables:
+  rightholder: Flinesoft
+  project_name: Prayer
+
+rules:
+  - xcode_build_phases:
+      project_path: <:project_name:>.xcodeproj
+      target_name: App
+      run_scripts:
+        BartyCrouch: |
+          if which bartycrouch > /dev/null; then
+              bartycrouch update -x
+              bartycrouch lint -x
+          else
+              echo "warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch"
+          fi
+
+        SwiftGen: |
+          if which swiftgen > /dev/null; then
+              swiftgen
+          else
+              echo "warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen"
+          fi
+
+        SwiftLint: |
+          if which swiftlint > /dev/null; then
+              swiftlint --quiet
+          else
+              echo "warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint"
+          fi
+
+        ProjLint: |
+          if which projlint > /dev/null; then
+              projlint lint --xcode --timeout 2 --ignore-network-errors
+          else
+              echo "warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint"
+          fi
+
+  - xcode_project_navigator:
+      project_path: <:project_name:>.xcodeproj
+      sorted:
+        - App/Sources
+        - App/Resources
+        - App/SupportingFiles
+        - App/Generated
+        - Tests/Sources
+        - Tests/Resources
+        - Tests/SupportingFiles
+        - UITests/Sources
+        - UITests/Resources
+        - UITests/SupportingFiles
+      inner_group_order: []
+      structure:
+        - App:
+            - Sources:
+                - AppDelegate.swift
+                - Globals:
+                    - Extensions
+            - Resources:
+                - Colors.xcassets
+                - Images.xcassets
+                - Localizable.strings
+                - Fonts
+            - SupportingFiles:
+                - App.entitlements
+                - BartyCrouch.swift
+                - LaunchScreen.storyboard
+                - Info.plist
+                - InfoPlist.strings
+            - Generated:
+                - SwiftGen:
+                    - Assets.swift
+                    - Storyboards.swift
+                    - Strings.swift
+        - Tests:
+            - Sources
+            - Resources
+            - SupportingFiles:
+                - Info.plist
+        - UITests:
+            - Sources
+            - Resources
+            - SupportingFiles:
+                - Info.plist
+        - Extensions
+        - RootFiles:
+            - .bartycrouch.toml
+            - .envrc
+            - .gitignore
+            - .periphery.yml
+            - .projlint.yml
+            - .swiftlint.yml
+            - beak.swift
+            - Brewfile
+            - Cartfile
+            - Cartfile.resolved
+            - SwiftGen-xcassets.stencil
+            - swiftgen.yml
+        - Frameworks:
+            - Carthage:
+                - App
+                - Tests
+            - Local:
+                - App
+                - Tests
+        - Products
+  - file_content_regex:
+      matching_all:
+        Cartfile:
+          - "#\\s*[^\\s]+" # Ensure dependencies are commented
+          - HandySwift
+          - HandyUIKit
+          - MungoHealer
+          - SwiftyBeaver
+          - SwiftyUserDefaults
+        .envrc:
+          - "PATH_add ./Scripts/SymLinks"
+        .gitignore:
+          - Scripts/SymLinks
+          - Carthage/Build
+          - .build
+        Brewfile:
+          - beak
+          - direnv
+      not_matching_all:
+        Cartfile: # Moya already includes Alamofire, prevent redundancy
+          - Alamofire
+          - Moya
+  - file_content_template:
+      matching:
+        .swiftlint.yml:
+          template_url: "https://raw.githubusercontent.com/JamitLabs/ProjLintTemplates/master/JamitLabs/App/SwiftLint.stencil"
+          parameters:
+            rightholder: <:rightholder:>
+        .projlint.yml:
+          template_url: "https://raw.githubusercontent.com/JamitLabs/ProjLintTemplates/master/JamitLabs/App/ProjLint.stencil"
+          parameters:
+            rightholder: <:rightholder:>
+            project_name: <:project_name:>
+  - file_existence:
+      existing_paths:
+        - .bartycrouch.toml
+        - .envrc
+        - .gitignore
+        - .periphery.yml
+        - .projlint.yml
+        - .swiftlint.yml
+        - beak.swift
+        - Brewfile
+        - Cartfile
+        - Cartfile.resolved
+        - README.md
+        - SwiftGen-xcassets.stencil
+        - swiftgen.yml
+        - <:project_name:>.xcodeproj/xcshareddata/IDETemplateMacros.plist
+        - App/Sources/AppDelegate.swift
+        - App/Sources/Globals/Branding.swift
+        - App/Sources/Globals/ErrorHandler.swift
+        - App/Sources/Globals/Logger.swift
+        - App/Generated/SwiftGen/Assets.swift
+        - App/Generated/SwiftGen/Storyboards.swift
+        - App/Generated/SwiftGen/Strings.swift
+        - App/SupportingFiles/Info.plist
+        - App/Resources/de.lproj/Localizable.strings
+        - App/Resources/en.lproj/Localizable.strings
+        - App/Resources/Colors.xcassets/Contents.json
+        - App/Resources/Images.xcassets/AppIcon.appiconset/Contents.json
+        - Scripts/ci.swift
+        - Scripts/deps.swift
+        - Scripts/project.swift
+        - Scripts/tools.swift
+        - Tests/SupportingFiles/Info.plist
+        - UITests/SupportingFiles/Info.plist

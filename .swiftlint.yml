@@ -12,12 +12,11 @@ opt_in_rules:
 - empty_xctest_method
 - explicit_init
 - explicit_type_interface
-- extension_access_modifier
 - fallthrough
 - fatal_error_message
 - file_header
 - file_name
-- file_types_order
+# - file_types_order
 - first_where
 - function_default_parameter_at_end
 - implicitly_unwrapped_optional
@@ -54,7 +53,7 @@ opt_in_rules:
 - sorted_imports
 - switch_case_on_newline
 - trailing_closure
-- type_contents_order
+# - type_contents_order
 - unavailable_function
 - unneeded_parentheses_in_closure_argument
 - untyped_error_in_catch
@@ -65,6 +64,7 @@ opt_in_rules:
 - yoda_condition
 
 disabled_rules:
+- cyclomatic_complexity
 - force_cast
 - todo
 - type_name
@@ -87,18 +87,18 @@ explicit_type_interface:
 file_header:
   required_pattern: |
                     \/\/
-                    \/\/  Created by [^\(\)\d\n]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
+                    \/\/  Created by [^\(\)\d\n]+ on \S{6,10}\.
                     \/\/  Copyright © \d{4} Flinesoft\. All rights reserved\.
                     \/\/
 
 file_name:
   suffix_pattern: "Extensions?|\\+.*"
 
-file_types_order:
-  order:
-    - supporting_type
-    - main_type
-    - extension
+# file_types_order:
+#   order:
+#     - supporting_type
+#     - main_type
+#     - extension
 
 identifier_name:
   excluded:
@@ -106,20 +106,21 @@ identifier_name:
 
 line_length: 160
 
-type_contents_order:
-  order:
-    - case
-    - [type_alias, associated_type]
-    - subtype
-    - type_property
-    - instance_property
-    - ib_outlet
-    - initializer
-    - type_method
-    - view_life_cycle_method
-    - ib_action
-    - other_method
-    - subscript
+# type_contents_order:
+#   order:
+#     - case
+#     - [type_alias, associated_type]
+#     - subtype
+#     - type_property
+#     - ib_inspectable
+#     - instance_property
+#     - ib_outlet
+#     - initializer
+#     - type_method
+#     - view_life_cycle_method
+#     - ib_action
+#     - other_method
+#     - subscript
 
 # Custom Rules
 custom_rules:
@@ -141,15 +142,9 @@ custom_rules:
     name: "Class Name Suffix View Controller"
     message: "All `ViewController` subclasses should end on `ViewController`."
     severity: warning
-  closing_brace_whitespace:
-    included: ".*.swift"
-    regex: '(?:\n| {2,})\}\)? *\n *[^ \n\})\]s#"]'
-    name: "Closing Brace Whitespace"
-    message: "Empty line required after closing curly braces if code with same indentation follows."
-    severity: warning
   closure_params_parantheses:
     included: ".*.swift"
-    regex: '\{\s*\([^):]+\)\s*in'
+    regex: '\{\s*\((?!self)[^):]+\)\s*in'
     name: "Unnecessary Closure Params Parantheses"
     message: "Don't use parantheses around non-typed parameters in a closure."
     severity: warning
@@ -179,7 +174,7 @@ custom_rules:
     severity: warning
   controller_class_name_suffix:
     included: ".*.swift"
-    regex: 'class +\w+(?<!View|Flow)Controller'
+    regex: 'class +\w+(?<!View|Flow|Model)Controller'
     name: "Controller Class Name Suffix"
     message: "Only use the `Controller` class name suffix for ViewControllers or FlowControllers."
     severity: warning
@@ -303,12 +298,6 @@ custom_rules:
     name: "Remove Where for Negative Filtering"
     message: "Use `remove(where:)` instead of `filter(where not ...)` for performance."
     severity: warning
-  self_conditional_binding:
-    included: ".*.swift"
-    regex: '\s+`?\w+`?(?<! strongSelf)\s*=\s*self\s'
-    name: "Self Conditional Binding"
-    message: "Constants with conditional binding on `self` should be named `strongSelf`."
-    severity: warning
   single_line_enum_cases:
     included: ".*.swift"
     regex: 'enum [^\{]+\{\s*(?:\s*\/\/[^\n]*)*\s*case\s+[^,(\n]+,'
@@ -349,7 +338,7 @@ custom_rules:
     included: ".*.swift"
     regex: 'print\([^\n]+\)'
     name: "SwiftyBeaver Logging"
-    message: "Don't use print – use log.verbose/debug/info/warning/error instead."
+    message: "Don't use print – use log.verbose/debug/info/warning/error instead."
     severity: warning
   switch_associated_value_style:
     included: ".*.swift"
