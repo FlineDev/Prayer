@@ -1,5 +1,5 @@
 [update]
-tasks = ["interfaces", "transform", "normalize"]
+tasks = ["interfaces", "transform", "translate", "normalize"]
 
 [update.interfaces]
 path = "App/Sources"
@@ -12,6 +12,11 @@ supportedLanguageEnumPath = "App/SupportingFiles"
 
 [update.normalize]
 path = "App"
+
+[update.translate]
+path = "App"
+secret = ""
+sourceLocale = "en"
 
 [lint]
 path = "App"
