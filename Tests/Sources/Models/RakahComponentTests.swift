@@ -3,7 +3,7 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-@testable import Prayer
+@testable import App
 import XCTest
 
 class RakahComponentTests: XCTestCase {

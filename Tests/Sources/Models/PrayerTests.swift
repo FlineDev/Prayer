@@ -3,12 +3,12 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-@testable import Prayer
+@testable import App
 import XCTest
 
-class SalahTests: XCTestCase {
+class PrayerTests: XCTestCase {
     func testWith4Rakat() {
-        let salah = Salah(rakatCount: 4)
+        let salah = Prayer.make(rakatCount: 4)
         let randomRecitation = "RR"
 
         XCTAssertEqual(salah.rakat.count, 4)

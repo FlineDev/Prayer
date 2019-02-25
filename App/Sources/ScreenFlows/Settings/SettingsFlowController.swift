@@ -70,10 +70,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
 
     func startPrayer() {
         guard settingsViewModel.rakatCount > 0 else { return }
-        let salah = Salah(rakatCount: UInt(settingsViewModel.rakatCount))
+        let prayer = Prayer.make(rakatCount: UInt(settingsViewModel.rakatCount))
 
         let prayerCoordinator = PrayerFlowController(
-            salah: salah,
+            prayer: prayer,
             fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
             changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
             showChangingTextName: settingsViewModel.showChangingTextName,

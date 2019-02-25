@@ -15,12 +15,12 @@ internal enum StoryboardScene {
   internal enum PrayerView: StoryboardType {
     internal static let storyboardName = "PrayerView"
 
-    internal static let initialScene = InitialSceneType<Prayer.PrayerViewController>(storyboard: PrayerView.self)
+    internal static let initialScene = InitialSceneType<App.PrayerViewController>(storyboard: PrayerView.self)
   }
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
 
-    internal static let faqNavigationController = SceneType<Prayer.BrandedNavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
+    internal static let faqNavigationController = SceneType<App.BrandedNavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

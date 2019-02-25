@@ -3,12 +3,12 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-@testable import Prayer
+@testable import App
 import XCTest
 
 class RakahTests: XCTestCase {
     func testCorrectComponentsCountForBeginningRakah() {
-        let rakah = Rakah(isBeginningOfPrayer: true, includesStandingRecitation: true, includesSittingRecitation: false, isEndOfPrayer: false)
+        let rakah = Rakah.make(isBeginningOfPrayer: true, includesStandingRecitation: true, includesSittingRecitation: false, isEndOfPrayer: false)
 
         let randomRecitation = "RR"
         let expectedComponentNames = [
@@ -25,7 +25,7 @@ class RakahTests: XCTestCase {
     }
 
     func testCorrectComponentsCountForEndingRakah() {
-        let rakah = Rakah(isBeginningOfPrayer: false, includesStandingRecitation: false, includesSittingRecitation: true, isEndOfPrayer: true)
+        let rakah = Rakah.make(isBeginningOfPrayer: false, includesStandingRecitation: false, includesSittingRecitation: true, isEndOfPrayer: true)
 
         let randomRecitation = "RR"
         let expectedComponentNames = [

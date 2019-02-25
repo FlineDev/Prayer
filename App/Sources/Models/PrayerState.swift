@@ -7,7 +7,7 @@ import UIKit
 
 class PrayerState {
     // MARK: - Stored Instance Properties
-    private let salah: Salah
+    private let prayer: Prayer
     private let changingTextSpeedFactor: Double
     private let fixedTextsSpeedFactor: Double
     private let movementSoundInstrument: String
@@ -23,15 +23,15 @@ class PrayerState {
     private var currentPosition: Position = .standing
 
     // MARK: - Initializers
-    init(salah: Salah, changingTextSpeedFactor: Double, fixedTextsSpeedFactor: Double, movementSoundInstrument: String) {
-        self.salah = salah
+    init(prayer: Prayer, changingTextSpeedFactor: Double, fixedTextsSpeedFactor: Double, movementSoundInstrument: String) {
+        self.prayer = prayer
         self.changingTextSpeedFactor = changingTextSpeedFactor
         self.fixedTextsSpeedFactor = fixedTextsSpeedFactor
         self.movementSoundInstrument = movementSoundInstrument
     }
 
     // MARK: - Computed Instance Properties
-    private var currentRakah: Rakah { return salah.rakat[rakatIndex] }
+    private var currentRakah: Rakah { return prayer.rakat[rakatIndex] }
     private var currentComponent: RakahComponent { return currentRakah.components()[componentIndex] }
     var currentArrow: Position.Arrow? { return previousPositon.arrow(forChangingTo: currentPosition) }
     var currentLine: String { return currentComponent.spokenTextLines[lineIndex] }
@@ -58,8 +58,8 @@ class PrayerState {
     var currentRecitationChapterNum: Int? { return currentComponent.chapterNumber }
 
     private var nextRakah: Rakah? {
-        guard rakatIndex + 1 < salah.rakat.count else { return nil }
-        return salah.rakat[rakatIndex + 1]
+        guard rakatIndex + 1 < prayer.rakat.count else { return nil }
+        return prayer.rakat[rakatIndex + 1]
     }
 
     private var nextComponent: RakahComponent? {
@@ -102,7 +102,7 @@ class PrayerState {
         guard componentIndex + 1 >= currentRakah.components().count else { componentIndex += 1; return true }
         componentIndex = 0
 
-        guard rakatIndex + 1 >= salah.rakat.count else { rakatIndex += 1; return true }
+        guard rakatIndex + 1 >= prayer.rakat.count else { rakatIndex += 1; return true }
         return false
     }
 

@@ -9,7 +9,7 @@ import UIKit
 
 class PrayerFlowController: FlowController {
     // MARK: - Stored Instance Properties
-    private let salah: Salah
+    private let prayer: Prayer
     private let fixedTextSpeedsFactor: Double
     private let changingTextSpeedFactor: Double
     private let showChangingTextName: Bool
@@ -23,13 +23,13 @@ class PrayerFlowController: FlowController {
 
     // MARK: - Initializers
     init(
-        salah: Salah,
+        prayer: Prayer,
         fixedTextSpeedsFactor: Double,
         changingTextSpeedFactor: Double,
         showChangingTextName: Bool,
         movementSoundInstrument: String
     ) {
-        self.salah = salah
+        self.prayer = prayer
         self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
         self.changingTextSpeedFactor = changingTextSpeedFactor
         self.showChangingTextName = showChangingTextName
@@ -76,7 +76,7 @@ class PrayerFlowController: FlowController {
 
     func startPrayer() {
         prayerState = PrayerState(
-            salah: salah,
+            prayer: prayer,
             changingTextSpeedFactor: changingTextSpeedFactor,
             fixedTextsSpeedFactor: fixedTextSpeedsFactor,
             movementSoundInstrument: movementSoundInstrument
