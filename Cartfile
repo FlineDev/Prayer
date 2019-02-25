@@ -11,7 +11,10 @@ github "xmartlabs/Eureka" ~> 4.2
 github "Flinesoft/Imperio" ~> 3.0
 
 # Error Handler based on localized & healable (recoverable) errors without the overhead of NSError.
-github "JamitLabs/MungoHealer" ~> 0.1
+github "JamitLabs/MungoHealer" ~> 0.3
+
+# Realm is a mobile database: a replacement for Core Data & SQLite
+github "realm/realm-cocoa" ~> 3.13
 
 # Convenient logging during development & release in Swift
 github "SwiftyBeaver/SwiftyBeaver" ~> 1.6

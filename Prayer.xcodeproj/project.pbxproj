@@ -60,6 +60,11 @@
 		A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Strings.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
 		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
+		A160295A2224338B00A700A0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029582224338B00A700A0 /* Realm.framework */; };
+		A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029592224338B00A700A0 /* RealmSwift.framework */; };
+		A160295D222433C700A700A0 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160295C222433C700A700A0 /* RealmHelper.swift */; };
+		A16029612224342800A700A0 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029602224342800A700A0 /* BaseObject.swift */; };
+		A16029632224344500A700A0 /* RealmEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029622224344500A700A0 /* RealmEditable.swift */; };
 		A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* Snapshot.swift */; };
 		A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */; };
 		A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
@@ -236,6 +241,11 @@
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		A15CF8211EEC37D8008987C2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A16029582224338B00A700A0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		A16029592224338B00A700A0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		A160295C222433C700A700A0 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		A16029602224342800A700A0 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
+		A16029622224344500A700A0 /* RealmEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEditable.swift; sourceTree = "<group>"; };
 		A161E36B1E7EF826009C6602 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		A161E36C1E7EF869009C6602 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
@@ -277,11 +287,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A160295A2224338B00A700A0 /* Realm.framework in Frameworks */,
 				A115CBFC2222F6E300A7EB3A /* MungoHealer.framework in Frameworks */,
 				A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */,
 				A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */,
 				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
 				A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */,
+				A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */,
 				A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */,
 				A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */,
 				A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */,
@@ -323,6 +335,7 @@
 				A1D1EFC31E393F080029C009 /* Countdown.swift */,
 				A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */,
 				A1370CD71E368DF300B55D9E /* Logger.swift */,
+				A160295C222433C700A700A0 /* RealmHelper.swift */,
 				A11783F321445E6100B41A1A /* Branding */,
 				A11783EB21445D6400B41A1A /* Extensions */,
 			);
@@ -354,6 +367,7 @@
 				A16484E41E243B5F008EC78C /* Rakah.swift */,
 				A16484E61E25503C008EC78C /* RakahComponent.swift */,
 				A16484E21E243AAC008EC78C /* Salah.swift */,
+				A160295F2224341700A700A0 /* RealmSupport */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,6 +486,8 @@
 				A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */,
 				A1370CD21E368A9300B55D9E /* Imperio.framework */,
 				A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */,
+				A16029582224338B00A700A0 /* Realm.framework */,
+				A16029592224338B00A700A0 /* RealmSwift.framework */,
 				A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */,
 				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
 				A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */,
@@ -567,6 +583,15 @@
 				A11783EC21445D8A00B41A1A /* SwiftGen */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		A160295F2224341700A700A0 /* RealmSupport */ = {
+			isa = PBXGroup;
+			children = (
+				A16029602224342800A700A0 /* BaseObject.swift */,
+				A16029622224344500A700A0 /* RealmEditable.swift */,
+			);
+			path = RealmSupport;
 			sourceTree = "<group>";
 		};
 		A161E36D1E7EF8B1009C6602 /* fastlane */ = {
@@ -926,6 +951,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MungoHealer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -988,11 +1015,14 @@
 				A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
+				A16029632224344500A700A0 /* RealmEditable.swift in Sources */,
+				A160295D222433C700A700A0 /* RealmHelper.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */,
 				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
 				A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */,
+				A16029612224342800A700A0 /* BaseObject.swift in Sources */,
 				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
 				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
 				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
