@@ -7,21 +7,19 @@ import HandyUIKit
 import Imperio
 import UIKit
 
-enum FAQAction {
-    case doneButtonPressed
+protocol FAQFlowDelegate: class {
+    func doneButtonPressed()
 }
 
-class FAQViewController: BrandedViewController, Coordinatable {
-    // MARK: - Coordinatable Protocol Implementation
-    typealias Action = FAQAction
-    var coordinate: ((FAQAction) -> Void)!
-
+class FAQViewController: BrandedViewController {
     // MARK: - IBOutlets
     @IBOutlet private var collectionView: UICollectionView!
 
     // MARK: - Stored Instance Properties
     private let l10n = L10n.Settings.Faq.self
     fileprivate let cellReuseIdentifier: String = "FAQCell"
+
+    weak var flowDelegate: FAQFlowDelegate?
 
     var viewModel: FAQViewModel! {
         didSet {
@@ -41,7 +39,7 @@ class FAQViewController: BrandedViewController, Coordinatable {
 
     // MARK: - IBAction Methods
     @IBAction private func doneButtonPressed() {
-        coordinate(.doneButtonPressed)
+        flowDelegate?.doneButtonPressed()
     }
 }
 

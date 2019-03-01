@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */; };
+		A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */; };
+		A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF92222EE5700A7EB3A /* Assets.swift */; };
+		A115CBFC2222F6E300A7EB3A /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */; };
 		A11783F621445EF600B41A1A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11783F521445EF600B41A1A /* Colors.xcassets */; };
 		A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */; };
 		A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EA1E591EF600CBE087 /* FAQViewController.swift */; };
@@ -18,21 +22,16 @@
 		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
 		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
 		A1370CD81E368DF300B55D9E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CD71E368DF300B55D9E /* Logger.swift */; };
-		A1370CDB1E368FA600B55D9E /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */; };
+		A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */; };
 		A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDE1E369E3F00B55D9E /* Branding.swift */; };
-		A1370CE31E36A31100B55D9E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE21E36A31100B55D9E /* Colors.swift */; };
 		A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE41E36A5D000B55D9E /* BrandedFormViewController.swift */; };
 		A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */; };
-		A1370CE91E37394600B55D9E /* PrayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */; };
+		A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE81E37394600B55D9E /* PrayerFlowController.swift */; };
 		A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AEC1E25A9F000286EBF /* Takbir.txt */; };
 		A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AF31E27F47800286EBF /* HandySwift.framework */; };
-		A1494AFE1E27F5C100286EBF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; };
-		A1494AFF1E27F5C800286EBF /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A1494AFD1E27F5C100286EBF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A1494B001E27F5CB00286EBF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AFA1E27F5A200286EBF /* Nimble.framework */; };
-		A1494B011E27F5CD00286EBF /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A1494AFA1E27F5A200286EBF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A1494B041E27F60400286EBF /* SalahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B031E27F60400286EBF /* SalahSpec.swift */; };
-		A1494B061E27F64600286EBF /* RakahSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B051E27F64600286EBF /* RakahSpec.swift */; };
-		A1494B081E27F65000286EBF /* RakahComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B071E27F65000286EBF /* RakahComponentSpec.swift */; };
+		A1494B041E27F60400286EBF /* PrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B031E27F60400286EBF /* PrayerTests.swift */; };
+		A1494B061E27F64600286EBF /* RakahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B051E27F64600286EBF /* RakahTests.swift */; };
+		A1494B081E27F65000286EBF /* RakahComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B071E27F65000286EBF /* RakahComponentTests.swift */; };
 		A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B0D1E2869B500286EBF /* Opening-Supplication.txt */; };
 		A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B141E28762B00286EBF /* Taawwudh.txt */; };
 		A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B211E29452B00286EBF /* 001_The-Opening.txt */; };
@@ -61,6 +60,12 @@
 		A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Strings.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
 		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
+		A160295A2224338B00A700A0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029582224338B00A700A0 /* Realm.framework */; };
+		A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029592224338B00A700A0 /* RealmSwift.framework */; };
+		A160295D222433C700A700A0 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160295C222433C700A700A0 /* RealmHelper.swift */; };
+		A16029612224342800A700A0 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029602224342800A700A0 /* BaseObject.swift */; };
+		A16029632224344500A700A0 /* RealmEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029622224344500A700A0 /* RealmEditable.swift */; };
+		A16029652224370B00A700A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029642224370B00A700A0 /* User.swift */; };
 		A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* Snapshot.swift */; };
 		A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */; };
 		A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
@@ -70,7 +75,7 @@
 		A16484D41E243898008EC78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C01E243898008EC78C /* AppDelegate.swift */; };
 		A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484C11E243898008EC78C /* SettingsViewController.swift */; };
 		A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16484C51E243898008EC78C /* LaunchScreen.storyboard */; };
-		A16484E31E243AAC008EC78C /* Salah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Salah.swift */; };
+		A16484E31E243AAC008EC78C /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E21E243AAC008EC78C /* Prayer.swift */; };
 		A16484E51E243B5F008EC78C /* Rakah.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E41E243B5F008EC78C /* Rakah.swift */; };
 		A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16484E61E25503C008EC78C /* RakahComponent.swift */; };
 		A1701D641E33CE420080C0A1 /* E-Long in Resources */ = {isa = PBXBuildFile; fileRef = A1701D5F1E33CE420080C0A1 /* E-Long */; };
@@ -112,8 +117,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A1494AFF1E27F5C800286EBF /* Quick.framework in Carthage */,
-				A1494B011E27F5CD00286EBF /* Nimble.framework in Carthage */,
 			);
 			name = Carthage;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,9 +124,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A11783E821445C1700B41A1A /* Cartfile.ignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.ignore; sourceTree = "<group>"; };
+		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
+		A115CBED2222E95F00A7EB3A /* .envrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = .envrc; sourceTree = "<group>"; };
+		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
+		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
+		A115CBF02222E99C00A7EB3A /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
+		A115CBF12222E9AD00A7EB3A /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
+		A115CBF22222EA4000A7EB3A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A115CBF42222ECDD00A7EB3A /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
+		A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
+		A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		A115CBF92222EE5700A7EB3A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MungoHealer.framework; path = Carthage/Build/iOS/MungoHealer.framework; sourceTree = "<group>"; };
 		A11783F521445EF600B41A1A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		A11784022144631900B41A1A /* Swiftgen-Colors.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-Colors.stencil"; sourceTree = "<group>"; };
+		A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
 		A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		A11830EA1E591EF600CBE087 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
@@ -134,14 +148,13 @@
 		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
 		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		A1370CD71E368DF300B55D9E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
 		A1370CDE1E369E3F00B55D9E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
-		A1370CE21E36A31100B55D9E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A1370CE41E36A5D000B55D9E /* BrandedFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandedFormViewController.swift; sourceTree = "<group>"; };
 		A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandedViewController.swift; sourceTree = "<group>"; };
-		A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerCoordinator.swift; sourceTree = "<group>"; };
+		A1370CE81E37394600B55D9E /* PrayerFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerFlowController.swift; sourceTree = "<group>"; };
 		A13B093B1E91AAB3003A375D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A13B093C1E91BB04003A375D /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		A13B093C1E91BB04003A375D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A1494AE61E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
@@ -150,12 +163,9 @@
 		A1494AF01E27F3F000286EBF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A1494AF11E27F44B00286EBF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1494AF31E27F47800286EBF /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
-		A1494AF61E27F52B00286EBF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
-		A1494AFA1E27F5A200286EBF /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		A1494AFD1E27F5C100286EBF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		A1494B031E27F60400286EBF /* SalahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalahSpec.swift; sourceTree = "<group>"; };
-		A1494B051E27F64600286EBF /* RakahSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahSpec.swift; sourceTree = "<group>"; };
-		A1494B071E27F65000286EBF /* RakahComponentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponentSpec.swift; sourceTree = "<group>"; };
+		A1494B031E27F60400286EBF /* PrayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTests.swift; sourceTree = "<group>"; };
+		A1494B051E27F64600286EBF /* RakahTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahTests.swift; sourceTree = "<group>"; };
+		A1494B071E27F65000286EBF /* RakahComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponentTests.swift; sourceTree = "<group>"; };
 		A1494B0C1E2869B500286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
 		A1494B0E1E2869B600286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
 		A1494B0F1E2869B700286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/Opening-Supplication.txt"; sourceTree = "<group>"; };
@@ -232,6 +242,12 @@
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		A15CF8211EEC37D8008987C2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A16029582224338B00A700A0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		A16029592224338B00A700A0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		A160295C222433C700A700A0 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		A16029602224342800A700A0 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
+		A16029622224344500A700A0 /* RealmEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEditable.swift; sourceTree = "<group>"; };
+		A16029642224370B00A700A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A161E36B1E7EF826009C6602 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		A161E36C1E7EF869009C6602 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
@@ -250,7 +266,7 @@
 		A16484C61E243898008EC78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A16484CD1E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16484D21E243898008EC78C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A16484E21E243AAC008EC78C /* Salah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salah.swift; sourceTree = "<group>"; };
+		A16484E21E243AAC008EC78C /* Prayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		A16484E41E243B5F008EC78C /* Rakah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rakah.swift; sourceTree = "<group>"; };
 		A16484E61E25503C008EC78C /* RakahComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponent.swift; sourceTree = "<group>"; };
 		A1701D5F1E33CE420080C0A1 /* E-Long */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "E-Long"; sourceTree = "<group>"; };
@@ -273,10 +289,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A160295A2224338B00A700A0 /* Realm.framework in Frameworks */,
+				A115CBFC2222F6E300A7EB3A /* MungoHealer.framework in Frameworks */,
 				A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */,
 				A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */,
 				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
 				A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */,
+				A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */,
 				A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */,
 				A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */,
 				A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */,
@@ -287,8 +306,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1494AFE1E27F5C100286EBF /* Quick.framework in Frameworks */,
-				A1494B001E27F5CB00286EBF /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +319,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A115CBEB2222E74000A7EB3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1494B031E27F60400286EBF /* PrayerTests.swift */,
+				A1494B051E27F64600286EBF /* RakahTests.swift */,
+				A1494B071E27F65000286EBF /* RakahComponentTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A11783EA21445D5400B41A1A /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CDE1E369E3F00B55D9E /* Branding.swift */,
-				A11783F321445E6100B41A1A /* Branding */,
 				A1D1EFBD1E391C700029C009 /* AudioPlayer.swift */,
+				A1370CDE1E369E3F00B55D9E /* Branding.swift */,
 				A1D1EFC31E393F080029C009 /* Countdown.swift */,
+				A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */,
 				A1370CD71E368DF300B55D9E /* Logger.swift */,
+				A160295C222433C700A700A0 /* RealmHelper.swift */,
+				A11783F321445E6100B41A1A /* Branding */,
 				A11783EB21445D6400B41A1A /* Extensions */,
 			);
 			path = Globals;
@@ -325,7 +354,7 @@
 		A11783EC21445D8A00B41A1A /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CE21E36A31100B55D9E /* Colors.swift */,
+				A115CBF92222EE5700A7EB3A /* Assets.swift */,
 				A1494BCD1E2ED79500286EBF /* Storyboards.swift */,
 				A1494BCC1E2ED79500286EBF /* Strings.swift */,
 			);
@@ -339,7 +368,9 @@
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
 				A16484E41E243B5F008EC78C /* Rakah.swift */,
 				A16484E61E25503C008EC78C /* RakahComponent.swift */,
-				A16484E21E243AAC008EC78C /* Salah.swift */,
+				A16484E21E243AAC008EC78C /* Prayer.swift */,
+				A16029642224370B00A700A0 /* User.swift */,
+				A160295F2224341700A700A0 /* RealmSupport */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,7 +394,7 @@
 		A11783F121445E1200B41A1A /* Prayer */ = {
 			isa = PBXGroup;
 			children = (
-				A1370CE81E37394600B55D9E /* PrayerCoordinator.swift */,
+				A1370CE81E37394600B55D9E /* PrayerFlowController.swift */,
 				A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */,
 				A1494BC81E2ED60500286EBF /* PrayerViewController.swift */,
 				A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */,
@@ -402,7 +433,7 @@
 				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
 				A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */,
 				A11830EE1E591FD900CBE087 /* Settings.storyboard */,
-				A1370CDA1E368FA600B55D9E /* SettingsCoordinator.swift */,
+				A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */,
 				A16484C11E243898008EC78C /* SettingsViewController.swift */,
 				A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */,
 			);
@@ -457,6 +488,9 @@
 				A1494AF31E27F47800286EBF /* HandySwift.framework */,
 				A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */,
 				A1370CD21E368A9300B55D9E /* Imperio.framework */,
+				A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */,
+				A16029582224338B00A700A0 /* Realm.framework */,
+				A16029592224338B00A700A0 /* RealmSwift.framework */,
 				A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */,
 				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
 				A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */,
@@ -467,8 +501,6 @@
 		A11783FD2144600200B41A1A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A1494AFA1E27F5A200286EBF /* Nimble.framework */,
-				A1494AFD1E27F5C100286EBF /* Quick.framework */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -507,29 +539,25 @@
 		A1494AEF1E27F3DF00286EBF /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */,
+				A115CBED2222E95F00A7EB3A /* .envrc */,
+				A115CBF22222EA4000A7EB3A /* .gitignore */,
+				A115CBEE2222E97100A7EB3A /* .periphery.yml */,
+				A115CBEF2222E97E00A7EB3A /* .projlint.yml */,
 				A15CF8211EEC37D8008987C2 /* .swiftlint.yml */,
+				A115CBF02222E99C00A7EB3A /* beak.swift */,
+				A115CBF12222E9AD00A7EB3A /* Brewfile */,
 				A1494AF01E27F3F000286EBF /* Cartfile */,
-				A11783E821445C1700B41A1A /* Cartfile.ignore */,
-				A1494AF61E27F52B00286EBF /* Cartfile.private */,
 				A1494AF11E27F44B00286EBF /* Cartfile.resolved */,
 				A161E36D1E7EF8B1009C6602 /* fastlane */,
 				A161E36B1E7EF826009C6602 /* Gemfile */,
 				A161E36C1E7EF869009C6602 /* Gemfile.lock */,
-				A13B093C1E91BB04003A375D /* LICENSE.md */,
+				A13B093C1E91BB04003A375D /* LICENSE */,
 				A13B093B1E91AAB3003A375D /* README.md */,
-				A11784022144631900B41A1A /* Swiftgen-Colors.stencil */,
+				A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */,
+				A115CBF42222ECDD00A7EB3A /* swiftgen.yml */,
 			);
 			name = RootFiles;
-			sourceTree = "<group>";
-		};
-		A1494B021E27F5E200286EBF /* Specs */ = {
-			isa = PBXGroup;
-			children = (
-				A1494B031E27F60400286EBF /* SalahSpec.swift */,
-				A1494B051E27F64600286EBF /* RakahSpec.swift */,
-				A1494B071E27F65000286EBF /* RakahComponentSpec.swift */,
-			);
-			name = Specs;
 			sourceTree = "<group>";
 		};
 		A1494B201E29452B00286EBF /* Recitations */ = {
@@ -558,6 +586,15 @@
 				A11783EC21445D8A00B41A1A /* SwiftGen */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		A160295F2224341700A700A0 /* RealmSupport */ = {
+			isa = PBXGroup;
+			children = (
+				A16029602224342800A700A0 /* BaseObject.swift */,
+				A16029622224344500A700A0 /* RealmEditable.swift */,
+			);
+			path = RealmSupport;
 			sourceTree = "<group>";
 		};
 		A161E36D1E7EF8B1009C6602 /* fastlane */ = {
@@ -627,8 +664,9 @@
 		A16484C21E243898008EC78C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
+				A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */,
 				A16484C31E243898008EC78C /* Info.plist */,
+				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -646,7 +684,7 @@
 		A16484CA1E243898008EC78C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A1494B021E27F5E200286EBF /* Specs */,
+				A115CBEB2222E74000A7EB3A /* Models */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -689,12 +727,12 @@
 		A1701CF41E33CDC70080C0A1 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				A1701CF51E33CDC70080C0A1 /* Movement Sounds */,
+				A1701CF51E33CDC70080C0A1 /* MovementSounds */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		A1701CF51E33CDC70080C0A1 /* Movement Sounds */ = {
+		A1701CF51E33CDC70080C0A1 /* MovementSounds */ = {
 			isa = PBXGroup;
 			children = (
 				A1701D5F1E33CE420080C0A1 /* E-Long */,
@@ -703,7 +741,7 @@
 				A1701D621E33CE420080C0A1 /* C-Short */,
 				A1701D631E33CE420080C0A1 /* G-Short */,
 			);
-			path = "Movement Sounds";
+			path = MovementSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,6 +757,7 @@
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
 				A15CF8221EEC3C05008987C2 /* SwiftLint */,
+				A115CBF32222EC7500A7EB3A /* ProjLint */,
 				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
@@ -883,6 +922,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A115CBF32222EC7500A7EB3A /* ProjLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = ProjLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which projlint > /dev/null; then\n    projlint lint --xcode --timeout 2 --ignore-network-errors\nelse\n    echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\nfi\n";
+		};
 		A1494AF51E27F49200286EBF /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -896,6 +953,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MungoHealer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -916,7 +976,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    # Incrementally update all Storyboards/XIBs strings files\n    bartycrouch interfaces -p \"$PROJECT_DIR/App/Sources\"\n\n    # Add new keys to Localizable.strings files from NSLocalizedString in code\n    bartycrouch code -p \"$PROJECT_DIR/App/Sources\" -l \"$PROJECT_DIR/App/Resources\" -a -s -e\n\n    # Normalize your Strings files to keep them nice and clean\n    bartycrouch normalize -p \"$PROJECT_DIR/App\" -l en -d -w -h -s\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = "if which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -930,7 +990,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen strings \"$PROJECT_DIR/App/Resources/en.lproj/Localizable.strings\" -t structured-swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Strings.swift\"\n    swiftgen storyboards \"$PROJECT_DIR/App/Sources\" -t swift4 -o \"$PROJECT_DIR/App/Generated/SwiftGen/Storyboards.swift\"\n    swiftgen xcassets \"$PROJECT_DIR/App/Resources/Colors.xcassets\" -p \"$PROJECT_DIR/SwiftGen-Colors.stencil\" -o \"$PROJECT_DIR/App/Generated/SwiftGen/Colors.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
+			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 		A15CF8221EEC3C05008987C2 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -944,7 +1004,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint --quiet\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -954,21 +1014,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A6A4661E3A819D00A909FF /* Position.swift in Sources */,
+				A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */,
 				A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
-				A1370CE31E36A31100B55D9E /* Colors.swift in Sources */,
-				A16484E31E243AAC008EC78C /* Salah.swift in Sources */,
+				A16029652224370B00A700A0 /* User.swift in Sources */,
+				A16484E31E243AAC008EC78C /* Prayer.swift in Sources */,
+				A16029632224344500A700A0 /* RealmEditable.swift in Sources */,
+				A160295D222433C700A700A0 /* RealmHelper.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */,
 				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
 				A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */,
+				A16029612224342800A700A0 /* BaseObject.swift in Sources */,
+				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
 				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
 				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
 				A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */,
 				A1D1EFC21E3937FC0029C009 /* PrayerState.swift in Sources */,
+				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
 				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,
-				A1370CDB1E368FA600B55D9E /* SettingsCoordinator.swift in Sources */,
+				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
 				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
 				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
@@ -976,7 +1042,7 @@
 				A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */,
 				A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */,
 				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
-				A1370CE91E37394600B55D9E /* PrayerCoordinator.swift in Sources */,
+				A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
 				A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */,
 			);
@@ -986,9 +1052,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1494B061E27F64600286EBF /* RakahSpec.swift in Sources */,
-				A1494B081E27F65000286EBF /* RakahComponentSpec.swift in Sources */,
-				A1494B041E27F60400286EBF /* SalahSpec.swift in Sources */,
+				A1494B061E27F64600286EBF /* RakahTests.swift in Sources */,
+				A1494B081E27F65000286EBF /* RakahComponentTests.swift in Sources */,
+				A1494B041E27F60400286EBF /* PrayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,6 +1401,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1387,6 +1454,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1406,8 +1474,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
+				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1425,8 +1493,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
+				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1446,7 +1514,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Debug;
@@ -1466,7 +1533,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Release;
@@ -1481,7 +1547,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = App;
 			};
 			name = Debug;
@@ -1496,7 +1561,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = App;
 			};
 			name = Release;

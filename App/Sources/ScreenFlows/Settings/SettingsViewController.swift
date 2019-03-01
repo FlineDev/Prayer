@@ -8,25 +8,24 @@ import HandyUIKit
 import Imperio
 import UIKit
 
-class SettingsViewController: BrandedFormViewController, Coordinatable {
-    // MARK: - Coordinatable Protocol Implementation
-    enum Action {
-        case setRakat(Int)
-        case setFixedPartSpeed(Double)
-        case setChangingPartSpeed(Double)
-        case setShowChagingTextName(Bool)
-        case changeLanguage(String)
-        case confirmRestart
-        case chooseInstrument(String)
-        case startPrayer
-        case didPressFAQButton
-    }
+protocol SettingsFlowDelegate: class {
+    func setRakat(_ rakatCount: Int)
+    func setFixedPartSpeed(_ fixedPartSpeed: Double)
+    func setChangingPartSpeed(_ changingPartSpeed: Double)
+    func setShowChangingTextName(_ showChangingTextName: Bool)
+    func changeLanguage(to language: String)
+    func confirmRestart()
+    func chooseInstrument(_ instrument: String)
+    func startPrayer()
+    func didPressFAQButton()
+}
 
-    var coordinate: ((SettingsViewController.Action) -> Void)!
-
+class SettingsViewController: BrandedFormViewController {
     // MARK: - Stored Instance Properties
     let l10n = L10n.Settings.self
     var viewModel: SettingsViewModel
+
+    weak var flowDelegate: SettingsFlowDelegate?
 
     // MARK: - Initializers
     init(viewModel: SettingsViewModel) {
@@ -45,7 +44,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         super.viewDidLoad()
 
         title = L10n.Settings.title
-        tableView?.backgroundColor = Color.Theme.contentBackground
+        tableView?.backgroundColor = Colors.Theme.contentBackground
 
         setupAppSection()
         setupPrayerSection()
@@ -62,7 +61,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             row.displayValueFor = { Locale.current.localizedString(forLanguageCode: $0!) }
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Language had nil value."); return }
-            self.coordinate(.changeLanguage(rowValue))
+            self.flowDelegate?.changeLanguage(to: rowValue)
         }
 
         form.append(appSection)
@@ -89,7 +88,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             }
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Rakat row had nil value."); return }
-            self.coordinate(.setRakat(rowValue))
+            self.flowDelegate?.setRakat(rowValue)
         }
     }
 
@@ -102,8 +101,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
-            let speed = Double(rowValue)
-            self.coordinate(.setFixedPartSpeed(speed))
+            self.flowDelegate?.setFixedPartSpeed(Double(rowValue))
         }
     }
 
@@ -116,8 +114,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
-            let speed = Double(rowValue)
-            self.coordinate(.setChangingPartSpeed(speed))
+            self.flowDelegate?.setChangingPartSpeed(Double(rowValue))
         }
     }
 
@@ -127,7 +124,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             row.value = viewModel.showChangingTextName
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Show changing text name had nil value."); return }
-            self.coordinate(.setShowChagingTextName(rowValue))
+            self.flowDelegate?.setShowChangingTextName(rowValue)
         }
     }
 
@@ -138,7 +135,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
             row.value = viewModel.movementSoundInstrument
         }.onChange { row in
             guard let rowValue = row.value else { log.error("Instrument had nil value."); return }
-            self.coordinate(.chooseInstrument(rowValue))
+            self.flowDelegate?.chooseInstrument(rowValue)
         }
     }
 
@@ -148,9 +145,9 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
         }.cellSetup { cell, _ in
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
         }.cellUpdate { cell, _ in
-            cell.textLabel?.textColor = Color.Theme.accent
+            cell.textLabel?.textColor = Colors.Theme.accent
         }.onCellSelection { _, _ in
-            self.coordinate(.startPrayer)
+            self.flowDelegate?.startPrayer()
         }
 
         form.append(startSection)
@@ -162,7 +159,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
 
     @objc
     func didPressFAQButton() {
-        coordinate(.didPressFAQButton)
+        self.flowDelegate?.didPressFAQButton()
     }
 
     func showRestartConfirmDialog() {
@@ -170,7 +167,7 @@ class SettingsViewController: BrandedFormViewController, Coordinatable {
 
         let confirmAlertCtrl = UIAlertController(title: localL10n.title, message: localL10n.message, preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: localL10n.Action.confirm, style: .destructive) { _ in
-            self.coordinate(.confirmRestart)
+            self.flowDelegate?.confirmRestart()
         }
 
         confirmAlertCtrl.addAction(confirmAction)

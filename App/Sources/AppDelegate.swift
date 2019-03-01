@@ -9,21 +9,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Stored Instance Properties
-    var appCoordinator: AppCoordinator?
     var window: UIWindow?
+    var initialFlowCtrl: InitialFlowController?
 
-    // MARK: - Application Lifecycle Methods
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // global configurations
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+
+        // setup global stuff
         Logger.shared.setup()
-        Branding.shared.setupGlobalAppearance()
+        ErrorHandler.shared.setup(window: window!)
+        Branding.shared.setup(window: window!)
 
-        // load initial coordinator
-        appCoordinator = SettingsCoordinator()
-        appCoordinator?.start()
-
-        // set window
-        window = appCoordinator?.window
+        // start initial flow
+        initialFlowCtrl = SettingsFlowController()
+        initialFlowCtrl?.start(from: window!)
 
         return true
     }

@@ -1,0 +1,22 @@
+[update]
+tasks = ["interfaces", "transform", "translate", "normalize"]
+
+[update.interfaces]
+path = "App/Sources"
+
+[update.transform]
+codePath = "App/Sources"
+localizablePath = "App/Resources"
+transformer = "swiftgenStructured"
+supportedLanguageEnumPath = "App/SupportingFiles"
+
+[update.normalize]
+path = "App"
+
+[update.translate]
+path = "App"
+secret = ""
+sourceLocale = "en"
+
+[lint]
+path = "App"

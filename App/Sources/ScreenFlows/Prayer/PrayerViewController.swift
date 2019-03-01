@@ -8,14 +8,11 @@ import Imperio
 import SwiftyTimer
 import UIKit
 
-class PrayerViewController: BrandedViewController, Coordinatable {
-    // MARK: - Coordinatable Protocol Implementation
-    enum Action {
-        case doneButtonPressed
-    }
+protocol PrayerFlowDelegate: class {
+    func doneButtonPressed()
+}
 
-    var coordinate: ((PrayerViewController.Action) -> Void)!
-
+class PrayerViewController: BrandedViewController {
     // MARK: - Stored Instance Properties
     var viewModel: PrayerViewModel! {
         didSet {
@@ -26,7 +23,7 @@ class PrayerViewController: BrandedViewController, Coordinatable {
             updateSeparators()
 
             if viewModel.isChapterName {
-                currentLineLabel.textColor = Color.Theme.secondary
+                currentLineLabel.textColor = Colors.Theme.secondary
             } else {
                 currentLineLabel.textColor = UIColor.black
             }
@@ -36,6 +33,8 @@ class PrayerViewController: BrandedViewController, Coordinatable {
             }
         }
     }
+
+    weak var flowDelegate: PrayerFlowDelegate?
 
     // MARK: - IBOutlets
     @IBOutlet private var previousLineLabel: UILabel!
@@ -80,7 +79,7 @@ class PrayerViewController: BrandedViewController, Coordinatable {
 
     @objc
     func doneButtonPressed() {
-        coordinate(.doneButtonPressed)
+        flowDelegate?.doneButtonPressed()
     }
 
     override func viewWillAppear(_ animated: Bool) {

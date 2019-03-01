@@ -7,9 +7,9 @@ import HandySwift
 import Imperio
 import UIKit
 
-class PrayerCoordinator: Coordinator {
+class PrayerFlowController: FlowController {
     // MARK: - Stored Instance Properties
-    private let salah: Salah
+    private let prayer: Prayer
     private let fixedTextSpeedsFactor: Double
     private let changingTextSpeedFactor: Double
     private let showChangingTextName: Bool
@@ -21,44 +21,26 @@ class PrayerCoordinator: Coordinator {
 
     private var timer: Timer?
 
-    // MARK: - Computed Instance Properties
-    override var mainViewController: UIViewController? {
-        return prayerViewCtrl
-    }
-
     // MARK: - Initializers
     init(
-        presentingViewController: UIViewController,
-        salah: Salah,
+        prayer: Prayer,
         fixedTextSpeedsFactor: Double,
         changingTextSpeedFactor: Double,
         showChangingTextName: Bool,
         movementSoundInstrument: String
     ) {
-        self.salah = salah
+        self.prayer = prayer
         self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
         self.changingTextSpeedFactor = changingTextSpeedFactor
         self.showChangingTextName = showChangingTextName
         self.movementSoundInstrument = movementSoundInstrument
-
-        super.init(presentingViewController: presentingViewController)
     }
 
     // MARK: - Instance Methods
-    override func start() {
-        super.start()
-
+    override func start(from presentingViewController: UIViewController) {
         // configure prayer view controller
         prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
-
-        prayerViewCtrl.coordinate = { [unowned self] action in
-            switch action {
-            case .doneButtonPressed:
-                self.countdown?.cancel()
-                self.cleanup()
-                self.finish()
-            }
-        }
+        prayerViewCtrl.flowDelegate = self
 
         // initialize countdown
         let countdownCount = 5
@@ -70,15 +52,10 @@ class PrayerCoordinator: Coordinator {
         countdown?.onFinish { self.startPrayer() }
 
         let navCtrl = BrandedNavigationController(rootViewController: prayerViewCtrl)
-        present(
-            navCtrl,
-            style: .modal(
-                completion: {
-                    self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
-                    self.countdown?.start()
-                }
-            )
-        )
+        presentingViewController.present(navCtrl, animated: true) {
+            self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
+            self.countdown?.start()
+        }
     }
 
     func countdownViewModel(count: Int) -> PrayerViewModel {
@@ -99,7 +76,7 @@ class PrayerCoordinator: Coordinator {
 
     func startPrayer() {
         prayerState = PrayerState(
-            salah: salah,
+            prayer: prayer,
             changingTextSpeedFactor: changingTextSpeedFactor,
             fixedTextsSpeedFactor: fixedTextSpeedsFactor,
             movementSoundInstrument: movementSoundInstrument
@@ -149,7 +126,8 @@ class PrayerCoordinator: Coordinator {
                 self.progressPrayer()
             } else {
                 self.cleanup()
-                self.finish()
+                self.prayerViewCtrl.dismiss(animated: true, completion: nil)
+                self.removeFromSuperFlowController()
             }
         }
     }
@@ -158,5 +136,14 @@ class PrayerCoordinator: Coordinator {
         timer?.invalidate()
         timer = nil
         UIApplication.shared.isIdleTimerDisabled = false
+    }
+}
+
+extension PrayerFlowController: PrayerFlowDelegate {
+    func doneButtonPressed() {
+        countdown?.cancel()
+        cleanup()
+        prayerViewCtrl.dismiss(animated: true, completion: nil)
+        removeFromSuperFlowController()
     }
 }

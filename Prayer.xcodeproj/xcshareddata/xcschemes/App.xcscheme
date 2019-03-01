@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A164848A1E243834008EC78C"
-               BuildableName = "App.app"
+               BuildableName = "Prayer.app"
                BlueprintName = "App"
                ReferencedContainer = "container:Prayer.xcodeproj">
             </BuildableReference>
@@ -41,7 +41,7 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO"
+            skipped = "YES"
             parallelizable = "YES"
             testExecutionOrdering = "random">
             <BuildableReference
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "App.app"
+            BuildableName = "Prayer.app"
             BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "App.app"
+            BuildableName = "Prayer.app"
             BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>
@@ -99,7 +99,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A164848A1E243834008EC78C"
-            BuildableName = "App.app"
+            BuildableName = "Prayer.app"
             BlueprintName = "App"
             ReferencedContainer = "container:Prayer.xcodeproj">
          </BuildableReference>

@@ -3,28 +3,27 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import HandySwift
 import UIKit
 
 final class Branding {
-    // MARK: - Stored  Type Properties
+    // MARK: - Stored Type Properties
     static let shared = Branding()
 
     // MARK: - Instance Methods
-    final func setupGlobalAppearance() {
-        UIApplication.shared.keyWindow?.tintColor = Color.Theme.primary
+    func setup(window: UIWindow) {
+        window.tintColor = Colors.Theme.primary
     }
 
-    final func setupViewControllerAppearance(_ viewController: UIViewController) {
-        viewController.navigationController?.navigationBar.barTintColor = Color.Theme.barBackground
+    func setupViewControllerAppearance(_ viewController: UIViewController) {
+        viewController.navigationController?.navigationBar.barTintColor = Colors.Theme.barBackground
         viewController.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: Color.Theme.secondary
+            NSAttributedString.Key.foregroundColor: Colors.Theme.secondary
         ]
 
         self.setupViewAppearance(viewController.view)
     }
 
-    final func setupViewAppearance(_ view: UIView) {
-        view.tintColor = Color.Theme.accent
+    func setupViewAppearance(_ view: UIView) {
+        view.tintColor = Colors.Theme.accent
     }
 }
