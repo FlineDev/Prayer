@@ -95,7 +95,8 @@ extension SettingsFlowController: SettingsFlowDelegate {
                 (question: localL10n.IpadReading.question, answer: localL10n.IpadReading.answer),
                 (question: localL10n.Language.question, answer: localL10n.Language.answer),
                 (question: localL10n.LanguageMix.question, answer: localL10n.LanguageMix.answer),
-                (question: localL10n.TranslationProblem.question, answer: localL10n.TranslationProblem.answer)
+                (question: localL10n.TranslationProblem.question, answer: localL10n.TranslationProblem.answer),
+                (question: localL10n.Contact.question, answer: localL10n.Contact.answer)
             ]
         )
 

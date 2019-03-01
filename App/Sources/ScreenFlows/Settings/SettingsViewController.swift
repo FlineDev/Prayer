@@ -44,7 +44,7 @@ class SettingsViewController: BrandedFormViewController {
         super.viewDidLoad()
 
         title = L10n.Settings.title
-        tableView?.backgroundColor = Color.Colors.Theme.contentBackground
+        tableView?.backgroundColor = Colors.Theme.contentBackground
 
         setupAppSection()
         setupPrayerSection()
@@ -145,7 +145,7 @@ class SettingsViewController: BrandedFormViewController {
         }.cellSetup { cell, _ in
             cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
         }.cellUpdate { cell, _ in
-            cell.textLabel?.textColor = Color.Colors.Theme.accent
+            cell.textLabel?.textColor = Colors.Theme.accent
         }.onCellSelection { _, _ in
             self.flowDelegate?.startPrayer()
         }

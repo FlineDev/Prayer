@@ -1,81 +1,38 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 #if os(OSX)
-  import AppKit.NSColor
-  internal typealias AssetColorTypeAlias = NSColor
+  import AppKit.NSImage
 #elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  internal typealias AssetColorTypeAlias = UIColor
+  import UIKit.UIImage
 #endif
 
-// swiftlint:disable superfluous_disable_command
-// swiftlint:disable file_length
+// MARK: - Asset Catalogs
 
-internal struct ColorAsset {
-  internal fileprivate(set) var name: String
+internal typealias Colors = Asset.Colors
+internal typealias Images = Asset.Images
 
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  internal var color: AssetColorTypeAlias {
-    return AssetColorTypeAlias(asset: self)
-  }
-}
-
-// swiftlint:disable identifier_name line_length nesting type_body_length type_name
-internal enum Color {
+internal enum Asset {
   internal enum Colors {
     internal enum Feedback {
-      internal static let error = ColorAsset(name: "Error").color
-      internal static let success = ColorAsset(name: "Success").color
+      internal static let error = UIColor(named: "Feedback/Error", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let success = UIColor(named: "Feedback/Success", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
     internal enum Theme {
-      internal static let accent = ColorAsset(name: "Accent").color
-      internal static let barBackground = ColorAsset(name: "BarBackground").color
-      internal static let contentBackground = ColorAsset(name: "ContentBackground").color
-      internal static let primary = ColorAsset(name: "Primary").color
-      internal static let secondary = ColorAsset(name: "Secondary").color
+      internal static let accent = UIColor(named: "Theme/Accent", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let barBackground = UIColor(named: "Theme/BarBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let contentBackground = UIColor(named: "Theme/ContentBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let primary = UIColor(named: "Theme/Primary", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let secondary = UIColor(named: "Theme/Secondary", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
-
-    // swiftlint:disable trailing_comma
-    internal static let allColors: [UIColor] = [
-      Feedback.error,
-      Feedback.success,
-      Theme.accent,
-      Theme.barBackground,
-      Theme.contentBackground,
-      Theme.primary,
-      Theme.secondary,
-    ]
-    // swiftlint:enable trailing_comma
   }
   internal enum Images {
-    internal enum LaunchScreen {
-      internal static let logo = (name: "Logo")
-    }
-    internal enum Prayer {
-      internal static let separatorCompact = (name: "separator-compact")
-      internal static let separator = (name: "separator")
-    }
-
-    // swiftlint:disable trailing_comma
-    internal static let allColors: [UIColor] = [
-    ]
-    // swiftlint:enable trailing_comma
+    internal static let logo = UIImage(named: "Logo", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let separatorCompact = UIImage(named: "separator-compact", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let separator = UIImage(named: "separator", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
   }
 }
-// swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
-internal extension AssetColorTypeAlias {
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  convenience init!(asset: ColorAsset) {
-    let bundle = Bundle(for: BundleToken.self)
-    #if os(iOS) || os(tvOS)
-    self.init(named: asset.name, in: bundle, compatibleWith: nil)
-    #elseif os(OSX)
-    self.init(named: NSColor.Name(asset.name), bundle: bundle)
-    #elseif os(watchOS)
-    self.init(named: asset.name)
-    #endif
-  }
-}
+// MARK: - Implementation Details
 
 private final class BundleToken {}

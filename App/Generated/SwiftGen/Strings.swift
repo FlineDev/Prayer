@@ -163,6 +163,12 @@ internal enum L10n {
         /// What is the purpose of this app?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION")
       }
+      internal enum Contact {
+        /// Just write an email to prayer@cihatguenduez.de with your bug report or suggestion. Please always provide the exact iPhone or iPad model and iOS version when reporting bugs. Screenshots are also welcome.
+        internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.CONTACT.ANSWER")
+        /// How can I report bugs or suggest features?
+        internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.CONTACT.QUESTION")
+      }
       internal enum IpadReading {
         /// In the end, this can only be answered by God, but we would like to ask all critics the following question: Are the prayers valid if you do not understand the meaning of your spoken words?
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER")

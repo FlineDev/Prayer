@@ -23,7 +23,7 @@ class PrayerViewController: BrandedViewController {
             updateSeparators()
 
             if viewModel.isChapterName {
-                currentLineLabel.textColor = Color.Colors.Theme.secondary
+                currentLineLabel.textColor = Colors.Theme.secondary
             } else {
                 currentLineLabel.textColor = UIColor.black
             }

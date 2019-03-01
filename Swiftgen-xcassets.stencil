@@ -1,93 +1,88 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 {% if catalogs %}
-{% set colorAlias %}{{param.colorAliasName|default:"AssetColorTypeAlias"}}{% endset %}
+{% set enumName %}{{param.enumName|default:"Asset"}}{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
 {% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
 #if os(OSX)
-  import AppKit.NSColor
-  {{accessModifier}} typealias {{colorAlias}} = NSColor
+  import AppKit.NSImage
+  {% set colorType %}NSColor{% endset %}
+  {% set imageType %}NSImage{% endset %}
 #elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  {{accessModifier}} typealias {{colorAlias}} = UIColor
+  import UIKit.UIImage
+  {% set colorType %}UIColor{% endset %}
+  {% set imageType %}UIImage{% endset %}
 #endif
 
-// swiftlint:disable superfluous_disable_command
-// swiftlint:disable file_length
+// MARK: - Asset Catalogs
 
-{% set enumName %}{{param.enumName|default:"Asset"}}{% endset %}
-{% set colorType %}{{param.colorTypeName|default:"ColorAsset"}}{% endset %}
-{{accessModifier}} struct {{colorType}} {
-  {{accessModifier}} fileprivate(set) var name: String
+{% macro enumBlock assets %}
+  {% call casesBlock assets %}
+  {% if param.allValues %}
 
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  {{accessModifier}} var color: {{colorAlias}} {
-    return {{colorAlias}}(asset: self)
+  {{accessModifier}} static let allColors: [{{colorType}}] = [
+    {% filter indent:2 %}{% call allValuesBlock assets "color" "" %}{% endfilter %}
+  ]
+  {{accessModifier}} static let allDataAssets: [Data] = [
+    {% filter indent:2 %}{% call allValuesBlock assets "data" "" %}{% endfilter %}
+  ]
+  {{accessModifier}} static let allImages: [{{imageType}}] = [
+    {% filter indent:2 %}{% call allValuesBlock assets "image" "" %}{% endfilter %}
+  ]
+  {% endif %}
+{% endmacro %}
+{% macro casesBlock assets %}
+  {% for asset in assets %}
+  {% if asset.type == "color" %}
+  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(named: "{{asset.value}}", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+  {% elif asset.type == "data" %}
+  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = NSDataAsset(name: "{{asset.value}}", bundle: Bundle(for: BundleToken.self))!.data
+  {% elif asset.type == "image" %}
+  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(named: "{{asset.value}}", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+  {{accessModifier}} enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+
+    {% filter indent:2 %}{% call casesBlock asset.items %}{% endfilter %}
   }
-}
-{% macro enumBlock assets sp %}
-{{sp}}  {% call casesBlock assets sp %}
-{{sp}}  {% if not param.noAllValues %}
+  {% elif asset.items %}
+  {% call casesBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+{% macro allValuesBlock assets filter prefix %}
+  {% for asset in assets %}
+  {% if asset.type == filter %}
+  {{prefix}}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}},
+  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+  {% set prefix2 %}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}.{% endset %}
+  {% call allValuesBlock asset.items filter prefix2 %}
+  {% elif asset.items %}
+  {% call allValuesBlock asset.items filter prefix %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+{% if catalogs.count > 1 %}
+{% for catalog in catalogs %}
+{{accessModifier}} typealias {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} = {{enumName}}.{{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}
+{% endfor %}
+{% else %}
+{% call enumBlock catalogs.first.assets %}
+{% endif %}
 
-{{sp}}  // swiftlint:disable trailing_comma
-{{sp}}  {{accessModifier}} static let allColors: [UIColor] = [
-{{sp}}    {% set sp2 %}{{sp}}  {% endset %}
-{{sp}}    {% call allValuesBlock assets "color" "" sp2 %}
-{{sp}}  ]
-{{sp}}  // swiftlint:enable trailing_comma
-{{sp}}  {% endif %}
-{% endmacro %}
-{% macro casesBlock assets sp %}
-{{sp}}  {% for asset in assets %}
-{{sp}}  {% if asset.type == "color" %}
-{{sp}}  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(name: "{{asset.value}}").color
-{{sp}}  {% elif asset.type == "image" %}
-{{sp}}  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(name: "{{asset.value}}")
-{{sp}}  {% elif asset.items %}
-{{sp}}  {{accessModifier}} enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
-{{sp}}    {% set sp2 %}{{sp}}  {% endset %}
-{{sp}}    {% call casesBlock asset.items sp2 %}
-{{sp}}  }
-{{sp}}  {% endif %}
-{{sp}}  {% endfor %}
-{% endmacro %}
-{% macro allValuesBlock assets filter prefix sp %}
-{{sp}}  {% for asset in assets %}
-{{sp}}  {% if asset.type == filter %}
-{{sp}}  {{prefix}}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}},
-{{sp}}  {% elif asset.items %}
-{{sp}}  {% set prefix2 %}{{prefix}}{{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}}.{% endset %}
-{{sp}}  {% call allValuesBlock asset.items filter prefix2 sp %}
-{{sp}}  {% endif %}
-{{sp}}  {% endfor %}
-{% endmacro %}
-
-// swiftlint:disable identifier_name line_length nesting type_body_length type_name
-{{accessModifier}} enum Color {
+{{accessModifier}} enum {{enumName}} {
   {% if catalogs.count > 1 %}
   {% for catalog in catalogs %}
   {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
-    {% call enumBlock catalog.assets "  " %}
+    {% filter indent:2 %}{% call enumBlock catalog.assets %}{% endfilter %}
   }
   {% endfor %}
   {% else %}
-  {% call enumBlock catalogs.first.assets "" %}
+  {% call enumBlock catalogs.first.assets %}
   {% endif %}
 }
-// swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
-{{accessModifier}} extension {{colorAlias}} {
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  convenience init!(asset: {{colorType}}) {
-    let bundle = Bundle(for: BundleToken.self)
-    #if os(iOS) || os(tvOS)
-    self.init(named: asset.name, in: bundle, compatibleWith: nil)
-    #elseif os(OSX)
-    self.init(named: NSColor.Name(asset.name), bundle: bundle)
-    #elseif os(watchOS)
-    self.init(named: asset.name)
-    #endif
-  }
-}
+// MARK: - Implementation Details
 
 private final class BundleToken {}
 {% else %}
