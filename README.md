@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Flinesoft/Prayer/stable/Logo.png"
-      width=500 height=200 alt="Prayer Logo">
+      width=500 alt="Prayer Logo">
 </p>
 
 <p align="center">
