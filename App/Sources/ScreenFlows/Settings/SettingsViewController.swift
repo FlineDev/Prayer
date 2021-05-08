@@ -18,6 +18,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func chooseInstrument(_ instrument: String)
   func startPrayer()
   func didPressFAQButton()
+  func didPressFeedbackButton()
 }
 
 class SettingsViewController: BrandedFormViewController {
@@ -54,6 +55,7 @@ class SettingsViewController: BrandedFormViewController {
     setupPrayerSection()
     setupStartSection()
     setupFAQButton()
+    setupFeedbackButton()
   }
 
   // MARK: - Instance Methods
@@ -181,9 +183,23 @@ class SettingsViewController: BrandedFormViewController {
     )
   }
 
+  private func setupFeedbackButton() {
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: l10n.FeedbackButton.title,
+      style: .plain,
+      target: self,
+      action: #selector(didPressFeedbackButton)
+    )
+  }
+
   @objc
   func didPressFAQButton() {
     self.flowDelegate?.didPressFAQButton()
+  }
+
+  @objc
+  func didPressFeedbackButton() {
+    self.flowDelegate?.didPressFeedbackButton()
   }
 
   func showRestartConfirmDialog() {

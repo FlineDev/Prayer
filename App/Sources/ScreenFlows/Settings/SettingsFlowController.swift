@@ -68,6 +68,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
     showFAQ()
   }
 
+  func didPressFeedbackButton() {
+    showFeedbackCommunity()
+  }
+
   func startPrayer() {
     guard settingsViewModel.rakatCount > 0 else { return }
     let prayer = Prayer.make(rakatCount: UInt(settingsViewModel.rakatCount))
@@ -102,6 +106,13 @@ extension SettingsFlowController: SettingsFlowDelegate {
 
     faqViewCtrl?.flowDelegate = self
     settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
+  }
+
+  func showFeedbackCommunity() {
+    let communityUrl = URL(string: "https://community.flinesoft.com/c/prayer-app")!
+    let safariViewCtrl = SFSafariViewController(url: communityUrl)
+
+    settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
   }
 }
 
