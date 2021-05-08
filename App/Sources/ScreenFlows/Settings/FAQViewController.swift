@@ -7,7 +7,7 @@ import HandyUIKit
 import Imperio
 import UIKit
 
-protocol FAQFlowDelegate: class {
+protocol FAQFlowDelegate: AnyObject {
     func doneButtonPressed()
 }
 

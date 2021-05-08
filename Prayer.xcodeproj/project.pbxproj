@@ -321,16 +321,8 @@
 				A1370CD71E368DF300B55D9E /* Logger.swift */,
 				A160295C222433C700A700A0 /* RealmHelper.swift */,
 				A11783F321445E6100B41A1A /* Branding */,
-				A11783EB21445D6400B41A1A /* Extensions */,
 			);
 			path = Globals;
-			sourceTree = "<group>";
-		};
-		A11783EB21445D6400B41A1A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A11783EC21445D8A00B41A1A /* SwiftGen */ = {
@@ -357,13 +349,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A11783EF21445DD600B41A1A /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		A11783F021445DDC00B41A1A /* ScreenFlows */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				A1701CF41E33CDC70080C0A1 /* Audio */,
+				A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */,
 				A11783F521445EF600B41A1A /* Colors.xcassets */,
 				A16484BE1E243898008EC78C /* Images.xcassets */,
 				A1494BB51E2EBF4F00286EBF /* Localizable.strings */,
@@ -551,7 +537,6 @@
 				A16484C01E243898008EC78C /* AppDelegate.swift */,
 				A11783EA21445D5400B41A1A /* Globals */,
 				A11783EE21445DCE00B41A1A /* Models */,
-				A11783EF21445DD600B41A1A /* Networking */,
 				A11783F021445DDC00B41A1A /* ScreenFlows */,
 			);
 			path = Sources;
@@ -560,7 +545,6 @@
 		A16484C21E243898008EC78C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */,
 				A16484C31E243898008EC78C /* Info.plist */,
 				A16484C51E243898008EC78C /* LaunchScreen.storyboard */,
 			);
@@ -650,9 +634,6 @@
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
-				A15CF8221EEC3C05008987C2 /* SwiftLint */,
-				A115CBF32222EC7500A7EB3A /* ProjLint */,
-				A1494AF51E27F49200286EBF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -718,26 +699,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Flinesoft;
 				TargetAttributes = {
 					A164848A1E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
 					A164849E1E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A164848A1E243834008EC78C;
 					};
 					A16484A91E243834008EC78C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A164848A1E243834008EC78C;
 					};
@@ -839,48 +820,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A115CBF32222EC7500A7EB3A /* ProjLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = ProjLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which projlint > /dev/null; then\n    projlint lint --xcode --timeout 2 --ignore-network-errors\nelse\n    echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\nfi\n";
-		};
-		A1494AF51E27F49200286EBF /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/HandyUIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Imperio.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MungoHealer.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -908,20 +847,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
-		};
-		A15CF8221EEC3C05008987C2 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint --quiet\nelse\n    echo \"warning: SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1287,6 +1212,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1311,7 +1237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1348,6 +1274,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1366,7 +1293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1384,11 +1311,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1397,6 +1319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1406,11 +1329,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1419,6 +1337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1429,10 +1348,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1442,6 +1357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Debug;
@@ -1453,10 +1369,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1465,6 +1377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
 			};
 			name = Release;
@@ -1483,6 +1396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = App;
 			};
 			name = Debug;
@@ -1501,6 +1415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = App;
 			};
 			name = Release;

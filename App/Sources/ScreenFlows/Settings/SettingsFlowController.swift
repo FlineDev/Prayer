@@ -24,7 +24,7 @@ class SettingsFlowController: InitialFlowController {
         let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
         window.rootViewController = navCtrl
 
-        if !Defaults[.faqClosed] {
+        if !Defaults.faqClosed {
             showFAQ()
         }
     }
@@ -107,11 +107,11 @@ extension SettingsFlowController: SettingsFlowDelegate {
 
 extension SettingsFlowController: FAQFlowDelegate {
     func doneButtonPressed() {
-        Defaults[.faqClosed] = true
+        Defaults.faqClosed = true
         faqViewCtrl?.dismiss(animated: true, completion: nil)
     }
 }
 
 extension DefaultsKeys {
-    static let faqClosed = DefaultsKey<Bool>("faqClosed")
+    var faqClosed: DefaultsKey<Bool> { .init("faqClosed", defaultValue: false) }
 }

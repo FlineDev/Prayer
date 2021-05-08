@@ -8,7 +8,7 @@ import Imperio
 import SwiftyTimer
 import UIKit
 
-protocol PrayerFlowDelegate: class {
+protocol PrayerFlowDelegate: AnyObject {
     func doneButtonPressed()
 }
 
@@ -59,7 +59,7 @@ class PrayerViewController: BrandedViewController {
 
     override var shouldAutorotate: Bool { return false }
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        switch UIApplication.shared.statusBarOrientation {
+        switch UIApplication.shared.windows.first?.windowScene?.interfaceOrientation {
         case .portrait:
             return .portrait
 

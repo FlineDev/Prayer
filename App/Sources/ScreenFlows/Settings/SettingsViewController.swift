@@ -8,7 +8,7 @@ import HandyUIKit
 import Imperio
 import UIKit
 
-protocol SettingsFlowDelegate: class {
+protocol SettingsFlowDelegate: AnyObject {
     func setRakat(_ rakatCount: Int)
     func setFixedPartSpeed(_ fixedPartSpeed: Double)
     func setChangingPartSpeed(_ changingPartSpeed: Double)

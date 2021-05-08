@@ -53,7 +53,7 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
         let itemWidth = self.itemWidth
         let columns = self.columns
 
-        var xOffsets: [CGFloat] = (0 ..< columns).map { CGFloat($0) * (CGFloat(itemWidth) + gapWidth) + gapWidth }
+        let xOffsets: [CGFloat] = (0 ..< columns).map { CGFloat($0) * (CGFloat(itemWidth) + gapWidth) + gapWidth }
         var yOffsets = [CGFloat](repeating: gapWidth, count: columns)
         var column: Int = 0
         contentHeight = 0
@@ -74,7 +74,7 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
             contentHeight = max(contentHeight, attributes.frame.maxY + gapWidth)
             yOffsets[column] += height + gapWidth
 
-            column = yOffsets.index(of: yOffsets.min()!)!
+            column = yOffsets.firstIndex(of: yOffsets.min()!)!
         }
     }
 
