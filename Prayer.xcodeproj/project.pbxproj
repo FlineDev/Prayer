@@ -273,14 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */,
-				2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */,
-				2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */,
-				2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */,
 				2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */,
-				2E6C0B53264701B800A4D8E3 /* RealmSwift in Frameworks */,
+				2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */,
 				2E6C0B4D2646FDE900A4D8E3 /* Imperio in Frameworks */,
-				2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */,
 				2E6C0B502647013D00A4D8E3 /* MungoHealer in Frameworks */,
+				2E6C0B53264701B800A4D8E3 /* RealmSwift in Frameworks */,
+				2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */,
+				2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */,
+				2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +632,7 @@
 				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
 				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				2E6C0B5D264730FA00A4D8E3 /* Swift-Format */,
+				2E2CB95F26473CAE00C4CFCC /* XCSort */,
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
@@ -764,40 +765,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */,
-				A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */,
-				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
-				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
-				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
-				A1701D641E33CE420080C0A1 /* E-Long in Resources */,
-				A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */,
-				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
-				A1701D671E33CE420080C0A1 /* C-Short in Resources */,
-				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
-				A1701D661E33CE420080C0A1 /* C-Long in Resources */,
-				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
-				A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */,
-				A1701D6A1E33E7300080C0A1 /* E-Short in Resources */,
-				A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */,
-				A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */,
-				A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */,
-				A1494B541E2B0F8900286EBF /* 108_Good-in-Abundance.txt in Resources */,
-				A1494B3F1E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt in Resources */,
-				A11783F621445EF600B41A1A /* Colors.xcassets in Resources */,
-				A1494B4D1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt in Resources */,
 				A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */,
-				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
+				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
 				A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */,
-				A1701D681E33CE420080C0A1 /* G-Short in Resources */,
-				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
-				A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */,
-				A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */,
-				A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */,
-				A16484D31E243898008EC78C /* Images.xcassets in Resources */,
-				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
+				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
+				A1494B621E2B11FB00286EBF /* 106_Quraysh.txt in Resources */,
+				A1494B5B1E2B106300286EBF /* 107_Assistance.txt in Resources */,
+				A1494B541E2B0F8900286EBF /* 108_Good-in-Abundance.txt in Resources */,
+				A1494B4D1E2B0E1A00286EBF /* 109_Those-Who-Deny-the-Truth.txt in Resources */,
 				A1494B461E2B0D0900286EBF /* 110_Succour.txt in Resources */,
-				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
+				A1494B3F1E2B0BAF00286EBF /* 111_The-Twisted-Strands.txt in Resources */,
+				A1494B381E2B0A0000286EBF /* 112_The-Declaration-of-Gods-Perfection.txt in Resources */,
+				A1494B311E2B085500286EBF /* 113_The-Rising-Dawn.txt in Resources */,
+				A1494B2A1E2B071100286EBF /* 114_Men.txt in Resources */,
+				A1701D661E33CE420080C0A1 /* C-Long in Resources */,
+				A1701D671E33CE420080C0A1 /* C-Short in Resources */,
+				A11783F621445EF600B41A1A /* Colors.xcassets in Resources */,
+				A1701D641E33CE420080C0A1 /* E-Long in Resources */,
+				A1701D6A1E33E7300080C0A1 /* E-Short in Resources */,
+				A1701D681E33CE420080C0A1 /* G-Short in Resources */,
+				A16484D31E243898008EC78C /* Images.xcassets in Resources */,
+				A16484D71E243898008EC78C /* LaunchScreen.storyboard in Resources */,
+				A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */,
+				A1494B0B1E2869B500286EBF /* Opening-Supplication.txt in Resources */,
 				A1494BBF1E2ED5CF00286EBF /* PrayerView.storyboard in Resources */,
+				A1494BA51E2C628300286EBF /* Rabbanagh.txt in Resources */,
+				A1494B7E1E2BF47400286EBF /* Ruku.txt in Resources */,
+				A1494B8C1E2C31B900286EBF /* Sajdah.txt in Resources */,
+				A1494BAC1E2C693C00286EBF /* Salam.txt in Resources */,
+				A1494B9C1E2C574A00286EBF /* Salatul-Ibrahimiyyah.txt in Resources */,
+				A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */,
+				A1494B851E2C300C00286EBF /* Straightening-Up.txt in Resources */,
+				A1494B121E28762B00286EBF /* Taawwudh.txt in Resources */,
+				A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */,
+				A1494B951E2C49C500286EBF /* Tashahhud.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,8 +813,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */,
 				A161E3871E7F1D81009C6602 /* 001_The-Opening.txt in Resources */,
+				A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */,
 				A161E3881E7F1D81009C6602 /* Ruku.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +822,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E2CB95F26473CAE00C4CFCC /* XCSort */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = XCSort;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ $# -gt 1 ]]\nthen\n    echo \"Not support\"\n    exit 1\nfi\n\n# If your .xcodeproj file doesn't live immediately under SRCROOT or has a different name change the line below\nDEFAULT_PROJECT_FILE_PATH=\"${SRCROOT}/${PROJECT_NAME}.xcodeproj/project.pbxproj\"\nPROJECT_FILE_PATH=${1:-\"$DEFAULT_PROJECT_FILE_PATH\"}\nTEMP_FILE_PATH=$(mktemp \"${TMPDIR:-/tmp}/xc.$$.XXXXXXXXXX\")\n\nif [[ ! -f $PROJECT_FILE_PATH ]]\nthen\n    echo \"Cannot read $PROJECT_FILE_PATH\"\n    exit 1\nfi\n\nsort_range() {\n    while read -r\n    do\n        printf \"%s\\n\" \"$REPLY\"\n        if [[ $REPLY =~ $1 ]]\n        then\n            declare -a buf\n            while read -r && [[ ! $REPLY =~ $2 ]]\n            do\n                buf+=(\"$REPLY\")\n            done\n            for line in \"${buf[@]}\"\n            do\n                printf \"%s\\n\" \"$line\"\n            done | sort -k $3,$3 # To use case-insensitive sort, add `-f` option to `sort` command\n            unset buf\n            printf \"%s\\n\" \"$REPLY\"\n        fi\n    done\n}\n\ncat $PROJECT_FILE_PATH | \\\nsort_range \"files = \\(\" \"\\);\" 3  | \\\n# Uncomment the line below if you want your project structure to be sorted\n# sort_range \"children = \\(\" \"\\);\" 3 | \\\ncat > $TEMP_FILE_PATH\n\n\nif (( $(diff -u \"$TEMP_FILE_PATH\" \"$PROJECT_FILE_PATH\" | wc -c) > 0 ))\nthen\n    mv -f \"$TEMP_FILE_PATH\" \"$PROJECT_FILE_PATH\"\nelse\n    rm \"$TEMP_FILE_PATH\"\nfi\n\nexit 0\n";
+		};
 		2E6C0B5D264730FA00A4D8E3 /* Swift-Format */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -874,38 +893,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A6A4661E3A819D00A909FF /* Position.swift in Sources */,
+				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
+				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
+				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
+				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
+				A16029612224342800A700A0 /* BaseObject.swift in Sources */,
+				A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */,
+				A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */,
+				A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */,
+				A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */,
+				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,
 				A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */,
+				A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */,
 				A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */,
-				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
-				A16029652224370B00A700A0 /* User.swift in Sources */,
+				A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */,
+				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
+				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
+				A1A6A4661E3A819D00A909FF /* Position.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Prayer.swift in Sources */,
+				A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */,
+				A1D1EFC21E3937FC0029C009 /* PrayerState.swift in Sources */,
+				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
+				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
+				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
+				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
 				A16029632224344500A700A0 /* RealmEditable.swift in Sources */,
 				A160295D222433C700A700A0 /* RealmHelper.swift in Sources */,
-				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
-				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
-				A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */,
-				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
-				A1370CE51E36A5D000B55D9E /* BrandedFormViewController.swift in Sources */,
-				A16029612224342800A700A0 /* BaseObject.swift in Sources */,
-				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
-				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
-				A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */,
-				A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */,
-				A1D1EFC21E3937FC0029C009 /* PrayerState.swift in Sources */,
-				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
-				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
-				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
-				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
-				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
-				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
-				A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */,
-				A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */,
-				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
-				A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */,
+				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
-				A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */,
+				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
+				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
+				A16029652224370B00A700A0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,9 +932,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1494B061E27F64600286EBF /* RakahTests.swift in Sources */,
-				A1494B081E27F65000286EBF /* RakahComponentTests.swift in Sources */,
 				A1494B041E27F60400286EBF /* PrayerTests.swift in Sources */,
+				A1494B081E27F65000286EBF /* RakahComponentTests.swift in Sources */,
+				A1494B061E27F64600286EBF /* RakahTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
