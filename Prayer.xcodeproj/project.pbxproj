@@ -3,24 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B432646FD7A00A4D8E3 /* HandySwift */; };
+		2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B462646FD9200A4D8E3 /* HandyUIKit */; };
+		2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B492646FDC800A4D8E3 /* Eureka */; };
+		2E6C0B4D2646FDE900A4D8E3 /* Imperio in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B4C2646FDE900A4D8E3 /* Imperio */; };
+		2E6C0B502647013D00A4D8E3 /* MungoHealer in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B4F2647013D00A4D8E3 /* MungoHealer */; };
+		2E6C0B53264701B800A4D8E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B52264701B800A4D8E3 /* RealmSwift */; };
+		2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B55264701D500A4D8E3 /* SwiftyBeaver */; };
+		2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B582647023900A4D8E3 /* SwiftyTimer */; };
+		2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B5B2647025800A4D8E3 /* SwiftyUserDefaults */; };
 		A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */; };
 		A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */; };
 		A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF92222EE5700A7EB3A /* Assets.swift */; };
-		A115CBFC2222F6E300A7EB3A /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */; };
 		A11783F621445EF600B41A1A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11783F521445EF600B41A1A /* Colors.xcassets */; };
-		A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */; };
 		A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EA1E591EF600CBE087 /* FAQViewController.swift */; };
 		A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */; };
 		A11830EF1E591FD900CBE087 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11830EE1E591FD900CBE087 /* Settings.storyboard */; };
 		A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */; };
 		A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */; };
-		A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD01E35831900B55D9E /* Eureka.framework */; };
-		A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD21E368A9300B55D9E /* Imperio.framework */; };
-		A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */; };
 		A1370CD81E368DF300B55D9E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CD71E368DF300B55D9E /* Logger.swift */; };
 		A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */; };
 		A1370CDF1E369E3F00B55D9E /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CDE1E369E3F00B55D9E /* Branding.swift */; };
@@ -28,7 +32,6 @@
 		A1370CE71E36A5E900B55D9E /* BrandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE61E36A5E900B55D9E /* BrandedViewController.swift */; };
 		A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1370CE81E37394600B55D9E /* PrayerFlowController.swift */; };
 		A1494AEA1E25A9F000286EBF /* Takbir.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494AEC1E25A9F000286EBF /* Takbir.txt */; };
-		A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494AF31E27F47800286EBF /* HandySwift.framework */; };
 		A1494B041E27F60400286EBF /* PrayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B031E27F60400286EBF /* PrayerTests.swift */; };
 		A1494B061E27F64600286EBF /* RakahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B051E27F64600286EBF /* RakahTests.swift */; };
 		A1494B081E27F65000286EBF /* RakahComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494B071E27F65000286EBF /* RakahComponentTests.swift */; };
@@ -59,9 +62,6 @@
 		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
 		A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Strings.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
-		A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */; };
-		A160295A2224338B00A700A0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029582224338B00A700A0 /* Realm.framework */; };
-		A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16029592224338B00A700A0 /* RealmSwift.framework */; };
 		A160295D222433C700A700A0 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160295C222433C700A700A0 /* RealmHelper.swift */; };
 		A16029612224342800A700A0 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029602224342800A700A0 /* BaseObject.swift */; };
 		A16029632224344500A700A0 /* RealmEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029622224344500A700A0 /* RealmEditable.swift */; };
@@ -85,7 +85,6 @@
 		A1701D6A1E33E7300080C0A1 /* E-Short in Resources */ = {isa = PBXBuildFile; fileRef = A1701D691E33E7300080C0A1 /* E-Short */; };
 		A1A6A4661E3A819D00A909FF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6A4651E3A819D00A909FF /* Position.swift */; };
 		A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */; };
-		A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */; };
 		A1D1EFBB1E3833960029C009 /* BrandedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1EFBA1E3833960029C009 /* BrandedNavigationController.swift */; };
 		A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1EFBD1E391C700029C009 /* AudioPlayer.swift */; };
 		A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */; };
@@ -125,28 +124,20 @@
 
 /* Begin PBXFileReference section */
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
-		A115CBED2222E95F00A7EB3A /* .envrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = .envrc; sourceTree = "<group>"; };
 		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
 		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
-		A115CBF02222E99C00A7EB3A /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
-		A115CBF12222E9AD00A7EB3A /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		A115CBF22222EA4000A7EB3A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A115CBF42222ECDD00A7EB3A /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
 		A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		A115CBF92222EE5700A7EB3A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MungoHealer.framework; path = Carthage/Build/iOS/MungoHealer.framework; sourceTree = "<group>"; };
 		A11783F521445EF600B41A1A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
-		A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyUIKit.framework; path = Carthage/Build/iOS/HandyUIKit.framework; sourceTree = "<group>"; };
 		A11830EA1E591EF600CBE087 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		A11830EE1E591FD900CBE087 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCollectionViewLayout.swift; sourceTree = "<group>"; };
 		A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCollectionViewCell.swift; sourceTree = "<group>"; };
-		A1370CD01E35831900B55D9E /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
-		A1370CD21E368A9300B55D9E /* Imperio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Imperio.framework; path = Carthage/Build/iOS/Imperio.framework; sourceTree = "<group>"; };
-		A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		A1370CD71E368DF300B55D9E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
 		A1370CDE1E369E3F00B55D9E /* Branding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
@@ -160,9 +151,6 @@
 		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
 		A1494AED1E25A9F100286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Takbir.txt; sourceTree = "<group>"; };
 		A1494AEE1E25A9F200286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/Takbir.txt; sourceTree = "<group>"; };
-		A1494AF01E27F3F000286EBF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		A1494AF11E27F44B00286EBF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		A1494AF31E27F47800286EBF /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
 		A1494B031E27F60400286EBF /* PrayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTests.swift; sourceTree = "<group>"; };
 		A1494B051E27F64600286EBF /* RakahTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahTests.swift; sourceTree = "<group>"; };
 		A1494B071E27F65000286EBF /* RakahComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakahComponentTests.swift; sourceTree = "<group>"; };
@@ -240,16 +228,12 @@
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		A1494BCC1E2ED79500286EBF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		A15CF8211EEC37D8008987C2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		A16029582224338B00A700A0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		A16029592224338B00A700A0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		A160295C222433C700A700A0 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		A16029602224342800A700A0 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		A16029622224344500A700A0 /* RealmEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEditable.swift; sourceTree = "<group>"; };
 		A16029642224370B00A700A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A161E36B1E7EF826009C6602 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		A161E36C1E7EF869009C6602 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		A161E36F1E7EF8B1009C6602 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		A161E3701E7EFA30009C6602 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
@@ -276,7 +260,6 @@
 		A1701D691E33E7300080C0A1 /* E-Short */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "E-Short"; sourceTree = "<group>"; };
 		A1A6A4651E3A819D00A909FF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		A1D1EFB61E381FD00029C009 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		A1D1EFBA1E3833960029C009 /* BrandedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandedNavigationController.swift; sourceTree = "<group>"; };
 		A1D1EFBD1E391C700029C009 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		A1D1EFBF1E391FBE0029C009 /* PrayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewModel.swift; sourceTree = "<group>"; };
@@ -289,16 +272,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A160295A2224338B00A700A0 /* Realm.framework in Frameworks */,
-				A115CBFC2222F6E300A7EB3A /* MungoHealer.framework in Frameworks */,
-				A1370CD61E368DB800B55D9E /* SwiftyBeaver.framework in Frameworks */,
-				A1370CD11E35831900B55D9E /* Eureka.framework in Frameworks */,
-				A1494BD11E2FEBE200286EBF /* SwiftyTimer.framework in Frameworks */,
-				A1D1EFB91E38217E0029C009 /* SwiftyUserDefaults.framework in Frameworks */,
-				A160295B2224338B00A700A0 /* RealmSwift.framework in Frameworks */,
-				A11830DB1E58A5F500CBE087 /* HandyUIKit.framework in Frameworks */,
-				A1370CD31E368A9300B55D9E /* Imperio.framework in Frameworks */,
-				A1494AF41E27F47800286EBF /* HandySwift.framework in Frameworks */,
+				2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */,
+				2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */,
+				2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */,
+				2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */,
+				2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */,
+				2E6C0B53264701B800A4D8E3 /* RealmSwift in Frameworks */,
+				2E6C0B4D2646FDE900A4D8E3 /* Imperio in Frameworks */,
+				2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */,
+				2E6C0B502647013D00A4D8E3 /* MungoHealer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,85 +422,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		A11783F721445F4300B41A1A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A11783F821445F4D00B41A1A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A11783F921445FD900B41A1A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A11783FA21445FEB00B41A1A /* Carthage */,
-				A11783FB21445FF200B41A1A /* Local */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A11783FA21445FEB00B41A1A /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				A11783FC21445FFB00B41A1A /* App */,
-				A11783FD2144600200B41A1A /* Tests */,
-			);
-			name = Carthage;
-			sourceTree = "<group>";
-		};
-		A11783FB21445FF200B41A1A /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				A11783FE2144600700B41A1A /* App */,
-				A11783FF2144600E00B41A1A /* Tests */,
-			);
-			name = Local;
-			sourceTree = "<group>";
-		};
-		A11783FC21445FFB00B41A1A /* App */ = {
-			isa = PBXGroup;
-			children = (
-				A1370CD01E35831900B55D9E /* Eureka.framework */,
-				A1494AF31E27F47800286EBF /* HandySwift.framework */,
-				A11830DA1E58A5F500CBE087 /* HandyUIKit.framework */,
-				A1370CD21E368A9300B55D9E /* Imperio.framework */,
-				A115CBFB2222F6E200A7EB3A /* MungoHealer.framework */,
-				A16029582224338B00A700A0 /* Realm.framework */,
-				A16029592224338B00A700A0 /* RealmSwift.framework */,
-				A1370CD51E368DB800B55D9E /* SwiftyBeaver.framework */,
-				A1494BD01E2FEBE200286EBF /* SwiftyTimer.framework */,
-				A1D1EFB81E38217E0029C009 /* SwiftyUserDefaults.framework */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		A11783FD2144600200B41A1A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		A11783FE2144600700B41A1A /* App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		A11783FF2144600E00B41A1A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
 		A1494AE31E2596B200286EBF /* SpokenTexts */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,18 +443,12 @@
 			isa = PBXGroup;
 			children = (
 				A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */,
-				A115CBED2222E95F00A7EB3A /* .envrc */,
 				A115CBF22222EA4000A7EB3A /* .gitignore */,
 				A115CBEE2222E97100A7EB3A /* .periphery.yml */,
 				A115CBEF2222E97E00A7EB3A /* .projlint.yml */,
 				A15CF8211EEC37D8008987C2 /* .swiftlint.yml */,
-				A115CBF02222E99C00A7EB3A /* beak.swift */,
-				A115CBF12222E9AD00A7EB3A /* Brewfile */,
-				A1494AF01E27F3F000286EBF /* Cartfile */,
-				A1494AF11E27F44B00286EBF /* Cartfile.resolved */,
 				A161E36D1E7EF8B1009C6602 /* fastlane */,
 				A161E36B1E7EF826009C6602 /* Gemfile */,
-				A161E36C1E7EF869009C6602 /* Gemfile.lock */,
 				A13B093C1E91BB04003A375D /* LICENSE */,
 				A13B093B1E91AAB3003A375D /* README.md */,
 				A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */,
@@ -623,7 +520,6 @@
 				A16484C91E243898008EC78C /* Tests */,
 				A16484CE1E243898008EC78C /* UITests */,
 				A1494AEF1E27F3DF00286EBF /* RootFiles */,
-				A11783F921445FD900B41A1A /* Frameworks */,
 				A164848C1E243834008EC78C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -675,7 +571,6 @@
 			isa = PBXGroup;
 			children = (
 				A16484CA1E243898008EC78C /* Sources */,
-				A11783F721445F4300B41A1A /* Resources */,
 				A16484CC1E243898008EC78C /* SupportingFiles */,
 			);
 			path = Tests;
@@ -701,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				A16484CF1E243898008EC78C /* Sources */,
-				A11783F821445F4D00B41A1A /* Resources */,
 				A16484D11E243898008EC78C /* SupportingFiles */,
 			);
 			path = UITests;
@@ -765,6 +659,17 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				2E6C0B432646FD7A00A4D8E3 /* HandySwift */,
+				2E6C0B462646FD9200A4D8E3 /* HandyUIKit */,
+				2E6C0B492646FDC800A4D8E3 /* Eureka */,
+				2E6C0B4C2646FDE900A4D8E3 /* Imperio */,
+				2E6C0B4F2647013D00A4D8E3 /* MungoHealer */,
+				2E6C0B52264701B800A4D8E3 /* RealmSwift */,
+				2E6C0B55264701D500A4D8E3 /* SwiftyBeaver */,
+				2E6C0B582647023900A4D8E3 /* SwiftyTimer */,
+				2E6C0B5B2647025800A4D8E3 /* SwiftyUserDefaults */,
+			);
 			productName = Prayer;
 			productReference = A164848B1E243834008EC78C /* Prayer.app */;
 			productType = "com.apple.product-type.application";
@@ -843,12 +748,24 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				de,
 				tr,
 			);
 			mainGroup = A16484821E243834008EC78C;
+			packageReferences = (
+				2E6C0B422646FD7A00A4D8E3 /* XCRemoteSwiftPackageReference "HandySwift" */,
+				2E6C0B452646FD9200A4D8E3 /* XCRemoteSwiftPackageReference "HandyUIKit" */,
+				2E6C0B482646FDC800A4D8E3 /* XCRemoteSwiftPackageReference "Eureka" */,
+				2E6C0B4B2646FDE900A4D8E3 /* XCRemoteSwiftPackageReference "Imperio" */,
+				2E6C0B4E2647013D00A4D8E3 /* XCRemoteSwiftPackageReference "MungoHealer" */,
+				2E6C0B51264701B800A4D8E3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				2E6C0B54264701D500A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				2E6C0B572647023900A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyTimer" */,
+				2E6C0B5A2647025800A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+			);
 			productRefGroup = A164848C1E243834008EC78C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1452,7 +1369,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1472,7 +1390,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -1491,7 +1412,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.Prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -1510,7 +1434,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1530,7 +1458,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayer.app/Prayer";
@@ -1543,7 +1475,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "$(SRCROOT)/UITests/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1557,7 +1493,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "$(SRCROOT)/UITests/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.PrayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1605,6 +1545,129 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E6C0B422646FD7A00A4D8E3 /* XCRemoteSwiftPackageReference "HandySwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flinesoft/HandySwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+		2E6C0B452646FD9200A4D8E3 /* XCRemoteSwiftPackageReference "HandyUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flinesoft/HandyUIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
+		2E6C0B482646FDC800A4D8E3 /* XCRemoteSwiftPackageReference "Eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/Eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.3;
+			};
+		};
+		2E6C0B4B2646FDE900A4D8E3 /* XCRemoteSwiftPackageReference "Imperio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flinesoft/Imperio";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+		2E6C0B4E2647013D00A4D8E3 /* XCRemoteSwiftPackageReference "MungoHealer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flinesoft/MungoHealer";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		2E6C0B51264701B800A4D8E3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.5;
+			};
+		};
+		2E6C0B54264701D500A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.4;
+			};
+		};
+		2E6C0B572647023900A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyTimer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/janlionly/SwiftyTimer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2E6C0B5A2647025800A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E6C0B432646FD7A00A4D8E3 /* HandySwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B422646FD7A00A4D8E3 /* XCRemoteSwiftPackageReference "HandySwift" */;
+			productName = HandySwift;
+		};
+		2E6C0B462646FD9200A4D8E3 /* HandyUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B452646FD9200A4D8E3 /* XCRemoteSwiftPackageReference "HandyUIKit" */;
+			productName = HandyUIKit;
+		};
+		2E6C0B492646FDC800A4D8E3 /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B482646FDC800A4D8E3 /* XCRemoteSwiftPackageReference "Eureka" */;
+			productName = Eureka;
+		};
+		2E6C0B4C2646FDE900A4D8E3 /* Imperio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B4B2646FDE900A4D8E3 /* XCRemoteSwiftPackageReference "Imperio" */;
+			productName = Imperio;
+		};
+		2E6C0B4F2647013D00A4D8E3 /* MungoHealer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B4E2647013D00A4D8E3 /* XCRemoteSwiftPackageReference "MungoHealer" */;
+			productName = MungoHealer;
+		};
+		2E6C0B52264701B800A4D8E3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B51264701B800A4D8E3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		2E6C0B55264701D500A4D8E3 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B54264701D500A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		2E6C0B582647023900A4D8E3 /* SwiftyTimer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B572647023900A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyTimer" */;
+			productName = SwiftyTimer;
+		};
+		2E6C0B5B2647025800A4D8E3 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6C0B5A2647025800A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A16484831E243834008EC78C /* Project object */;
 }
