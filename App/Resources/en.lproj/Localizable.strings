@@ -20,31 +20,31 @@
 
 "RAKAH_COMPONENT.TASHAHHUD.NAME" = "Tashahhud";
 
-"RECITATION.ASSISTANCE.NAME" = "Assistance";
+"RECITATION.ASSISTANCE.NAME" = "al-Ma'Un (Assistance)";
 
-"RECITATION.GOOD_IN_ABUNDANCE.NAME" = "Good in Abundance";
+"RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Good in Abundance)";
 
-"RECITATION.MEN.NAME" = "Men";
+"RECITATION.MEN.NAME" = "an-Nas (Men)";
 
-"RECITATION.QURAYSH.NAME" = "Quraysh";
+"RECITATION.QURAYSH.NAME" = "Quraysch";
 
-"RECITATION.SUCCOUR.NAME" = "Succour";
+"RECITATION.SUCCOUR.NAME" = "an-Nasr (Succour)";
 
-"RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "The Decleration Of (God's) Perfection";
+"RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (The Decleration Of [God's] Perfection)";
 
-"RECITATION.THE_ELEPHANT.NAME" = "The Elephant";
+"RECITATION.THE_ELEPHANT.NAME" = "al-Fil (The Elephant)";
 
-"RECITATION.THE_FLIGHT_OF_TIME.NAME" = "The Flight Of Time";
+"RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (The Flight Of Time)";
 
-"RECITATION.THE_OPENING.NAME" = "The Opening";
+"RECITATION.THE_OPENING.NAME" = "al-Fatiha (The Opening)";
 
-"RECITATION.THE_RISING_DAWN.NAME" = "The Rising Dawn";
+"RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (The Rising Dawn)";
 
-"RECITATION.THE_SLANDERER.NAME" = "The Slanderer";
+"RECITATION.THE_SLANDERER.NAME" = "al-Humaza (The Slanderer)";
 
-"RECITATION.THE_TWISTED_STRANDS.NAME" = "The Twisted Strands";
+"RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (The Twisted Strands)";
 
-"RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Those Who Deny The Truth";
+"RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Those Who Deny The Truth)";
 
 "SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Interface language";
 
