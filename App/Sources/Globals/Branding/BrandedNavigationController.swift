@@ -6,18 +6,18 @@
 import UIKit
 
 class BrandedNavigationController: UINavigationController {
-    // MARK: - View Lifecycle Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  // MARK: - View Lifecycle Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        Branding.shared.setupViewControllerAppearance(self)
-    }
+    Branding.shared.setupViewControllerAppearance(self)
+  }
 
-    override var shouldAutorotate: Bool {
-        return topViewController!.shouldAutorotate
-    }
+  override var shouldAutorotate: Bool {
+    return topViewController!.shouldAutorotate
+  }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return topViewController!.supportedInterfaceOrientations
-    }
+  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return topViewController!.supportedInterfaceOrientations
+  }
 }

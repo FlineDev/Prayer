@@ -11,23 +11,23 @@ let log = SwiftyBeaver.self
 
 // MARK: - Helper Class
 final class Logger {
-    // MARK: - Stored Type Properties
-    static let shared = Logger()
+  // MARK: - Stored Type Properties
+  static let shared = Logger()
 
-    // MARK: - Instance Properties
-    func setup() {
-        // log to console
-        let consoleDestination = ConsoleDestination()
-        #if DEBUG
-            consoleDestination.minLevel = .debug
-        #else
-            consoleDestination.minLevel = .warning
-        #endif
-        log.addDestination(consoleDestination)
+  // MARK: - Instance Properties
+  func setup() {
+    // log to console
+    let consoleDestination = ConsoleDestination()
+    #if DEBUG
+      consoleDestination.minLevel = .debug
+    #else
+      consoleDestination.minLevel = .warning
+    #endif
+    log.addDestination(consoleDestination)
 
-        // log to file
-        let fileDestination = FileDestination()
-        fileDestination.minLevel = .info
-        log.addDestination(fileDestination)
-    }
+    // log to file
+    let fileDestination = FileDestination()
+    fileDestination.minLevel = .info
+    log.addDestination(fileDestination)
+  }
 }

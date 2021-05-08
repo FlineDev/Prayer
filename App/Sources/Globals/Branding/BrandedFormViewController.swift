@@ -7,10 +7,10 @@ import Eureka
 import UIKit
 
 class BrandedFormViewController: FormViewController {
-    // MARK: - View Lifecycle Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  // MARK: - View Lifecycle Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        Branding.shared.setupViewControllerAppearance(self)
-    }
+    Branding.shared.setupViewControllerAppearance(self)
+  }
 }

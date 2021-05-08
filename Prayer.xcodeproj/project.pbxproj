@@ -123,6 +123,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
 		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
 		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
@@ -228,7 +229,6 @@
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		A1494BCC1E2ED79500286EBF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		A15CF8211EEC37D8008987C2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A160295C222433C700A700A0 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		A16029602224342800A700A0 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		A16029622224344500A700A0 /* RealmEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEditable.swift; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 				A115CBF22222EA4000A7EB3A /* .gitignore */,
 				A115CBEE2222E97100A7EB3A /* .periphery.yml */,
 				A115CBEF2222E97E00A7EB3A /* .projlint.yml */,
-				A15CF8211EEC37D8008987C2 /* .swiftlint.yml */,
+				2E6C0B5E2647315600A4D8E3 /* .swift-format */,
 				A161E36D1E7EF8B1009C6602 /* fastlane */,
 				A161E36B1E7EF826009C6602 /* Gemfile */,
 				A13B093C1E91BB04003A375D /* LICENSE */,
@@ -631,6 +631,7 @@
 			buildPhases = (
 				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
 				A1494BCA1E2ED74700286EBF /* SwiftGen */,
+				2E6C0B5D264730FA00A4D8E3 /* Swift-Format */,
 				A16484871E243834008EC78C /* Sources */,
 				A16484881E243834008EC78C /* Frameworks */,
 				A16484891E243834008EC78C /* Resources */,
@@ -820,6 +821,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E6C0B5D264730FA00A4D8E3 /* Swift-Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
+		};
 		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

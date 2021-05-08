@@ -14,21 +14,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  swift-format:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Mint
-        run: git clone https://github.com/yonaskolb/Mint.git && cd Mint && make
-
-      - name: Install Swift-Format
-        run: mint install apple/swift-format
-
-      - name: Run Swift-Format
-        run: "! swift-format lint --recursive App/Sources Tests/Sources UITests/Sources 2>&1 | grep -q warning"
-
   tests:
     runs-on: macOS-latest
 

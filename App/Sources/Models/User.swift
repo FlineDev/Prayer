@@ -8,7 +8,7 @@ import RealmSwift
 
 @objcMembers
 class User: BaseObject {
-    dynamic var name: String = ""
+  dynamic var name: String = ""
 
-    let prayedPrayers = List<Prayer>()
+  let prayedPrayers = List<Prayer>()
 }

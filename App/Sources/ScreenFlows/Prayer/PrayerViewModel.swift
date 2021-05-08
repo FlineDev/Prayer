@@ -7,19 +7,19 @@ import SwiftyUserDefaults
 import UIKit
 
 struct PrayerViewModel {
-    let currentComponentName: String
+  let currentComponentName: String
 
-    let previousArrow: Position.Arrow?
-    let previousLine: String?
+  let previousArrow: Position.Arrow?
+  let previousLine: String?
 
-    let currentArrow: Position.Arrow?
-    let currentLine: String
-    let isChapterName: Bool
-    let currentIsComponentBeginning: Bool
+  let currentArrow: Position.Arrow?
+  let currentLine: String
+  let isChapterName: Bool
+  let currentIsComponentBeginning: Bool
 
-    let nextArrow: Position.Arrow?
-    let nextLine: String?
-    let nextIsComponentBeginning: Bool
+  let nextArrow: Position.Arrow?
+  let nextLine: String?
+  let nextIsComponentBeginning: Bool
 
-    let movementSoundUrl: URL?
+  let movementSoundUrl: URL?
 }
