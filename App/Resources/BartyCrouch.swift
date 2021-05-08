@@ -1,7 +1,5 @@
-//
 //  This file is required in order for the `transform` task of the translation helper tool BartyCrouch to work.
 //  See here for more details: https://github.com/Flinesoft/BartyCrouch
-//
 
 import Foundation
 

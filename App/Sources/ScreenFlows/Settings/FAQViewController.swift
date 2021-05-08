@@ -7,69 +7,70 @@ import HandyUIKit
 import Imperio
 import UIKit
 
-protocol FAQFlowDelegate: class {
-    func doneButtonPressed()
+protocol FAQFlowDelegate: AnyObject {
+  func doneButtonPressed()
 }
 
 class FAQViewController: BrandedViewController {
-    // MARK: - IBOutlets
-    @IBOutlet private var collectionView: UICollectionView!
+  // MARK: - IBOutlets
+  @IBOutlet private var collectionView: UICollectionView!
 
-    // MARK: - Stored Instance Properties
-    private let l10n = L10n.Settings.Faq.self
-    fileprivate let cellReuseIdentifier: String = "FAQCell"
+  // MARK: - Stored Instance Properties
+  private let l10n = L10n.Settings.Faq.self
+  fileprivate let cellReuseIdentifier: String = "FAQCell"
 
-    weak var flowDelegate: FAQFlowDelegate?
+  weak var flowDelegate: FAQFlowDelegate?
 
-    var viewModel: FAQViewModel! {
-        didSet {
-            if view != nil {
-                collectionView.reloadData()
-            }
-        }
+  var viewModel: FAQViewModel! {
+    didSet {
+      if view != nil {
+        collectionView.reloadData()
+      }
     }
+  }
 
-    // MARK: - View Lifecycle Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  // MARK: - View Lifecycle Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        title = l10n.title
-        (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self // swiftlint:disable:this force_cast
-    }
+    title = l10n.title
+    (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
+  }
 
-    // MARK: - IBAction Methods
-    @IBAction private func doneButtonPressed() {
-        flowDelegate?.doneButtonPressed()
-    }
+  // MARK: - IBAction Methods
+  @IBAction private func doneButtonPressed() {
+    flowDelegate?.doneButtonPressed()
+  }
 }
 
 // MARK: - UICollectionViewDataSource Protocol Implementation
 extension FAQViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.entries.count
-    }
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return viewModel.entries.count
+  }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // swiftlint:disable:next force_cast
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! FAQCollectionViewCell
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell =
+      collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
+      as! FAQCollectionViewCell
 
-        cell.questionLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).questionLabelFont // swiftlint:disable:this force_cast
-        cell.answerLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).answerLabelFont // swiftlint:disable:this force_cast
+    cell.questionLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).questionLabelFont
+    cell.answerLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).answerLabelFont
 
-        cell.questionLabel.attributedText = viewModel.entries[indexPath.item].question.hyphenated()
-        cell.answerLabel.attributedText = viewModel.entries[indexPath.item].answer.hyphenated()
+    cell.questionLabel.attributedText = viewModel.entries[indexPath.item].question.hyphenated()
+    cell.answerLabel.attributedText = viewModel.entries[indexPath.item].answer.hyphenated()
 
-        return cell
-    }
+    return cell
+  }
 }
 
 // MARK: - FAQCollectionViewLayoutDelegate Protocol Implementation
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
-    func question(at indexPath: IndexPath) -> String {
-        return viewModel.entries[indexPath.item].question
-    }
+  func question(at indexPath: IndexPath) -> String {
+    return viewModel.entries[indexPath.item].question
+  }
 
-    func answer(at indexPath: IndexPath) -> String {
-        return viewModel.entries[indexPath.item].answer
-    }
+  func answer(at indexPath: IndexPath) -> String {
+    return viewModel.entries[indexPath.item].answer
+  }
 }

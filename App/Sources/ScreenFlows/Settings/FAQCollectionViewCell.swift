@@ -6,7 +6,7 @@
 import UIKit
 
 class FAQCollectionViewCell: UICollectionViewCell {
-    // MARK: - IBOutlets
-    @IBOutlet var questionLabel: UILabel! // swiftlint:disable:this private_outlet
-    @IBOutlet var answerLabel: UILabel! // swiftlint:disable:this private_outlet
+  // MARK: - IBOutlets
+  @IBOutlet var questionLabel: UILabel!
+  @IBOutlet var answerLabel: UILabel!
 }

@@ -8,15 +8,15 @@ import RealmSwift
 
 @objcMembers
 class BaseObject: Object, RealmEditable {
-    dynamic var id: String = UUID().uuidString
-    dynamic var createdAt = Date()
-    dynamic var updatedAt = Date()
+  dynamic var id: String = UUID().uuidString
+  dynamic var createdAt = Date()
+  dynamic var updatedAt = Date()
 
-    var isManagedObject: Bool {
-        return realm != nil
-    }
+  var isManagedObject: Bool {
+    return realm != nil
+  }
 
-    override static func primaryKey() -> String {
-        return "id"
-    }
+  override static func primaryKey() -> String {
+    return "id"
+  }
 }

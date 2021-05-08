@@ -6,10 +6,10 @@
 import UIKit
 
 class BrandedViewController: UIViewController {
-    // MARK: - View Lifecycle Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  // MARK: - View Lifecycle Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        Branding.shared.setupViewControllerAppearance(self)
-    }
+    Branding.shared.setupViewControllerAppearance(self)
+  }
 }
