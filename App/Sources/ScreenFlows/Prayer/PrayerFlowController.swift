@@ -53,6 +53,7 @@ class PrayerFlowController: FlowController {
     countdown?.onFinish { self.startPrayer() }
 
     let navCtrl = BrandedNavigationController(rootViewController: prayerViewCtrl)
+    navCtrl.modalPresentationStyle = .fullScreen
     presentingViewController.present(navCtrl, animated: true) {
       self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
       self.countdown?.start()

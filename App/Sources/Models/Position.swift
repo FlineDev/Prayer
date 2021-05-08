@@ -50,7 +50,7 @@ enum Position: Int {
 
   func movementDuration(forChangingTo newPosition: Position) -> TimeInterval {
     guard abs(self.rawValue - newPosition.rawValue) <= 100 else {
-      return 1.5 * Position.baseMovementDuration.timeInterval
+      return 2.5 * Position.baseMovementDuration.timeInterval
     }
     return Position.baseMovementDuration.timeInterval
   }
