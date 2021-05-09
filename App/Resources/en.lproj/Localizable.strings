@@ -46,21 +46,7 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Those Who Deny The Truth)";
 
-"SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Interface language";
-
-"SETTINGS.APP_SECTION.TITLE" = "App Settings";
-
-"SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Choose language";
-
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
-
-"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Close now";
-
-"SETTINGS.CONFIRM_ALERT.ACTION.LATER" = "Later";
-
-"SETTINGS.CONFIRM_ALERT.MESSAGE" = "In order to change the language, the App must be closed and reopened by you.";
-
-"SETTINGS.CONFIRM_ALERT.TITLE" = "App restart required";
 
 "SETTINGS.FAQ.TITLE" = "FAQ";
 

@@ -46,21 +46,7 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Kafirun (İnkarcılar)";
 
-"SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE" = "Arayüz dili";
-
-"SETTINGS.APP_SECTION.TITLE" = "Uygulama ayarları";
-
-"SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE" = "Dil seç";
-
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Hareket tonun enstrumanını seç";
-
-"SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM" = "Şimdi kapat";
-
-"SETTINGS.CONFIRM_ALERT.ACTION.LATER" = "Sonra";
-
-"SETTINGS.CONFIRM_ALERT.MESSAGE" = "Uygulama dili değişmesi için, kapatılması ve tekrar açılması gerekiyor.";
-
-"SETTINGS.CONFIRM_ALERT.TITLE" = "Yeniden başlatmanız gerekiyor";
 
 "SETTINGS.FAQ.TITLE" = "SSS";
 

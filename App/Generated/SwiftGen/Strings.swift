@@ -119,33 +119,9 @@ internal enum L10n {
   internal enum Settings {
     /// Settings
     internal static let title = L10n.tr("Localizable", "SETTINGS.TITLE")
-    internal enum AppSection {
-      /// App Settings
-      internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.TITLE")
-      internal enum InterfaceLanguage {
-        /// Interface language
-        internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.INTERFACE_LANGUAGE.TITLE")
-      }
-    }
-    internal enum ChangeLanguageSheet {
-      /// Choose language
-      internal static let title = L10n.tr("Localizable", "SETTINGS.CHANGE_LANGUAGE_SHEET.TITLE")
-    }
     internal enum ChangeMovementSoundSheet {
       /// Choose movement instrument
       internal static let title = L10n.tr("Localizable", "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")
-    }
-    internal enum ConfirmAlert {
-      /// In order to change the language, the App must be closed and reopened by you.
-      internal static let message = L10n.tr("Localizable", "SETTINGS.CONFIRM_ALERT.MESSAGE")
-      /// App restart required
-      internal static let title = L10n.tr("Localizable", "SETTINGS.CONFIRM_ALERT.TITLE")
-      internal enum Action {
-        /// Close now
-        internal static let confirm = L10n.tr("Localizable", "SETTINGS.CONFIRM_ALERT.ACTION.CONFIRM")
-        /// Later
-        internal static let later = L10n.tr("Localizable", "SETTINGS.CONFIRM_ALERT.ACTION.LATER")
-      }
     }
     internal enum Faq {
       /// FAQ

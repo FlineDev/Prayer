@@ -13,8 +13,6 @@ protocol SettingsFlowDelegate: AnyObject {
   func setFixedPartSpeed(_ fixedPartSpeed: Double)
   func setChangingPartSpeed(_ changingPartSpeed: Double)
   func setShowChangingTextName(_ showChangingTextName: Bool)
-  func changeLanguage(to language: String)
-  func confirmRestart()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
   func didPressFAQButton()
@@ -51,7 +49,6 @@ class SettingsViewController: BrandedFormViewController {
     title = L10n.Settings.title
     tableView?.backgroundColor = Colors.Theme.contentBackground
 
-    setupAppSection()
     setupPrayerSection()
     setupStartSection()
     setupFAQButton()
@@ -59,23 +56,6 @@ class SettingsViewController: BrandedFormViewController {
   }
 
   // MARK: - Instance Methods
-  private func setupAppSection() {
-    let appSection =
-      Section(l10n.AppSection.title)
-      <<< ActionSheetRow<String> { row in
-        row.title = l10n.AppSection.InterfaceLanguage.title
-        row.options = SettingsViewModel.availableLanguageCodes
-        row.value = viewModel.interfaceLanguageCode
-        row.displayValueFor = { Locale.current.localizedString(forLanguageCode: $0!) }
-      }
-      .onChange { row in
-        guard let rowValue = row.value else { log.error("Language had nil value."); return }
-        self.flowDelegate?.changeLanguage(to: rowValue)
-      }
-
-    form.append(appSection)
-  }
-
   private func setupPrayerSection() {
     let prayerSection =
       Section(l10n.PrayerSection.title)
@@ -200,21 +180,5 @@ class SettingsViewController: BrandedFormViewController {
   @objc
   func didPressFeedbackButton() {
     self.flowDelegate?.didPressFeedbackButton()
-  }
-
-  func showRestartConfirmDialog() {
-    let localL10n = l10n.ConfirmAlert.self
-
-    let confirmAlertCtrl = UIAlertController(title: localL10n.title, message: localL10n.message, preferredStyle: .alert)
-    let confirmAction = UIAlertAction(title: localL10n.Action.confirm, style: .destructive) { _ in
-      self.flowDelegate?.confirmRestart()
-    }
-
-    confirmAlertCtrl.addAction(confirmAction)
-
-    let laterAction = UIAlertAction(title: localL10n.Action.later, style: .cancel, handler: nil)
-    confirmAlertCtrl.addAction(laterAction)
-
-    present(confirmAlertCtrl, animated: true, completion: nil)
   }
 }

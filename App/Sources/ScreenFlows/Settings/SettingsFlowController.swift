@@ -47,15 +47,6 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.showChangingTextName = showChangingTextName
   }
 
-  func changeLanguage(to language: String) {
-    settingsViewModel.interfaceLanguageCode = language
-    settingsViewCtrl.showRestartConfirmDialog()
-  }
-
-  func confirmRestart() {
-    exit(EXIT_SUCCESS)  // see http://stackoverflow.com/a/9939963/3451975
-  }
-
   func chooseInstrument(_ instrument: String) {
     settingsViewModel.movementSoundInstrument = instrument
 
