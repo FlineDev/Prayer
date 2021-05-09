@@ -37,6 +37,12 @@ class FAQViewController: BrandedViewController {
     (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    collectionView.backgroundColor = Colors.Theme.contentBackgroundElevated
+  }
+
   // MARK: - IBAction Methods
   @IBAction private func doneButtonPressed() {
     flowDelegate?.doneButtonPressed()

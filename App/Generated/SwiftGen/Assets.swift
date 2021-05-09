@@ -18,6 +18,7 @@ internal enum Asset {
       internal static let accent = UIColor(named: "Theme/Accent", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
       internal static let barBackground = UIColor(named: "Theme/BarBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
       internal static let contentBackground = UIColor(named: "Theme/ContentBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+      internal static let contentBackgroundElevated = UIColor(named: "Theme/ContentBackgroundElevated", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
       internal static let primary = UIColor(named: "Theme/Primary", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
       internal static let secondary = UIColor(named: "Theme/Secondary", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     }
