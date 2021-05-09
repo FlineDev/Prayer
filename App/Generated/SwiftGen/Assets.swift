@@ -14,10 +14,6 @@ internal typealias Images = Asset.Images
 
 internal enum Asset {
   internal enum Colors {
-    internal enum Feedback {
-      internal static let error = UIColor(named: "Feedback/Error", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-      internal static let success = UIColor(named: "Feedback/Success", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
-    }
     internal enum Theme {
       internal static let accent = UIColor(named: "Theme/Accent", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
       internal static let barBackground = UIColor(named: "Theme/BarBackground", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
@@ -27,6 +23,7 @@ internal enum Asset {
     }
   }
   internal enum Images {
+    internal static let background = UIImage(named: "Background", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let logo = UIImage(named: "Logo", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let separatorCompact = UIImage(named: "separator-compact", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let separator = UIImage(named: "separator", in: Bundle(for: BundleToken.self), compatibleWith: nil)!

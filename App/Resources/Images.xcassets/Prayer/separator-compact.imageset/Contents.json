@@ -1,56 +1,59 @@
 {
   "images" : [
     {
+      "filename" : "separator-compact~universal@1x.png",
+      "idiom" : "universal",
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "cap-insets" : {
+          "left" : 44,
+          "right" : 44
+        },
         "center" : {
           "mode" : "tile",
           "width" : 8
         },
-        "cap-insets" : {
-          "right" : 44,
-          "left" : 44
-        }
+        "mode" : "3-part-horizontal"
       },
-      "idiom" : "universal",
-      "filename" : "separator-compact~universal@1x.png",
       "scale" : "1x"
     },
     {
+      "filename" : "separator-compact~universal@2x.png",
+      "idiom" : "universal",
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "cap-insets" : {
+          "left" : 88,
+          "right" : 86
+        },
         "center" : {
           "mode" : "tile",
           "width" : 18
         },
-        "cap-insets" : {
-          "right" : 86,
-          "left" : 88
-        }
+        "mode" : "3-part-horizontal"
       },
-      "idiom" : "universal",
-      "filename" : "separator-compact~universal@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "separator-compact~universal@3x.png",
+      "idiom" : "universal",
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "cap-insets" : {
+          "left" : 133,
+          "right" : 129
+        },
         "center" : {
           "mode" : "tile",
           "width" : 26
         },
-        "cap-insets" : {
-          "right" : 129,
-          "left" : 133
-        }
+        "mode" : "3-part-horizontal"
       },
-      "idiom" : "universal",
-      "filename" : "separator-compact~universal@3x.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }

@@ -26,7 +26,7 @@ class PrayerViewController: BrandedViewController {
         currentLineLabel.textColor = Colors.Theme.secondary
       }
       else {
-        currentLineLabel.textColor = UIColor.black
+        currentLineLabel.textColor = Colors.Theme.primary
       }
 
       if let movementSoundUrl = viewModel.movementSoundUrl {

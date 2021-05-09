@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,19 +16,26 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aWW-s4-d23">
+                                <rect key="frame" x="-100" y="-100" width="1394" height="1014"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="E0D-i7-beE">
-                                <rect key="frame" x="138" y="299" width="138" height="138"/>
+                                <rect key="frame" x="472" y="292" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="E0D-i7-beE" secondAttribute="height" multiplier="1:1" id="YwR-qm-uew"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="pr5-TY-l1e"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.74655050039291382" green="0.8197866678237915" blue="0.86987560987472534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="aWW-s4-d23" secondAttribute="bottom" constant="-100" id="0z3-Na-HfO"/>
+                            <constraint firstItem="aWW-s4-d23" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-100" id="1Lc-mD-bHq"/>
+                            <constraint firstAttribute="trailing" secondItem="aWW-s4-d23" secondAttribute="trailing" constant="-100" id="9uV-8g-poy"/>
+                            <constraint firstItem="aWW-s4-d23" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-100" id="Sox-ES-1wD"/>
                             <constraint firstItem="E0D-i7-beE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pMS-ui-fk1"/>
                             <constraint firstItem="E0D-i7-beE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sgy-eX-4Uz"/>
                             <constraint firstItem="E0D-i7-beE" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1:3" priority="800" id="tt4-fk-enw"/>
@@ -41,10 +44,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.5" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="5" height="5"/>
         <image name="Logo" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
