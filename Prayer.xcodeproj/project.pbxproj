@@ -66,7 +66,7 @@
 		A16029612224342800A700A0 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029602224342800A700A0 /* BaseObject.swift */; };
 		A16029632224344500A700A0 /* RealmEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029622224344500A700A0 /* RealmEditable.swift */; };
 		A16029652224370B00A700A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16029642224370B00A700A0 /* User.swift */; };
-		A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* Snapshot.swift */; };
+		A161E3721E7EFA78009C6602 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */; };
 		A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */; };
 		A161E3861E7F1BC8009C6602 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
 		A161E3871E7F1D81009C6602 /* 001_The-Opening.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1494B211E29452B00286EBF /* 001_The-Opening.txt */; };
@@ -237,7 +237,7 @@
 		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		A161E36F1E7EF8B1009C6602 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		A161E3701E7EFA30009C6602 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
-		A161E3711E7EFA78009C6602 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotUITests.swift; sourceTree = "<group>"; };
 		A161E3891E7F3DC0009C6602 /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deliverfile; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -491,14 +491,6 @@
 			path = fastlane;
 			sourceTree = "<group>";
 		};
-		A161E3731E7EFA7B009C6602 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				A161E3711E7EFA78009C6602 /* Snapshot.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		A16484821E243834008EC78C = {
 			isa = PBXGroup;
 			children = (
@@ -589,7 +581,6 @@
 			isa = PBXGroup;
 			children = (
 				A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */,
-				A161E3731E7EFA7B009C6602 /* Helpers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -597,6 +588,7 @@
 		A16484D11E243898008EC78C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */,
 				A16484D21E243898008EC78C /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -943,7 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */,
-				A161E3721E7EFA78009C6602 /* Snapshot.swift in Sources */,
+				A161E3721E7EFA78009C6602 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1275,7 +1267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1331,7 +1323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

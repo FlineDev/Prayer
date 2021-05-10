@@ -8,6 +8,7 @@ import XCTest
 class AppStoreSnapshotUITests: XCTestCase {
   // MARK: - Stored Instance Properties
   let app = XCUIApplication()
+  var uiMode: String = "light"
 
   // MARK: - Test Methods
   override func setUp() {
@@ -17,6 +18,7 @@ class AppStoreSnapshotUITests: XCTestCase {
 
     setupSnapshot(app)
     app.launch()
+    uiMode = app.launchArguments.contains("DARK_MODE") ? "dark" : "light"
   }
 
   func testTakeAppStoreScreenshots() {
@@ -25,7 +27,7 @@ class AppStoreSnapshotUITests: XCTestCase {
       faqDoneButton.tap()
     }
 
-    snapshot("1-Settings")
+    snapshot("1-Settings-\(uiMode)")
 
     // Wait until starting Opening Prayer
     let startPrayerText = localizedString(key: "SETTINGS.START_BUTTON.TITLE")
@@ -42,7 +44,7 @@ class AppStoreSnapshotUITests: XCTestCase {
     }
 
     waitForExpectations(timeout: 100, handler: nil)
-    snapshot("2-Opening-Prayer")
+    snapshot("2-Opening-Prayer-\(uiMode)")
 
     // Wait until going to Ruku
     let rukuExpectation = expectation(description: "Going to Ruku Screenshot")
@@ -56,7 +58,7 @@ class AppStoreSnapshotUITests: XCTestCase {
     }
 
     waitForExpectations(timeout: 100, handler: nil)
-    snapshot("3-Ruku")
+    snapshot("3-Ruku-\(uiMode)")
   }
 
   // MARK: - Helper Methods

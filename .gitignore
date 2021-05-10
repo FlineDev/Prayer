@@ -94,3 +94,4 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/metadata/review_information
 .env
+Gemfile.lock

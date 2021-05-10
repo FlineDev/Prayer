@@ -15,7 +15,7 @@ class PrayerTests: XCTestCase {
 
     // first rakah
     var expectedComponentNames = [
-      "Takbīr", "Opening Supplication", "Ta'awwudh", "The Opening", randomRecitation, "Takbīr", "Ruku",
+      "Takbīr", "Opening Supplication", "Ta'awwudh", "al-Fatiha (The Opening)", randomRecitation, "Takbīr", "Ruku",
       "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
     ]
@@ -29,7 +29,7 @@ class PrayerTests: XCTestCase {
 
     // second rakah
     expectedComponentNames = [
-      "The Opening", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "al-Fatiha (The Opening)", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr",
     ]
 
@@ -42,7 +42,7 @@ class PrayerTests: XCTestCase {
 
     // third rakah
     expectedComponentNames = [
-      "The Opening", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "al-Fatiha (The Opening)", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
     ]
 
@@ -55,7 +55,7 @@ class PrayerTests: XCTestCase {
 
     // fourth rakah
     expectedComponentNames = [
-      "The Opening", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "al-Fatiha (The Opening)", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm",
       "Salâm",
     ]
