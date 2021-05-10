@@ -46,6 +46,10 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Those Who Deny The Truth)";
 
+"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Change app language in ⚙️ Settings app";
+
+"SETTINGS.APP_SECTION.TITLE" = "App Settings";
+
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
 
 "SETTINGS.FAQ.TITLE" = "FAQ";

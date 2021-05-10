@@ -13,6 +13,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func setFixedPartSpeed(_ fixedPartSpeed: Double)
   func setChangingPartSpeed(_ changingPartSpeed: Double)
   func setShowChangingTextName(_ showChangingTextName: Bool)
+  func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
   func didPressFAQButton()
@@ -49,6 +50,7 @@ class SettingsViewController: BrandedFormViewController {
     title = L10n.Settings.title
     tableView?.backgroundColor = Colors.Theme.contentBackground
 
+    setupAppSection()
     setupPrayerSection()
     setupStartSection()
     setupFAQButton()
@@ -56,6 +58,25 @@ class SettingsViewController: BrandedFormViewController {
   }
 
   // MARK: - Instance Methods
+  private func setupAppSection() {
+    let appSection =
+      Section(l10n.AppSection.title)
+      <<< ButtonRow { row in
+        row.title = l10n.AppSection.ChangeLanguageButton.title
+      }
+      .cellSetup { cell, _ in
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
+      }
+      .cellUpdate { cell, _ in
+        cell.textLabel?.textColor = Colors.Theme.accent
+      }
+      .onCellSelection { _, _ in
+        self.flowDelegate?.showLanguageSettings()
+      }
+
+    form.append(appSection)
+  }
+
   private func setupPrayerSection() {
     let prayerSection =
       Section(l10n.PrayerSection.title)

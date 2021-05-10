@@ -119,6 +119,14 @@ internal enum L10n {
   internal enum Settings {
     /// Settings
     internal static let title = L10n.tr("Localizable", "SETTINGS.TITLE")
+    internal enum AppSection {
+      /// App Settings
+      internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.TITLE")
+      internal enum ChangeLanguageButton {
+        /// Change app language in ⚙️ Settings app
+        internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE")
+      }
+    }
     internal enum ChangeMovementSoundSheet {
       /// Choose movement instrument
       internal static let title = L10n.tr("Localizable", "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")

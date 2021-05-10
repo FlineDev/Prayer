@@ -47,6 +47,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.showChangingTextName = showChangingTextName
   }
 
+  func showLanguageSettings() {
+    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+  }
+
   func chooseInstrument(_ instrument: String) {
     settingsViewModel.movementSoundInstrument = instrument
 
