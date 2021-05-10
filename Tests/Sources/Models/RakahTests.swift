@@ -8,7 +8,7 @@ import XCTest
 
 class RakahTests: XCTestCase {
   func testCorrectComponentsCountForBeginningRakah() {
-    let rakah = Rakah.make(
+    let rakah = Rakah(
       isBeginningOfPrayer: true,
       includesStandingRecitation: true,
       includesSittingRecitation: false,
@@ -31,7 +31,7 @@ class RakahTests: XCTestCase {
   }
 
   func testCorrectComponentsCountForEndingRakah() {
-    let rakah = Rakah.make(
+    let rakah = Rakah(
       isBeginningOfPrayer: false,
       includesStandingRecitation: false,
       includesSittingRecitation: true,

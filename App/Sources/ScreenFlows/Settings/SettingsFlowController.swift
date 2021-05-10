@@ -69,7 +69,7 @@ extension SettingsFlowController: SettingsFlowDelegate {
 
   func startPrayer() {
     guard settingsViewModel.rakatCount > 0 else { return }
-    let prayer = Prayer.make(rakatCount: UInt(settingsViewModel.rakatCount))
+    let prayer = Prayer(rakatCount: UInt(settingsViewModel.rakatCount))
 
     let prayerCoordinator = PrayerFlowController(
       prayer: prayer,

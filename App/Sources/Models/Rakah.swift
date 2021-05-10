@@ -6,43 +6,42 @@
 import Foundation
 import HandySwift
 
+/// "Arabic: ركعة‎‎ rakʿah, plural: ركعات rakaʿāt"
+/// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
+typealias Rakat = [Rakah]
+
 /// "(A) single unit of Islamic prayers."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
-@objcMembers
-class Rakah: BaseObject {
+class Rakah {
   // MARK: - Stored Instance Properties
-  dynamic var isBeginningOfPrayer: Bool = false
-  dynamic var includesStandingRecitation: Bool = false
-  dynamic var includesSittingRecitation: Bool = false
-  dynamic var isEndOfPrayer: Bool = false
-  dynamic var standingRecitationFileName: String?
+  private let isBeginningOfPrayer: Bool
+  private let includesStandingRecitation: Bool
+  private let includesSittingRecitation: Bool
+  private let isEndOfPrayer: Bool
+  let standingRecitationFileName: String?
 
-  // MARK: - Initializer Alternative
-  static func make(
+  // MARK: - Initializer
+  init(
     isBeginningOfPrayer: Bool,
     includesStandingRecitation: Bool,
     includesSittingRecitation: Bool,
     isEndOfPrayer: Bool,
     excludeStandingRecitationNames: [String] = []
-  ) -> Rakah {
-    let rakat = Rakah()
-
-    rakat.isBeginningOfPrayer = isBeginningOfPrayer
-    rakat.includesStandingRecitation = includesStandingRecitation
-    rakat.includesSittingRecitation = includesSittingRecitation
-    rakat.isEndOfPrayer = isEndOfPrayer
+  ) {
+    self.isBeginningOfPrayer = isBeginningOfPrayer
+    self.includesStandingRecitation = includesStandingRecitation
+    self.includesSittingRecitation = includesSittingRecitation
+    self.isEndOfPrayer = isEndOfPrayer
 
     if includesStandingRecitation {
       let allowedStandingRecitationNames = Component.nonOpeningRecitationFileNames.filter {
         !excludeStandingRecitationNames.contains($0)
       }
-      rakat.standingRecitationFileName = allowedStandingRecitationNames.sample
+      self.standingRecitationFileName = allowedStandingRecitationNames.sample
     }
     else {
-      rakat.standingRecitationFileName = nil
+      self.standingRecitationFileName = nil
     }
-
-    return rakat
   }
 
   // MARK: - Instance Methods
