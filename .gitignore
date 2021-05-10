@@ -93,3 +93,4 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/metadata/review_information
+.env

@@ -1,1 +1,6 @@
-
+- Vollständige Unterstützung für neuere Bildschirmgrößen und Betriebssystemversionen.
+- Vollständige Unterstützung für die neue Dark-Mode-Oberfläche.
+- Arabische Transkription für Rezitationsnamen hinzugefügt (z.B. "Die Eröffnung" ist jetzt "Al-Fatiha (Die Eröffnung)").
+- Verlängert die Zeit für die Niederwerfung und das erneute Aufstehen davon.
+- Weist auf die neue iOS-Funktion zum Ändern der App-Sprache hin, statt einer hakeligen Eigenlösung.
+- Behebt einen Tippfehler im deutschen Rezitationstext ("Sah:" ist jetzt "Sag:").
