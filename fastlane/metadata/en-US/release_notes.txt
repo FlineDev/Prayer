@@ -4,3 +4,4 @@
 - Lengthens time for falling down to Sajdah and standing up from it again.
 - Points to new iOS feature for changing app language rather than hacky solution.
 - Fixes a typo in German recitation text.
+- Increased minimum required version to iOS/iPadOS 14.5.
