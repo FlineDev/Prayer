@@ -40,9 +40,9 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    # match(type: "appstore")
-    snapshot(dark_mode: false)
-    snapshot(dark_mode: true, launch_arguments: "DARK_MODE")
+    match(type: "appstore")
+    snapshot(localize_simulator: true, dark_mode: true, launch_arguments: "DARK_MODE")
+    snapshot(localize_simulator: true, dark_mode: false)
     # frameit(white: true)
     gym(include_bitcode: true) # Build your app - more options available
     deliver(force: true)

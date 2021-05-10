@@ -40,7 +40,7 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 - Lengthens time for falling down to Sajdah and standing up from it again.
 - Points to new iOS feature for changing app language rather than hacky solution.
 ### Removed
-- Increased minimum required version to iOS/iPadOS 14.5.
+- Increased minimum required version to iOS/iPadOS 14.
 ### Fixed
 - Fixes a typo in German recitation text.
 

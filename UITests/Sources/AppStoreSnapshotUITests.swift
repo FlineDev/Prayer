@@ -18,7 +18,9 @@ class AppStoreSnapshotUITests: XCTestCase {
 
     setupSnapshot(app)
     app.launch()
+
     uiMode = app.launchArguments.contains("DARK_MODE") ? "dark" : "light"
+    XCUIDevice.shared.orientation = UIDevice.current.userInterfaceIdiom == .pad ? .landscapeLeft : .portrait
   }
 
   func testTakeAppStoreScreenshots() {

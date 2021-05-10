@@ -4,4 +4,4 @@
 - Secde'ye düşme ve tekrar ayağa kalkma süresi uzatıldı.
 - Uygulama dilini değiştirmek için yeni iOS özelliğine işaret eklendi.
 - Almanca okuma metnindeki bir yazım hatası düzetildi.
-- iOS/iPadOS minimum gerekli sürüm 14.5'e yükseltildi. 
+- iOS/iPadOS minimum gerekli sürüm 14'e yükseltildi. 

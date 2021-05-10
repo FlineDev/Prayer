@@ -4,4 +4,4 @@
 - Verlängert die Zeit für die Niederwerfung und das erneute Aufstehen davon.
 - Weist auf die neue iOS-Funktion zum Ändern der App-Sprache hin, statt einer hakeligen Eigenlösung.
 - Behebt einen Tippfehler im deutschen Rezitationstext ("Sah:" ist jetzt "Sag:").
-- Minimale Systemanforderung wurde auf iOS-/iPadOS-Version 14.5 heraufgesetzt.
+- Minimale Systemanforderung wurde auf iOS-/iPadOS-Version 14 heraufgesetzt.
