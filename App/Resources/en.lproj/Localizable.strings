@@ -56,10 +56,6 @@
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "What is the purpose of this app?";
 
-"SETTINGS.FAQ_ENTRIES.CONTACT.ANSWER" = "Just write an email to prayer@cihatguenduez.de with your bug report or suggestion. Please always provide the exact iPhone or iPad model and iOS version when reporting bugs. Screenshots are also welcome.";
-
-"SETTINGS.FAQ_ENTRIES.CONTACT.QUESTION" = "How can I report bugs or suggest features?";
-
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "In the end, this can only be answered by God, but we would like to ask all critics the following question: Are the prayers valid if you do not understand the meaning of your spoken words?";
 
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Are the prayers valid at all, if I read from the iPad?";

@@ -56,10 +56,6 @@
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
 
-"SETTINGS.FAQ_ENTRIES.CONTACT.ANSWER" = "Hata raporu veya öneri ile prayer@cihatguenduez.de ye bir e-posta yazın. Hataları bildirirken lütfen her zaman tam iPhone veya iPad modelini ve iOS sürümünü belirleyin. Ekran görüntüleri de yardim edebilir.";
-
-"SETTINGS.FAQ_ENTRIES.CONTACT.QUESTION" = "Hataları nasıl bildirebilir veya özellikleri önerebilirsiniz?";
-
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Bu soruya sonuçta sadece Tanrımız cevap verebilir, ama biz tüm eleştirmenlere şu soruyu sormak istiyoruz: Eğer namazda konuşulan kelimelerin anlamı bilinmez ise, namazın gerçekten kabul olabileceğini mi düşünüyorsunuz?";
 
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Namazda kelimeler iPad den okunulursa, namaz hiç geçerli olabilirmi?";
