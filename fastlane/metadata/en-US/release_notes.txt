@@ -1,1 +1,7 @@
-
+- Adds full support for newer screen sizes & OS versions.
+- Adds full support for newer dark mode interface.
+- Adds Arabic transciption to recitation names (e.g. 'The Opening' is now 'Al-Fatiha (The Opening)').
+- Lengthens time for falling down to Sajdah and standing up from it again.
+- Points to new iOS feature for changing app language rather than hacky solution.
+- Fixes a typo in German recitation text.
+- Increased minimum required version to iOS/iPadOS 14.

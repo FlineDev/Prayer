@@ -1,0 +1,15 @@
+{
+  "lineBreakAroundMultilineExpressionChainComponents": true,
+  "lineBreakBeforeControlFlowKeywords": true,
+  "lineBreakBeforeEachArgument": true,
+  "lineBreakBeforeEachGenericRequirement": true,
+  "lineLength": 120,
+  "prioritizeKeepingFunctionOutputTogether": true,
+  "rules": {
+    "NeverUseImplicitlyUnwrappedOptionals": false,
+    "NoLeadingUnderscores": true,
+    "ValidateDocumentationComments": false,
+  },
+  "tabWidth": 2,
+  "version": 1,
+}

@@ -1,0 +1,70 @@
+//
+//  Created by Cihat Gündüz on 12.01.17.
+//  Copyright © 2017 Flinesoft. All rights reserved.
+//
+
+@testable import App
+import XCTest
+
+class PrayerTests: XCTestCase {
+  func testWith4Rakat() {
+    let prayer = Prayer(rakatCount: 4)
+    let randomRecitation = "RR"
+
+    XCTAssertEqual(prayer.rakat.count, 4)
+
+    // first rakah
+    var expectedComponentNames = [
+      "Takbīr", "Opening Supplication", "Ta'awwudh", "al-Fatiha (The Opening)", randomRecitation, "Takbīr", "Ruku",
+      "Straightening Up", "Takbīr",
+      "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
+    ]
+
+    XCTAssertEqual(prayer.rakat[0].components().count, expectedComponentNames.count)
+    for (index, component) in prayer.rakat[0].components().enumerated() {
+      // skip comparison for random recitations
+      if expectedComponentNames[index] == randomRecitation { continue }
+      XCTAssertEqual(component.name, expectedComponentNames[index])
+    }
+
+    // second rakah
+    expectedComponentNames = [
+      "al-Fatiha (The Opening)", randomRecitation, "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Takbīr",
+    ]
+
+    XCTAssertEqual(prayer.rakat[1].components().count, expectedComponentNames.count)
+    for (index, component) in prayer.rakat[1].components().enumerated() {
+      // skip comparison for random recitations
+      if expectedComponentNames[index] == randomRecitation { continue }
+      XCTAssertEqual(component.name, expectedComponentNames[index])
+    }
+
+    // third rakah
+    expectedComponentNames = [
+      "al-Fatiha (The Opening)", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
+    ]
+
+    XCTAssertEqual(prayer.rakat[2].components().count, expectedComponentNames.count)
+    for (index, component) in prayer.rakat[2].components().enumerated() {
+      // skip comparison for random recitations
+      if expectedComponentNames[index] == randomRecitation { continue }
+      XCTAssertEqual(component.name, expectedComponentNames[index])
+    }
+
+    // fourth rakah
+    expectedComponentNames = [
+      "al-Fatiha (The Opening)", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr", "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm",
+      "Salâm",
+    ]
+
+    XCTAssertEqual(prayer.rakat[3].components().count, expectedComponentNames.count)
+    for (index, component) in prayer.rakat[3].components().enumerated() {
+      // skip comparison for random recitations
+      if expectedComponentNames[index] == randomRecitation { continue }
+      XCTAssertEqual(component.name, expectedComponentNames[index])
+    }
+  }
+}

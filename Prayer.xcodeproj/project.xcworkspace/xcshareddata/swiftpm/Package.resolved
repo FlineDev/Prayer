@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Eureka",
+        "repositoryURL": "https://github.com/xmartlabs/Eureka",
+        "state": {
+          "branch": null,
+          "revision": "523af88efc83cdaf39b415446be1ca1529f5664d",
+          "version": "5.3.3"
+        }
+      },
+      {
+        "package": "HandySwift",
+        "repositoryURL": "https://github.com/Flinesoft/HandySwift",
+        "state": {
+          "branch": null,
+          "revision": "50b84f0fa735cae0e2bc3155609d4b00e2ce854c",
+          "version": "3.3.0"
+        }
+      },
+      {
+        "package": "HandyUIKit",
+        "repositoryURL": "https://github.com/Flinesoft/HandyUIKit",
+        "state": {
+          "branch": null,
+          "revision": "630ad7b1d210519391a1f637bbfc2d10bc829946",
+          "version": "1.9.2"
+        }
+      },
+      {
+        "package": "Imperio",
+        "repositoryURL": "https://github.com/Flinesoft/Imperio",
+        "state": {
+          "branch": null,
+          "revision": "238b9bc7de239d3e99a03ba94157d49a4ecd8b61",
+          "version": "3.0.2"
+        }
+      },
+      {
+        "package": "MungoHealer",
+        "repositoryURL": "https://github.com/Flinesoft/MungoHealer",
+        "state": {
+          "branch": "main",
+          "revision": "4e86b62deb5abeed9cc2dad6ff81052bd8bdf196",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
+        "state": {
+          "branch": null,
+          "revision": "5cfd6888447adcc49b80b625281b6177104f011f",
+          "version": "1.9.4"
+        }
+      },
+      {
+        "package": "SwiftyTimer",
+        "repositoryURL": "https://github.com/janlionly/SwiftyTimer",
+        "state": {
+          "branch": "master",
+          "revision": "cd1c75bc1b72b7a7224ad8e8197b97d367aadbcf",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyUserDefaults",
+        "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
+        "state": {
+          "branch": null,
+          "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
+          "version": "5.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

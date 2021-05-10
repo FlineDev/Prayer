@@ -1,0 +1,17 @@
+strings:
+  inputs: App/Resources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: App/Generated/SwiftGen/Strings.swift
+ib:
+  inputs: App/Sources
+  outputs:
+    - templateName: scenes-swift4
+      output: App/Generated/SwiftGen/Storyboards.swift
+xcassets:
+  inputs:
+    - App/Resources/Images.xcassets
+    - App/Resources/Colors.xcassets
+  outputs:
+    - templatePath: SwiftGen-xcassets.stencil
+      output: App/Generated/SwiftGen/Assets.swift

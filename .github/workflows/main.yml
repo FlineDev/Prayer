@@ -1,0 +1,15 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  tests:
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build & Run Tests
+        run: xcodebuild test -scheme App -destination 'platform=iOS Simulator,name=iPad Air (4th generation),OS=latest'

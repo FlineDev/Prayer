@@ -1,6 +1,0 @@
-Background  : #d6d6d6
-Primary     : #001024
-Secondary   : #154f69
-Accent      : #4da1bd
-Success     : #a1bd4d
-Error       : #bd4da1

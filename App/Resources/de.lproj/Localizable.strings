@@ -1,0 +1,95 @@
+"PRAYER_VIEW.COUNTDOWN.NAME" = "Countdown";
+
+"RAKAH_COMPONENT.OPENING_SUPPLICATION.NAME" = "Eröffnungsgebet";
+
+"RAKAH_COMPONENT.RABBANAGH.NAME" = "Rabbenagh";
+
+"RAKAH_COMPONENT.RUKU.NAME" = "Verbeugung";
+
+"RAKAH_COMPONENT.SAJDAH.NAME" = "Niederwerfung";
+
+"RAKAH_COMPONENT.SALAM.NAME" = "Salām";
+
+"RAKAH_COMPONENT.SALATUL_IBRAHIMIYYAH.NAME" = "Salat al-Ibrahimiyyah";
+
+"RAKAH_COMPONENT.STRAIGHTENING_UP.NAME" = "Aufrechte Position";
+
+"RAKAH_COMPONENT.TAAWWUDH.NAME" = "Ta'awwudh";
+
+"RAKAH_COMPONENT.TAKBIR.NAME" = "Takbīr";
+
+"RAKAH_COMPONENT.TASHAHHUD.NAME" = "Schahada";
+
+"RECITATION.ASSISTANCE.NAME" = "al-Ma'un (Hilfeleistung)";
+
+"RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Gutes in Fülle)";
+
+"RECITATION.MEN.NAME" = "an-Nas (Die Menschen)";
+
+"RECITATION.QURAYSH.NAME" = "Quraysch";
+
+"RECITATION.SUCCOUR.NAME" = "an-Nasr (Beistand)";
+
+"RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (Die Erklärung von [Gottes] Vollkommenheit)";
+
+"RECITATION.THE_ELEPHANT.NAME" = "al-Fil (Der Elefant)";
+
+"RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (Das Verfliegen der Zeit)";
+
+"RECITATION.THE_OPENING.NAME" = "al-Fatiha (Die Eröffnung)";
+
+"RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (Die aufgehende Morgendämmerung)";
+
+"RECITATION.THE_SLANDERER.NAME" = "al-Humaza (Der Verleumder)";
+
+"RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (Die gedrehten Stränge)";
+
+"RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Jene, welche die Wahrheit leugnen)";
+
+"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Sprache ändern in der ⚙️ Einstellungen-App";
+
+"SETTINGS.APP_SECTION.TITLE" = "App-Einstellungen";
+
+"SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Wähle Instrument für Bewegungston";
+
+"SETTINGS.FAQ.TITLE" = "FAQ";
+
+"SETTINGS.FAQ_BUTTON.TITLE" = "FAQ";
+
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Zwei Ziele werden mit dieser App derzeit verfolgt:\n1. Sich dessen bewusst werden, was man beim Beten eigentlich sagt.\n2. Das regelmäßige Gebet dazu nutzen, den Koran zu lesen.\n\nDerzeit enthält die App zwar nur die letzten zwölf Suren des Koran und wählt zwischen diesen zufällig beim Gebet eines im Stehen aus, jedoch ist dies nur der erste Schritt. Mit Updates sollen alle fehlenden Suren folgen, wobei wir auch eine Lösung für längere Suren vorgesehen haben, sodass man sie Stück für Stück beim Beten lesen kann, ohne den Kontext zu verlieren.\n\nInsbesondere NICHT Ziel dieser App ist es das Beten von Grund auf zu lehren. Wissen über die Grundlagen der Gebete werden bereits vorausgesetzt, die App soll vor allem dazu dienen, vom Beten einer fremden Sprache (Arabisch) in eine Sprache zu wechseln, die man auch beherrscht (derzeit: Deutsch, Englisch und Türkisch).";
+
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Was ist der Sinn dieser App?";
+
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Das kann letzten Endes nur Gott allein beantworten, wir möchten aber allen Kritikern folgende Gegenfrage stellen: Sind die Gebete denn gültig, wenn ihr selbst die Bedeutung eurer gesprochenen Worte nicht versteht?";
+
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Sind die Gebete denn überhaupt gültig, wenn ich während dessen vom iPad ablese?";
+
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "Wir sind der Überzeugung, dass der Koran das Gebet vor allem dazu vorschreibt, sich Gottes stets bewusst zu sein und sich seiner Rechtleitung zu erinnern. Worte, die man nicht versteht können weder vor dem falschen Weg warnen, noch den richtigen Weg aufzeigen, was ja die Ziele des Koran sind.\n\nWir können uns jedenfalls nicht vorstellen, dass Gott von uns nur möchte, dass wir fünf mal täglich die Schönheit des Klangs seiner Lyrik bewundern. Das Arabisch im Koran mag perfekt sein und in seiner Bedeutung vollkommen, doch solange der Betende des Arabischen nicht mächtig ist, ist sein Gebet auf Arabisch unvollkommen. Zudem kennen wir keinen Koranvers, der das Beten in arabischer Sprache vorschreibt.";
+
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "Müssen Gebete nicht auf Arabisch gesprochen werden, der Originalsprache des Koran?";
+
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER" = "Eigentlich ist diese App dazu gedacht, gerade von der arabischen Sprache weg kommen zu können, wenn man sie nicht beherrscht. Eine alternative Nutzungsmethode wäre es, die App nur ergänzend zum Gebet auf Arabisch einzusetzen, um die Bedeutung nebenher lesen zu können. Weil wir davon überzeugt sind, dass es beim Beten allein um die Bedeutung geht, raten wir zwar hiervon ab um das Gebet nicht unnötig zu verkomplizieren, jedoch mag dies für manche der einzige für sie akzeptable Weg sein, wofür wir Verständnis haben. Wir empfehlen für diese Anwendungsmethode die Einstellung „Name für wechselnden Text“ an zu lassen.";
+
+"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION" = "Kann ich die App auch nutzen, wenn ich weiter auf Arabisch beten will?";
+
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER" = "Wir verstehen, dass das Gebet etwas so wichtiges ist, dass man alles möglichst richtig machen möchte. Wir verstehen auch, dass gerade in der Religion viele unterschiedliche Auffassungen über die Bedeutung desselben Textes vorherrschen und gerade dabei wichtig ist, dass man so nah wie möglich am Original bleiben muss.\n\nDeshalb wollen wir ja auch unbedingt, dass ihr selbst den Koran lest, und zwar den Koran selbst, nicht die Überlieferungen und Erzählungen derer, die den Koran Jahre lang studiert haben und euch (vermeintlich) aufklären wollen, und vor allem nicht jener, die euch „die eigentliche Botschaft des Koran“ beibringen wollen. Wir sind davon überzeugt, dass diese Unterscheidung nur dann geht, wenn ihr selbst den Koran lest, wobei euch diese App helfen soll.";
+
+"SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Ändern Übersetzungen nicht zwangsweise die Bedeutung des Originaltextes?";
+
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback senden";
+
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Zeitfaktor wechselnder Text";
+
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name für wechselnden Text";
+
+"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Zeitfaktor unveränderte Texte";
+
+"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Bewegungsgeräusch";
+
+"SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Anzahl der Rakat";
+
+"SETTINGS.PRAYER_SECTION.TITLE" = "Gebetseinstellungen";
+
+"SETTINGS.START_BUTTON.TITLE" = "Gebet starten";
+
+"SETTINGS.TITLE" = "Einstellungen";

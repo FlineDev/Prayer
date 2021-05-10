@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gp9-NW-NNQ">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prayer View Controller-->
+        <scene sceneID="Ruq-sT-d4E">
+            <objects>
+                <viewController id="gp9-NW-NNQ" customClass="PrayerViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="412-9a-0bj"/>
+                        <viewControllerLayoutGuide type="bottom" id="4V3-eo-NF4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7UV-4X-BDj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-dM-nb7">
+                                <rect key="frame" x="0.0" y="432.5" width="1024" height="20"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xKx-lr-bht">
+                                        <variation key="widthClass=compact" constant="8"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="widthClass=compact" image="separator-compact"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-Yb-i5m">
+                                <rect key="frame" x="0.0" y="994.5" width="1024" height="20"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                <variation key="widthClass=compact" image="separator-compact"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-Kl-VJt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1316"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6KQ-zZ-19x">
+                                        <rect key="frame" x="20" y="10" width="984" height="265.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o45-ce-Jad">
+                                                <rect key="frame" x="0.0" y="95.5" width="13" height="74"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="62"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="400" verticalCompressionResistancePriority="400" text="All praise is due to God alone, the Sustainer of all the worlds," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLQ-2h-xh7">
+                                                <rect key="frame" x="13" y="68" width="971" height="129"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="54"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cnv-4X-Y4z">
+                                        <rect key="frame" x="20" y="355.5" width="984" height="456"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↓ " lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-vA-dz9">
+                                                <rect key="frame" x="0.0" y="191" width="59" height="74"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="500" text="In the name of God, The Most Gracious, The Dispenser of Grace:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpF-sR-yLO">
+                                                <rect key="frame" x="59" y="117" width="925" height="222"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NgH-gP-L94">
+                                        <rect key="frame" x="20" y="891.5" width="984" height="414.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→ " lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbh-cg-HzJ">
+                                                <rect key="frame" x="0.0" y="170.5" width="66" height="74"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="62"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="44"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" text="All praise is due to God alone, the Sustainer of all the worlds," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kq9-9u-4eW">
+                                                <rect key="frame" x="66" y="143" width="918" height="129"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="54"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="10" left="20" bottom="10" right="20"/>
+                                <variation key="widthClass=compact" spacing="32">
+                                    <edgeInsets key="layoutMargins" top="4" left="8" bottom="4" right="8"/>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9zM-Yb-i5m" firstAttribute="bottom" secondItem="kq9-9u-4eW" secondAttribute="top" constant="-20" id="CEB-OX-KxK">
+                                <variation key="widthClass=compact" constant="-8"/>
+                            </constraint>
+                            <constraint firstItem="9zM-Yb-i5m" firstAttribute="height" secondItem="fpV-dM-nb7" secondAttribute="height" id="Op0-Pb-j4u"/>
+                            <constraint firstItem="fpV-dM-nb7" firstAttribute="leading" secondItem="7UV-4X-BDj" secondAttribute="leading" id="So7-7E-xiv"/>
+                            <constraint firstAttribute="trailing" secondItem="oW4-Kl-VJt" secondAttribute="trailing" id="UDg-cX-xqW"/>
+                            <constraint firstItem="oW4-Kl-VJt" firstAttribute="leading" secondItem="7UV-4X-BDj" secondAttribute="leading" id="ciS-9I-j0f"/>
+                            <constraint firstItem="oW4-Kl-VJt" firstAttribute="top" secondItem="7UV-4X-BDj" secondAttribute="top" id="erl-ef-fDN"/>
+                            <constraint firstItem="4V3-eo-NF4" firstAttribute="top" secondItem="oW4-Kl-VJt" secondAttribute="bottom" id="ggZ-LF-Vbz"/>
+                            <constraint firstItem="fpV-dM-nb7" firstAttribute="bottom" secondItem="mpF-sR-yLO" secondAttribute="top" constant="-20" id="mf4-nL-OgL">
+                                <variation key="widthClass=compact" constant="-8"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="9zM-Yb-i5m" secondAttribute="trailing" id="prb-89-ivb"/>
+                            <constraint firstAttribute="trailing" secondItem="fpV-dM-nb7" secondAttribute="trailing" id="sYq-Zm-Nnr"/>
+                            <constraint firstItem="9zM-Yb-i5m" firstAttribute="leading" secondItem="7UV-4X-BDj" secondAttribute="leading" id="zKh-76-PjG"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="currentArrowLabel" destination="Cdx-vA-dz9" id="DAa-dP-j3f"/>
+                        <outlet property="currentLineComponentSeparator" destination="fpV-dM-nb7" id="08J-2H-G0w"/>
+                        <outlet property="currentLineLabel" destination="mpF-sR-yLO" id="HJZ-BG-LLC"/>
+                        <outlet property="nextArrowLabel" destination="hbh-cg-HzJ" id="7zO-mJ-T4S"/>
+                        <outlet property="nextLineComponentSeparator" destination="9zM-Yb-i5m" id="TDP-sW-1ds"/>
+                        <outlet property="nextLineLabel" destination="kq9-9u-4eW" id="OPi-IY-k0l"/>
+                        <outlet property="previousArrowLabel" destination="o45-ce-Jad" id="dhf-2w-bNg"/>
+                        <outlet property="previousLineLabel" destination="fLQ-2h-xh7" id="efv-VL-vBK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFM-Es-feH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="270"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="separator" width="241" height="20"/>
+        <image name="separator-compact" width="96" height="8"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
