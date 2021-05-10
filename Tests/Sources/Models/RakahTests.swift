@@ -8,7 +8,7 @@ import XCTest
 
 class RakahTests: XCTestCase {
   func testCorrectComponentsCountForBeginningRakah() {
-    let rakah = Rakah.make(
+    let rakah = Rakah(
       isBeginningOfPrayer: true,
       includesStandingRecitation: true,
       includesSittingRecitation: false,
@@ -17,7 +17,7 @@ class RakahTests: XCTestCase {
 
     let randomRecitation = "RR"
     let expectedComponentNames = [
-      "Takbīr", "Opening Supplication", "Ta'awwudh", "The Opening", randomRecitation, "Takbīr", "Ruku",
+      "Takbīr", "Opening Supplication", "Ta'awwudh", "al-Fatiha (The Opening)", randomRecitation, "Takbīr", "Ruku",
       "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
     ]
@@ -31,7 +31,7 @@ class RakahTests: XCTestCase {
   }
 
   func testCorrectComponentsCountForEndingRakah() {
-    let rakah = Rakah.make(
+    let rakah = Rakah(
       isBeginningOfPrayer: false,
       includesStandingRecitation: false,
       includesSittingRecitation: true,
@@ -40,7 +40,7 @@ class RakahTests: XCTestCase {
 
     let randomRecitation = "RR"
     let expectedComponentNames = [
-      "The Opening", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
+      "al-Fatiha (The Opening)", "Takbīr", "Ruku", "Straightening Up", "Takbīr",
       "Sajdah", "Takbīr", "Takbīr", "Sajdah", "Takbīr",
       "Tashahhud", "Salatul-'Ibrahimiyyah", "Rabbanagh", "Salâm", "Salâm",
     ]

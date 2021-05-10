@@ -1,1 +1,7 @@
-
+- Yeni ekran boyutları ve işletim sistemi sürümleri için tam destek.
+- Yeni karanlık mod arayüzü için tam destek.
+- Anlatım adlarına Arapça isim eklendi (mesela 'Açılış' yerine 'Fatiha (Açılış)').
+- Secde'ye düşme ve tekrar ayağa kalkma süresi uzatıldı.
+- Uygulama dilini değiştirmek için yeni iOS özelliğine işaret eklendi.
+- Almanca okuma metnindeki bir yazım hatası düzetildi.
+- iOS/iPadOS minimum gerekli sürüm 14'e yükseltildi. 

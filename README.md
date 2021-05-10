@@ -9,8 +9,8 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/Flinesoft/Prayer/releases">
-        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
-             alt="Version: 1.0.0">
+        <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg"
+             alt="Version: 1.1.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-5.4-FFAC45.svg"
          alt="Swift: 5.4">
@@ -62,6 +62,7 @@ Thank you very much for any donation, it really helps out a lot! 💯
 ## Contributing
 
 Contributions are welcome. Feel free to open an issue on GitHub with your ideas or implement an idea yourself and post a pull request. If you want to contribute code, please try to follow the same syntax and semantic in your **commit messages** (see rationale [here](http://chris.beams.io/posts/git-commit/)).
+
 
 ## License
 This project is released under the [GNU General Public License, version 3 (GPL-3.0)](http://opensource.org/licenses/GPL-3.0).
