@@ -15,6 +15,20 @@
 		2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B55264701D500A4D8E3 /* SwiftyBeaver */; };
 		2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B582647023900A4D8E3 /* SwiftyTimer */; };
 		2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B5B2647025800A4D8E3 /* SwiftyUserDefaults */; };
+		2E9976BE271585A500F61BFE /* Recitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9976BD271585A500F61BFE /* Recitation.swift */; };
+		2E9976D92715A75400F61BFE /* 090_The-Land.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976DB2715A75400F61BFE /* 090_The-Land.txt */; };
+		2E9976DE2715A76100F61BFE /* 091_The-Sun.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976E02715A76100F61BFE /* 091_The-Sun.txt */; };
+		2E9976E32715A76C00F61BFE /* 092_The-Night.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976E52715A76C00F61BFE /* 092_The-Night.txt */; };
+		2E9976E82715A77500F61BFE /* 093_The-Bright-Morning-Hours.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976EA2715A77500F61BFE /* 093_The-Bright-Morning-Hours.txt */; };
+		2E9976ED2715A77E00F61BFE /* 094_The-Opening-Up-of-the-Heart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976EF2715A77E00F61BFE /* 094_The-Opening-Up-of-the-Heart.txt */; };
+		2E9976F22715A78900F61BFE /* 095_The-Fig.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976F42715A78900F61BFE /* 095_The-Fig.txt */; };
+		2E9976F72715A79200F61BFE /* 096_The-Germ-Cell.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976F92715A79200F61BFE /* 096_The-Germ-Cell.txt */; };
+		2E9976FC2715A79A00F61BFE /* 097_Destiny.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9976FE2715A79A00F61BFE /* 097_Destiny.txt */; };
+		2E9977012715A7A500F61BFE /* 098_The-Evidence-of-the-Truth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977032715A7A500F61BFE /* 098_The-Evidence-of-the-Truth.txt */; };
+		2E9977062715A7AC00F61BFE /* 099_The-Earthquake.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977082715A7AC00F61BFE /* 099_The-Earthquake.txt */; };
+		2E99770B2715A7B500F61BFE /* 100_The-Chargers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E99770D2715A7B500F61BFE /* 100_The-Chargers.txt */; };
+		2E9977102715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977122715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt */; };
+		2E9977152715A7C500F61BFE /* 102_Greed-for-More-and-More.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977172715A7C500F61BFE /* 102_Greed-for-More-and-More.txt */; };
 		A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */; };
 		A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */; };
 		A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF92222EE5700A7EB3A /* Assets.swift */; };
@@ -119,6 +133,46 @@
 
 /* Begin PBXFileReference section */
 		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
+		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
+		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
+		2E9976DC2715A75B00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
+		2E9976DD2715A75C00F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
+		2E9976DF2715A76100F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/091_The-Sun.txt"; sourceTree = "<group>"; };
+		2E9976E12715A76300F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/091_The-Sun.txt"; sourceTree = "<group>"; };
+		2E9976E22715A76400F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/091_The-Sun.txt"; sourceTree = "<group>"; };
+		2E9976E42715A76C00F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/092_The-Night.txt"; sourceTree = "<group>"; };
+		2E9976E62715A76D00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/092_The-Night.txt"; sourceTree = "<group>"; };
+		2E9976E72715A76E00F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/092_The-Night.txt"; sourceTree = "<group>"; };
+		2E9976E92715A77500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/093_The-Bright-Morning-Hours.txt"; sourceTree = "<group>"; };
+		2E9976EB2715A77600F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/093_The-Bright-Morning-Hours.txt"; sourceTree = "<group>"; };
+		2E9976EC2715A77800F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/093_The-Bright-Morning-Hours.txt"; sourceTree = "<group>"; };
+		2E9976EE2715A77E00F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/094_The-Opening-Up-of-the-Heart.txt"; sourceTree = "<group>"; };
+		2E9976F02715A77F00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/094_The-Opening-Up-of-the-Heart.txt"; sourceTree = "<group>"; };
+		2E9976F12715A78300F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/094_The-Opening-Up-of-the-Heart.txt"; sourceTree = "<group>"; };
+		2E9976F32715A78900F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/095_The-Fig.txt"; sourceTree = "<group>"; };
+		2E9976F52715A78A00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/095_The-Fig.txt"; sourceTree = "<group>"; };
+		2E9976F62715A78C00F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/095_The-Fig.txt"; sourceTree = "<group>"; };
+		2E9976F82715A79200F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/096_The-Germ-Cell.txt"; sourceTree = "<group>"; };
+		2E9976FA2715A79300F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/096_The-Germ-Cell.txt"; sourceTree = "<group>"; };
+		2E9976FB2715A79400F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/096_The-Germ-Cell.txt"; sourceTree = "<group>"; };
+		2E9976FD2715A79A00F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/097_Destiny.txt; sourceTree = "<group>"; };
+		2E9976FF2715A79F00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/097_Destiny.txt; sourceTree = "<group>"; };
+		2E9977002715A7A000F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/097_Destiny.txt; sourceTree = "<group>"; };
+		2E9977022715A7A500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/098_The-Evidence-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E9977042715A7A600F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/098_The-Evidence-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E9977052715A7A700F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/098_The-Evidence-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E9977072715A7AC00F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/099_The-Earthquake.txt"; sourceTree = "<group>"; };
+		2E9977092715A7AE00F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/099_The-Earthquake.txt"; sourceTree = "<group>"; };
+		2E99770A2715A7AF00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/099_The-Earthquake.txt"; sourceTree = "<group>"; };
+		2E99770C2715A7B500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/100_The-Chargers.txt"; sourceTree = "<group>"; };
+		2E99770E2715A7B700F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/100_The-Chargers.txt"; sourceTree = "<group>"; };
+		2E99770F2715A7B800F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/100_The-Chargers.txt"; sourceTree = "<group>"; };
+		2E9977112715A7BD00F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/101_The-Sudden-Calamity.txt"; sourceTree = "<group>"; };
+		2E9977132715A7BE00F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/101_The-Sudden-Calamity.txt"; sourceTree = "<group>"; };
+		2E9977142715A7BF00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/101_The-Sudden-Calamity.txt"; sourceTree = "<group>"; };
+		2E9977162715A7C500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
+		2E9977182715A7C600F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
+		2E9977192715A7C700F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
 		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
 		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
@@ -332,6 +386,7 @@
 				A16484E41E243B5F008EC78C /* Rakah.swift */,
 				A16484E61E25503C008EC78C /* RakahComponent.swift */,
 				A16484E21E243AAC008EC78C /* Prayer.swift */,
+				2E9976BD271585A500F61BFE /* Recitation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -434,6 +489,19 @@
 			isa = PBXGroup;
 			children = (
 				A1494B211E29452B00286EBF /* 001_The-Opening.txt */,
+				2E9976DB2715A75400F61BFE /* 090_The-Land.txt */,
+				2E9976E02715A76100F61BFE /* 091_The-Sun.txt */,
+				2E9976E52715A76C00F61BFE /* 092_The-Night.txt */,
+				2E9976EA2715A77500F61BFE /* 093_The-Bright-Morning-Hours.txt */,
+				2E9976EF2715A77E00F61BFE /* 094_The-Opening-Up-of-the-Heart.txt */,
+				2E9976F42715A78900F61BFE /* 095_The-Fig.txt */,
+				2E9976F92715A79200F61BFE /* 096_The-Germ-Cell.txt */,
+				2E9976FE2715A79A00F61BFE /* 097_Destiny.txt */,
+				2E9977032715A7A500F61BFE /* 098_The-Evidence-of-the-Truth.txt */,
+				2E9977082715A7AC00F61BFE /* 099_The-Earthquake.txt */,
+				2E99770D2715A7B500F61BFE /* 100_The-Chargers.txt */,
+				2E9977122715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt */,
+				2E9977172715A7C500F61BFE /* 102_Greed-for-More-and-More.txt */,
 				A1494B791E2B17D100286EBF /* 103_The-Flight-of-Time.txt */,
 				A1494B721E2B156500286EBF /* 104_The-Slanderer.txt */,
 				A1494B6B1E2B12FD00286EBF /* 105_The-Elephant.txt */,
@@ -734,6 +802,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */,
+				2E9976D92715A75400F61BFE /* 090_The-Land.txt in Resources */,
+				2E9976DE2715A76100F61BFE /* 091_The-Sun.txt in Resources */,
+				2E9976E32715A76C00F61BFE /* 092_The-Night.txt in Resources */,
+				2E9976E82715A77500F61BFE /* 093_The-Bright-Morning-Hours.txt in Resources */,
+				2E9976ED2715A77E00F61BFE /* 094_The-Opening-Up-of-the-Heart.txt in Resources */,
+				2E9976F22715A78900F61BFE /* 095_The-Fig.txt in Resources */,
+				2E9976F72715A79200F61BFE /* 096_The-Germ-Cell.txt in Resources */,
+				2E9976FC2715A79A00F61BFE /* 097_Destiny.txt in Resources */,
+				2E9977012715A7A500F61BFE /* 098_The-Evidence-of-the-Truth.txt in Resources */,
+				2E9977062715A7AC00F61BFE /* 099_The-Earthquake.txt in Resources */,
+				2E99770B2715A7B500F61BFE /* 100_The-Chargers.txt in Resources */,
+				2E9977102715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt in Resources */,
+				2E9977152715A7C500F61BFE /* 102_Greed-for-More-and-More.txt in Resources */,
 				A1494B771E2B17D100286EBF /* 103_The-Flight-of-Time.txt in Resources */,
 				A1494B701E2B156500286EBF /* 104_The-Slanderer.txt in Resources */,
 				A1494B691E2B12FD00286EBF /* 105_The-Elephant.txt in Resources */,
@@ -884,6 +965,7 @@
 				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
+				2E9976BE271585A500F61BFE /* Recitation.swift in Sources */,
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
@@ -927,6 +1009,136 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2E9976DB2715A75400F61BFE /* 090_The-Land.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976DA2715A75400F61BFE /* en */,
+				2E9976DC2715A75B00F61BFE /* de */,
+				2E9976DD2715A75C00F61BFE /* tr */,
+			);
+			name = "090_The-Land.txt";
+			sourceTree = "<group>";
+		};
+		2E9976E02715A76100F61BFE /* 091_The-Sun.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976DF2715A76100F61BFE /* en */,
+				2E9976E12715A76300F61BFE /* de */,
+				2E9976E22715A76400F61BFE /* tr */,
+			);
+			name = "091_The-Sun.txt";
+			sourceTree = "<group>";
+		};
+		2E9976E52715A76C00F61BFE /* 092_The-Night.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976E42715A76C00F61BFE /* en */,
+				2E9976E62715A76D00F61BFE /* de */,
+				2E9976E72715A76E00F61BFE /* tr */,
+			);
+			name = "092_The-Night.txt";
+			sourceTree = "<group>";
+		};
+		2E9976EA2715A77500F61BFE /* 093_The-Bright-Morning-Hours.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976E92715A77500F61BFE /* en */,
+				2E9976EB2715A77600F61BFE /* de */,
+				2E9976EC2715A77800F61BFE /* tr */,
+			);
+			name = "093_The-Bright-Morning-Hours.txt";
+			sourceTree = "<group>";
+		};
+		2E9976EF2715A77E00F61BFE /* 094_The-Opening-Up-of-the-Heart.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976EE2715A77E00F61BFE /* en */,
+				2E9976F02715A77F00F61BFE /* de */,
+				2E9976F12715A78300F61BFE /* tr */,
+			);
+			name = "094_The-Opening-Up-of-the-Heart.txt";
+			sourceTree = "<group>";
+		};
+		2E9976F42715A78900F61BFE /* 095_The-Fig.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976F32715A78900F61BFE /* en */,
+				2E9976F52715A78A00F61BFE /* de */,
+				2E9976F62715A78C00F61BFE /* tr */,
+			);
+			name = "095_The-Fig.txt";
+			sourceTree = "<group>";
+		};
+		2E9976F92715A79200F61BFE /* 096_The-Germ-Cell.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976F82715A79200F61BFE /* en */,
+				2E9976FA2715A79300F61BFE /* de */,
+				2E9976FB2715A79400F61BFE /* tr */,
+			);
+			name = "096_The-Germ-Cell.txt";
+			sourceTree = "<group>";
+		};
+		2E9976FE2715A79A00F61BFE /* 097_Destiny.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9976FD2715A79A00F61BFE /* en */,
+				2E9976FF2715A79F00F61BFE /* de */,
+				2E9977002715A7A000F61BFE /* tr */,
+			);
+			name = 097_Destiny.txt;
+			sourceTree = "<group>";
+		};
+		2E9977032715A7A500F61BFE /* 098_The-Evidence-of-the-Truth.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9977022715A7A500F61BFE /* en */,
+				2E9977042715A7A600F61BFE /* de */,
+				2E9977052715A7A700F61BFE /* tr */,
+			);
+			name = "098_The-Evidence-of-the-Truth.txt";
+			sourceTree = "<group>";
+		};
+		2E9977082715A7AC00F61BFE /* 099_The-Earthquake.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9977072715A7AC00F61BFE /* en */,
+				2E9977092715A7AE00F61BFE /* tr */,
+				2E99770A2715A7AF00F61BFE /* de */,
+			);
+			name = "099_The-Earthquake.txt";
+			sourceTree = "<group>";
+		};
+		2E99770D2715A7B500F61BFE /* 100_The-Chargers.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E99770C2715A7B500F61BFE /* en */,
+				2E99770E2715A7B700F61BFE /* de */,
+				2E99770F2715A7B800F61BFE /* tr */,
+			);
+			name = "100_The-Chargers.txt";
+			sourceTree = "<group>";
+		};
+		2E9977122715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9977112715A7BD00F61BFE /* en */,
+				2E9977132715A7BE00F61BFE /* tr */,
+				2E9977142715A7BF00F61BFE /* de */,
+			);
+			name = "101_The-Sudden-Calamity.txt";
+			sourceTree = "<group>";
+		};
+		2E9977172715A7C500F61BFE /* 102_Greed-for-More-and-More.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9977162715A7C500F61BFE /* en */,
+				2E9977182715A7C600F61BFE /* de */,
+				2E9977192715A7C700F61BFE /* tr */,
+			);
+			name = "102_Greed-for-More-and-More.txt";
+			sourceTree = "<group>";
+		};
 		A1494AEC1E25A9F000286EBF /* Takbir.txt */ = {
 			isa = PBXVariantGroup;
 			children = (
