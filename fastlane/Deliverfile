@@ -17,7 +17,7 @@ name(
 )
 
 support_url(
-  "de-DE" => "https://community.flinesoft.com/c/prayer-app",
-  "en-US" => "https://community.flinesoft.com/c/prayer-app",
-  "tr" => "https://community.flinesoft.com/c/prayer-app"
+  "de-DE" => "https://links.flinesoft.com/forum/prayer",
+  "en-US" => "https://links.flinesoft.com/forum/prayer",
+  "tr" => "https://links.flinesoft.com/forum/prayer"
 )

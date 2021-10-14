@@ -37,7 +37,7 @@
 
 <p align="center">
     <a href="#about">About</a>
-  • <a href="https://community.flinesoft.com/c/prayer-app">Community Forum</a>
+  • <a href="https://links.flinesoft.com/forum/prayer">Community Forum</a>
   • <a href="https://itunes.apple.com/us/app/prayer-in-english/id1217136884">App Store</a>
   • <a href="#donation">Donation</a>
   • <a href="#contributing">Contributing</a>
