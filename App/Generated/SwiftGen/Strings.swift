@@ -66,9 +66,17 @@ internal enum L10n {
       /// al-Ma'Un (Assistance)
       internal static let name = L10n.tr("Localizable", "RECITATION.ASSISTANCE.NAME")
     }
+    internal enum Destiny {
+      /// Al-Qadr (Destiny)
+      internal static let name = L10n.tr("Localizable", "RECITATION.DESTINY.NAME")
+    }
     internal enum GoodInAbundance {
       /// al-Kawthar (Good in Abundance)
       internal static let name = L10n.tr("Localizable", "RECITATION.GOOD_IN_ABUNDANCE.NAME")
+    }
+    internal enum GreedForMoreAndMore {
+      /// At-Takathur (Greed For More And More)
+      internal static let name = L10n.tr("Localizable", "RECITATION.GREED_FOR_MORE_AND_MORE.NAME")
     }
     internal enum Men {
       /// an-Nas (Men)
@@ -82,21 +90,57 @@ internal enum L10n {
       /// an-Nasr (Succour)
       internal static let name = L10n.tr("Localizable", "RECITATION.SUCCOUR.NAME")
     }
+    internal enum TheBrightMorningHours {
+      /// Ad-Duha (The Bright Morning Hours)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_BRIGHT_MORNING_HOURS.NAME")
+    }
+    internal enum TheChargers {
+      /// Al-Adiyat (The Chargers)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_CHARGERS.NAME")
+    }
     internal enum TheDecleratiionOfGodsPerfection {
       /// al-Ikhlas (The Decleration Of [God's] Perfection)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME")
+    }
+    internal enum TheEarthquake {
+      /// Al-Zalzalah (The Earthquake)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_EARTHQUAKE.NAME")
     }
     internal enum TheElephant {
       /// al-Fil (The Elephant)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_ELEPHANT.NAME")
     }
+    internal enum TheEvidenceOfTheTruth {
+      /// Al-Bayyinah (The Evidence Of The Truth)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME")
+    }
+    internal enum TheFig {
+      /// At-Tin (The Fig)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_FIG.NAME")
+    }
     internal enum TheFlightOfTime {
       /// al-'Asr (The Flight Of Time)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_FLIGHT_OF_TIME.NAME")
     }
+    internal enum TheGermCell {
+      /// Al-Alaq (The Germ-Cell)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_GERM_CELL.NAME")
+    }
+    internal enum TheLand {
+      /// Al-Balad (The Land)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_LAND.NAME")
+    }
+    internal enum TheNight {
+      /// Al-Layl (The Night)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_NIGHT.NAME")
+    }
     internal enum TheOpening {
       /// al-Fatiha (The Opening)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_OPENING.NAME")
+    }
+    internal enum TheOpeningUpOfTheHeart {
+      /// Ash-Sharh (The Opening-Up Of The Heart)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME")
     }
     internal enum TheRisingDawn {
       /// al-Falaq (The Rising Dawn)
@@ -105,6 +149,14 @@ internal enum L10n {
     internal enum TheSlanderer {
       /// al-Humaza (The Slanderer)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_SLANDERER.NAME")
+    }
+    internal enum TheSuddenCalamity {
+      /// Al-Qariah (The Sudden Calamity)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_SUDDEN_CALAMITY.NAME")
+    }
+    internal enum TheSun {
+      /// Ash-Shams (The Sun)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_SUN.NAME")
     }
     internal enum TheTwistedStrands {
       /// al-Masad (The Twisted Strands)
@@ -178,16 +230,20 @@ internal enum L10n {
     internal enum PrayerSection {
       /// Prayer Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.TITLE")
+      internal enum AllowLongerRecitations {
+        /// Allow longer recitations
+        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
+      }
       internal enum ChangingText {
-        /// Changing text speed
+        /// Quran sura speed
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE")
       }
       internal enum ChangingTextName {
-        /// Changing text name
+        /// Quran sura name
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
       }
       internal enum FixedTexts {
-        /// Fixed texts speed
+        /// Other texts speed
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE")
       }
       internal enum MovementSoundInstrument {

@@ -22,7 +22,11 @@
 
 "RECITATION.ASSISTANCE.NAME" = "al-Ma'Un (Assistance)";
 
+"RECITATION.DESTINY.NAME" = "Al-Qadr (Destiny)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Good in Abundance)";
+
+"RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "At-Takathur (Greed For More And More)";
 
 "RECITATION.MEN.NAME" = "an-Nas (Men)";
 
@@ -30,17 +34,39 @@
 
 "RECITATION.SUCCOUR.NAME" = "an-Nasr (Succour)";
 
+"RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "Ad-Duha (The Bright Morning Hours)";
+
+"RECITATION.THE_CHARGERS.NAME" = "Al-Adiyat (The Chargers)";
+
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (The Decleration Of [God's] Perfection)";
+
+"RECITATION.THE_EARTHQUAKE.NAME" = "Al-Zalzalah (The Earthquake)";
 
 "RECITATION.THE_ELEPHANT.NAME" = "al-Fil (The Elephant)";
 
+"RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "Al-Bayyinah (The Evidence Of The Truth)";
+
+"RECITATION.THE_FIG.NAME" = "At-Tin (The Fig)";
+
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (The Flight Of Time)";
 
+"RECITATION.THE_GERM_CELL.NAME" = "Al-Alaq (The Germ-Cell)";
+
+"RECITATION.THE_LAND.NAME" = "Al-Balad (The Land)";
+
+"RECITATION.THE_NIGHT.NAME" = "Al-Layl (The Night)";
+
 "RECITATION.THE_OPENING.NAME" = "al-Fatiha (The Opening)";
+
+"RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "Ash-Sharh (The Opening-Up Of The Heart)";
 
 "RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (The Rising Dawn)";
 
 "RECITATION.THE_SLANDERER.NAME" = "al-Humaza (The Slanderer)";
+
+"RECITATION.THE_SUDDEN_CALAMITY.NAME" = "Al-Qariah (The Sudden Calamity)";
+
+"RECITATION.THE_SUN.NAME" = "Ash-Shams (The Sun)";
 
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (The Twisted Strands)";
 
@@ -77,6 +103,8 @@
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Do translations not necessarily change the meaning of the original text?";
 
 "SETTINGS.FEEDBACK_BUTTON.TITLE" = "Send Feedback";
+
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Allow longer recitations";
 
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Quran sura speed";
 

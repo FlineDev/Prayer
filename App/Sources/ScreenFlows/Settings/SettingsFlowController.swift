@@ -47,6 +47,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.showChangingTextName = showChangingTextName
   }
 
+  func setAllowLongerRecitations(_ allowLongerRecitations: Bool) {
+    settingsViewModel.allowLongerRecitations = allowLongerRecitations
+  }
+
   func showLanguageSettings() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
@@ -69,7 +73,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
 
   func startPrayer() {
     guard settingsViewModel.rakatCount > 0 else { return }
-    let prayer = Prayer(rakatCount: UInt(settingsViewModel.rakatCount))
+    let prayer = Prayer(
+      rakatCount: UInt(settingsViewModel.rakatCount),
+      allowLongerRecitations: settingsViewModel.allowLongerRecitations
+    )
 
     let prayerCoordinator = PrayerFlowController(
       prayer: prayer,

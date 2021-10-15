@@ -22,7 +22,11 @@
 
 "RECITATION.ASSISTANCE.NAME" = "Ma'un (Yardımlaşma)";
 
+"RECITATION.DESTINY.NAME" = "Kadr (Kudret)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "Kevser (Bolluk)";
+
+"RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "Tekasür (Çoğaltma Yarışı)";
 
 "RECITATION.MEN.NAME" = "Nas (Halk)";
 
@@ -30,17 +34,39 @@
 
 "RECITATION.SUCCOUR.NAME" = "Nasr (Yardım)";
 
+"RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "Duha (Kuşluk)";
+
+"RECITATION.THE_CHARGERS.NAME" = "Adiyat (Aşanlar)";
+
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "İhlas";
+
+"RECITATION.THE_EARTHQUAKE.NAME" = "Zilzal (Deprem)";
 
 "RECITATION.THE_ELEPHANT.NAME" = "Fil";
 
+"RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "Beyyine (Kanıt)";
+
+"RECITATION.THE_FIG.NAME" = "Tin (İncir)";
+
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "'Asr (Çağ)";
 
+"RECITATION.THE_GERM_CELL.NAME" = "Alak (Embriyo)";
+
+"RECITATION.THE_LAND.NAME" = "Beled (Kent)";
+
+"RECITATION.THE_NIGHT.NAME" = "Leyl (Gece)";
+
 "RECITATION.THE_OPENING.NAME" = "Fatiha (Açılış)";
+
+"RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "Şarh (Sakinleştirme)";
 
 "RECITATION.THE_RISING_DAWN.NAME" = "Felak (Şafak)";
 
 "RECITATION.THE_SLANDERER.NAME" = "Hümeze (Dedikoducu)";
+
+"RECITATION.THE_SUDDEN_CALAMITY.NAME" = "Karia (Şok)";
+
+"RECITATION.THE_SUN.NAME" = "Şems (Güneş)";
 
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "Tebbet (Diken)";
 
@@ -77,6 +103,8 @@
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Çeviriler otomatikmen orijinal metnin anlamını değiştirmezmi?";
 
 "SETTINGS.FEEDBACK_BUTTON.TITLE" = "Geribildirim yolla";
+
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Daha uzun surelere izin ver";
 
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Kur'an âyet hızı";
 

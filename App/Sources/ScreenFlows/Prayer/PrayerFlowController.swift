@@ -63,7 +63,7 @@ class PrayerFlowController: FlowController {
   }
 
   func countdownViewModel(count: Int) -> PrayerViewModel {
-    return PrayerViewModel(
+    PrayerViewModel(
       currentComponentName: L10n.PrayerView.Countdown.name,
       previousArrow: nil,
       previousLine: nil,

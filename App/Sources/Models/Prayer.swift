@@ -19,22 +19,24 @@ class Prayer {
   ///   - rakatCount: The number of rakats to be included in the prayer.
   /// - Returns: The Prayer object.
   init(
-    rakatCount: UInt
+    rakatCount: UInt,
+    allowLongerRecitations: Bool
   ) {
     self.rakat = {
       var rakat: Rakat = []
-      var usedStandingRecitationFileNames: [String] = []
+      var usedStandingRecitations: [Recitation] = []
       for num in 1...rakatCount {
         let rakah = Rakah(
           isBeginningOfPrayer: num == 1,
           includesStandingRecitation: num <= 2,
           includesSittingRecitation: num % 2 == 0 || num == rakatCount,
           isEndOfPrayer: num == rakatCount,
-          excludeStandingRecitationNames: usedStandingRecitationFileNames
+          allowLongerRecitations: allowLongerRecitations,
+          excludeStandingRecitations: usedStandingRecitations
         )
         rakat.append(rakah)
-        if let standingRecitationFileName = rakah.standingRecitationFileName {
-          usedStandingRecitationFileNames.append(standingRecitationFileName)
+        if let standingRecitation = rakah.standingRecitation {
+          usedStandingRecitations.append(standingRecitation)
         }
       }
 

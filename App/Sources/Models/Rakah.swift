@@ -18,7 +18,7 @@ class Rakah {
   private let includesStandingRecitation: Bool
   private let includesSittingRecitation: Bool
   private let isEndOfPrayer: Bool
-  let standingRecitationFileName: String?
+  let standingRecitation: Recitation?
 
   // MARK: - Initializer
   init(
@@ -26,7 +26,8 @@ class Rakah {
     includesStandingRecitation: Bool,
     includesSittingRecitation: Bool,
     isEndOfPrayer: Bool,
-    excludeStandingRecitationNames: [String] = []
+    allowLongerRecitations: Bool,
+    excludeStandingRecitations: [Recitation] = []
   ) {
     self.isBeginningOfPrayer = isBeginningOfPrayer
     self.includesStandingRecitation = includesStandingRecitation
@@ -34,13 +35,20 @@ class Rakah {
     self.isEndOfPrayer = isEndOfPrayer
 
     if includesStandingRecitation {
-      let allowedStandingRecitationNames = Component.nonOpeningRecitationFileNames.filter {
-        !excludeStandingRecitationNames.contains($0)
-      }
-      self.standingRecitationFileName = allowedStandingRecitationNames.sample
+      let allowedStandingRecitations = Recitation.allCases.dropFirst()
+        .filter { recitation in
+          if allowLongerRecitations {
+            return recitation.length == .short || recitation.length == .medium
+          }
+          else {
+            return recitation.length == .short
+          }
+        }
+        .filter { !excludeStandingRecitations.contains($0) }
+      self.standingRecitation = allowedStandingRecitations.randomElement()
     }
     else {
-      self.standingRecitationFileName = nil
+      self.standingRecitation = nil
     }
   }
 
@@ -54,11 +62,11 @@ class Rakah {
       components.append(RakahComponent(.taawwudh))
     }
 
-    components.append(RakahComponent(.recitation(fileName: "001_The-Opening")))
+    components.append(RakahComponent(.recitation(Recitation.theOpening)))
 
     if includesStandingRecitation {
-      let standingRecitation = RakahComponent(.recitation(fileName: standingRecitationFileName!))
-      components.append(standingRecitation)
+      let standingRecitationComponent = RakahComponent(.recitation(standingRecitation!))
+      components.append(standingRecitationComponent)
     }
 
     components.append(RakahComponent(.takbir(.bending)))
@@ -100,7 +108,7 @@ extension Rakah {
     case takbir(Position)
     case openingSupplication
     case taawwudh
-    case recitation(fileName: String)
+    case recitation(Recitation)
     case ruku
     case straighteningUp  // from Ruku
     case sajdah
@@ -109,18 +117,14 @@ extension Rakah {
     case rabbanagh
     case salam(Position)
 
-    static let theOpeningRecitationFileName: String = Recitation.theOpening.fileName
-    static let nonOpeningRecitationFileNames: [String] = Recitation.allCases.dropFirst().map(\.fileName)
-
     static var all: [Component] {
       let nonQuranicComponents: [Component] = [
         .takbir(.standing), .takbir(.bending), .takbir(.sitting), .takbir(.worship),
         .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
         .salatulIbrahimiyyah, .rabbanagh, .salam(.salamRight), .salam(.salamLeft),
       ]
-      let recitations = ([theOpeningRecitationFileName] + nonOpeningRecitationFileNames)
-        .map { Component.recitation(fileName: $0) }
-      return nonQuranicComponents + recitations
+      let recitationComponents = Recitation.allCases.map { Component.recitation($0) }
+      return nonQuranicComponents + recitationComponents
     }
   }
 }

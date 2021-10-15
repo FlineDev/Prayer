@@ -765,10 +765,9 @@
 			};
 			buildConfigurationList = A16484861E243834008EC78C /* Build configuration list for PBXProject "Prayer" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				de,

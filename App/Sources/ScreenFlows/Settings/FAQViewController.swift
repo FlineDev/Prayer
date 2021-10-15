@@ -52,7 +52,7 @@ class FAQViewController: BrandedViewController {
 // MARK: - UICollectionViewDataSource Protocol Implementation
 extension FAQViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.entries.count
+    viewModel.entries.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,10 +73,10 @@ extension FAQViewController: UICollectionViewDataSource {
 // MARK: - FAQCollectionViewLayoutDelegate Protocol Implementation
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
   func question(at indexPath: IndexPath) -> String {
-    return viewModel.entries[indexPath.item].question
+    viewModel.entries[indexPath.item].question
   }
 
   func answer(at indexPath: IndexPath) -> String {
-    return viewModel.entries[indexPath.item].answer
+    viewModel.entries[indexPath.item].answer
   }
 }

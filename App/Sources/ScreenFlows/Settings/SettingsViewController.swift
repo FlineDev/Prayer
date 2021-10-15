@@ -13,6 +13,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func setFixedPartSpeed(_ fixedPartSpeed: Double)
   func setChangingPartSpeed(_ changingPartSpeed: Double)
   func setShowChangingTextName(_ showChangingTextName: Bool)
+  func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -84,6 +85,7 @@ class SettingsViewController: BrandedFormViewController {
       <<< fixedTextsRow()
       <<< changingTextRow()
       <<< changingTextNameRow()
+      <<< allowLongerRecitationsRow()
       <<< movementSoundInstrumentRow()
 
     form.append(prayerSection)
@@ -141,6 +143,17 @@ class SettingsViewController: BrandedFormViewController {
     .onChange { row in
       guard let rowValue = row.value else { log.error("Show changing text name had nil value."); return }
       self.flowDelegate?.setShowChangingTextName(rowValue)
+    }
+  }
+
+  fileprivate func allowLongerRecitationsRow() -> SwitchRow {
+    return SwitchRow { row in
+      row.title = L10n.Settings.PrayerSection.AllowLongerRecitations.title
+      row.value = viewModel.allowLongerRecitations
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Allow longer recitations had nil value."); return }
+      self.flowDelegate?.setAllowLongerRecitations(rowValue)
     }
   }
 

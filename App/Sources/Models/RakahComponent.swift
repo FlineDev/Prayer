@@ -87,71 +87,15 @@ class RakahComponent {
       isChangingText = false
       chapterNumber = nil
 
-    case .recitation(fileName: let fileName):
-      let l10n = L10n.Recitation.self
+    case let .recitation(recitation):
+      chapterNumber = recitation.rawValue
+      name = recitation.localizedTitle
 
-      switch fileName {
-      case "001_The-Opening":
-        chapterNumber = 1
-        name = l10n.TheOpening.name
-
-      case "103_The-Flight-of-Time":
-        chapterNumber = 103
-        name = l10n.TheFlightOfTime.name
-
-      case "104_The-Slanderer":
-        chapterNumber = 104
-        name = l10n.TheSlanderer.name
-
-      case "105_The-Elephant":
-        chapterNumber = 105
-        name = l10n.TheElephant.name
-
-      case "106_Quraysh":
-        chapterNumber = 106
-        name = l10n.Quraysh.name
-
-      case "107_Assistance":
-        chapterNumber = 107
-        name = l10n.Assistance.name
-
-      case "108_Good-in-Abundance":
-        chapterNumber = 108
-        name = l10n.GoodInAbundance.name
-
-      case "109_Those-Who-Deny-the-Truth":
-        chapterNumber = 109
-        name = l10n.ThoseWhoDenyTheTruth.name
-
-      case "110_Succour":
-        chapterNumber = 110
-        name = l10n.Succour.name
-
-      case "111_The-Twisted-Strands":
-        chapterNumber = 111
-        name = l10n.TheTwistedStrands.name
-
-      case "112_The-Declaration-of-Gods-Perfection":
-        chapterNumber = 112
-        name = l10n.TheDecleratiionOfGodsPerfection.name
-
-      case "113_The-Rising-Dawn":
-        chapterNumber = 113
-        name = l10n.TheRisingDawn.name
-
-      case "114_Men":
-        chapterNumber = 114
-        name = l10n.Men.name
-
-      default:
-        preconditionFailure()
-      }
-
-      spokenTextLines = RakahComponent.readLinesFromFile(named: fileName)
+      spokenTextLines = RakahComponent.readLinesFromFile(named: recitation.fileName)
       needsMovement = false
       position = .standing
       movementSound = nil
-      isChangingText = fileName != "001_The-Opening"
+      isChangingText = recitation != .theOpening
 
     case .ruku:
       name = l10n.Ruku.name

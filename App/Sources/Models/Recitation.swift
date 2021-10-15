@@ -6,7 +6,7 @@
 import Foundation
 
 /// Represents a recitation with its surah (chapter) number as its raw value.
-enum Recitation: Int, CaseIterable {
+enum Recitation: Int, CaseIterable, Equatable {
   /// The length group of a recitation.
   enum Length {
     /// Short enough to consider for every prayers Rakah, even when time is limited.
@@ -52,11 +52,96 @@ enum Recitation: Int, CaseIterable {
 
   var fileName: String {
     let normalizedNum = String(format: "%03d", rawValue)
-    let normalizedTitle = title.components(separatedBy: .whitespaces).joined(separator: "-")
+    let normalizedTitle = englishTitle.components(separatedBy: .whitespaces).joined(separator: "-")
     return "\(normalizedNum)_\(normalizedTitle)"
   }
 
-  private var title: String {
+  var localizedTitle: String {
+    let l10n = L10n.Recitation.self
+
+    switch self {
+    case .theOpening:
+      return l10n.TheOpening.name
+
+    case .theLand:
+      return l10n.TheLand.name
+
+    case .theSun:
+      return l10n.TheSun.name
+
+    case .theNight:
+      return l10n.TheNight.name
+
+    case .theBrightMorningHours:
+      return l10n.TheBrightMorningHours.name
+
+    case .theOpeningUpOfTheHeart:
+      return l10n.TheOpeningUpOfTheHeart.name
+
+    case .theFig:
+      return l10n.TheFig.name
+
+    case .theGermCell:
+      return l10n.TheGermCell.name
+
+    case .destiny:
+      return l10n.Destiny.name
+
+    case .theEvidenceOfTheTruth:
+      return l10n.TheEvidenceOfTheTruth.name
+
+    case .theEarthquake:
+      return l10n.TheEarthquake.name
+
+    case .theChargers:
+      return l10n.TheChargers.name
+
+    case .theSuddenCalamity:
+      return l10n.TheSuddenCalamity.name
+
+    case .greedForMoreAndMore:
+      return l10n.GreedForMoreAndMore.name
+
+    case .theFlightOfTime:
+      return l10n.TheFlightOfTime.name
+
+    case .theSlanderer:
+      return l10n.TheSlanderer.name
+
+    case .theElephant:
+      return l10n.TheElephant.name
+
+    case .quraysh:
+      return l10n.Quraysh.name
+
+    case .assistance:
+      return l10n.Assistance.name
+
+    case .goodInAbundance:
+      return l10n.GoodInAbundance.name
+
+    case .thoseWhoDenyTheTruth:
+      return l10n.ThoseWhoDenyTheTruth.name
+
+    case .succour:
+      return l10n.Succour.name
+
+    case .theTwistedStrands:
+      return l10n.TheTwistedStrands.name
+
+    case .theDeclarationOfGodsPerfection:
+      return l10n.TheDecleratiionOfGodsPerfection.name
+
+    case .theRisingDawn:
+      return l10n.TheRisingDawn.name
+
+    case .men:
+      return l10n.Men.name
+    }
+  }
+
+  /// Use for looking up the file in resources.
+  private var englishTitle: String {
     switch self {
     case .theOpening:  // 001
       return "The Opening"
