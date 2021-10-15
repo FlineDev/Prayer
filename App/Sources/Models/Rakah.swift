@@ -15,41 +15,23 @@ typealias Rakat = [Rakah]
 class Rakah {
   // MARK: - Stored Instance Properties
   private let isBeginningOfPrayer: Bool
-  private let includesStandingRecitation: Bool
   private let includesSittingRecitation: Bool
   private let isEndOfPrayer: Bool
   let standingRecitation: Recitation?
 
+  private var includesStandingRecitation: Bool { standingRecitation != nil }
+
   // MARK: - Initializer
   init(
     isBeginningOfPrayer: Bool,
-    includesStandingRecitation: Bool,
+    standingRecitation: Recitation?,
     includesSittingRecitation: Bool,
-    isEndOfPrayer: Bool,
-    allowLongerRecitations: Bool,
-    excludeStandingRecitations: [Recitation] = []
+    isEndOfPrayer: Bool
   ) {
     self.isBeginningOfPrayer = isBeginningOfPrayer
-    self.includesStandingRecitation = includesStandingRecitation
     self.includesSittingRecitation = includesSittingRecitation
     self.isEndOfPrayer = isEndOfPrayer
-
-    if includesStandingRecitation {
-      let allowedStandingRecitations = Recitation.allCases.dropFirst()
-        .filter { recitation in
-          if allowLongerRecitations {
-            return recitation.length == .short || recitation.length == .medium
-          }
-          else {
-            return recitation.length == .short
-          }
-        }
-        .filter { !excludeStandingRecitations.contains($0) }
-      self.standingRecitation = allowedStandingRecitations.randomElement()
-    }
-    else {
-      self.standingRecitation = nil
-    }
+    self.standingRecitation = standingRecitation
   }
 
   // MARK: - Instance Methods
@@ -62,10 +44,10 @@ class Rakah {
       components.append(RakahComponent(.taawwudh))
     }
 
-    components.append(RakahComponent(.recitation(Recitation.theOpening)))
+    components.append(RakahComponent(.recitation(Recitation.theOpening, part: 1, totalParts: 1)))
 
-    if includesStandingRecitation {
-      let standingRecitationComponent = RakahComponent(.recitation(standingRecitation!))
+    if let standingRecitation = standingRecitation {
+      let standingRecitationComponent = RakahComponent(.recitation(standingRecitation, part: 1, totalParts: 1))
       components.append(standingRecitationComponent)
     }
 
@@ -108,7 +90,7 @@ extension Rakah {
     case takbir(Position)
     case openingSupplication
     case taawwudh
-    case recitation(Recitation)
+    case recitation(Recitation, part: Int, totalParts: Int)
     case ruku
     case straighteningUp  // from Ruku
     case sajdah
@@ -116,15 +98,5 @@ extension Rakah {
     case salatulIbrahimiyyah
     case rabbanagh
     case salam(Position)
-
-    static var all: [Component] {
-      let nonQuranicComponents: [Component] = [
-        .takbir(.standing), .takbir(.bending), .takbir(.sitting), .takbir(.worship),
-        .openingSupplication, .taawwudh, .ruku, .straighteningUp, .sajdah, .tashahhud,
-        .salatulIbrahimiyyah, .rabbanagh, .salam(.salamRight), .salam(.salamLeft),
-      ]
-      let recitationComponents = Recitation.allCases.map { Component.recitation($0) }
-      return nonQuranicComponents + recitationComponents
-    }
   }
 }

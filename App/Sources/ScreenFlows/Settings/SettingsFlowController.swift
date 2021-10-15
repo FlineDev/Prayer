@@ -21,7 +21,7 @@ class SettingsFlowController: InitialFlowController {
     settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
     settingsViewCtrl?.flowDelegate = self
 
-    let navCtrl = BrandedNavigationController(rootViewController: settingsViewCtrl)
+    let navCtrl = UINavigationController(rootViewController: settingsViewCtrl)
     window.rootViewController = navCtrl
 
     if !Defaults.faqClosed {

@@ -11,7 +11,7 @@ protocol FAQFlowDelegate: AnyObject {
   func doneButtonPressed()
 }
 
-class FAQViewController: BrandedViewController {
+class FAQViewController: UIViewController {
   // MARK: - IBOutlets
   @IBOutlet private var collectionView: UICollectionView!
 
@@ -35,12 +35,6 @@ class FAQViewController: BrandedViewController {
 
     title = l10n.title
     (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-
-    collectionView.backgroundColor = Colors.Theme.contentBackgroundElevated
   }
 
   // MARK: - IBAction Methods

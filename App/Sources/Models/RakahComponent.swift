@@ -87,9 +87,15 @@ class RakahComponent {
       isChangingText = false
       chapterNumber = nil
 
-    case let .recitation(recitation):
+    case let .recitation(recitation, part, totalParts):
       chapterNumber = recitation.rawValue
-      name = recitation.localizedTitle
+
+      if totalParts > 1 {
+        name = "\(recitation.localizedTitle) \(part)/\(totalParts)"
+      }
+      else {
+        name = recitation.localizedTitle
+      }
 
       spokenTextLines = RakahComponent.readLinesFromFile(named: recitation.fileName)
       needsMovement = false
@@ -167,13 +173,15 @@ class RakahComponent {
     let spokenTextFilePath = Bundle.main.url(forResource: name, withExtension: "txt")!
     let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
 
-    return contentString.stripped().components(separatedBy: .newlines)
+    return contentString.stripped()
+      .components(separatedBy: .newlines)
+      .filter { $0.stripped() != Recitation.splitSeparator }
   }
 }
 
 // MARK: - Sub Types
 extension String {
   var estimatedReadingTime: Timespan {
-    return RakahComponent.durationPerCharacter * Double(utf8.count)
+    RakahComponent.durationPerCharacter * Double(utf8.count) + .milliseconds(500)  // add time for context switch
   }
 }

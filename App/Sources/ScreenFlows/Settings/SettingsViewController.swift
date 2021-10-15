@@ -21,7 +21,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func didPressFeedbackButton()
 }
 
-class SettingsViewController: BrandedFormViewController {
+class SettingsViewController: FormViewController {
   // MARK: - Stored Instance Properties
   let l10n = L10n.Settings.self
   var viewModel: SettingsViewModel
@@ -49,7 +49,6 @@ class SettingsViewController: BrandedFormViewController {
     super.viewDidLoad()
 
     title = L10n.Settings.title
-    tableView?.backgroundColor = Colors.Theme.contentBackground
 
     setupAppSection()
     setupPrayerSection()
@@ -67,9 +66,6 @@ class SettingsViewController: BrandedFormViewController {
       }
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
-      }
-      .cellUpdate { cell, _ in
-        cell.textLabel?.textColor = Colors.Theme.accent
       }
       .onCellSelection { _, _ in
         self.flowDelegate?.showLanguageSettings()
@@ -177,9 +173,6 @@ class SettingsViewController: BrandedFormViewController {
       }
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-      }
-      .cellUpdate { cell, _ in
-        cell.textLabel?.textColor = Colors.Theme.accent
       }
       .onCellSelection { _, _ in
         self.flowDelegate?.startPrayer()

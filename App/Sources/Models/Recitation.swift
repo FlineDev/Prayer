@@ -7,19 +7,9 @@ import Foundation
 
 /// Represents a recitation with its surah (chapter) number as its raw value.
 enum Recitation: Int, CaseIterable, Equatable {
-  /// The length group of a recitation.
-  enum Length {
-    /// Short enough to consider for every prayers Rakah, even when time is limited.
-    case short
-
-    /// Short enough to consider for prayers in one Rakah, where time is not limited.
-    case medium
-
-    /// Too long to recite in one Rakah. Can be split to up to 4 smaller parts, that can be fully recited in a prayer with 4 Rakat.
-    case long
-
-    /// Too long to recite in one Prayer. Must be split into more than 4 smaller parts, requires persistance of last prayer to continue from last point left off.
-    case veryLong
+  enum MaxArabicWordsPerStanding: Int {
+    case short = 50
+    case longer = 200
   }
 
   case theOpening = 1
@@ -49,6 +39,9 @@ enum Recitation: Int, CaseIterable, Equatable {
   case theDeclarationOfGodsPerfection = 112
   case theRisingDawn = 113
   case men = 114
+
+  /// The separator to use when splitting Surah into multiple parts. This helps prevent bad separation points. All translations should have one every 50 words.
+  static let splitSeparator: String = "⁋"
 
   var fileName: String {
     let normalizedNum = String(format: "%03d", rawValue)
@@ -223,28 +216,8 @@ enum Recitation: Int, CaseIterable, Equatable {
     }
   }
 
-  /// The length of the Surah. See docs of ``Length`` cases for their exact meaning.
-  var length: Length {
-    switch arabicWordsCount {
-    case 0..<50:  // 21 Surah fall under this range
-      return .short
-
-    case 50..<200:  // 21 Surah fall under this range, too
-      return .medium
-
-    case 200..<800:  // 36 Surah fall under this range
-      return .long
-
-    case 800...:  // 34 Surah fall under this range
-      return .veryLong
-
-    default:
-      fatalError("Unexpectedly found negative arabic words count of \(arabicWordsCount) for Surah \(rawValue).")
-    }
-  }
-
   /// The number of words the Surah consists of in the Arabic original.
-  private var arabicWordsCount: Int {
+  var arabicWordsCount: Int {
     Self.chapterNumToWordsCount[rawValue]!
   }
 

@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // setup global stuff
     Logger.shared.setup()
     ErrorHandler.shared.setup(window: window!)
-    Branding.shared.setup(window: window!)
 
     // start initial flow
     initialFlowCtrl = SettingsFlowController()

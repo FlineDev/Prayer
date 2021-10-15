@@ -20,7 +20,7 @@ internal enum StoryboardScene {
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
 
-    internal static let faqNavigationController = SceneType<App.BrandedNavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
+    internal static let faqNavigationController = SceneType<UIKit.UINavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
