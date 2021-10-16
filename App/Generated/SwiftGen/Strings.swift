@@ -19,6 +19,10 @@ internal enum L10n {
   }
 
   internal enum RakahComponent {
+    /// %1$@ – part %2$d of %3$d
+    internal static func splitRecitationTitle(_ p1: Any, _ p2: Int, _ p3: Int) -> String {
+      return L10n.tr("Localizable", "RAKAH_COMPONENT.SPLIT_RECITATION_TITLE", String(describing: p1), p2, p3)
+    }
     internal enum OpeningSupplication {
       /// Opening Supplication
       internal static let name = L10n.tr("Localizable", "RAKAH_COMPONENT.OPENING_SUPPLICATION.NAME")
@@ -243,6 +247,10 @@ internal enum L10n {
       internal enum AllowLongerRecitations {
         /// Allow longer recitations
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
+      }
+      internal enum AllowSplittingRecitations {
+        /// Include long surah by splitting them
+        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
       }
       internal enum ChangingText {
         /// Quran sura speed

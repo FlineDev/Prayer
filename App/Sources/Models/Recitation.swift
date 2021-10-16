@@ -7,9 +7,13 @@ import Foundation
 
 /// Represents a recitation with its surah (chapter) number as its raw value.
 enum Recitation: Int, CaseIterable, Equatable {
-  enum MaxArabicWordsPerStanding: Int {
+  enum MaxArabicWordsPerStanding: Int, Equatable {
     case short = 50
     case longer = 200
+
+    var factor: Int {
+      self.rawValue / Self.short.rawValue
+    }
   }
 
   case theOpening = 1
@@ -219,6 +223,10 @@ enum Recitation: Int, CaseIterable, Equatable {
   /// The number of words the Surah consists of in the Arabic original.
   var arabicWordsCount: Int {
     Self.chapterNumToWordsCount[rawValue]!
+  }
+
+  func totalParts(maxWordsPerPart: MaxArabicWordsPerStanding) -> Int {
+    Int((Double(arabicWordsCount) / Double(maxWordsPerPart.rawValue)).rounded(.up))
   }
 
   // Source: https://qurananalysis.com/analysis/basic-statistics.php?lang=AR

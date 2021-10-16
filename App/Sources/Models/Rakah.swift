@@ -17,21 +17,21 @@ class Rakah {
   private let isBeginningOfPrayer: Bool
   private let includesSittingRecitation: Bool
   private let isEndOfPrayer: Bool
-  let standingRecitation: Recitation?
+  let standingRecitationPart: RecitationPart?
 
-  private var includesStandingRecitation: Bool { standingRecitation != nil }
+  private var includesStandingRecitation: Bool { standingRecitationPart != nil }
 
   // MARK: - Initializer
   init(
     isBeginningOfPrayer: Bool,
-    standingRecitation: Recitation?,
+    standingRecitationPart: RecitationPart?,
     includesSittingRecitation: Bool,
     isEndOfPrayer: Bool
   ) {
     self.isBeginningOfPrayer = isBeginningOfPrayer
     self.includesSittingRecitation = includesSittingRecitation
     self.isEndOfPrayer = isEndOfPrayer
-    self.standingRecitation = standingRecitation
+    self.standingRecitationPart = standingRecitationPart
   }
 
   // MARK: - Instance Methods
@@ -44,10 +44,10 @@ class Rakah {
       components.append(RakahComponent(.taawwudh))
     }
 
-    components.append(RakahComponent(.recitation(Recitation.theOpening, part: 1, totalParts: 1)))
+    components.append(RakahComponent(.recitationPart(.init(recitation: .theOpening, partLength: .short))))
 
-    if let standingRecitation = standingRecitation {
-      let standingRecitationComponent = RakahComponent(.recitation(standingRecitation, part: 1, totalParts: 1))
+    if let standingRecitationPart = standingRecitationPart {
+      let standingRecitationComponent = RakahComponent(.recitationPart(standingRecitationPart))
       components.append(standingRecitationComponent)
     }
 
@@ -90,7 +90,7 @@ extension Rakah {
     case takbir(Position)
     case openingSupplication
     case taawwudh
-    case recitation(Recitation, part: Int, totalParts: Int)
+    case recitationPart(RecitationPart)
     case ruku
     case straighteningUp  // from Ruku
     case sajdah

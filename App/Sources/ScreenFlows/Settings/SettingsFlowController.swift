@@ -48,7 +48,16 @@ extension SettingsFlowController: SettingsFlowDelegate {
   }
 
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool) {
+    if settingsViewModel.allowLongerRecitations != allowLongerRecitations {
+      // delete next recitation part since part calculation changes with this setting adjusted
+      Defaults.nextRecitationPart = nil
+    }
+
     settingsViewModel.allowLongerRecitations = allowLongerRecitations
+  }
+
+  func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool) {
+    settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
   }
 
   func showLanguageSettings() {
@@ -75,7 +84,8 @@ extension SettingsFlowController: SettingsFlowDelegate {
     guard settingsViewModel.rakatCount > 0 else { return }
     let prayer = Prayer(
       rakatCount: UInt(settingsViewModel.rakatCount),
-      allowLongerRecitations: settingsViewModel.allowLongerRecitations
+      allowLongerRecitations: settingsViewModel.allowLongerRecitations,
+      allowSplittingRecitations: settingsViewModel.allowSplittingRecitations
     )
 
     let prayerCoordinator = PrayerFlowController(

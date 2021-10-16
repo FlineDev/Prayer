@@ -8,7 +8,7 @@ import XCTest
 
 class PrayerTests: XCTestCase {
   func testWith4Rakat() {
-    let prayer = Prayer(rakatCount: 4)
+    let prayer = Prayer(rakatCount: 4, allowLongerRecitations: false, allowSplittingRecitations: false)
     let randomRecitation = "RR"
 
     XCTAssertEqual(prayer.rakat.count, 4)

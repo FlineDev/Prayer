@@ -39,6 +39,11 @@ class SettingsViewModel {
     set { Defaults.allowLongerRecitations = newValue }
   }
 
+  var allowSplittingRecitations: Bool {
+    get { Defaults.allowSplittingRecitations }
+    set { Defaults.allowSplittingRecitations = newValue }
+  }
+
   var movementSoundInstrument: String {
     get { Defaults.movementSoundInstrument }
     set { Defaults.movementSoundInstrument = newValue }
@@ -53,5 +58,6 @@ extension DefaultsKeys {
   var changingTextSpeedFactor: DefaultsKey<Double> { .init("ChangingTextSpeedFactor", defaultValue: 1.0) }
   var showChangingTextName: DefaultsKey<Bool> { .init("ShowChangingTextName", defaultValue: true) }
   var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
+  var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: false) }
   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument) }
 }

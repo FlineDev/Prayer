@@ -14,6 +14,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func setChangingPartSpeed(_ changingPartSpeed: Double)
   func setShowChangingTextName(_ showChangingTextName: Bool)
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
+  func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -82,6 +83,7 @@ class SettingsViewController: FormViewController {
       <<< changingTextRow()
       <<< changingTextNameRow()
       <<< allowLongerRecitationsRow()
+      <<< allowSplittingRecitationsRow()
       <<< movementSoundInstrumentRow()
 
     form.append(prayerSection)
@@ -144,12 +146,23 @@ class SettingsViewController: FormViewController {
 
   fileprivate func allowLongerRecitationsRow() -> SwitchRow {
     return SwitchRow { row in
-      row.title = L10n.Settings.PrayerSection.AllowLongerRecitations.title
+      row.title = l10n.PrayerSection.AllowLongerRecitations.title
       row.value = viewModel.allowLongerRecitations
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Allow longer recitations had nil value."); return }
       self.flowDelegate?.setAllowLongerRecitations(rowValue)
+    }
+  }
+
+  fileprivate func allowSplittingRecitationsRow() -> SwitchRow {
+    return SwitchRow { row in
+      row.title = l10n.PrayerSection.AllowSplittingRecitations.title
+      row.value = viewModel.allowSplittingRecitations
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Allow splitting recitations had nil value."); return }
+      self.flowDelegate?.setAllowSplittingRecitations(rowValue)
     }
   }
 

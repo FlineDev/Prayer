@@ -87,21 +87,22 @@ class RakahComponent {
       isChangingText = false
       chapterNumber = nil
 
-    case let .recitation(recitation, part, totalParts):
-      chapterNumber = recitation.rawValue
+    case let .recitationPart(recitationPart):
+      chapterNumber = recitationPart.recitation.rawValue
 
-      if totalParts > 1 {
-        name = "\(recitation.localizedTitle) \(part)/\(totalParts)"
+      let title = recitationPart.recitation.localizedTitle
+      if recitationPart.totalParts > 1 {
+        name = l10n.splitRecitationTitle(title, recitationPart.part, recitationPart.totalParts)
       }
       else {
-        name = recitation.localizedTitle
+        name = title
       }
 
-      spokenTextLines = RakahComponent.readLinesFromFile(named: recitation.fileName)
+      spokenTextLines = RakahComponent.readLinesFromRecitationFile(recitationPart: recitationPart)
       needsMovement = false
       position = .standing
       movementSound = nil
-      isChangingText = recitation != .theOpening
+      isChangingText = recitationPart.recitation != .theOpening
 
     case .ruku:
       name = l10n.Ruku.name
@@ -172,10 +173,22 @@ class RakahComponent {
   private static func readLinesFromFile(named name: String) -> [String] {
     let spokenTextFilePath = Bundle.main.url(forResource: name, withExtension: "txt")!
     let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
+    return contentString.stripped().components(separatedBy: .newlines)
+  }
 
-    return contentString.stripped()
-      .components(separatedBy: .newlines)
-      .filter { $0.stripped() != Recitation.splitSeparator }
+  private static func readLinesFromRecitationFile(recitationPart: RecitationPart) -> [String] {
+    let spokenTextFilePath = Bundle.main.url(forResource: recitationPart.recitation.fileName, withExtension: "txt")!
+    var contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
+
+    if recitationPart.totalParts > 1 {
+      let indexLowerBound = (recitationPart.part - 1) * recitationPart.partLength.factor
+      let indexUpperBound = recitationPart.part * recitationPart.partLength.factor
+      let partIndexRange = indexLowerBound..<indexUpperBound
+      contentString = contentString.components(separatedBy: Recitation.splitSeparator)[partIndexRange].joined()
+    }
+
+    return contentString.components(separatedBy: .newlines)
+      .filter { !$0.replacingOccurrences(of: Recitation.splitSeparator, with: "").isBlank }
   }
 }
 

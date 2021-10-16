@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
 
 /// The "physical, mental, and spiritual act of worship that is observed five times every day at prescribed times."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Salah)
@@ -17,50 +18,68 @@ class Prayer {
   ///
   /// - Parameters:
   ///   - rakatCount: The number of rakats to be included in the prayer.
+  ///   - allowLongerRecitations: If `true`, longer (bot not very long) recitations should be allowed.
+  ///   - allowSplittingRecitations: If `true`, the splitting of (longer and) very long recitations should be allowed.
   /// - Returns: The Prayer object.
   init(
     rakatCount: UInt,
-    allowLongerRecitations: Bool
+    allowLongerRecitations: Bool,
+    allowSplittingRecitations: Bool
   ) {
     self.rakat = {
       var rakat: Rakat = []
       var usedStandingRecitations: [Recitation] = []
+      let partLength: Recitation.MaxArabicWordsPerStanding = allowLongerRecitations ? .longer : .short
+
       for num in 1...rakatCount {
-        var standingRecitation: Recitation?
+        var standingRecitationPart: RecitationPart?
 
         if num <= 2 {
-          let allowedStandingRecitations = Recitation.allCases.dropFirst()
-            .filter { recitation in
-              if allowLongerRecitations {
-                return recitation.arabicWordsCount <= Recitation.MaxArabicWordsPerStanding.longer.rawValue
-              }
-              else {
-                return recitation.arabicWordsCount <= Recitation.MaxArabicWordsPerStanding.short.rawValue
-              }
+          if allowSplittingRecitations {
+            if let nextRecitationPart = Defaults.nextRecitationPart {
+              standingRecitationPart = nextRecitationPart
+              Defaults.nextRecitationPart = nextRecitationPart.nextPart()
             }
-            .filter { !usedStandingRecitations.contains($0) }
-          standingRecitation = allowedStandingRecitations.randomElement()
+            else {
+              let allowedStandingRecitations = Recitation.allCases.dropFirst()
+                .filter { !usedStandingRecitations.contains($0) }
+              let recitation = allowedStandingRecitations.randomElement()!
+              let totalParts = recitation.totalParts(maxWordsPerPart: partLength)
+
+              standingRecitationPart = .init(recitation: recitation, partLength: partLength, totalParts: totalParts)
+              Defaults.nextRecitationPart = standingRecitationPart!.nextPart()
+            }
+          }
+          else {
+            let allowedStandingRecitations = Recitation.allCases.dropFirst()
+              .filter { $0.totalParts(maxWordsPerPart: allowLongerRecitations ? .longer : .short) == 1 }
+              .filter { !usedStandingRecitations.contains($0) }
+            let recitation = allowedStandingRecitations.randomElement()!
+            standingRecitationPart = .init(recitation: recitation, partLength: partLength)
+          }
         }
         else {
-          standingRecitation = nil
+          standingRecitationPart = nil
         }
-
-        // TODO: [cg_2021-10-15] add logic to split surah to multiple rakat to fit into the prayer
 
         let rakah = Rakah(
           isBeginningOfPrayer: num == 1,
-          standingRecitation: standingRecitation,
+          standingRecitationPart: standingRecitationPart,
           includesSittingRecitation: num % 2 == 0 || num == rakatCount,
           isEndOfPrayer: num == rakatCount
         )
         rakat.append(rakah)
 
-        if let standingRecitation = standingRecitation {
-          usedStandingRecitations.append(standingRecitation)
+        if let standingRecitationPart = standingRecitationPart {
+          usedStandingRecitations.append(standingRecitationPart.recitation)
         }
       }
 
       return rakat
     }()
   }
+}
+
+extension DefaultsKeys {
+  var nextRecitationPart: DefaultsKey<RecitationPart?> { .init("NextRecitationPart") }
 }
