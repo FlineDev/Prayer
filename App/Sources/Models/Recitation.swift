@@ -4,10 +4,11 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
 
 /// Represents a recitation with its surah (chapter) number as its raw value.
-enum Recitation: Int, CaseIterable, Equatable {
-  enum MaxArabicWordsPerStanding: Int, Equatable {
+enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
+  enum MaxArabicWordsPerStanding: Int, Equatable, Codable {
     case short = 50
     case longer = 200
 

@@ -7,10 +7,15 @@ import Foundation
 import SwiftyUserDefaults
 
 struct RecitationPart: Codable, DefaultsSerializable {
-  let recitation: Recitation
   let partLength: Recitation.MaxArabicWordsPerStanding
   let part: Int
   let totalParts: Int
+
+  // NOTE: Workaround for an issue with SwiftyUserDefaults where RawRepresentable enums can't be Codable, too.
+  private let recitationRawValue: Recitation.RawValue
+  var recitation: Recitation {
+    Recitation(rawValue: recitationRawValue)!
+  }
 
   init(
     recitation: Recitation,
@@ -18,7 +23,7 @@ struct RecitationPart: Codable, DefaultsSerializable {
     part: Int = 1,
     totalParts: Int = 1
   ) {
-    self.recitation = recitation
+    self.recitationRawValue = recitation.rawValue
     self.partLength = partLength
     self.part = part
     self.totalParts = totalParts
@@ -35,6 +40,3 @@ struct RecitationPart: Codable, DefaultsSerializable {
     )
   }
 }
-
-extension Recitation: Codable {}
-extension Recitation.MaxArabicWordsPerStanding: Codable {}

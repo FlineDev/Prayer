@@ -28,7 +28,7 @@ class Prayer {
   ) {
     self.rakat = {
       var rakat: Rakat = []
-      var usedStandingRecitations: [Recitation] = []
+      var usedStandingRecitations: [Recitation] = Defaults.recentlyUsedRecitations
       let partLength: Recitation.MaxArabicWordsPerStanding = allowLongerRecitations ? .longer : .short
 
       for num in 1...rakatCount {
@@ -70,10 +70,15 @@ class Prayer {
         )
         rakat.append(rakah)
 
-        if let standingRecitationPart = standingRecitationPart {
+        if let standingRecitationPart = standingRecitationPart,
+          !usedStandingRecitations.contains(standingRecitationPart.recitation)
+        {
           usedStandingRecitations.append(standingRecitationPart.recitation)
         }
       }
+
+      // TODO: [cg_2021-10-16] increase the number 20 even more when more Surah are added (up to 50)
+      Defaults.recentlyUsedRecitations = usedStandingRecitations.suffix(allowSplittingRecitations ? 20 : 10)
 
       return rakat
     }()
@@ -82,4 +87,7 @@ class Prayer {
 
 extension DefaultsKeys {
   var nextRecitationPart: DefaultsKey<RecitationPart?> { .init("NextRecitationPart") }
+  var recentlyUsedRecitations: DefaultsKey<[Recitation]> {
+    .init("RecentlyUsedRecitations", defaultValue: Array<Recitation>.init())
+  }
 }
