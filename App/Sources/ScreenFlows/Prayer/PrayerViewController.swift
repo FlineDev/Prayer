@@ -12,7 +12,7 @@ protocol PrayerFlowDelegate: AnyObject {
   func doneButtonPressed()
 }
 
-class PrayerViewController: BrandedViewController {
+class PrayerViewController: UIViewController {
   // MARK: - Stored Instance Properties
   var viewModel: PrayerViewModel! {
     didSet {
@@ -23,10 +23,10 @@ class PrayerViewController: BrandedViewController {
       updateSeparators()
 
       if viewModel.isChapterName {
-        currentLineLabel.textColor = Colors.Theme.secondary
+        currentLineLabel.textColor = Colors.secondary
       }
       else {
-        currentLineLabel.textColor = Colors.Theme.primary
+        currentLineLabel.textColor = Colors.primary
       }
 
       if let movementSoundUrl = viewModel.movementSoundUrl {
@@ -52,6 +52,8 @@ class PrayerViewController: BrandedViewController {
   // MARK: - Instance Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    view.backgroundColor = Colors.contentBackground
 
     let doneSelector = #selector(doneButtonPressed)
     let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: doneSelector)

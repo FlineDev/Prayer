@@ -14,7 +14,7 @@ final class AudioPlayer {
 
   // MARK: - Instance Methods
   func movementSoundUrl(name: String, instrument: String) -> URL? {
-    return Bundle.main.url(forResource: instrument, withExtension: "caf", subdirectory: name)
+    Bundle.main.url(forResource: instrument, withExtension: "caf", subdirectory: name)
   }
 
   func playSound(at url: URL) {

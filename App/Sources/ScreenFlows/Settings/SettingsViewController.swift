@@ -7,12 +7,15 @@ import Eureka
 import HandyUIKit
 import Imperio
 import UIKit
+import SwiftyUserDefaults
 
 protocol SettingsFlowDelegate: AnyObject {
   func setRakat(_ rakatCount: Int)
   func setFixedPartSpeed(_ fixedPartSpeed: Double)
   func setChangingPartSpeed(_ changingPartSpeed: Double)
   func setShowChangingTextName(_ showChangingTextName: Bool)
+  func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
+  func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -20,7 +23,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func didPressFeedbackButton()
 }
 
-class SettingsViewController: BrandedFormViewController {
+class SettingsViewController: FormViewController {
   // MARK: - Stored Instance Properties
   let l10n = L10n.Settings.self
   var viewModel: SettingsViewModel
@@ -48,7 +51,6 @@ class SettingsViewController: BrandedFormViewController {
     super.viewDidLoad()
 
     title = L10n.Settings.title
-    tableView?.backgroundColor = Colors.Theme.contentBackground
 
     setupAppSection()
     setupPrayerSection()
@@ -67,9 +69,6 @@ class SettingsViewController: BrandedFormViewController {
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
       }
-      .cellUpdate { cell, _ in
-        cell.textLabel?.textColor = Colors.Theme.accent
-      }
       .onCellSelection { _, _ in
         self.flowDelegate?.showLanguageSettings()
       }
@@ -84,6 +83,8 @@ class SettingsViewController: BrandedFormViewController {
       <<< fixedTextsRow()
       <<< changingTextRow()
       <<< changingTextNameRow()
+      <<< allowLongerRecitationsRow()
+      <<< allowSplittingRecitationsRow()
       <<< movementSoundInstrumentRow()
 
     form.append(prayerSection)
@@ -144,6 +145,37 @@ class SettingsViewController: BrandedFormViewController {
     }
   }
 
+  fileprivate func allowLongerRecitationsRow() -> SwitchRow {
+    return SwitchRow { row in
+      row.title = l10n.PrayerSection.AllowLongerRecitations.title
+      row.value = viewModel.allowLongerRecitations
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Allow longer recitations had nil value."); return }
+
+      if self.viewModel.allowLongerRecitations != rowValue, Defaults.nextRecitationPart != nil {
+        // delete next recitation part since part calculation changes with this setting adjusted
+        Defaults.nextRecitationPart = nil
+
+        // inform user about the reset of the current ongoing recitation
+        self.showToast(message: self.l10n.PrayerSection.AllowLongerRecitations.resetMessage)
+      }
+
+      self.flowDelegate?.setAllowLongerRecitations(rowValue)
+    }
+  }
+
+  fileprivate func allowSplittingRecitationsRow() -> SwitchRow {
+    return SwitchRow { row in
+      row.title = l10n.PrayerSection.AllowSplittingRecitations.title
+      row.value = viewModel.allowSplittingRecitations
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Allow splitting recitations had nil value."); return }
+      self.flowDelegate?.setAllowSplittingRecitations(rowValue)
+    }
+  }
+
   fileprivate func movementSoundInstrumentRow() -> PushRow<String> {
     return PushRow<String> { row in
       row.title = l10n.PrayerSection.MovementSoundInstrument.title
@@ -164,9 +196,6 @@ class SettingsViewController: BrandedFormViewController {
       }
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-      }
-      .cellUpdate { cell, _ in
-        cell.textLabel?.textColor = Colors.Theme.accent
       }
       .onCellSelection { _, _ in
         self.flowDelegate?.startPrayer()

@@ -9,8 +9,8 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/Flinesoft/Prayer/releases">
-        <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg"
-             alt="Version: 1.1.0">
+        <img src="https://img.shields.io/badge/Version-1.2.0-blue.svg"
+             alt="Version: 1.2.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-5.4-FFAC45.svg"
          alt="Swift: 5.4">
@@ -37,7 +37,7 @@
 
 <p align="center">
     <a href="#about">About</a>
-  • <a href="https://community.flinesoft.com/c/prayer-app">Community Forum</a>
+  • <a href="https://links.flinesoft.com/forum/prayer">Community Forum</a>
   • <a href="https://itunes.apple.com/us/app/prayer-in-english/id1217136884">App Store</a>
   • <a href="#donation">Donation</a>
   • <a href="#contributing">Contributing</a>

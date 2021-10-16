@@ -81,18 +81,18 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
   }
 
   override var collectionViewContentSize: CGSize {
-    return CGSize(width: collectionView!.bounds.size.width, height: contentHeight)
+    CGSize(width: collectionView!.bounds.size.width, height: contentHeight)
   }
 
   override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-    return cachedLayoutAttributes.filter { $0.frame.intersects(rect) }
+    cachedLayoutAttributes.filter { $0.frame.intersects(rect) }
   }
 
   override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-    return cachedLayoutAttributes[indexPath.item]
+    cachedLayoutAttributes[indexPath.item]
   }
 
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-    return true  // ensure to re-calculate layout on orientation change
+    true  // ensure to re-calculate layout on orientation change
   }
 }

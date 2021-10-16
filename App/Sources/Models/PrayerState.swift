@@ -36,13 +36,13 @@ class PrayerState {
   }
 
   // MARK: - Computed Instance Properties
-  private var currentRakah: Rakah { return prayer.rakat[rakatIndex] }
-  private var currentComponent: RakahComponent { return currentRakah.components()[componentIndex] }
-  var currentArrow: Position.Arrow? { return previousPositon.arrow(forChangingTo: currentPosition) }
-  var currentLine: String { return currentComponent.spokenTextLines[lineIndex] }
+  private var currentRakah: Rakah { prayer.rakat[rakatIndex] }
+  private var currentComponent: RakahComponent { currentRakah.components()[componentIndex] }
+  var currentArrow: Position.Arrow? { previousPositon.arrow(forChangingTo: currentPosition) }
+  var currentLine: String { currentComponent.spokenTextLines[lineIndex] }
 
   private var readingSpeedupFactor: Double {
-    return currentComponent.isChangingText ? changingTextSpeedFactor : fixedTextsSpeedFactor
+    currentComponent.isChangingText ? changingTextSpeedFactor : fixedTextsSpeedFactor
   }
 
   var currentLineReadingTime: TimeInterval {

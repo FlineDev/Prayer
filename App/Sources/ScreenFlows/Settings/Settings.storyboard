@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Branded Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="jDj-b2-Aab">
             <objects>
-                <navigationController storyboardIdentifier="FAQNavigationController" id="T2I-Aw-B0j" customClass="BrandedNavigationController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FAQNavigationController" id="T2I-Aw-B0j" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMc-l9-vBj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,7 +26,7 @@
         <!--FAQ-->
         <scene sceneID="scz-xc-VOD">
             <objects>
-                <viewController id="Od8-9C-GeY" customClass="FAQViewController" customModule="Prayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Od8-9C-GeY" customClass="FAQViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jon-Fu-ZVs"/>
                         <viewControllerLayoutGuide type="bottom" id="S7A-Lu-aon"/>
@@ -40,9 +38,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iWl-BC-vaA">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="JhH-ja-yAK" customClass="FAQCollectionViewLayout" customModule="Prayer" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="JhH-ja-yAK" customClass="FAQCollectionViewLayout" customModule="App" customModuleProvider="target"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FAQCell" id="lBq-Cd-0ox" customClass="FAQCollectionViewCell" customModule="Prayer" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FAQCell" id="lBq-Cd-0ox" customClass="FAQCollectionViewCell" customModule="App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

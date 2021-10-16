@@ -19,6 +19,10 @@ internal enum L10n {
   }
 
   internal enum RakahComponent {
+    /// %1$@ – part %2$d of %3$d
+    internal static func splitRecitationTitle(_ p1: Any, _ p2: Int, _ p3: Int) -> String {
+      return L10n.tr("Localizable", "RAKAH_COMPONENT.SPLIT_RECITATION_TITLE", String(describing: p1), p2, p3)
+    }
     internal enum OpeningSupplication {
       /// Opening Supplication
       internal static let name = L10n.tr("Localizable", "RAKAH_COMPONENT.OPENING_SUPPLICATION.NAME")
@@ -66,9 +70,17 @@ internal enum L10n {
       /// al-Ma'Un (Assistance)
       internal static let name = L10n.tr("Localizable", "RECITATION.ASSISTANCE.NAME")
     }
+    internal enum Destiny {
+      /// Al-Qadr (Destiny)
+      internal static let name = L10n.tr("Localizable", "RECITATION.DESTINY.NAME")
+    }
     internal enum GoodInAbundance {
       /// al-Kawthar (Good in Abundance)
       internal static let name = L10n.tr("Localizable", "RECITATION.GOOD_IN_ABUNDANCE.NAME")
+    }
+    internal enum GreedForMoreAndMore {
+      /// At-Takathur (Greed For More And More)
+      internal static let name = L10n.tr("Localizable", "RECITATION.GREED_FOR_MORE_AND_MORE.NAME")
     }
     internal enum Men {
       /// an-Nas (Men)
@@ -82,21 +94,57 @@ internal enum L10n {
       /// an-Nasr (Succour)
       internal static let name = L10n.tr("Localizable", "RECITATION.SUCCOUR.NAME")
     }
+    internal enum TheBrightMorningHours {
+      /// Ad-Duha (The Bright Morning Hours)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_BRIGHT_MORNING_HOURS.NAME")
+    }
+    internal enum TheChargers {
+      /// Al-Adiyat (The Chargers)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_CHARGERS.NAME")
+    }
     internal enum TheDecleratiionOfGodsPerfection {
       /// al-Ikhlas (The Decleration Of [God's] Perfection)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME")
+    }
+    internal enum TheEarthquake {
+      /// Al-Zalzalah (The Earthquake)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_EARTHQUAKE.NAME")
     }
     internal enum TheElephant {
       /// al-Fil (The Elephant)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_ELEPHANT.NAME")
     }
+    internal enum TheEvidenceOfTheTruth {
+      /// Al-Bayyinah (The Evidence Of The Truth)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME")
+    }
+    internal enum TheFig {
+      /// At-Tin (The Fig)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_FIG.NAME")
+    }
     internal enum TheFlightOfTime {
       /// al-'Asr (The Flight Of Time)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_FLIGHT_OF_TIME.NAME")
     }
+    internal enum TheGermCell {
+      /// Al-Alaq (The Germ-Cell)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_GERM_CELL.NAME")
+    }
+    internal enum TheLand {
+      /// Al-Balad (The Land)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_LAND.NAME")
+    }
+    internal enum TheNight {
+      /// Al-Layl (The Night)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_NIGHT.NAME")
+    }
     internal enum TheOpening {
       /// al-Fatiha (The Opening)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_OPENING.NAME")
+    }
+    internal enum TheOpeningUpOfTheHeart {
+      /// Ash-Sharh (The Opening-Up Of The Heart)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME")
     }
     internal enum TheRisingDawn {
       /// al-Falaq (The Rising Dawn)
@@ -105,6 +153,14 @@ internal enum L10n {
     internal enum TheSlanderer {
       /// al-Humaza (The Slanderer)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_SLANDERER.NAME")
+    }
+    internal enum TheSuddenCalamity {
+      /// Al-Qariah (The Sudden Calamity)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_SUDDEN_CALAMITY.NAME")
+    }
+    internal enum TheSun {
+      /// Ash-Shams (The Sun)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_SUN.NAME")
     }
     internal enum TheTwistedStrands {
       /// al-Masad (The Twisted Strands)
@@ -141,7 +197,13 @@ internal enum L10n {
     }
     internal enum FaqEntries {
       internal enum AppMotivation {
-        /// This App currently has two goals:\n1. Becoming aware of what you are actually saying when you pray.\n2. Use the regular prayers to read the Quran.\n\nCurrently the app contains only the last twelve surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a planned solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.\n\nSpecifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
+        /// This App currently has two goals:
+        /// 1. Becoming aware of what you are actually saying when you pray.
+        /// 2. Use the regular prayers to read the Quran.
+        /// 
+        /// Currently the app contains only the last twelve surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a planned solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.
+        /// 
+        /// Specifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER")
         /// What is the purpose of this app?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION")
@@ -153,7 +215,9 @@ internal enum L10n {
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION")
       }
       internal enum Language {
-        /// We are convinced that the Quran prescribes regular prayers above all to be aware of God and to remember his guidance. Words that can not be understood neither warn against the wrong path, nor show the right path which is, at the end, what the Quran aims to do.\n\nIn any case, we can not imagine that God wants us to merely admire the beauty of the sound of his lyrics five times a day. The Arabic in the Quran may be perfect and supreme in its meaning, but as long as the person doing the prayer has not mastered the Arabic language, his prayers in Arabic are imperfect. Moreover, we do not know a Quran verse which requires prayers to be done in Arabic.
+        /// We are convinced that the Quran prescribes regular prayers above all to be aware of God and to remember his guidance. Words that can not be understood neither warn against the wrong path, nor show the right path which is, at the end, what the Quran aims to do.
+        /// 
+        /// In any case, we can not imagine that God wants us to merely admire the beauty of the sound of his lyrics five times a day. The Arabic in the Quran may be perfect and supreme in its meaning, but as long as the person doing the prayer has not mastered the Arabic language, his prayers in Arabic are imperfect. Moreover, we do not know a Quran verse which requires prayers to be done in Arabic.
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER")
         /// Do prayers not have to be spoken in Arabic, the original language of the Koran?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION")
@@ -165,7 +229,9 @@ internal enum L10n {
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION")
       }
       internal enum TranslationProblem {
-        /// We understand that regular prayers are something so important that you want to do everything as correct as possible. We also understand that in religion many different opinions about the meaning of the same text prevail, and it is important that you remain as close as possible to the original text.\n\nThis is why we absolutely want you to read the Quran yourself, not the narratives and traditions of those who have studied the Quran for years and try to enlighten you (supposedly), and above all not those who try to teach you about "the real message of the Koran". We are convinced that this distinction is only possible if you read the Quran for yourself what this App tries to help with.
+        /// We understand that regular prayers are something so important that you want to do everything as correct as possible. We also understand that in religion many different opinions about the meaning of the same text prevail, and it is important that you remain as close as possible to the original text.
+        /// 
+        /// This is why we absolutely want you to read the Quran yourself, not the narratives and traditions of those who have studied the Quran for years and try to enlighten you (supposedly), and above all not those who try to teach you about "the real message of the Koran". We are convinced that this distinction is only possible if you read the Quran for yourself what this App tries to help with.
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER")
         /// Do translations not necessarily change the meaning of the original text?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION")
@@ -178,16 +244,26 @@ internal enum L10n {
     internal enum PrayerSection {
       /// Prayer Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.TITLE")
+      internal enum AllowLongerRecitations {
+        /// Current position in split Surah was cleared.
+        internal static let resetMessage = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE")
+        /// Allow longer recitations
+        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
+      }
+      internal enum AllowSplittingRecitations {
+        /// Include long surah by splitting them
+        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
+      }
       internal enum ChangingText {
-        /// Changing text speed
+        /// Quran sura speed
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE")
       }
       internal enum ChangingTextName {
-        /// Changing text name
+        /// Quran sura name
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
       }
       internal enum FixedTexts {
-        /// Fixed texts speed
+        /// Other texts speed
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE")
       }
       internal enum MovementSoundInstrument {

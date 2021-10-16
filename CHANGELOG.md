@@ -31,6 +31,19 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.2.0] - 2021-10-16
+### Added
+- Added 12 more Quran recitations (from Surah 90 to 102) in all three supported languages.
+- Added an option to allow longer (but not too long) Quran recitations while standing.
+- Added an option to allow splitting too long Quran recitations into multiple parts.
+### Changed
+- Improved title for Quran recitation settings to make them easier to understand.
+- Prevented the random standing Quran recitation selection to repeat recent recitations.
+### Removed
+- Removed unnecessary branding & testing specific code.
+### Fixed
+- Replaced static support forum URL with a dynamically adjustable URL for faster updates.
+
 ## [1.1.0] - 2021-05-10
 ### Added
 - Adds full support for newer screen sizes & OS versions.

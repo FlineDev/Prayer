@@ -41,7 +41,6 @@ class PrayerFlowController: FlowController {
     // configure prayer view controller
     prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
     prayerViewCtrl.flowDelegate = self
-    prayerViewCtrl.view.backgroundColor = Colors.Theme.contentBackground
 
     // initialize countdown
     let countdownCount = 5
@@ -53,8 +52,7 @@ class PrayerFlowController: FlowController {
 
     countdown?.onFinish { self.startPrayer() }
 
-    let navCtrl = BrandedNavigationController(rootViewController: prayerViewCtrl)
-    navCtrl.navigationBar.barTintColor = Colors.Theme.barBackground
+    let navCtrl = UINavigationController(rootViewController: prayerViewCtrl)
     navCtrl.modalPresentationStyle = .fullScreen
     presentingViewController.present(navCtrl, animated: true) {
       self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
@@ -63,7 +61,7 @@ class PrayerFlowController: FlowController {
   }
 
   func countdownViewModel(count: Int) -> PrayerViewModel {
-    return PrayerViewModel(
+    PrayerViewModel(
       currentComponentName: L10n.PrayerView.Countdown.name,
       previousArrow: nil,
       previousLine: nil,

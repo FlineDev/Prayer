@@ -4,7 +4,7 @@ This app will help you make your prayers in English (or German or Turkish) to ma
 
 We recommend that you turn off silent mode when using this app (if possible), as the app plays a short tone for up and down movements. The app expects that you already know how a prayer is done. Therefore this app is not suitable for newcomers to prayers.
 
-We hope you find this app useful. If you like it, we would love to receive a rating in the App Store. For questions and suggestions, we have set up a forum: community.flinesoft.com
+We hope you find this app useful. If you like it, we would love to receive a rating in the App Store. For questions and suggestions, we have set up a forum: links.flinesoft.com/forum/prayer
 There, you will also find our plans for the future and you can even participate in the discussion.
 
 

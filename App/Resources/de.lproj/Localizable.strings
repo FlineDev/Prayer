@@ -12,6 +12,8 @@
 
 "RAKAH_COMPONENT.SALATUL_IBRAHIMIYYAH.NAME" = "Salat al-Ibrahimiyyah";
 
+"RAKAH_COMPONENT.SPLIT_RECITATION_TITLE" = "%1$@ – Teil %2$d von %3$d";
+
 "RAKAH_COMPONENT.STRAIGHTENING_UP.NAME" = "Aufrechte Position";
 
 "RAKAH_COMPONENT.TAAWWUDH.NAME" = "Ta'awwudh";
@@ -22,7 +24,11 @@
 
 "RECITATION.ASSISTANCE.NAME" = "al-Ma'un (Hilfeleistung)";
 
+"RECITATION.DESTINY.NAME" = "al-Qadr (Schicksal)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Gutes in Fülle)";
+
+"RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "at-Takathur (Gier nach mehr und mehr)";
 
 "RECITATION.MEN.NAME" = "an-Nas (Die Menschen)";
 
@@ -30,17 +36,39 @@
 
 "RECITATION.SUCCOUR.NAME" = "an-Nasr (Beistand)";
 
+"RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "ad-Duha (Die hellen Morgenstunden)";
+
+"RECITATION.THE_CHARGERS.NAME" = "al-'Adiyat (Die Streitrosse)";
+
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (Die Erklärung von [Gottes] Vollkommenheit)";
+
+"RECITATION.THE_EARTHQUAKE.NAME" = "az-Zalzala (Das Erdbeben)";
 
 "RECITATION.THE_ELEPHANT.NAME" = "al-Fil (Der Elefant)";
 
+"RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "al-Bayyina (Der Beweis der Wahrheit)";
+
+"RECITATION.THE_FIG.NAME" = "at-Tin (Die Feige)";
+
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (Das Verfliegen der Zeit)";
 
+"RECITATION.THE_GERM_CELL.NAME" = "al-'Alaq (Die Keimzelle)";
+
+"RECITATION.THE_LAND.NAME" = "al-Balad (Das Land)";
+
+"RECITATION.THE_NIGHT.NAME" = "al-Layl (Die Nacht)";
+
 "RECITATION.THE_OPENING.NAME" = "al-Fatiha (Die Eröffnung)";
+
+"RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "asch-Scharh (Das Öffnen des Herzens)";
 
 "RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (Die aufgehende Morgendämmerung)";
 
 "RECITATION.THE_SLANDERER.NAME" = "al-Humaza (Der Verleumder)";
+
+"RECITATION.THE_SUDDEN_CALAMITY.NAME" = "al-Qari'a (Das plötzliche Unheil)";
+
+"RECITATION.THE_SUN.NAME" = "asch-Schams (Die Sonne)";
 
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (Die gedrehten Stränge)";
 
@@ -78,11 +106,17 @@
 
 "SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback senden";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Zeitfaktor wechselnder Text";
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE" = "Aktuelle Position in geteilter Sure wurde gelöscht.";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name für wechselnden Text";
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Erlaube längere Rezitationen";
 
-"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Zeitfaktor unveränderte Texte";
+"SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Inkludiere lange Suren durch Aufteilung";
+
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Geschwindigkeit der Koransure";
+
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name der Koransure";
+
+"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Geschwindigkeit anderer Texte";
 
 "SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Bewegungsgeräusch";
 

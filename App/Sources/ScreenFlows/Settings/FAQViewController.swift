@@ -11,7 +11,7 @@ protocol FAQFlowDelegate: AnyObject {
   func doneButtonPressed()
 }
 
-class FAQViewController: BrandedViewController {
+class FAQViewController: UIViewController {
   // MARK: - IBOutlets
   @IBOutlet private var collectionView: UICollectionView!
 
@@ -37,12 +37,6 @@ class FAQViewController: BrandedViewController {
     (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-
-    collectionView.backgroundColor = Colors.Theme.contentBackgroundElevated
-  }
-
   // MARK: - IBAction Methods
   @IBAction private func doneButtonPressed() {
     flowDelegate?.doneButtonPressed()
@@ -52,7 +46,7 @@ class FAQViewController: BrandedViewController {
 // MARK: - UICollectionViewDataSource Protocol Implementation
 extension FAQViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.entries.count
+    viewModel.entries.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,10 +67,10 @@ extension FAQViewController: UICollectionViewDataSource {
 // MARK: - FAQCollectionViewLayoutDelegate Protocol Implementation
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
   func question(at indexPath: IndexPath) -> String {
-    return viewModel.entries[indexPath.item].question
+    viewModel.entries[indexPath.item].question
   }
 
   func answer(at indexPath: IndexPath) -> String {
-    return viewModel.entries[indexPath.item].answer
+    viewModel.entries[indexPath.item].answer
   }
 }
