@@ -1,7 +1,11 @@
-- Vollständige Unterstützung für neuere Bildschirmgrößen und Betriebssystemversionen.
-- Vollständige Unterstützung für die neue Dark-Mode-Oberfläche.
-- Arabische Transkription für Rezitationsnamen hinzugefügt (z.B. "Die Eröffnung" ist jetzt "Al-Fatiha (Die Eröffnung)").
-- Verlängert die Zeit für die Niederwerfung und das erneute Aufstehen davon.
-- Weist auf die neue iOS-Funktion zum Ändern der App-Sprache hin, statt einer hakeligen Eigenlösung.
-- Behebt einen Tippfehler im deutschen Rezitationstext ("Sah:" ist jetzt "Sag:").
-- Minimale Systemanforderung wurde auf iOS-/iPadOS-Version 14 heraufgesetzt.
+NEU:
+- 12 weitere Koranrezitationen (von Sure 90 bis 102) in allen drei unterstützten Sprachen hinzugefügt.
+- Es gibt eine neue Einstellung, die längere (aber nicht zu lange) Koranrezitationen im Stehen erlaubt.
+- Es gibt eine neue Einstellung, die es erlaubt, zu lange Koranrezitationen in mehrere Teile aufzusplitten.
+GEÄNDERT:
+- Die Titel für die Einstellungen der Koranrezitationen wurden verbessert, um sie leichter verständlich zu machen.
+- Die zufällige Auswahl von Koranrezitationen im Stehen vermeidet es nun, die letzten Rezitationen zu wiederholen.
+ENTFERNT:
+- Unnötiges Branding und spezifischer Test-Code wurde entfernt.
+FIXED:
+- Die statische URL des Support-Forums wurde durch eine dynamisch anpassbare ersetzt, um schnellere Reaktion zu ermöglichen.

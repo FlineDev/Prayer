@@ -1,7 +1,11 @@
-- Yeni ekran boyutları ve işletim sistemi sürümleri için tam destek.
-- Yeni karanlık mod arayüzü için tam destek.
-- Anlatım adlarına Arapça isim eklendi (mesela 'Açılış' yerine 'Fatiha (Açılış)').
-- Secde'ye düşme ve tekrar ayağa kalkma süresi uzatıldı.
-- Uygulama dilini değiştirmek için yeni iOS özelliğine işaret eklendi.
-- Almanca okuma metnindeki bir yazım hatası düzetildi.
-- iOS/iPadOS minimum gerekli sürüm 14'e yükseltildi. 
+YENİ:
+- Desteklenen her üç dilde 12 tane daha Kuran suresi (90'dan 102'ye kadar) eklendi.
+- Ayaktayken daha uzun (ancak çok uzun olmayan) Kuran okumalarına izin verme seçeneği eklendi.
+- Çok uzun Kuran okumalarına birden çok parçaya ayırma seçeneği eklendi.
+DEĞİŞEN:
+- Kuran okuma ayarlarının anlaşılmasını kolaylaştırmak için geliştirilmiş başlık.
+- Son alıntıları tekrarlamak için rastgele duran Kuran okuma seçimi engellendi.
+SİLİNEN:
+- Gereksiz marka bilinci oluşturma ve belirli test etme kodu kaldırıldı.
+DÜZELTİLEN:
+- Statik destek forumu URL'si, daha hızlı güncellemeler için dinamik olarak ayarlanabilen bir URL ile değiştirildi.
