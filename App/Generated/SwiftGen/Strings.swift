@@ -245,6 +245,8 @@ internal enum L10n {
       /// Prayer Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.TITLE")
       internal enum AllowLongerRecitations {
+        /// Current position in split Surah was cleared.
+        internal static let resetMessage = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE")
         /// Allow longer recitations
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
       }

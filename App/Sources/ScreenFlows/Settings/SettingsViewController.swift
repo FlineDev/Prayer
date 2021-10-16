@@ -7,6 +7,7 @@ import Eureka
 import HandyUIKit
 import Imperio
 import UIKit
+import SwiftyUserDefaults
 
 protocol SettingsFlowDelegate: AnyObject {
   func setRakat(_ rakatCount: Int)
@@ -151,6 +152,15 @@ class SettingsViewController: FormViewController {
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Allow longer recitations had nil value."); return }
+
+      if self.viewModel.allowLongerRecitations != rowValue, Defaults.nextRecitationPart != nil {
+        // delete next recitation part since part calculation changes with this setting adjusted
+        Defaults.nextRecitationPart = nil
+
+        // inform user about the reset of the current ongoing recitation
+        self.showToast(message: self.l10n.PrayerSection.AllowLongerRecitations.resetMessage)
+      }
+
       self.flowDelegate?.setAllowLongerRecitations(rowValue)
     }
   }

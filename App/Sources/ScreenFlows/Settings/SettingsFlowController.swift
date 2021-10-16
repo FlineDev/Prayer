@@ -48,11 +48,6 @@ extension SettingsFlowController: SettingsFlowDelegate {
   }
 
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool) {
-    if settingsViewModel.allowLongerRecitations != allowLongerRecitations {
-      // delete next recitation part since part calculation changes with this setting adjusted
-      Defaults.nextRecitationPart = nil
-    }
-
     settingsViewModel.allowLongerRecitations = allowLongerRecitations
   }
 

@@ -106,6 +106,8 @@
 
 "SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback senden";
 
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE" = "Aktuelle Position in geteilter Sure wurde gelöscht.";
+
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Erlaube längere Rezitationen";
 
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Inkludiere lange Suren durch Aufteilung";

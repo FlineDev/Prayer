@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "NotificationToast",
+        "repositoryURL": "https://github.com/Jeehut/NotificationToast.git",
+        "state": {
+          "branch": "master",
+          "revision": "97eb48565211eb898b3547937d115336c3cbcd46",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftyBeaver",
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
         "state": {

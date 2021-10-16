@@ -106,6 +106,8 @@
 
 "SETTINGS.FEEDBACK_BUTTON.TITLE" = "Geribildirim yolla";
 
+"SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE" = "Bölünmüş suredeki şu anki pozisyon silindi.";
+
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Daha uzun surelere izin ver";
 
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Uzun surelere parçalayarak izin ver";
