@@ -133,7 +133,6 @@
                             <constraint firstItem="9zM-Yb-i5m" firstAttribute="leading" secondItem="7UV-4X-BDj" secondAttribute="leading" id="zKh-76-PjG"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="currentArrowLabel" destination="Cdx-vA-dz9" id="DAa-dP-j3f"/>

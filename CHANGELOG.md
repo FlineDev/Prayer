@@ -27,7 +27,7 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Removed
 - None.
 ### Fixed
-- None.
+- Fixed an issue where the navigation bar of the prayer view had a black background in light mode. Also fixes the animation when opening it up.
 ### Security
 - None.
 
