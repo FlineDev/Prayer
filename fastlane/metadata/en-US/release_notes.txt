@@ -1,11 +1,2 @@
-NEW:
-- Added 12 more Quran recitations (from Surah 90 to 102) in all three supported languages.
-- Added an option to allow longer (but not too long) Quran recitations while standing.
-- Added an option to allow splitting too long Quran recitations into multiple parts.
-CHANGED:
-- Improved title for Quran recitation settings to make them easier to understand.
-- Prevented the random standing Quran recitation selection to repeat recent recitations.
-REMOVED:
-- Removed unnecessary branding & testing specific code.
-FIXED:
-- Replaced static support forum URL with a dynamically adjustable URL for faster updates.
+BEHOBEN:
+- Fixed an issue with the background color of the top bar in the prayer view.

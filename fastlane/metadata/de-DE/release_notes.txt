@@ -1,11 +1,2 @@
-NEU:
-- 12 weitere Koranrezitationen (von Sure 90 bis 102) in allen drei unterstützten Sprachen hinzugefügt.
-- Es gibt eine neue Einstellung, die längere (aber nicht zu lange) Koranrezitationen im Stehen erlaubt.
-- Es gibt eine neue Einstellung, die es erlaubt, zu lange Koranrezitationen in mehrere Teile aufzusplitten.
-GEÄNDERT:
-- Die Titel für die Einstellungen der Koranrezitationen wurden verbessert, um sie leichter verständlich zu machen.
-- Die zufällige Auswahl von Koranrezitationen im Stehen vermeidet es nun, die letzten Rezitationen zu wiederholen.
-ENTFERNT:
-- Unnötiges Branding und spezifischer Test-Code wurde entfernt.
-FIXED:
-- Die statische URL des Support-Forums wurde durch eine dynamisch anpassbare ersetzt, um schnellere Reaktion zu ermöglichen.
+BEHOBEN:
+- Einen Fehler mit der Hintergrundfarbe der oberen Leiste in der Gebetsansicht behoben.
