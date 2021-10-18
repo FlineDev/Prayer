@@ -32,10 +32,16 @@ class PrayerViewController: UIViewController {
       if let movementSoundUrl = viewModel.movementSoundUrl {
         AudioPlayer.shared.playSound(at: movementSoundUrl)
       }
+
+      // TODO: [cg_2021-10-18] make this configurable
+      speechSynthesizer?.speak(text: viewModel.currentLine)
     }
   }
 
   weak var flowDelegate: PrayerFlowDelegate?
+
+  // TODO: [cg_2021-10-18] make the language and the speech itself configurable
+  let speechSynthesizer: SpeechSynthesizer? = .init(voice: SpeechSynthesizer.SupportedLanguage.english.voices[0])
 
   // MARK: - IBOutlets
   @IBOutlet private var previousLineLabel: UILabel!
@@ -91,6 +97,11 @@ class PrayerViewController: UIViewController {
     clearLineLabels()
     clearArrowLabels()
     clearSeparators()
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    speechSynthesizer?.stop()
   }
 
   private func clearLineLabels() {

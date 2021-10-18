@@ -29,6 +29,7 @@
 		2E99770B2715A7B500F61BFE /* 100_The-Chargers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E99770D2715A7B500F61BFE /* 100_The-Chargers.txt */; };
 		2E9977102715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977122715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt */; };
 		2E9977152715A7C500F61BFE /* 102_Greed-for-More-and-More.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977172715A7C500F61BFE /* 102_Greed-for-More-and-More.txt */; };
+		2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */; };
 		2EAF638A271AAC9D00145D5D /* RecitationPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF6389271AAC9D00145D5D /* RecitationPart.swift */; };
 		2EAF6390271ADF3900145D5D /* NotificationToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2EAF638F271ADF3900145D5D /* NotificationToast */; };
 		2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */; };
@@ -172,6 +173,7 @@
 		2E9977162715A7C500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
 		2E9977182715A7C600F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
 		2E9977192715A7C700F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
+		2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		2EAF6389271AAC9D00145D5D /* RecitationPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitationPart.swift; sourceTree = "<group>"; };
 		2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				A1D1EFC31E393F080029C009 /* Countdown.swift */,
 				A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */,
 				A1370CD71E368DF300B55D9E /* Logger.swift */,
+				2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */,
 				2EAF6391271AE0A400145D5D /* Extensions */,
 			);
 			path = Globals;
@@ -963,6 +966,7 @@
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
+				2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
 				2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */,
