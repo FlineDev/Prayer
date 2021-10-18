@@ -1,11 +1,2 @@
-YENİ:
-- Desteklenen her üç dilde 12 tane daha Kuran suresi (90'dan 102'ye kadar) eklendi.
-- Ayaktayken daha uzun (ancak çok uzun olmayan) Kuran okumalarına izin verme seçeneği eklendi.
-- Çok uzun Kuran okumalarına birden çok parçaya ayırma seçeneği eklendi.
-DEĞİŞEN:
-- Kuran okuma ayarlarının anlaşılmasını kolaylaştırmak için geliştirilmiş başlık.
-- Son alıntıları tekrarlamak için rastgele duran Kuran okuma seçimi engellendi.
-SİLİNEN:
-- Gereksiz marka bilinci oluşturma ve belirli test etme kodu kaldırıldı.
 DÜZELTİLEN:
-- Statik destek forumu URL'si, daha hızlı güncellemeler için dinamik olarak ayarlanabilen bir URL ile değiştirildi.
+- Dua görünümünde üst çubuğun arka plan rengiyle ilgili bir sorun düzeltildi.

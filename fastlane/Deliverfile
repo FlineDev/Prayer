@@ -21,3 +21,9 @@ support_url(
   "en-US" => "https://links.flinesoft.com/forum/prayer",
   "tr" => "https://links.flinesoft.com/forum/prayer"
 )
+
+overwrite_screenshots(true)
+
+phased_release(true)
+
+automatic_release(true)

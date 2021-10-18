@@ -31,6 +31,10 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.2.1] - 2021-10-17
+### Fixed
+- Fixed an issue where the navigation bar of the prayer view had a black background in light mode. Also fixes the animation when opening it up.
+
 ## [1.2.0] - 2021-10-16
 ### Added
 - Added 12 more Quran recitations (from Surah 90 to 102) in all three supported languages.

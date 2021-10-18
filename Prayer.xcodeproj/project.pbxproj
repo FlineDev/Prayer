@@ -1527,7 +1527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -1548,7 +1548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
