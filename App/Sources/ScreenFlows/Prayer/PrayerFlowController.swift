@@ -20,6 +20,7 @@ class PrayerFlowController: FlowController {
   private var countdown: Countdown?
 
   private var timer: Timer?
+  private var speechSynthesizer: SpeechSynthesizer?
 
   // MARK: - Initializers
   init(
@@ -27,13 +28,15 @@ class PrayerFlowController: FlowController {
     fixedTextSpeedsFactor: Double,
     changingTextSpeedFactor: Double,
     showChangingTextName: Bool,
-    movementSoundInstrument: String
+    movementSoundInstrument: String,
+    speechSynthesizer: SpeechSynthesizer?
   ) {
     self.prayer = prayer
     self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
     self.changingTextSpeedFactor = changingTextSpeedFactor
     self.showChangingTextName = showChangingTextName
     self.movementSoundInstrument = movementSoundInstrument
+    self.speechSynthesizer = speechSynthesizer
   }
 
   // MARK: - Instance Methods
@@ -41,6 +44,8 @@ class PrayerFlowController: FlowController {
     // configure prayer view controller
     prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
     prayerViewCtrl.flowDelegate = self
+
+    // TODO: [cg_2021-10-21] use speech synthesizer instead of timer if exists
 
     // initialize countdown
     let countdownCount = 5
@@ -72,7 +77,8 @@ class PrayerFlowController: FlowController {
       nextArrow: nil,
       nextLine: nil,
       nextIsComponentBeginning: true,
-      movementSoundUrl: nil
+      movementSoundUrl: nil,
+      speechSynthesizer: speechSynthesizer
     )
   }
 
@@ -81,7 +87,8 @@ class PrayerFlowController: FlowController {
       prayer: prayer,
       changingTextSpeedFactor: changingTextSpeedFactor,
       fixedTextsSpeedFactor: fixedTextSpeedsFactor,
-      movementSoundInstrument: movementSoundInstrument
+      movementSoundInstrument: movementSoundInstrument,
+      speechSynthesizer: speechSynthesizer
     )
     prayerViewCtrl.viewModel = prayerState.prayerViewModel()
     progressPrayer()
@@ -109,7 +116,8 @@ class PrayerFlowController: FlowController {
               nextArrow: nil,
               nextLine: viewModel.currentLine,
               nextIsComponentBeginning: false,
-              movementSoundUrl: viewModel.movementSoundUrl
+              movementSoundUrl: viewModel.movementSoundUrl,
+              speechSynthesizer: self.speechSynthesizer
             )
             self.prayerViewCtrl.viewModel = infoViewModel
 

@@ -22,4 +22,5 @@ struct PrayerViewModel {
   let nextIsComponentBeginning: Bool
 
   let movementSoundUrl: URL?
+  let speechSynthesizer: SpeechSynthesizer?
 }

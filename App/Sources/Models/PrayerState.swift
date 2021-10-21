@@ -11,6 +11,7 @@ class PrayerState {
   private let changingTextSpeedFactor: Double
   private let fixedTextsSpeedFactor: Double
   private let movementSoundInstrument: String
+  private let speechSynthesizer: SpeechSynthesizer?
 
   private var rakatIndex: Int = 0
   private var componentIndex: Int = 0
@@ -27,12 +28,14 @@ class PrayerState {
     prayer: Prayer,
     changingTextSpeedFactor: Double,
     fixedTextsSpeedFactor: Double,
-    movementSoundInstrument: String
+    movementSoundInstrument: String,
+    speechSynthesizer: SpeechSynthesizer?
   ) {
     self.prayer = prayer
     self.changingTextSpeedFactor = changingTextSpeedFactor
     self.fixedTextsSpeedFactor = fixedTextsSpeedFactor
     self.movementSoundInstrument = movementSoundInstrument
+    self.speechSynthesizer = speechSynthesizer
   }
 
   // MARK: - Computed Instance Properties
@@ -123,7 +126,8 @@ class PrayerState {
       nextArrow: nextArrow,
       nextLine: nextLine,
       nextIsComponentBeginning: lineIndex + 1 == currentComponent.spokenTextLines.count,
-      movementSoundUrl: movementSoundUrl
+      movementSoundUrl: movementSoundUrl,
+      speechSynthesizer: speechSynthesizer
     )
   }
 }

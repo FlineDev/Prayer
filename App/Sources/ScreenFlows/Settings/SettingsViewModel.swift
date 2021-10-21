@@ -3,6 +3,7 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import SwiftyUserDefaults
 import UIKit
 
@@ -48,10 +49,39 @@ class SettingsViewModel {
     get { Defaults.movementSoundInstrument }
     set { Defaults.movementSoundInstrument = newValue }
   }
+
+  var speechSynthesizerVoice: AVSpeechSynthesisVoice? {
+    get {
+      guard let voiceId = Defaults.speechSynthesizerVoiceId else { return nil }
+      return AVSpeechSynthesisVoice(identifier: voiceId)
+    }
+    set { Defaults.speechSynthesizerVoiceId = newValue?.identifier }
+  }
+
+  var speechSynthesizerPitchMultiplier: Float {
+    get { Float(Defaults.speechSynthesizerPitchMultiplier) }
+    set { Defaults.speechSynthesizerPitchMultiplier = Double(newValue) }
+  }
+
+  var speechSynthesizerSpeechRate: Float {
+    get { Float(Defaults.speechSynthesizerSpeechRate) }
+    set { Defaults.speechSynthesizerSpeechRate = Double(newValue) }
+  }
+
+  var speechSynthesizer: SpeechSynthesizer? {
+    guard let speechSynthesizerVoice = speechSynthesizerVoice else { return nil }
+
+    return .init(
+      voice: speechSynthesizerVoice,
+      pitchMultiplier: speechSynthesizerPitchMultiplier,
+      speechRate: speechSynthesizerSpeechRate
+    )
+  }
 }
 
 extension DefaultsKeys {
   private var defaultInstrument: String { SettingsViewModel.availableMovementSoundInstruments.first! }
+  private var defaultSpeechRate: Double { Double(AVSpeechUtteranceDefaultSpeechRate) }
 
   var rakatCount: DefaultsKey<Int> { .init("RakatCount", defaultValue: 4) }
   var fixedTextsSpeedFactor: DefaultsKey<Double> { .init("FixedTextsSpeedFactor", defaultValue: 1.0) }
@@ -60,4 +90,7 @@ extension DefaultsKeys {
   var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
   var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: false) }
   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument) }
+  var speechSynthesizerVoiceId: DefaultsKey<String?> { .init("VoiceId") }
+  var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }
+  var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: defaultSpeechRate) }
 }

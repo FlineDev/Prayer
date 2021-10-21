@@ -3,8 +3,10 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import Eureka
 import HandyUIKit
+import HandySwift
 import Imperio
 import UIKit
 import SwiftyUserDefaults
@@ -16,6 +18,9 @@ protocol SettingsFlowDelegate: AnyObject {
   func setShowChangingTextName(_ showChangingTextName: Bool)
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
   func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool)
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice?)
+  func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float)
+  func setSpeechSynthesizerSpeechRate(_ speechRate: Float)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -86,6 +91,11 @@ class SettingsViewController: FormViewController {
       <<< allowLongerRecitationsRow()
       <<< allowSplittingRecitationsRow()
       <<< movementSoundInstrumentRow()
+      <<< speechSynthesizerVoiceRow()
+      <<< speechSynthesizerSpeechRateRow()
+      <<< speechSynthesizerPitchMultiplierRow()
+
+    // TODO: [cg_2021-10-21] split movement sound and speech synthesizer into separate audio section
 
     form.append(prayerSection)
   }
@@ -110,6 +120,7 @@ class SettingsViewController: FormViewController {
     return SliderRow { row in
       row.title = l10n.PrayerSection.FixedTexts.title
       row.value = Float(viewModel.fixedTextsSpeedFactor)
+      row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
@@ -124,6 +135,7 @@ class SettingsViewController: FormViewController {
     return SliderRow { row in
       row.title = l10n.PrayerSection.ChangingText.title
       row.value = Float(viewModel.changingTextSpeedFactor)
+      row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
@@ -185,6 +197,54 @@ class SettingsViewController: FormViewController {
     .onChange { row in
       guard let rowValue = row.value else { log.error("Instrument had nil value."); return }
       self.flowDelegate?.chooseInstrument(rowValue)
+    }
+  }
+
+  fileprivate func speechSynthesizerVoiceRow() -> PushRow<AVSpeechSynthesisVoice> {
+    return PushRow<AVSpeechSynthesisVoice> { row in
+      row.title = l10n.Audio.SpeechSynthesizer.voice
+      row.options = SpeechSynthesizer.SupportedLanguage.current.voices
+      row.value = viewModel.speechSynthesizerVoice
+      row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
+    }
+    .onChange { row in
+      self.flowDelegate?.setSpeechSynthesizerVoice(row.value)
+    }
+    .onPresent { from, to in
+      to.selectableRowCellUpdate = { cell, row in
+        cell.textLabel?.text = row.selectableValue!.name
+        cell.detailTextLabel?.text = Locale.current.localizedString(forIdentifier: row.selectableValue!.language)
+      }
+    }
+  }
+
+  fileprivate func speechSynthesizerPitchMultiplierRow() -> SliderRow {
+    return SliderRow { row in
+      row.title = l10n.Audio.SpeechSynthesizer.pitchMultiplier
+      row.value = viewModel.speechSynthesizerPitchMultiplier
+      row.displayValueFor = { String(format: "%.2f", $0!) }
+      row.cell.slider.minimumValue = 0.5
+      row.cell.slider.maximumValue = 2.0
+      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Pitch multiplier had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerPitchMultiplier(rowValue)
+    }
+  }
+
+  fileprivate func speechSynthesizerSpeechRateRow() -> SliderRow {
+    return SliderRow { row in
+      row.title = l10n.Audio.SpeechSynthesizer.speechRate
+      row.value = viewModel.speechSynthesizerSpeechRate
+      row.displayValueFor = { String(format: "%.2f", $0!) }
+      row.cell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
+      row.cell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
+      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerPitchMultiplier(rowValue)
     }
   }
 

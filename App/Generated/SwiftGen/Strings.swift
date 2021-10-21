@@ -183,6 +183,16 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE")
       }
     }
+    internal enum Audio {
+      internal enum SpeechSynthesizer {
+        /// Pitch multiplicator
+        internal static let pitchMultiplier = L10n.tr("Localizable", "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER")
+        /// Speech rate
+        internal static let speechRate = L10n.tr("Localizable", "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE")
+        /// Voice
+        internal static let voice = L10n.tr("Localizable", "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.VOICE")
+      }
+    }
     internal enum ChangeMovementSoundSheet {
       /// Choose movement instrument
       internal static let title = L10n.tr("Localizable", "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")

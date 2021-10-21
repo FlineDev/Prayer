@@ -3,6 +3,7 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import Imperio
 import SafariServices
 import SwiftyUserDefaults
@@ -55,6 +56,18 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
   }
 
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice?) {
+    settingsViewModel.speechSynthesizerVoice = voice
+  }
+
+  func setSpeechSynthesizerSpeechRate(_ speechRate: Float) {
+    settingsViewModel.speechSynthesizerSpeechRate = speechRate
+  }
+
+  func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float) {
+    settingsViewModel.speechSynthesizerPitchMultiplier = pitchMultiplier
+  }
+
   func showLanguageSettings() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
@@ -83,16 +96,17 @@ extension SettingsFlowController: SettingsFlowDelegate {
       allowSplittingRecitations: settingsViewModel.allowSplittingRecitations
     )
 
-    let prayerCoordinator = PrayerFlowController(
+    let prayerFlowCtrl = PrayerFlowController(
       prayer: prayer,
       fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
       changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
       showChangingTextName: settingsViewModel.showChangingTextName,
-      movementSoundInstrument: settingsViewModel.movementSoundInstrument
+      movementSoundInstrument: settingsViewModel.movementSoundInstrument,
+      speechSynthesizer: settingsViewModel.speechSynthesizer
     )
 
-    add(subFlowController: prayerCoordinator)
-    prayerCoordinator.start(from: settingsViewCtrl)
+    add(subFlowController: prayerFlowCtrl)
+    prayerFlowCtrl.start(from: settingsViewCtrl)
   }
 
   private func showFAQ() {

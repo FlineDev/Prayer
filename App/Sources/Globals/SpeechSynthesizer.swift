@@ -8,23 +8,34 @@ import AVFoundation
 
 final class SpeechSynthesizer: NSObject {
   enum SupportedLanguage: String {
-    case arabic = "ar"
     case english = "en"
     case german = "de"
     case turkish = "tr"
 
+    static var current: SupportedLanguage {
+      .init(rawValue: Locale.current.languageCode!)!
+    }
+
     var voices: [AVSpeechSynthesisVoice] {
-      AVSpeechSynthesisVoice.speechVoices().filter { $0.language.components(separatedBy: "-")[0] == rawValue }
+      AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix(rawValue) }
     }
   }
 
   let voice: AVSpeechSynthesisVoice
+  let pitchMultiplier: Float
+  let speechRate: Float
+
   let synthesizer: AVSpeechSynthesizer = .init()
 
   init(
-    voice: AVSpeechSynthesisVoice
+    voice: AVSpeechSynthesisVoice,
+    pitchMultiplier: Float,
+    speechRate: Float
   ) {
     self.voice = voice
+    self.pitchMultiplier = pitchMultiplier
+    self.speechRate = speechRate
+
     super.init()
     synthesizer.delegate = self
   }
@@ -32,9 +43,9 @@ final class SpeechSynthesizer: NSObject {
   func speak(text: String) {
     let utterance = AVSpeechUtterance(string: text)
     utterance.voice = voice
-    utterance.pitchMultiplier = 1.0
+    utterance.pitchMultiplier = pitchMultiplier
     utterance.volume = 1.0
-    utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+    utterance.rate = speechRate
     utterance.preUtteranceDelay = .zero
     utterance.postUtteranceDelay = .zero
 
