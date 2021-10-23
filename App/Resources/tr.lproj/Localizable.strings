@@ -80,6 +80,8 @@
 
 "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "⚙️ Ayarlar uygulamasında dili değiştir";
 
+"SETTINGS.APP_SECTION.FOOTER" = "Uygulamanın dili, bir dua sırasında gösterilen metinlerin dilini belirler. Apple, Ayarlar uygulamasında uygulamaya özel bir dil ayarı sağlar. Lütfen bu uygulamanın dilini ve duaları değiştirmek için o ayarı kullanın.";
+
 "SETTINGS.APP_SECTION.TITLE" = "Uygulama ayarları";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Pitch Çarpanı";
@@ -93,6 +95,8 @@
 "SETTINGS.AUDIO_SPEED_SECTION.CHANGING_TEXT.TITLE" = "Kur'an âyet hızı";
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Diğer metin hızı";
+
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Mevcut iki ses modundan birini seçin. İlkinde, bir dua sırasında pozisyon değiştirildiğinde sadece kısa bir ses çalınır. İkinci modda, tüm metin yüksek sesle okunur, böylece yalnızca dinleyerek kılınabilir. Bu, cihaz cebinizde kilitliyken de çalışır. Bu mesela aynı mescitteki diğer kişiler farkında olmadan tercih edilen dilde kılmak için faydalı olabilir.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket tonu";
 
@@ -133,6 +137,8 @@
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Uzun surelere parçalayarak izin ver";
 
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Kur'an âyet adı";
+
+"SETTINGS.PRAYER_SECTION.FOOTER" = "İçeriğini göstermeden önce ayakta dururken değişen Kuran kıraatinin adının görüntülenip görüntülenmeyeceğini seçin. Ayaktayken dört kata kadar daha uzun Kuran okumalarına izin vermek de mümkündür. Kuran surelerinin çoğu bunun için bile fazladan uzundur, bu sureleri de namaza eklemek için paylaşılmasına izin verilmelidir - uygulama daha sonra pasajı hatırlar ve bir sonraki dua ile kaldığı yerden devam etmesini sağlar.";
 
 "SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rekat sayısı";
 

@@ -183,6 +183,8 @@ internal enum L10n {
     /// Settings
     internal static let title = L10n.tr("Localizable", "SETTINGS.TITLE")
     internal enum AppSection {
+      /// The language of the app determines the language of the texts shown during a prayer. Apple provides an app-specific language setting in the Settings app. Please use it to change the language of this app and the prayers.
+      internal static let footer = L10n.tr("Localizable", "SETTINGS.APP_SECTION.FOOTER")
       /// App Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.TITLE")
       internal enum ChangeLanguageButton {
@@ -201,6 +203,8 @@ internal enum L10n {
       }
     }
     internal enum AudioSpeedSection {
+      /// Choose one of the two available audio modes. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.
+      internal static let footer = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.FOOTER")
       /// Audio & Speed Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.TITLE")
       internal enum AudioMode {
@@ -279,6 +283,8 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "SETTINGS.FEEDBACK_BUTTON.TITLE")
     }
     internal enum PrayerSection {
+      /// You can decide, if the name of the changing Quran recitation while standing should be displayed before showing its contents. You can also allow for up to four times longer Quran recitations while standing. Most Quranic surahs are even too long for that, to include them into your prayers, you have to allow splitting them – the app will remember the spliting position and continue from where you left off on the next prayer.
+      internal static let footer = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.FOOTER")
       /// Prayer Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.TITLE")
       internal enum AllowLongerRecitations {

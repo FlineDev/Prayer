@@ -71,7 +71,7 @@ class SettingsViewController: FormViewController {
   // MARK: - Instance Methods
   private func setupAppSection() {
     let appSection =
-      Section(l10n.AppSection.title)
+      Section(header: l10n.AppSection.title, footer: l10n.AppSection.footer)
       <<< ButtonRow { row in
         row.title = l10n.AppSection.ChangeLanguageButton.title
       }
@@ -87,7 +87,7 @@ class SettingsViewController: FormViewController {
 
   private func setupPrayerSection() {
     let prayerSection =
-      Section(l10n.PrayerSection.title)
+      Section(header: l10n.PrayerSection.title, footer: l10n.PrayerSection.footer)
       <<< rakatCountRow()
       <<< changingTextNameRow()
       <<< allowLongerRecitationsRow()
@@ -98,7 +98,7 @@ class SettingsViewController: FormViewController {
 
   private func setupAudioAndSpeedSection() {
     let audioAndSpeedSection =
-      Section(l10n.AudioSpeedSection.title)
+      Section(header: l10n.AudioSpeedSection.title, footer: l10n.AudioSpeedSection.footer)
       <<< audioModeRow()
       <<< fixedTextSpeedRow()
       <<< changingTextSpeedRow()
