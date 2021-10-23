@@ -38,6 +38,7 @@ final class SpeechSynthesizer: NSObject {
   let synthesizer: AVSpeechSynthesizer = .init()
 
   fileprivate var completionBlock: (() -> Void)?
+  fileprivate var completionDelay: TimeInterval?
 
   init(
     voice: AVSpeechSynthesisVoice,
@@ -52,7 +53,7 @@ final class SpeechSynthesizer: NSObject {
     synthesizer.delegate = self
   }
 
-  func speak(text: String, completion: @escaping () -> Void) {
+  func speak(text: String, completion: @escaping () -> Void, delayCompletion: TimeInterval? = nil) {
     let textToSpeak: String = {
       if text.contains("📖") {
         return text.replacingOccurrences(of: "📖", with: L10n.SpeechSynthesizer.bookEmojiReplacement)
@@ -75,6 +76,7 @@ final class SpeechSynthesizer: NSObject {
     utterance.postUtteranceDelay = .zero
 
     self.completionBlock = completion
+    self.completionDelay = delayCompletion
 
     synthesizer.speak(utterance)
   }
@@ -88,8 +90,11 @@ final class SpeechSynthesizer: NSObject {
 extension SpeechSynthesizer: AVSpeechSynthesizerDelegate {
   func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
     if let completionBlock = completionBlock {
-      self.completionBlock = nil
-      completionBlock()
+      delay(by: completionDelay ?? .zero) {
+        self.completionBlock = nil
+        self.completionDelay = nil
+        completionBlock()
+      }
     }
   }
 }

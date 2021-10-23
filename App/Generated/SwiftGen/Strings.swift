@@ -313,7 +313,7 @@ internal enum L10n {
   }
 
   internal enum SpeechSynthesizer {
-    /// Surah 
+    /// Chapter 
     internal static let bookEmojiReplacement = L10n.tr("Localizable", "SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT")
   }
 }

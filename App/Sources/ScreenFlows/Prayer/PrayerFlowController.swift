@@ -111,7 +111,11 @@ class PrayerFlowController: FlowController {
       timer = Timer.after(prayerState.currentLineReadingTime, progressToNextStep)
 
     case .speechSynthesizer:
-      speechSynthesizer.speak(text: prayerState.currentLine, completion: progressToNextStep)
+      speechSynthesizer.speak(
+        text: prayerState.currentLine,
+        completion: progressToNextStep,
+        delayCompletion: prayerState.movementDelay
+      )
     }
   }
 

@@ -54,11 +54,16 @@ class PrayerState {
   var currentLineReadingTime: TimeInterval {
     var readingTime = currentLine.estimatedReadingTime / readingSpeedupFactor
 
-    if lineIndex == 0 && currentComponent.needsMovement {
-      readingTime += previousPositon.movementDuration(forChangingTo: currentPosition)
+    if let movementDelay = movementDelay {
+      readingTime += movementDelay
     }
 
     return readingTime
+  }
+
+  var movementDelay: TimeInterval? {
+    guard lineIndex == 0 && currentComponent.needsMovement else { return nil }
+    return previousPositon.movementDuration(forChangingTo: currentPosition)
   }
 
   var currentMovementSoundUrl: URL? {
