@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06625A27243C9E001D8531 /* AudioMode.swift */; };
 		2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B432646FD7A00A4D8E3 /* HandySwift */; };
 		2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B462646FD9200A4D8E3 /* HandyUIKit */; };
 		2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B492646FDC800A4D8E3 /* Eureka */; };
@@ -132,6 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E06625A27243C9E001D8531 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
 		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
 		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 		A11783EE21445DCE00B41A1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E06625A27243C9E001D8531 /* AudioMode.swift */,
 				A1A6A4651E3A819D00A909FF /* Position.swift */,
 				A16484E21E243AAC008EC78C /* Prayer.swift */,
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
@@ -944,6 +947,7 @@
 			files = (
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
+				2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */,
 				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
 				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
 				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,

@@ -21,6 +21,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice?)
   func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float)
   func setSpeechSynthesizerSpeechRate(_ speechRate: Float)
+  func setAudioMode(_ audioMode: AudioMode)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -32,6 +33,8 @@ class SettingsViewController: FormViewController {
   // MARK: - Stored Instance Properties
   let l10n = L10n.Settings.self
   var viewModel: SettingsViewModel
+
+  private let audioModeRowTag: String = "AudioMode"
 
   weak var flowDelegate: SettingsFlowDelegate?
 
@@ -59,6 +62,7 @@ class SettingsViewController: FormViewController {
 
     setupAppSection()
     setupPrayerSection()
+    setupAudioAndSpeedSection()
     setupStartSection()
     setupFAQButton()
     setupFeedbackButton()
@@ -85,23 +89,44 @@ class SettingsViewController: FormViewController {
     let prayerSection =
       Section(l10n.PrayerSection.title)
       <<< rakatCountRow()
-      <<< fixedTextsRow()
-      <<< changingTextRow()
       <<< changingTextNameRow()
       <<< allowLongerRecitationsRow()
       <<< allowSplittingRecitationsRow()
+
+    form.append(prayerSection)
+  }
+
+  private func setupAudioAndSpeedSection() {
+    let audioAndSpeedSection =
+      Section(l10n.AudioSpeedSection.title)
+      <<< audioModeRow()
+      <<< fixedTextSpeedRow()
+      <<< changingTextSpeedRow()
       <<< movementSoundInstrumentRow()
       <<< speechSynthesizerVoiceRow()
       <<< speechSynthesizerSpeechRateRow()
       <<< speechSynthesizerPitchMultiplierRow()
 
-    // TODO: [cg_2021-10-21] split movement sound and speech synthesizer into separate audio section
-
-    form.append(prayerSection)
+    form.append(audioAndSpeedSection)
   }
 
-  fileprivate func rakatCountRow() -> IntRow {
-    return IntRow { row in
+  private func audioModeRow() -> SegmentedRow<AudioMode> {
+    SegmentedRow<AudioMode>(audioModeRowTag) { row in
+      if UIDevice.current.userInterfaceIdiom != .phone {
+        row.title = l10n.AudioSpeedSection.AudioMode.title
+      }
+      row.options = AudioMode.allCases
+      row.value = viewModel.audioMode
+      row.displayValueFor = { $0?.displayDescription }
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Audio mode row had nil value."); return }
+      self.flowDelegate?.setAudioMode(rowValue)
+    }
+  }
+
+  private func rakatCountRow() -> IntRow {
+    IntRow { row in
       row.title = l10n.PrayerSection.RakatCount.title
       row.value = viewModel.rakatCount
     }
@@ -116,14 +141,18 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func fixedTextsRow() -> SliderRow {
-    return SliderRow { row in
-      row.title = l10n.PrayerSection.FixedTexts.title
+  private func fixedTextSpeedRow() -> SliderRow {
+    SliderRow { row in
+      row.title = l10n.AudioSpeedSection.FixedTexts.title
       row.value = Float(viewModel.fixedTextsSpeedFactor)
       row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.movementSound
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
@@ -131,14 +160,18 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func changingTextRow() -> SliderRow {
-    return SliderRow { row in
-      row.title = l10n.PrayerSection.ChangingText.title
+  private func changingTextSpeedRow() -> SliderRow {
+    SliderRow { row in
+      row.title = l10n.AudioSpeedSection.ChangingText.title
       row.value = Float(viewModel.changingTextSpeedFactor)
       row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.movementSound
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
@@ -146,8 +179,8 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func changingTextNameRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func changingTextNameRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.ChangingTextName.title
       row.value = viewModel.showChangingTextName
     }
@@ -157,8 +190,8 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func allowLongerRecitationsRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func allowLongerRecitationsRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.AllowLongerRecitations.title
       row.value = viewModel.allowLongerRecitations
     }
@@ -177,8 +210,8 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func allowSplittingRecitationsRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func allowSplittingRecitationsRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.AllowSplittingRecitations.title
       row.value = viewModel.allowSplittingRecitations
     }
@@ -188,11 +221,15 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func movementSoundInstrumentRow() -> PushRow<String> {
-    return PushRow<String> { row in
-      row.title = l10n.PrayerSection.MovementSoundInstrument.title
+  private func movementSoundInstrumentRow() -> PushRow<String> {
+    PushRow<String> { row in
+      row.title = l10n.AudioSpeedSection.MovementSoundInstrument.title
       row.options = SettingsViewModel.availableMovementSoundInstruments
       row.value = viewModel.movementSoundInstrument
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.movementSound
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Instrument had nil value."); return }
@@ -200,12 +237,16 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func speechSynthesizerVoiceRow() -> PushRow<AVSpeechSynthesisVoice> {
-    return PushRow<AVSpeechSynthesisVoice> { row in
+  private func speechSynthesizerVoiceRow() -> PushRow<AVSpeechSynthesisVoice> {
+    PushRow<AVSpeechSynthesisVoice> { row in
       row.title = l10n.Audio.SpeechSynthesizer.voice
       row.options = SpeechSynthesizer.SupportedLanguage.current.voices
       row.value = viewModel.speechSynthesizerVoice
       row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.speechSynthesizer
+      }
     }
     .onChange { row in
       self.flowDelegate?.setSpeechSynthesizerVoice(row.value)
@@ -218,14 +259,18 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func speechSynthesizerPitchMultiplierRow() -> SliderRow {
-    return SliderRow { row in
+  private func speechSynthesizerPitchMultiplierRow() -> SliderRow {
+    SliderRow { row in
       row.title = l10n.Audio.SpeechSynthesizer.pitchMultiplier
       row.value = viewModel.speechSynthesizerPitchMultiplier
       row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.speechSynthesizer
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Pitch multiplier had nil value."); return }
@@ -233,14 +278,18 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func speechSynthesizerSpeechRateRow() -> SliderRow {
-    return SliderRow { row in
+  private func speechSynthesizerSpeechRateRow() -> SliderRow {
+    SliderRow { row in
       row.title = l10n.Audio.SpeechSynthesizer.speechRate
       row.value = viewModel.speechSynthesizerSpeechRate
       row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
       row.cell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { form in
+        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
+        return audioModeRow.value != AudioMode.speechSynthesizer
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }

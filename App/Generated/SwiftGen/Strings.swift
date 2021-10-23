@@ -11,6 +11,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum AudioMode {
+    /// Sound for position changes
+    internal static let movementSound = L10n.tr("Localizable", "AUDIO_MODE.MOVEMENT_SOUND")
+    /// Reading computer voice
+    internal static let speechSynthesizer = L10n.tr("Localizable", "AUDIO_MODE.SPEECH_SYNTHESIZER")
+  }
+
   internal enum PrayerView {
     internal enum Countdown {
       /// Countdown
@@ -193,6 +200,26 @@ internal enum L10n {
         internal static let voice = L10n.tr("Localizable", "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.VOICE")
       }
     }
+    internal enum AudioSpeedSection {
+      /// Audio & Speed Settings
+      internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.TITLE")
+      internal enum AudioMode {
+        /// Audio Mode
+        internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.AUDIO_MODE.TITLE")
+      }
+      internal enum ChangingText {
+        /// Quran sura speed
+        internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.CHANGING_TEXT.TITLE")
+      }
+      internal enum FixedTexts {
+        /// Other texts speed
+        internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE")
+      }
+      internal enum MovementSoundInstrument {
+        /// Movement sound
+        internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE")
+      }
+    }
     internal enum ChangeMovementSoundSheet {
       /// Choose movement instrument
       internal static let title = L10n.tr("Localizable", "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE")
@@ -264,21 +291,9 @@ internal enum L10n {
         /// Include long surah by splitting them
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
       }
-      internal enum ChangingText {
-        /// Quran sura speed
-        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE")
-      }
       internal enum ChangingTextName {
         /// Quran sura name
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
-      }
-      internal enum FixedTexts {
-        /// Other texts speed
-        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE")
-      }
-      internal enum MovementSoundInstrument {
-        /// Movement sound
-        internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE")
       }
       internal enum RakatCount {
         /// Rakat count

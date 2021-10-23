@@ -13,6 +13,7 @@ class PrayerFlowController: FlowController {
   private let fixedTextSpeedsFactor: Double
   private let changingTextSpeedFactor: Double
   private let showChangingTextName: Bool
+  private var audioMode: AudioMode
   private let movementSoundInstrument: String
 
   private var prayerState: PrayerState!
@@ -28,6 +29,7 @@ class PrayerFlowController: FlowController {
     fixedTextSpeedsFactor: Double,
     changingTextSpeedFactor: Double,
     showChangingTextName: Bool,
+    audioMode: AudioMode,
     movementSoundInstrument: String,
     speechSynthesizer: SpeechSynthesizer?
   ) {
@@ -35,6 +37,7 @@ class PrayerFlowController: FlowController {
     self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
     self.changingTextSpeedFactor = changingTextSpeedFactor
     self.showChangingTextName = showChangingTextName
+    self.audioMode = audioMode
     self.movementSoundInstrument = movementSoundInstrument
     self.speechSynthesizer = speechSynthesizer
   }
@@ -77,6 +80,7 @@ class PrayerFlowController: FlowController {
       nextArrow: nil,
       nextLine: nil,
       nextIsComponentBeginning: true,
+      audioMode: audioMode,
       movementSoundUrl: nil,
       speechSynthesizer: speechSynthesizer
     )
@@ -87,6 +91,7 @@ class PrayerFlowController: FlowController {
       prayer: prayer,
       changingTextSpeedFactor: changingTextSpeedFactor,
       fixedTextsSpeedFactor: fixedTextSpeedsFactor,
+      audioMode: audioMode,
       movementSoundInstrument: movementSoundInstrument,
       speechSynthesizer: speechSynthesizer
     )
@@ -96,6 +101,8 @@ class PrayerFlowController: FlowController {
     // prevent screen from locking
     UIApplication.shared.isIdleTimerDisabled = true
   }
+
+  // TODO: [cg_2021-10-23] use speech synthesizer if audio mode is set to it instead of classical timer
 
   func progressPrayer() {
     timer = Timer.after(prayerState.currentLineReadingTime) {
@@ -116,6 +123,7 @@ class PrayerFlowController: FlowController {
               nextArrow: nil,
               nextLine: viewModel.currentLine,
               nextIsComponentBeginning: false,
+              audioMode: self.audioMode,
               movementSoundUrl: viewModel.movementSoundUrl,
               speechSynthesizer: self.speechSynthesizer
             )

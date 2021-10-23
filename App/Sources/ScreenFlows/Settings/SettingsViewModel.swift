@@ -77,6 +77,11 @@ class SettingsViewModel {
       speechRate: speechSynthesizerSpeechRate
     )
   }
+
+  var audioMode: AudioMode {
+    get { Defaults.audioMode }
+    set { Defaults.audioMode = newValue }
+  }
 }
 
 extension DefaultsKeys {
@@ -93,4 +98,7 @@ extension DefaultsKeys {
   var speechSynthesizerVoiceId: DefaultsKey<String?> { .init("VoiceId") }
   var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }
   var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: defaultSpeechRate) }
+  var audioMode: DefaultsKey<AudioMode> { .init("AudioMode", defaultValue: .movementSound) }
 }
+
+extension AudioMode: DefaultsSerializable {}

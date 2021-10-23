@@ -10,6 +10,7 @@ class PrayerState {
   private let prayer: Prayer
   private let changingTextSpeedFactor: Double
   private let fixedTextsSpeedFactor: Double
+  private let audioMode: AudioMode
   private let movementSoundInstrument: String
   private let speechSynthesizer: SpeechSynthesizer?
 
@@ -28,12 +29,14 @@ class PrayerState {
     prayer: Prayer,
     changingTextSpeedFactor: Double,
     fixedTextsSpeedFactor: Double,
+    audioMode: AudioMode,
     movementSoundInstrument: String,
     speechSynthesizer: SpeechSynthesizer?
   ) {
     self.prayer = prayer
     self.changingTextSpeedFactor = changingTextSpeedFactor
     self.fixedTextsSpeedFactor = fixedTextsSpeedFactor
+    self.audioMode = audioMode
     self.movementSoundInstrument = movementSoundInstrument
     self.speechSynthesizer = speechSynthesizer
   }
@@ -126,6 +129,7 @@ class PrayerState {
       nextArrow: nextArrow,
       nextLine: nextLine,
       nextIsComponentBeginning: lineIndex + 1 == currentComponent.spokenTextLines.count,
+      audioMode: audioMode,
       movementSoundUrl: movementSoundUrl,
       speechSynthesizer: speechSynthesizer
     )

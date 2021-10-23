@@ -68,6 +68,10 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.speechSynthesizerPitchMultiplier = pitchMultiplier
   }
 
+  func setAudioMode(_ audioMode: AudioMode) {
+    settingsViewModel.audioMode = audioMode
+  }
+
   func showLanguageSettings() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
@@ -101,6 +105,7 @@ extension SettingsFlowController: SettingsFlowDelegate {
       fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
       changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
       showChangingTextName: settingsViewModel.showChangingTextName,
+      audioMode: settingsViewModel.audioMode,
       movementSoundInstrument: settingsViewModel.movementSoundInstrument,
       speechSynthesizer: settingsViewModel.speechSynthesizer
     )
