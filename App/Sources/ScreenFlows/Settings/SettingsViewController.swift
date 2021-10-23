@@ -18,7 +18,7 @@ protocol SettingsFlowDelegate: AnyObject {
   func setShowChangingTextName(_ showChangingTextName: Bool)
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
   func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool)
-  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice?)
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice)
   func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float)
   func setSpeechSynthesizerSpeechRate(_ speechRate: Float)
   func setAudioMode(_ audioMode: AudioMode)
@@ -249,7 +249,8 @@ class SettingsViewController: FormViewController {
       }
     }
     .onChange { row in
-      self.flowDelegate?.setSpeechSynthesizerVoice(row.value)
+      guard let rowValue = row.value else { log.error("Synthesizer voice had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerVoice(rowValue)
     }
     .onPresent { from, to in
       to.selectableRowCellUpdate = { cell, row in

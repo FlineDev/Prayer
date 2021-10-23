@@ -56,7 +56,7 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
   }
 
-  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice?) {
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice) {
     settingsViewModel.speechSynthesizerVoice = voice
   }
 

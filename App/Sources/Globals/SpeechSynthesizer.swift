@@ -16,6 +16,15 @@ final class SpeechSynthesizer: NSObject {
       .init(rawValue: Locale.current.languageCode!)!
     }
 
+    static var bestMatchingVoice: AVSpeechSynthesisVoice {
+      guard let regionCode = Locale.current.regionCode else { return current.voices[0] }
+      guard let voice = AVSpeechSynthesisVoice.speechVoices().first(where: { $0.language.hasSuffix(regionCode) }) else {
+        return current.voices[0]
+      }
+
+      return voice
+    }
+
     var voices: [AVSpeechSynthesisVoice] {
       AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix(rawValue) }
     }
