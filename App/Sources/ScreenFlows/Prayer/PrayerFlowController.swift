@@ -21,7 +21,7 @@ class PrayerFlowController: FlowController {
   private var countdown: Countdown?
 
   private var timer: Timer?
-  private var speechSynthesizer: SpeechSynthesizer?
+  private var speechSynthesizer: SpeechSynthesizer
 
   // MARK: - Initializers
   init(
@@ -31,7 +31,7 @@ class PrayerFlowController: FlowController {
     showChangingTextName: Bool,
     audioMode: AudioMode,
     movementSoundInstrument: String,
-    speechSynthesizer: SpeechSynthesizer?
+    speechSynthesizer: SpeechSynthesizer
   ) {
     self.prayer = prayer
     self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
@@ -79,10 +79,7 @@ class PrayerFlowController: FlowController {
       currentIsComponentBeginning: false,
       nextArrow: nil,
       nextLine: nil,
-      nextIsComponentBeginning: true,
-      audioMode: audioMode,
-      movementSoundUrl: nil,
-      speechSynthesizer: speechSynthesizer
+      nextIsComponentBeginning: true
     )
   }
 
@@ -105,30 +102,42 @@ class PrayerFlowController: FlowController {
   // TODO: [cg_2021-10-23] use speech synthesizer if audio mode is set to it instead of classical timer
 
   func progressPrayer() {
-    timer = Timer.after(prayerState.currentLineReadingTime) {
-      if self.prayerState.moveToNextLine() {
-        let viewModel = self.prayerState.prayerViewModel()
+    switch audioMode {
+    case .movementSound:
+      if let movementSoundUrl = prayerState.currentMovementSoundUrl {
+        AudioPlayer.shared.playSound(at: movementSoundUrl)
+      }
 
-        // show changing text info if chosen
-        if self.showChangingTextName && viewModel.currentIsComponentBeginning {
-          if let chapterNum = self.prayerState.currentRecitationChapterNum {
-            let infoViewModel = PrayerViewModel(
-              currentComponentName: viewModel.currentComponentName,
-              previousArrow: viewModel.previousArrow,
-              previousLine: viewModel.previousLine,
-              currentArrow: nil,
-              currentLine: "📖\(chapterNum): \(viewModel.currentComponentName)",
-              isChapterName: true,
-              currentIsComponentBeginning: true,
-              nextArrow: nil,
-              nextLine: viewModel.currentLine,
-              nextIsComponentBeginning: false,
-              audioMode: self.audioMode,
-              movementSoundUrl: viewModel.movementSoundUrl,
-              speechSynthesizer: self.speechSynthesizer
-            )
-            self.prayerViewCtrl.viewModel = infoViewModel
+      timer = Timer.after(prayerState.currentLineReadingTime, progressToNextStep)
 
+    case .speechSynthesizer:
+      speechSynthesizer.speak(text: prayerState.currentLine, completion: progressToNextStep)
+    }
+  }
+
+  private func progressToNextStep() {
+    if prayerState.moveToNextLine() {
+      let viewModel = prayerState.prayerViewModel()
+
+      // show changing text info if chosen
+      if self.showChangingTextName && viewModel.currentIsComponentBeginning {
+        if let chapterNum = prayerState.currentRecitationChapterNum, chapterNum != 1 {
+          let infoViewModel = PrayerViewModel(
+            currentComponentName: viewModel.currentComponentName,
+            previousArrow: viewModel.previousArrow,
+            previousLine: viewModel.previousLine,
+            currentArrow: nil,
+            currentLine: viewModel.currentComponentName,
+            isChapterName: true,
+            currentIsComponentBeginning: true,
+            nextArrow: nil,
+            nextLine: viewModel.currentLine,
+            nextIsComponentBeginning: false
+          )
+          self.prayerViewCtrl.viewModel = infoViewModel
+
+          switch audioMode {
+          case .movementSound:
             let rememberTime = Timespan.milliseconds(1_000)
             let waitTime = infoViewModel.currentLine.estimatedReadingTime + rememberTime
             delay(by: waitTime) {
@@ -136,24 +145,31 @@ class PrayerFlowController: FlowController {
               self.progressPrayer()
             }
 
-            return
+          case .speechSynthesizer:
+            speechSynthesizer.speak(text: infoViewModel.currentLine) {
+              self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
+              self.progressPrayer()
+            }
           }
-        }
 
-        self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
-        self.progressPrayer()
+          return
+        }
       }
-      else {
-        self.cleanup()
-        self.prayerViewCtrl.dismiss(animated: true, completion: nil)
-        self.removeFromSuperFlowController()
-      }
+
+      prayerViewCtrl.viewModel = prayerState.prayerViewModel()
+      progressPrayer()
+    }
+    else {
+      cleanup()
+      prayerViewCtrl.dismiss(animated: true, completion: nil)
+      removeFromSuperFlowController()
     }
   }
 
-  func cleanup() {
+  private func cleanup() {
     timer?.invalidate()
     timer = nil
+    speechSynthesizer.stop()
     UIApplication.shared.isIdleTimerDisabled = false
   }
 }

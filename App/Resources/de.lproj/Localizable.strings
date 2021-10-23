@@ -96,7 +96,7 @@
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Geschwindigkeit anderer Texte";
 
-"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Wähle einen der beiden verfügbaren Audiomodi. Im ersten wird nur ein kurzer Ton abgespielt, wenn während eines Gebets die Position gewechselt wird. Im zweiten Modus wird der gesamte Text laut vorgelesen, sodass man nur zuhören kann. Dies funktioniert auch dann, wenn das Gerät gesperrt in der Hosentasche liegt. Dies kann zum Beispiel nützlich sein, wenn die Gebete in der bevorzugten Sprache verrichtet werden sollen, ohne dass andere im selben Gebetsraum dies mitbekommen.";
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Wähle einen der beiden verfügbaren Audiomodi. Im ersten wird nur ein kurzer Ton abgespielt, wenn während eines Gebets die Position gewechselt wird. Im zweiten Modus wird der gesamte Text laut vorgelesen, sodass man auch nur zuhören kann. Dies funktioniert auch dann, wenn das Gerät gesperrt in der Hosentasche liegt. Dies kann zum Beispiel nützlich sein, wenn die Gebete in der bevorzugten Sprache verrichtet werden sollen, ohne dass andere im selben Gebetsraum dies mitbekommen.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Bewegungsgeräusch";
 
@@ -136,9 +136,9 @@
 
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Inkludiere lange Suren durch Aufteilung";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name der Koransure";
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name der Koransure einblenden";
 
-"SETTINGS.PRAYER_SECTION.FOOTER" = "Wähle, ob der Name der sich ändernden Koranrezitation im Stehen angezeigt werden soll, bevor ihr Inhalt angezeigt wird. Es können auch bis zu viermal längere Koranrezitationen im Stehen zugelassen werden. Die meisten Koransuren sind selbst dafür zu lang, um sie in die Gebete einzubeziehen, muss das Teilen von Suren erlaubt werden  - die App merkt sich die Stelle dann und macht beim nächsten Gebet dort weiter, wo zuletzt aufgehört.";
+"SETTINGS.PRAYER_SECTION.FOOTER" = "Wähle, ob der Name der sich ändernden Koranrezitation im Stehen angezeigt werden soll, bevor ihr Inhalt angezeigt wird. Es können auch bis zu viermal längere Koranrezitationen im Stehen zugelassen werden. Die meisten Koransuren sind selbst dafür zu lang, um sie in die Gebete einzubeziehen, muss das Teilen von Suren erlaubt werden – die App merkt sich die Stelle dann und macht beim nächsten Gebet dort weiter, wo zuletzt aufgehört.";
 
 "SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Anzahl der Rakat";
 
@@ -147,3 +147,5 @@
 "SETTINGS.START_BUTTON.TITLE" = "Gebet starten";
 
 "SETTINGS.TITLE" = "Einstellungen";
+
+"SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT" = "Kapitel ";

@@ -20,8 +20,4 @@ struct PrayerViewModel {
   let nextArrow: Position.Arrow?
   let nextLine: String?
   let nextIsComponentBeginning: Bool
-
-  let audioMode: AudioMode
-  let movementSoundUrl: URL?
-  let speechSynthesizer: SpeechSynthesizer?
 }

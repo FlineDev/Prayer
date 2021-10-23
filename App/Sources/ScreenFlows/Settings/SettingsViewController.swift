@@ -284,9 +284,9 @@ class SettingsViewController: FormViewController {
       row.title = l10n.Audio.SpeechSynthesizer.speechRate
       row.value = viewModel.speechSynthesizerSpeechRate
       row.displayValueFor = { String(format: "%.2f", $0!) }
-      row.cell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
-      row.cell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
-      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.cell.slider.minimumValue = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
+      row.cell.slider.maximumValue = (AVSpeechUtteranceMaximumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
+      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.01)
       row.hidden = Condition.function([audioModeRowTag]) { form in
         let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
         return audioModeRow.value != AudioMode.speechSynthesizer
@@ -294,7 +294,7 @@ class SettingsViewController: FormViewController {
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }
-      self.flowDelegate?.setSpeechSynthesizerPitchMultiplier(rowValue)
+      self.flowDelegate?.setSpeechSynthesizerSpeechRate(rowValue)
     }
   }
 

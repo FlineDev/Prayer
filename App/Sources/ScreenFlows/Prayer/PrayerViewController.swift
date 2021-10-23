@@ -28,12 +28,6 @@ class PrayerViewController: UIViewController {
       else {
         currentLineLabel.textColor = Colors.primary
       }
-
-      if let movementSoundUrl = viewModel.movementSoundUrl {
-        AudioPlayer.shared.playSound(at: movementSoundUrl)
-      }
-
-      viewModel.speechSynthesizer?.speak(text: viewModel.currentLine)
     }
   }
 
@@ -93,11 +87,6 @@ class PrayerViewController: UIViewController {
     clearLineLabels()
     clearArrowLabels()
     clearSeparators()
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    viewModel.speechSynthesizer?.stop()
   }
 
   private func clearLineLabels() {

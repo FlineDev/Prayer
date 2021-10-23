@@ -298,7 +298,7 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
       }
       internal enum ChangingTextName {
-        /// Quran sura name
+        /// Show Quran sura name
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE")
       }
       internal enum RakatCount {
@@ -310,6 +310,11 @@ internal enum L10n {
       /// Start prayer
       internal static let title = L10n.tr("Localizable", "SETTINGS.START_BUTTON.TITLE")
     }
+  }
+
+  internal enum SpeechSynthesizer {
+    /// Surah 
+    internal static let bookEmojiReplacement = L10n.tr("Localizable", "SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

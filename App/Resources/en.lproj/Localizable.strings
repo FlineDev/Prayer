@@ -136,7 +136,7 @@
 
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Include long surah by splitting them";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Quran sura name";
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Show Quran sura name";
 
 "SETTINGS.PRAYER_SECTION.FOOTER" = "You can decide, if the name of the changing Quran recitation while standing should be displayed before showing its contents. You can also allow for up to four times longer Quran recitations while standing. Most Quranic surahs are even too long for that, to include them into your prayers, you have to allow splitting them – the app will remember the spliting position and continue from where you left off on the next prayer.";
 
@@ -147,3 +147,5 @@
 "SETTINGS.START_BUTTON.TITLE" = "Start prayer";
 
 "SETTINGS.TITLE" = "Settings";
+
+"SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT" = "Surah ";

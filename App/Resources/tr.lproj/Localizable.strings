@@ -136,7 +136,7 @@
 
 "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Uzun surelere parçalayarak izin ver";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Kur'an âyet adı";
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Kur'an âyet adı göster";
 
 "SETTINGS.PRAYER_SECTION.FOOTER" = "İçeriğini göstermeden önce ayakta dururken değişen Kuran kıraatinin adının görüntülenip görüntülenmeyeceğini seçin. Ayaktayken dört kata kadar daha uzun Kuran okumalarına izin vermek de mümkündür. Kuran surelerinin çoğu bunun için bile fazladan uzundur, bu sureleri de namaza eklemek için paylaşılmasına izin verilmelidir - uygulama daha sonra pasajı hatırlar ve bir sonraki dua ile kaldığı yerden devam etmesini sağlar.";
 
@@ -147,3 +147,5 @@
 "SETTINGS.START_BUTTON.TITLE" = "Namazı başlat";
 
 "SETTINGS.TITLE" = "Ayarlar";
+
+"SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT" = "Sure ";

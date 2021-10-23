@@ -90,13 +90,11 @@ class RakahComponent {
     case let .recitationPart(recitationPart):
       chapterNumber = recitationPart.recitation.rawValue
 
-      let title = recitationPart.recitation.localizedTitle
+      var title = recitationPart.recitation.localizedTitle
       if recitationPart.totalParts > 1 {
-        name = l10n.splitRecitationTitle(title, recitationPart.part, recitationPart.totalParts)
+        title = l10n.splitRecitationTitle(title, recitationPart.part, recitationPart.totalParts)
       }
-      else {
-        name = title
-      }
+      name = "📖\(chapterNumber!): \(title)"
 
       spokenTextLines = RakahComponent.readLinesFromRecitationFile(recitationPart: recitationPart)
       needsMovement = false
