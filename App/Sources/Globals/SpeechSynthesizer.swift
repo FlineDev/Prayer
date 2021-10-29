@@ -49,11 +49,18 @@ final class SpeechSynthesizer: NSObject {
     self.pitchMultiplier = pitchMultiplier
     self.speechRate = speechRate
 
+    try? AVAudioSession.sharedInstance()
+      .setCategory(.playback, mode: .voicePrompt, options: .mixWithOthers)
+
     super.init()
     synthesizer.delegate = self
   }
 
-  func speak(text: String, completion: @escaping () -> Void, delayCompletion: TimeInterval? = nil) {
+  func speak(
+    text: String,
+    completion: (() -> Void)? = nil,
+    delayCompletion: TimeInterval? = nil
+  ) {
     let textToSpeak: String = {
       if text.contains("📖") {
         return text.replacingOccurrences(of: "📖", with: L10n.SpeechSynthesizer.bookEmojiReplacement)

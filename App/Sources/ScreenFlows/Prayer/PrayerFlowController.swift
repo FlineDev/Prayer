@@ -53,10 +53,12 @@ class PrayerFlowController: FlowController {
     // initialize countdown
     let countdownCount = 5
     countdown = Countdown(startValue: countdownCount)
-    countdown?
-      .onCount { count in
-        self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
+    countdown?.onCount { count in
+      self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
+      if case .speechSynthesizer = self.audioMode {
+        self.speechSynthesizer.speak(text: String(count))
       }
+    }
 
     countdown?.onFinish { self.startPrayer() }
 
@@ -65,6 +67,10 @@ class PrayerFlowController: FlowController {
     presentingViewController.present(navCtrl, animated: true) {
       self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
       self.countdown?.start()
+
+      if case .speechSynthesizer = self.audioMode {
+        self.speechSynthesizer.speak(text: String(countdownCount))
+      }
     }
   }
 
