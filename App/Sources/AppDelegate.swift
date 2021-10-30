@@ -8,7 +8,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  // MARK: - Stored Instance Properties
   var window: UIWindow?
   var initialFlowCtrl: InitialFlowController?
 

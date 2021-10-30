@@ -13,7 +13,6 @@ protocol PrayerFlowDelegate: AnyObject {
 }
 
 class PrayerViewController: UIViewController {
-  // MARK: - Stored Instance Properties
   var viewModel: PrayerViewModel! {
     didSet {
       title = viewModel.currentComponentName
@@ -33,7 +32,6 @@ class PrayerViewController: UIViewController {
 
   weak var flowDelegate: PrayerFlowDelegate?
 
-  // MARK: - IBOutlets
   @IBOutlet private var previousLineLabel: UILabel!
   @IBOutlet private var currentLineLabel: UILabel!
   @IBOutlet private var nextLineLabel: UILabel!
@@ -45,7 +43,6 @@ class PrayerViewController: UIViewController {
   @IBOutlet private var currentLineComponentSeparator: UIImageView!
   @IBOutlet private var nextLineComponentSeparator: UIImageView!
 
-  // MARK: - Instance Methods
   override func viewDidLoad() {
     super.viewDidLoad()
 

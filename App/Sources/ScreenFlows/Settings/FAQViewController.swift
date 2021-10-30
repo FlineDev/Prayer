@@ -12,10 +12,8 @@ protocol FAQFlowDelegate: AnyObject {
 }
 
 class FAQViewController: UIViewController {
-  // MARK: - IBOutlets
   @IBOutlet private var collectionView: UICollectionView!
 
-  // MARK: - Stored Instance Properties
   private let l10n = L10n.Settings.Faq.self
   fileprivate let cellReuseIdentifier: String = "FAQCell"
 
@@ -29,7 +27,6 @@ class FAQViewController: UIViewController {
     }
   }
 
-  // MARK: - View Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -37,13 +34,11 @@ class FAQViewController: UIViewController {
     (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
   }
 
-  // MARK: - IBAction Methods
   @IBAction private func doneButtonPressed() {
     flowDelegate?.doneButtonPressed()
   }
 }
 
-// MARK: - UICollectionViewDataSource Protocol Implementation
 extension FAQViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     viewModel.entries.count
@@ -64,7 +59,6 @@ extension FAQViewController: UICollectionViewDataSource {
   }
 }
 
-// MARK: - FAQCollectionViewLayoutDelegate Protocol Implementation
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
   func question(at indexPath: IndexPath) -> String {
     viewModel.entries[indexPath.item].question

@@ -13,17 +13,14 @@ protocol FAQCollectionViewLayoutDelegate: AnyObject {
 
 @IBDesignable
 class FAQCollectionViewLayout: UICollectionViewLayout {
-  // MARK: - Stored Instance Properties
   var questionLabelFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
   var answerLabelFont = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
 
   private var cachedLayoutAttributes: [UICollectionViewLayoutAttributes] = []
   private var contentHeight: CGFloat = 0
 
-  // MARK: - IBOutlets
   weak var delegate: FAQCollectionViewLayoutDelegate?
 
-  // MARK: - Computed Instance Properties
   var columns: Int {
     var columns = Int(collectionView!.bounds.size.width) / preferredItemWidth
     if Int(collectionView!.bounds.size.width) % preferredItemWidth > preferredItemWidth / 2 {
@@ -40,11 +37,9 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
     return (collectionView!.bounds.size.width - allGapsWidth) / CGFloat(columns)
   }
 
-  // MARK: - IBInspectables
   @IBInspectable var preferredItemWidth: Int = 400
   @IBInspectable var gapWidth: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 12
 
-  // MARK: - Instance Methods
   override func prepare() {
     guard let collectionView = collectionView else {
       log.info("Skipping FAQ layout preparation."); return

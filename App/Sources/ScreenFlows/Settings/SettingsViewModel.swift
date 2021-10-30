@@ -8,13 +8,11 @@ import SwiftyUserDefaults
 import UIKit
 
 class SettingsViewModel {
-  // MARK: - Stored Instance Properties
   static let availableMovementSoundInstruments: [String] = [
     "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
     "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth",
   ]
 
-  // MARK: - Computed Instance Properties
   var rakatCount: Int {
     get { Defaults.rakatCount }
     set { Defaults.rakatCount = newValue }

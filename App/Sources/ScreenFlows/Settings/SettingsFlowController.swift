@@ -10,13 +10,11 @@ import SwiftyUserDefaults
 import UIKit
 
 class SettingsFlowController: InitialFlowController {
-  // MARK: - Stored Instance Properties
   private let l10n = L10n.Settings.self
   var settingsViewModel: SettingsViewModel!
   var settingsViewCtrl: SettingsViewController!
   var faqViewCtrl: FAQViewController?
 
-  // MARK: - Coordinator Methods
   override func start(from window: UIWindow) {
     settingsViewModel = SettingsViewModel()
     settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)

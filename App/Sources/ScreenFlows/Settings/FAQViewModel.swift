@@ -6,9 +6,7 @@
 import UIKit
 
 struct FAQViewModel {
-  // MARK: - Sub Types
   typealias FAQEntry = (question: String, answer: String)
 
-  // MARK: - Stored Instance Properties
   let entries: [FAQEntry]
 }

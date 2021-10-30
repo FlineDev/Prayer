@@ -30,7 +30,6 @@ protocol SettingsFlowDelegate: AnyObject {
 }
 
 class SettingsViewController: FormViewController {
-  // MARK: - Stored Instance Properties
   let l10n = L10n.Settings.self
   var viewModel: SettingsViewModel
 
@@ -38,7 +37,6 @@ class SettingsViewController: FormViewController {
 
   weak var flowDelegate: SettingsFlowDelegate?
 
-  // MARK: - Initializers
   init(
     viewModel: SettingsViewModel
   ) {
@@ -54,7 +52,6 @@ class SettingsViewController: FormViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
-  // MARK: - View Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -68,7 +65,6 @@ class SettingsViewController: FormViewController {
     setupFeedbackButton()
   }
 
-  // MARK: - Instance Methods
   private func setupAppSection() {
     let appSection =
       Section(header: l10n.AppSection.title, footer: l10n.AppSection.footer)

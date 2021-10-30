@@ -10,10 +10,8 @@ typealias Duration = DispatchTimeInterval
 
 /// A single unit a rakah can consists of.
 class RakahComponent {
-  // MARK: - Stored Type Properties
   static let durationPerCharacter = Timespan.milliseconds(55)
 
-  // MARK: - Computed Type Properties
   static var movementSoundInstrument: String {
     get {
       guard let instrument = UserDefaults.standard.string(forKey: "MovementSoundInstrument") else {
@@ -28,7 +26,6 @@ class RakahComponent {
     }
   }
 
-  // MARK: - Stored Instance Properties
   let name: String
   let chapterNumber: Int?
   let spokenTextLines: [String]
@@ -39,7 +36,6 @@ class RakahComponent {
 
   let l10n = L10n.RakahComponent.self
 
-  // MARK: - Initializers
   init(
     _ component: Rakah.Component,
     longSitting: Bool = false
@@ -167,7 +163,6 @@ class RakahComponent {
     }
   }
 
-  // MARK: - Type Methods
   private static func readLinesFromFile(named name: String) -> [String] {
     let spokenTextFilePath = Bundle.main.url(forResource: name, withExtension: "txt")!
     let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
@@ -190,7 +185,6 @@ class RakahComponent {
   }
 }
 
-// MARK: - Sub Types
 extension String {
   var estimatedReadingTime: Timespan {
     RakahComponent.durationPerCharacter * Double(utf8.count) + .milliseconds(500)  // add time for context switch

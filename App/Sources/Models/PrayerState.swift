@@ -6,7 +6,6 @@
 import UIKit
 
 class PrayerState {
-  // MARK: - Stored Instance Properties
   private let prayer: Prayer
   private let changingTextSpeedFactor: Double
   private let fixedTextsSpeedFactor: Double
@@ -24,7 +23,6 @@ class PrayerState {
   private var previousPositon: Position = .standing
   private var currentPosition: Position = .standing
 
-  // MARK: - Initializers
   init(
     prayer: Prayer,
     changingTextSpeedFactor: Double,
@@ -41,7 +39,6 @@ class PrayerState {
     self.speechSynthesizer = speechSynthesizer
   }
 
-  // MARK: - Computed Instance Properties
   private var currentRakah: Rakah { prayer.rakat[rakatIndex] }
   private var currentComponent: RakahComponent { currentRakah.components()[componentIndex] }
   var currentArrow: Position.Arrow? { previousPositon.arrow(forChangingTo: currentPosition) }
@@ -100,7 +97,6 @@ class PrayerState {
     return AudioPlayer.shared.movementSoundUrl(name: movementSound, instrument: movementSoundInstrument)
   }
 
-  // MARK: - Instance Methods
   func moveToNextLine() -> Bool {
     previousLine = currentLine
 

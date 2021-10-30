@@ -9,10 +9,8 @@ import SwiftyUserDefaults
 /// The "physical, mental, and spiritual act of worship that is observed five times every day at prescribed times."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Salah)
 class Prayer {
-  // MARK: - Stored Instance Properties
   let rakat: Rakat
 
-  // MARK: - Initializer
   /// Creates a new prayer automatically based on the number of rakat.
   /// Currently the logic covers creating the five daily prayers.
   ///

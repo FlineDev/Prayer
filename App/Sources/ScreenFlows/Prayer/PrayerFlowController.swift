@@ -8,7 +8,6 @@ import Imperio
 import UIKit
 
 class PrayerFlowController: FlowController {
-  // MARK: - Stored Instance Properties
   private let prayer: Prayer
   private let fixedTextSpeedsFactor: Double
   private let changingTextSpeedFactor: Double
@@ -23,7 +22,6 @@ class PrayerFlowController: FlowController {
   private var timer: Timer?
   private var speechSynthesizer: SpeechSynthesizer
 
-  // MARK: - Initializers
   init(
     prayer: Prayer,
     fixedTextSpeedsFactor: Double,
@@ -42,7 +40,6 @@ class PrayerFlowController: FlowController {
     self.speechSynthesizer = speechSynthesizer
   }
 
-  // MARK: - Instance Methods
   override func start(from presentingViewController: UIViewController) {
     // configure prayer view controller
     prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
