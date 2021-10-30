@@ -197,6 +197,10 @@ internal enum L10n {
       }
     }
     internal enum Audio {
+      internal enum OutputDevice {
+        /// Select output device (via AirPlay icon):
+        internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE")
+      }
       internal enum SpeechSynthesizer {
         /// Pitch multiplicator
         internal static let pitchMultiplier = L10n.tr("Localizable", "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER")
@@ -207,7 +211,7 @@ internal enum L10n {
       }
     }
     internal enum AudioSpeedSection {
-      /// Choose one of the two available audio modes. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.
+      /// Choose one of the two available audio modes, or both or none. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.
       internal static let footer = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.FOOTER")
       /// Audio & Speed Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.AUDIO_SPEED_SECTION.TITLE")

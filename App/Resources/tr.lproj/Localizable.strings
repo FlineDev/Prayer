@@ -88,6 +88,8 @@
 
 "SETTINGS.APP_SECTION.TITLE" = "Uygulama ayarları";
 
+"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Çıkış cihazını seçin (AirPlay simgesi ile):";
+
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Pitch Çarpanı";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Konuşma hızı";
@@ -100,7 +102,7 @@
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Diğer metin hızı";
 
-"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Mevcut iki ses modundan birini seçin. İlkinde, bir dua sırasında pozisyon değiştirildiğinde sadece kısa bir ses çalınır. İkinci modda, tüm metin yüksek sesle okunur, böylece yalnızca dinleyerek kılınabilir. Bu, cihaz cebinizde kilitliyken de çalışır. Bu mesela aynı mescitteki diğer kişiler farkında olmadan tercih edilen dilde kılmak için faydalı olabilir.";
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Mevcut iki ses modundan birini seçin, yada ikisinide yada hiç birini. İlkinde, bir dua sırasında pozisyon değiştirildiğinde sadece kısa bir ses çalınır. İkinci modda, tüm metin yüksek sesle okunur, böylece yalnızca dinleyerek kılınabilir. Bu, cihaz cebinizde kilitliyken de çalışır. Bu mesela aynı mescitteki diğer kişiler farkında olmadan tercih edilen dilde kılmak için faydalı olabilir.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket tonu";
 

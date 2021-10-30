@@ -3,13 +3,16 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+// 4. Speaker / Bluetooth chooser
+
 import AVKit
 import Eureka
 import HandyUIKit
 import HandySwift
 import Imperio
-import UIKit
 import SwiftyUserDefaults
+import UIKit
+import ViewRow
 
 protocol SettingsFlowDelegate: AnyObject {
   func setRakat(_ rakatCount: Int)
@@ -109,6 +112,7 @@ class SettingsViewController: FormViewController {
       <<< speechSynthesizerVoiceRow()
       <<< speechSynthesizerSpeechRateRow()
       <<< speechSynthesizerPitchMultiplierRow()
+      <<< volumeViewRow()
 
     form.append(audioAndSpeedSection)
   }
@@ -327,6 +331,34 @@ class SettingsViewController: FormViewController {
     .onChange { row in
       guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }
       self.flowDelegate?.setSpeechSynthesizerSpeechRate(rowValue)
+    }
+  }
+
+  private func volumeViewRow() -> ViewRow<AudioVolumeView> {
+    ViewRow<AudioVolumeView> { row in
+      row.title = "🔈   " + l10n.Audio.OutputDevice.title
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode == nil || self.audioMode == AudioMode.none
+      }
+    }
+    .cellSetup { cell, _ in
+      let horizontalMargin: CGFloat = 20
+      let verticalMargin: CGFloat = 10
+      let volumeSliderHeight: CGFloat = 18
+
+      cell.view = AudioVolumeView(
+        frame: CGRect(
+          width: UIScreen.main.bounds.width - 2 * horizontalMargin,
+          height: volumeSliderHeight + 2 * verticalMargin
+        )
+      )
+
+      cell.titleLeftMargin = horizontalMargin
+      cell.titleRightMargin = horizontalMargin
+
+      cell.viewLeftMargin = horizontalMargin
+      cell.viewRightMargin = horizontalMargin
+      cell.viewBottomMargin = 5
     }
   }
 

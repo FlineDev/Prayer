@@ -88,6 +88,8 @@
 
 "SETTINGS.APP_SECTION.TITLE" = "App-Einstellungen";
 
+"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Ausgabegerät festlegen (mit AirPlay-Icon):";
+
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Tonhöhen-Multiplikator";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Sprechgeschwindigkeit";
@@ -100,7 +102,7 @@
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Geschwindigkeit anderer Texte";
 
-"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Wähle einen der beiden verfügbaren Audiomodi. Im ersten wird nur ein kurzer Ton abgespielt, wenn während eines Gebets die Position gewechselt wird. Im zweiten Modus wird der gesamte Text laut vorgelesen, sodass man auch nur zuhören kann. Dies funktioniert auch dann, wenn das Gerät gesperrt in der Hosentasche liegt. Dies kann zum Beispiel nützlich sein, wenn die Gebete in der bevorzugten Sprache verrichtet werden sollen, ohne dass andere im selben Gebetsraum dies mitbekommen.";
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Wähle einen der zwei verfügbaren Audiomodi, oder beide oder keines. Im ersten wird nur ein kurzer Ton abgespielt, wenn während eines Gebets die Position gewechselt wird. Im zweiten Modus wird der gesamte Text laut vorgelesen, sodass man auch nur zuhören kann. Dies funktioniert auch dann, wenn das Gerät gesperrt in der Hosentasche liegt. Dies kann zum Beispiel nützlich sein, wenn die Gebete in der bevorzugten Sprache verrichtet werden sollen, ohne dass andere im selben Gebetsraum dies mitbekommen.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Bewegungsgeräusch";
 

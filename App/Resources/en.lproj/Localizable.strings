@@ -88,6 +88,8 @@
 
 "SETTINGS.APP_SECTION.TITLE" = "App Settings";
 
+"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Select output device (via AirPlay icon):";
+
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Pitch multiplicator";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Speech rate";
@@ -100,7 +102,7 @@
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Other texts speed";
 
-"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Choose one of the two available audio modes. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.";
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Choose one of the two available audio modes, or both or none. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound";
 
