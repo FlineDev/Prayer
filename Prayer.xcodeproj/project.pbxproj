@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06625A27243C9E001D8531 /* AudioMode.swift */; };
 		2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B432646FD7A00A4D8E3 /* HandySwift */; };
 		2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B462646FD9200A4D8E3 /* HandyUIKit */; };
 		2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B492646FDC800A4D8E3 /* Eureka */; };
@@ -29,9 +30,12 @@
 		2E99770B2715A7B500F61BFE /* 100_The-Chargers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E99770D2715A7B500F61BFE /* 100_The-Chargers.txt */; };
 		2E9977102715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977122715A7BD00F61BFE /* 101_The-Sudden-Calamity.txt */; };
 		2E9977152715A7C500F61BFE /* 102_Greed-for-More-and-More.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9977172715A7C500F61BFE /* 102_Greed-for-More-and-More.txt */; };
+		2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */; };
 		2EAF638A271AAC9D00145D5D /* RecitationPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF6389271AAC9D00145D5D /* RecitationPart.swift */; };
 		2EAF6390271ADF3900145D5D /* NotificationToast in Frameworks */ = {isa = PBXBuildFile; productRef = 2EAF638F271ADF3900145D5D /* NotificationToast */; };
 		2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */; };
+		2ED15D71272DDCC3003BC370 /* AudioVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */; };
+		2ED15D74272DDF16003BC370 /* ViewRow in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED15D73272DDF16003BC370 /* ViewRow */; };
 		A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */; };
 		A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */; };
 		A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF92222EE5700A7EB3A /* Assets.swift */; };
@@ -131,6 +135,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E06625A27243C9E001D8531 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
 		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
 		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
@@ -172,8 +177,10 @@
 		2E9977162715A7C500F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
 		2E9977182715A7C600F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
 		2E9977192715A7C700F61BFE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/102_Greed-for-More-and-More.txt"; sourceTree = "<group>"; };
+		2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		2EAF6389271AAC9D00145D5D /* RecitationPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitationPart.swift; sourceTree = "<group>"; };
 		2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVolumeView.swift; sourceTree = "<group>"; };
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
 		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
 		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
@@ -323,6 +330,7 @@
 				2E6C0B56264701D500A4D8E3 /* SwiftyBeaver in Frameworks */,
 				2E6C0B592647023900A4D8E3 /* SwiftyTimer in Frameworks */,
 				2E6C0B5C2647025800A4D8E3 /* SwiftyUserDefaults in Frameworks */,
+				2ED15D74272DDF16003BC370 /* ViewRow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +376,7 @@
 				A1D1EFC31E393F080029C009 /* Countdown.swift */,
 				A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */,
 				A1370CD71E368DF300B55D9E /* Logger.swift */,
+				2EA2CDF5271D2AC7009172C3 /* SpeechSynthesizer.swift */,
 				2EAF6391271AE0A400145D5D /* Extensions */,
 			);
 			path = Globals;
@@ -386,6 +395,7 @@
 		A11783EE21445DCE00B41A1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E06625A27243C9E001D8531 /* AudioMode.swift */,
 				A1A6A4651E3A819D00A909FF /* Position.swift */,
 				A16484E21E243AAC008EC78C /* Prayer.swift */,
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
@@ -435,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				A11830EE1E591FD900CBE087 /* Settings.storyboard */,
+				2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */,
 				A11830F81E59BDE200CBE087 /* FAQCollectionViewCell.swift */,
 				A11830F01E5932BC00CBE087 /* FAQCollectionViewLayout.swift */,
 				A11830EA1E591EF600CBE087 /* FAQViewController.swift */,
@@ -686,6 +697,7 @@
 				2E6C0B582647023900A4D8E3 /* SwiftyTimer */,
 				2E6C0B5B2647025800A4D8E3 /* SwiftyUserDefaults */,
 				2EAF638F271ADF3900145D5D /* NotificationToast */,
+				2ED15D73272DDF16003BC370 /* ViewRow */,
 			);
 			productName = Prayer;
 			productReference = A164848B1E243834008EC78C /* Prayer.app */;
@@ -781,6 +793,7 @@
 				2E6C0B572647023900A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyTimer" */,
 				2E6C0B5A2647025800A4D8E3 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 				2EAF638E271ADF3900145D5D /* XCRemoteSwiftPackageReference "NotificationToast" */,
+				2ED15D72272DDF16003BC370 /* XCRemoteSwiftPackageReference "ViewRow" */,
 			);
 			productRefGroup = A164848C1E243834008EC78C /* Products */;
 			projectDirPath = "";
@@ -902,7 +915,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
 		};
 		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -916,7 +929,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -930,7 +943,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -941,7 +954,9 @@
 			files = (
 				A16484D41E243898008EC78C /* AppDelegate.swift in Sources */,
 				A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */,
+				2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */,
 				A1D1EFBE1E391C700029C009 /* AudioPlayer.swift in Sources */,
+				2ED15D71272DDCC3003BC370 /* AudioVolumeView.swift in Sources */,
 				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
 				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,
 				A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */,
@@ -963,6 +978,7 @@
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
+				2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
 				2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */,
@@ -1749,6 +1765,14 @@
 				kind = branch;
 			};
 		};
+		2ED15D72272DDF16003BC370 /* XCRemoteSwiftPackageReference "ViewRow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EurekaCommunity/ViewRow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1796,6 +1820,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2EAF638E271ADF3900145D5D /* XCRemoteSwiftPackageReference "NotificationToast" */;
 			productName = NotificationToast;
+		};
+		2ED15D73272DDF16003BC370 /* ViewRow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED15D72272DDF16003BC370 /* XCRemoteSwiftPackageReference "ViewRow" */;
+			productName = ViewRow;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

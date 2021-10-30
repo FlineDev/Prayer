@@ -1,3 +1,11 @@
+"AUDIO_MODE.MOVEMENT_SOUND" = "Sound for position changes";
+
+"AUDIO_MODE.MOVEMENT_SOUND_AND_SPEECH_SYNTHESIZER" = "Both (sound + voice)";
+
+"AUDIO_MODE.NONE" = "No audio (muted)";
+
+"AUDIO_MODE.SPEECH_SYNTHESIZER" = "Reading computer voice";
+
 "PRAYER_VIEW.COUNTDOWN.NAME" = "Countdown";
 
 "RAKAH_COMPONENT.OPENING_SUPPLICATION.NAME" = "Opening Supplication";
@@ -74,9 +82,31 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Those Who Deny The Truth)";
 
-"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Change app language in ⚙️ Settings app";
+"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Change language in ⚙️ Settings";
+
+"SETTINGS.APP_SECTION.FOOTER" = "The language of the app determines the language of the texts shown during a prayer. Apple provides an app-specific language setting in the Settings app. Please use it to change the language of this app and the prayers.";
 
 "SETTINGS.APP_SECTION.TITLE" = "App Settings";
+
+"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Select output device (via AirPlay icon):";
+
+"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Pitch multiplicator";
+
+"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Speech rate";
+
+"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.VOICE" = "Voice";
+
+"SETTINGS.AUDIO_SPEED_SECTION.AUDIO_MODE.TITLE" = "Audio Mode";
+
+"SETTINGS.AUDIO_SPEED_SECTION.CHANGING_TEXT.TITLE" = "Quran sura speed";
+
+"SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Other texts speed";
+
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Choose one of the two available audio modes, or both or none. The first only plays a short sound when changing positions during a prayer. The second will instead read out loud the full prayer text so you can just listen. This also works when the device is locked in your pocket. This can for example be useful when you want to do your prayers in your preferred language without others in the same Prayer room noticing it.";
+
+"SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound";
+
+"SETTINGS.AUDIO_SPEED_SECTION.TITLE" = "Audio & Speed Settings";
 
 "SETTINGS.CHANGE_MOVEMENT_SOUND_SHEET.TITLE" = "Choose movement instrument";
 
@@ -104,21 +134,17 @@
 
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Do translations not necessarily change the meaning of the original text?";
 
-"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Send Feedback";
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback";
 
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE" = "Current position in split Surah was cleared.";
 
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Allow longer recitations";
 
-"SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Include long surah by splitting them";
+"SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Split & include lon surah";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT.TITLE" = "Quran sura speed";
+"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Show Quran sura name";
 
-"SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Quran sura name";
-
-"SETTINGS.PRAYER_SECTION.FIXED_TEXTS.TITLE" = "Other texts speed";
-
-"SETTINGS.PRAYER_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Movement sound";
+"SETTINGS.PRAYER_SECTION.FOOTER" = "You can decide, if the name of the changing Quran recitation while standing should be displayed before showing its contents. You can also allow for up to four times longer Quran recitations while standing. Most Quranic surahs are even too long for that, to include them into your prayers, you have to allow splitting them – the app will remember the spliting position and continue from where you left off on the next prayer.";
 
 "SETTINGS.PRAYER_SECTION.RAKAT_COUNT.TITLE" = "Rakat count";
 
@@ -127,3 +153,5 @@
 "SETTINGS.START_BUTTON.TITLE" = "Start prayer";
 
 "SETTINGS.TITLE" = "Settings";
+
+"SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT" = "Chapter ";

@@ -3,19 +3,18 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import Imperio
 import SafariServices
 import SwiftyUserDefaults
 import UIKit
 
 class SettingsFlowController: InitialFlowController {
-  // MARK: - Stored Instance Properties
   private let l10n = L10n.Settings.self
   var settingsViewModel: SettingsViewModel!
   var settingsViewCtrl: SettingsViewController!
   var faqViewCtrl: FAQViewController?
 
-  // MARK: - Coordinator Methods
   override func start(from window: UIWindow) {
     settingsViewModel = SettingsViewModel()
     settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
@@ -55,6 +54,22 @@ extension SettingsFlowController: SettingsFlowDelegate {
     settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
   }
 
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice) {
+    settingsViewModel.speechSynthesizerVoice = voice
+  }
+
+  func setSpeechSynthesizerSpeechRate(_ speechRate: Float) {
+    settingsViewModel.speechSynthesizerSpeechRate = speechRate
+  }
+
+  func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float) {
+    settingsViewModel.speechSynthesizerPitchMultiplier = pitchMultiplier
+  }
+
+  func setAudioMode(_ audioMode: AudioMode) {
+    settingsViewModel.audioMode = audioMode
+  }
+
   func showLanguageSettings() {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
@@ -83,16 +98,18 @@ extension SettingsFlowController: SettingsFlowDelegate {
       allowSplittingRecitations: settingsViewModel.allowSplittingRecitations
     )
 
-    let prayerCoordinator = PrayerFlowController(
+    let prayerFlowCtrl = PrayerFlowController(
       prayer: prayer,
       fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
       changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
       showChangingTextName: settingsViewModel.showChangingTextName,
-      movementSoundInstrument: settingsViewModel.movementSoundInstrument
+      audioMode: settingsViewModel.audioMode,
+      movementSoundInstrument: settingsViewModel.movementSoundInstrument,
+      speechSynthesizer: settingsViewModel.speechSynthesizer
     )
 
-    add(subFlowController: prayerCoordinator)
-    prayerCoordinator.start(from: settingsViewCtrl)
+    add(subFlowController: prayerFlowCtrl)
+    prayerFlowCtrl.start(from: settingsViewCtrl)
   }
 
   private func showFAQ() {

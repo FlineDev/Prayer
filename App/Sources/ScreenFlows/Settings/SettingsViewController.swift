@@ -3,11 +3,16 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+// 4. Speaker / Bluetooth chooser
+
+import AVKit
 import Eureka
 import HandyUIKit
+import HandySwift
 import Imperio
-import UIKit
 import SwiftyUserDefaults
+import UIKit
+import ViewRow
 
 protocol SettingsFlowDelegate: AnyObject {
   func setRakat(_ rakatCount: Int)
@@ -16,6 +21,10 @@ protocol SettingsFlowDelegate: AnyObject {
   func setShowChangingTextName(_ showChangingTextName: Bool)
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool)
   func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool)
+  func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice)
+  func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float)
+  func setSpeechSynthesizerSpeechRate(_ speechRate: Float)
+  func setAudioMode(_ audioMode: AudioMode)
   func showLanguageSettings()
   func chooseInstrument(_ instrument: String)
   func startPrayer()
@@ -24,13 +33,19 @@ protocol SettingsFlowDelegate: AnyObject {
 }
 
 class SettingsViewController: FormViewController {
-  // MARK: - Stored Instance Properties
   let l10n = L10n.Settings.self
   var viewModel: SettingsViewModel
 
+  private let audioModeRowTag: String = "AudioMode"
+
   weak var flowDelegate: SettingsFlowDelegate?
 
-  // MARK: - Initializers
+  private var audioMode: AudioMode? {
+    UIDevice.current.userInterfaceIdiom == .pad
+      ? (form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>).value
+      : (form.rowBy(tag: self.audioModeRowTag) as! PushRow<AudioMode>).value
+  }
+
   init(
     viewModel: SettingsViewModel
   ) {
@@ -46,7 +61,6 @@ class SettingsViewController: FormViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
-  // MARK: - View Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -54,20 +68,21 @@ class SettingsViewController: FormViewController {
 
     setupAppSection()
     setupPrayerSection()
+    setupAudioAndSpeedSection()
     setupStartSection()
     setupFAQButton()
     setupFeedbackButton()
   }
 
-  // MARK: - Instance Methods
   private func setupAppSection() {
     let appSection =
-      Section(l10n.AppSection.title)
+      Section(header: l10n.AppSection.title, footer: l10n.AppSection.footer)
       <<< ButtonRow { row in
         row.title = l10n.AppSection.ChangeLanguageButton.title
       }
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
+        cell.imageView?.image = UIImage(systemName: "flag")
       }
       .onCellSelection { _, _ in
         self.flowDelegate?.showLanguageSettings()
@@ -78,22 +93,69 @@ class SettingsViewController: FormViewController {
 
   private func setupPrayerSection() {
     let prayerSection =
-      Section(l10n.PrayerSection.title)
+      Section(header: l10n.PrayerSection.title, footer: l10n.PrayerSection.footer)
       <<< rakatCountRow()
-      <<< fixedTextsRow()
-      <<< changingTextRow()
       <<< changingTextNameRow()
       <<< allowLongerRecitationsRow()
       <<< allowSplittingRecitationsRow()
-      <<< movementSoundInstrumentRow()
 
     form.append(prayerSection)
   }
 
-  fileprivate func rakatCountRow() -> IntRow {
-    return IntRow { row in
+  private func setupAudioAndSpeedSection() {
+    let audioAndSpeedSection =
+      Section(header: l10n.AudioSpeedSection.title, footer: l10n.AudioSpeedSection.footer)
+      <<< (UIDevice.current.userInterfaceIdiom == .pad ? audioModeSegmentedRow() : audioModePushRow())
+      <<< fixedTextSpeedRow()
+      <<< changingTextSpeedRow()
+      <<< movementSoundInstrumentRow()
+      <<< speechSynthesizerVoiceRow()
+      <<< speechSynthesizerSpeechRateRow()
+      <<< speechSynthesizerPitchMultiplierRow()
+      <<< volumeViewRow()
+
+    form.append(audioAndSpeedSection)
+  }
+
+  private func audioModePushRow() -> PushRow<AudioMode> {
+    PushRow<AudioMode>(audioModeRowTag) { row in
+      row.title = l10n.AudioSpeedSection.AudioMode.title
+      row.options = AudioMode.allCases
+      row.value = viewModel.audioMode
+      row.displayValueFor = { $0?.displayDescription }
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "waveform")
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Audio mode row had nil value."); return }
+      self.flowDelegate?.setAudioMode(rowValue)
+    }
+  }
+
+  private func audioModeSegmentedRow() -> SegmentedRow<AudioMode> {
+    SegmentedRow<AudioMode>(audioModeRowTag) { row in
+      row.title = l10n.AudioSpeedSection.AudioMode.title
+      row.options = AudioMode.allCases
+      row.value = viewModel.audioMode
+      row.displayValueFor = { $0?.displayDescription }
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "waveform")
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Audio mode row had nil value."); return }
+      self.flowDelegate?.setAudioMode(rowValue)
+    }
+  }
+
+  private func rakatCountRow() -> IntRow {
+    IntRow { row in
       row.title = l10n.PrayerSection.RakatCount.title
       row.value = viewModel.rakatCount
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "number")
     }
     .onCellHighlightChanged { cell, row in
       if cell.textField.isFirstResponder {
@@ -106,13 +168,17 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func fixedTextsRow() -> SliderRow {
-    return SliderRow { row in
-      row.title = l10n.PrayerSection.FixedTexts.title
+  private func fixedTextSpeedRow() -> SliderRow {
+    SliderRow { row in
+      row.title = "🔂    " + l10n.AudioSpeedSection.FixedTexts.title
       row.value = Float(viewModel.fixedTextsSpeedFactor)
+      row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != AudioMode.none
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
@@ -120,13 +186,17 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func changingTextRow() -> SliderRow {
-    return SliderRow { row in
-      row.title = l10n.PrayerSection.ChangingText.title
+  private func changingTextSpeedRow() -> SliderRow {
+    SliderRow { row in
+      row.title = "🔀    " + l10n.AudioSpeedSection.ChangingText.title
       row.value = Float(viewModel.changingTextSpeedFactor)
+      row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != AudioMode.none
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
@@ -134,10 +204,13 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func changingTextNameRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func changingTextNameRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.ChangingTextName.title
       row.value = viewModel.showChangingTextName
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "character.book.closed")
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Show changing text name had nil value."); return }
@@ -145,10 +218,13 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func allowLongerRecitationsRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func allowLongerRecitationsRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.AllowLongerRecitations.title
       row.value = viewModel.allowLongerRecitations
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "clock.badge.checkmark")
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Allow longer recitations had nil value."); return }
@@ -165,10 +241,13 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func allowSplittingRecitationsRow() -> SwitchRow {
-    return SwitchRow { row in
+  private func allowSplittingRecitationsRow() -> SwitchRow {
+    SwitchRow { row in
       row.title = l10n.PrayerSection.AllowSplittingRecitations.title
       row.value = viewModel.allowSplittingRecitations
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "scissors")
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Allow splitting recitations had nil value."); return }
@@ -176,11 +255,17 @@ class SettingsViewController: FormViewController {
     }
   }
 
-  fileprivate func movementSoundInstrumentRow() -> PushRow<String> {
-    return PushRow<String> { row in
-      row.title = l10n.PrayerSection.MovementSoundInstrument.title
+  private func movementSoundInstrumentRow() -> PushRow<String> {
+    PushRow<String> { row in
+      row.title = l10n.AudioSpeedSection.MovementSoundInstrument.title
       row.options = SettingsViewModel.availableMovementSoundInstruments
       row.value = viewModel.movementSoundInstrument
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "guitars")
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Instrument had nil value."); return }
@@ -188,11 +273,100 @@ class SettingsViewController: FormViewController {
     }
   }
 
+  private func speechSynthesizerVoiceRow() -> PushRow<AVSpeechSynthesisVoice> {
+    PushRow<AVSpeechSynthesisVoice> { row in
+      row.title = l10n.Audio.SpeechSynthesizer.voice
+      row.options = SpeechSynthesizer.SupportedLanguage.current.voices
+      row.value = viewModel.speechSynthesizerVoice
+      row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "person.wave.2")
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Synthesizer voice had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerVoice(rowValue)
+    }
+    .onPresent { from, to in
+      to.selectableRowCellUpdate = { cell, row in
+        cell.textLabel?.text = row.selectableValue!.name
+        cell.detailTextLabel?.text = Locale.current.localizedString(forIdentifier: row.selectableValue!.language)
+      }
+    }
+  }
+
+  private func speechSynthesizerPitchMultiplierRow() -> SliderRow {
+    SliderRow { row in
+      row.title = "↕️   " + l10n.Audio.SpeechSynthesizer.pitchMultiplier
+      row.value = viewModel.speechSynthesizerPitchMultiplier
+      row.displayValueFor = { String(format: "%.2f", $0!) }
+      row.cell.slider.minimumValue = 0.5
+      row.cell.slider.maximumValue = 2.0
+      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Pitch multiplier had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerPitchMultiplier(rowValue)
+    }
+  }
+
+  private func speechSynthesizerSpeechRateRow() -> SliderRow {
+    SliderRow { row in
+      row.title = "🐇   " + l10n.Audio.SpeechSynthesizer.speechRate
+      row.value = viewModel.speechSynthesizerSpeechRate
+      row.displayValueFor = { String(format: "%.2f", $0!) }
+      row.cell.slider.minimumValue = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
+      row.cell.slider.maximumValue = (AVSpeechUtteranceMaximumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
+      row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.01)
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }
+      self.flowDelegate?.setSpeechSynthesizerSpeechRate(rowValue)
+    }
+  }
+
+  private func volumeViewRow() -> ViewRow<AudioVolumeView> {
+    ViewRow<AudioVolumeView> { row in
+      row.title = "🔈   " + l10n.Audio.OutputDevice.title
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode == nil || self.audioMode == AudioMode.none
+      }
+    }
+    .cellSetup { cell, _ in
+      let horizontalMargin: CGFloat = 20
+      let verticalMargin: CGFloat = 10
+      let volumeSliderHeight: CGFloat = 18
+
+      cell.view = AudioVolumeView(
+        frame: CGRect(
+          width: UIScreen.main.bounds.width - 2 * horizontalMargin,
+          height: volumeSliderHeight + 2 * verticalMargin
+        )
+      )
+
+      cell.titleLeftMargin = horizontalMargin
+      cell.titleRightMargin = horizontalMargin
+
+      cell.viewLeftMargin = horizontalMargin
+      cell.viewRightMargin = horizontalMargin
+      cell.viewBottomMargin = 5
+    }
+  }
+
   private func setupStartSection() {
     let startSection =
       Section()
       <<< ButtonRow { row in
-        row.title = L10n.Settings.StartButton.title
+        row.title = "🕋   " + L10n.Settings.StartButton.title
       }
       .cellSetup { cell, _ in
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)

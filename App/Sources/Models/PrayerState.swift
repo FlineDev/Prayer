@@ -6,11 +6,12 @@
 import UIKit
 
 class PrayerState {
-  // MARK: - Stored Instance Properties
   private let prayer: Prayer
   private let changingTextSpeedFactor: Double
   private let fixedTextsSpeedFactor: Double
+  private let audioMode: AudioMode
   private let movementSoundInstrument: String
+  private let speechSynthesizer: SpeechSynthesizer
 
   private var rakatIndex: Int = 0
   private var componentIndex: Int = 0
@@ -22,20 +23,22 @@ class PrayerState {
   private var previousPositon: Position = .standing
   private var currentPosition: Position = .standing
 
-  // MARK: - Initializers
   init(
     prayer: Prayer,
     changingTextSpeedFactor: Double,
     fixedTextsSpeedFactor: Double,
-    movementSoundInstrument: String
+    audioMode: AudioMode,
+    movementSoundInstrument: String,
+    speechSynthesizer: SpeechSynthesizer
   ) {
     self.prayer = prayer
     self.changingTextSpeedFactor = changingTextSpeedFactor
     self.fixedTextsSpeedFactor = fixedTextsSpeedFactor
+    self.audioMode = audioMode
     self.movementSoundInstrument = movementSoundInstrument
+    self.speechSynthesizer = speechSynthesizer
   }
 
-  // MARK: - Computed Instance Properties
   private var currentRakah: Rakah { prayer.rakat[rakatIndex] }
   private var currentComponent: RakahComponent { currentRakah.components()[componentIndex] }
   var currentArrow: Position.Arrow? { previousPositon.arrow(forChangingTo: currentPosition) }
@@ -48,11 +51,16 @@ class PrayerState {
   var currentLineReadingTime: TimeInterval {
     var readingTime = currentLine.estimatedReadingTime / readingSpeedupFactor
 
-    if lineIndex == 0 && currentComponent.needsMovement {
-      readingTime += previousPositon.movementDuration(forChangingTo: currentPosition)
+    if let movementDelay = movementDelay {
+      readingTime += movementDelay
     }
 
     return readingTime
+  }
+
+  var movementDelay: TimeInterval? {
+    guard lineIndex == 0 && currentComponent.needsMovement else { return nil }
+    return previousPositon.movementDuration(forChangingTo: currentPosition)
   }
 
   var currentMovementSoundUrl: URL? {
@@ -89,7 +97,6 @@ class PrayerState {
     return AudioPlayer.shared.movementSoundUrl(name: movementSound, instrument: movementSoundInstrument)
   }
 
-  // MARK: - Instance Methods
   func moveToNextLine() -> Bool {
     previousLine = currentLine
 
@@ -122,8 +129,7 @@ class PrayerState {
       currentIsComponentBeginning: lineIndex == 0,
       nextArrow: nextArrow,
       nextLine: nextLine,
-      nextIsComponentBeginning: lineIndex + 1 == currentComponent.spokenTextLines.count,
-      movementSoundUrl: movementSoundUrl
+      nextIsComponentBeginning: lineIndex + 1 == currentComponent.spokenTextLines.count
     )
   }
 }

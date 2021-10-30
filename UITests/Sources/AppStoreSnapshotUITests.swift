@@ -6,11 +6,9 @@
 import XCTest
 
 class AppStoreSnapshotUITests: XCTestCase {
-  // MARK: - Stored Instance Properties
   let app = XCUIApplication()
   var uiMode: String = "light"
 
-  // MARK: - Test Methods
   override func setUp() {
     super.setUp()
 
@@ -63,7 +61,6 @@ class AppStoreSnapshotUITests: XCTestCase {
     snapshot("3-Ruku-\(uiMode)")
   }
 
-  // MARK: - Helper Methods
   private func localizedString(key: String) -> String {
     let language = String(deviceLanguage.prefix(upTo: deviceLanguage.index(deviceLanguage.startIndex, offsetBy: 2)))
     let localizationBundle = Bundle(
