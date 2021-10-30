@@ -78,7 +78,7 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Jene, welche die Wahrheit leugnen)";
 
-"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Sprache ändern in der ⚙️ Einstellungen-App";
+"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Sprache ändern in ⚙️ Einstellungen";
 
 "SETTINGS.APP_SECTION.FOOTER" = "Die Sprache der App bestimmt die Sprache der Texte, die während eines Gebets angezeigt werden. Apple bietet eine app-spezifische Spracheinstellung in der Einstellungen-App. Bitte dort anpassen, um die Sprache dieser App und der Gebete zu ändern.";
 
@@ -134,7 +134,7 @@
 
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE" = "Erlaube längere Rezitationen";
 
-"SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Inkludiere lange Suren durch Aufteilung";
+"SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE" = "Lange Suren aufteilen & inkludieren";
 
 "SETTINGS.PRAYER_SECTION.CHANGING_TEXT_NAME.TITLE" = "Name der Koransure einblenden";
 
