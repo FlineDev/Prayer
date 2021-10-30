@@ -128,7 +128,7 @@
 
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION" = "Ändern Übersetzungen nicht zwangsweise die Bedeutung des Originaltextes?";
 
-"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback senden";
+"SETTINGS.FEEDBACK_BUTTON.TITLE" = "Feedback";
 
 "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.RESET_MESSAGE" = "Aktuelle Position in geteilter Sure wurde gelöscht.";
 

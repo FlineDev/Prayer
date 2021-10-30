@@ -37,6 +37,12 @@ class SettingsViewController: FormViewController {
 
   weak var flowDelegate: SettingsFlowDelegate?
 
+  private var audioMode: AudioMode? {
+    UIDevice.current.userInterfaceIdiom == .pad
+    ? (form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>).value
+    : (form.rowBy(tag: self.audioModeRowTag) as! PushRow<AudioMode>).value
+  }
+
   init(
     viewModel: SettingsViewModel
   ) {
@@ -96,7 +102,7 @@ class SettingsViewController: FormViewController {
   private func setupAudioAndSpeedSection() {
     let audioAndSpeedSection =
       Section(header: l10n.AudioSpeedSection.title, footer: l10n.AudioSpeedSection.footer)
-      <<< audioModeRow()
+      <<< (UIDevice.current.userInterfaceIdiom == .pad ? audioModeSegmentedRow() : audioModePushRow())
       <<< fixedTextSpeedRow()
       <<< changingTextSpeedRow()
       <<< movementSoundInstrumentRow()
@@ -107,11 +113,25 @@ class SettingsViewController: FormViewController {
     form.append(audioAndSpeedSection)
   }
 
-  private func audioModeRow() -> SegmentedRow<AudioMode> {
+  private func audioModePushRow() -> PushRow<AudioMode> {
+    PushRow<AudioMode>(audioModeRowTag) { row in
+      row.title = l10n.AudioSpeedSection.AudioMode.title
+      row.options = AudioMode.allCases
+      row.value = viewModel.audioMode
+      row.displayValueFor = { $0?.displayDescription }
+    }
+    .cellSetup { cell, _ in
+      cell.imageView?.image = UIImage(systemName: "waveform")
+    }
+    .onChange { row in
+      guard let rowValue = row.value else { log.error("Audio mode row had nil value."); return }
+      self.flowDelegate?.setAudioMode(rowValue)
+    }
+  }
+
+  private func audioModeSegmentedRow() -> SegmentedRow<AudioMode> {
     SegmentedRow<AudioMode>(audioModeRowTag) { row in
-      if UIDevice.current.userInterfaceIdiom != .phone {
-        row.title = l10n.AudioSpeedSection.AudioMode.title
-      }
+      row.title = l10n.AudioSpeedSection.AudioMode.title
       row.options = AudioMode.allCases
       row.value = viewModel.audioMode
       row.displayValueFor = { $0?.displayDescription }
@@ -152,10 +172,7 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.movementSound
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
@@ -171,10 +188,7 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.movementSound
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
@@ -238,10 +252,7 @@ class SettingsViewController: FormViewController {
       row.title = l10n.AudioSpeedSection.MovementSoundInstrument.title
       row.options = SettingsViewModel.availableMovementSoundInstruments
       row.value = viewModel.movementSoundInstrument
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.movementSound
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
     }
     .cellSetup { cell, _ in
       cell.imageView?.image = UIImage(systemName: "guitars")
@@ -258,10 +269,7 @@ class SettingsViewController: FormViewController {
       row.options = SpeechSynthesizer.SupportedLanguage.current.voices
       row.value = viewModel.speechSynthesizerVoice
       row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.speechSynthesizer
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
     }
     .cellSetup { cell, _ in
       cell.imageView?.image = UIImage(systemName: "person.wave.2")
@@ -286,10 +294,7 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.speechSynthesizer
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Pitch multiplier had nil value."); return }
@@ -305,10 +310,7 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
       row.cell.slider.maximumValue = (AVSpeechUtteranceMaximumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.01)
-      row.hidden = Condition.function([audioModeRowTag]) { form in
-        let audioModeRow = form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>
-        return audioModeRow.value != AudioMode.speechSynthesizer
-      }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }
