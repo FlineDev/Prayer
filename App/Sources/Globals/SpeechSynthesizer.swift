@@ -50,7 +50,11 @@ final class SpeechSynthesizer: NSObject {
     self.speechRate = speechRate
 
     try? AVAudioSession.sharedInstance()
-      .setCategory(.playback, mode: .voicePrompt, options: .mixWithOthers)
+      .setCategory(
+        .playback,
+        mode: .voicePrompt,
+        options: [.mixWithOthers, .allowAirPlay, .allowBluetooth, .allowBluetoothA2DP]
+      )
 
     super.init()
     synthesizer.delegate = self

@@ -3,6 +3,7 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import HandySwift
 import Imperio
 import UIKit
@@ -69,7 +70,6 @@ class PrayerFlowController: FlowController {
       self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
       self.countdown?.start()
 
-
       switch self.audioMode {
       case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
         self.speechSynthesizer.speak(text: String(countdownCount))
@@ -107,11 +107,12 @@ class PrayerFlowController: FlowController {
     prayerViewCtrl.viewModel = prayerState.prayerViewModel()
     progressPrayer()
 
+    // set audio session to this app
+    try? AVAudioSession.sharedInstance().setActive(true)
+
     // prevent screen from locking
     UIApplication.shared.isIdleTimerDisabled = true
   }
-
-  // TODO: [cg_2021-10-23] use speech synthesizer if audio mode is set to it instead of classical timer
 
   func progressPrayer() {
     switch audioMode {
@@ -200,6 +201,7 @@ class PrayerFlowController: FlowController {
     timer?.invalidate()
     timer = nil
     speechSynthesizer.stop()
+    try? AVAudioSession.sharedInstance().setActive(false)
     UIApplication.shared.isIdleTimerDisabled = false
   }
 }

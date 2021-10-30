@@ -12,7 +12,11 @@ final class AudioPlayer {
 
   private init() {
     try? AVAudioSession.sharedInstance()
-      .setCategory(.playback, mode: .voicePrompt, options: .mixWithOthers)
+      .setCategory(
+        .playback,
+        mode: .voicePrompt,
+        options: [.mixWithOthers, .allowAirPlay, .allowBluetooth, .allowBluetoothA2DP]
+      )
   }
 
   func movementSoundUrl(name: String, instrument: String) -> URL? {
