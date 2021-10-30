@@ -1,5 +1,9 @@
 "AUDIO_MODE.MOVEMENT_SOUND" = "Sound for position changes";
 
+"AUDIO_MODE.MOVEMENT_SOUND_AND_SPEECH_SYNTHESIZER" = "Both (sound + voice)";
+
+"AUDIO_MODE.NONE" = "No audio (muted)";
+
 "AUDIO_MODE.SPEECH_SYNTHESIZER" = "Reading computer voice";
 
 "PRAYER_VIEW.COUNTDOWN.NAME" = "Countdown";

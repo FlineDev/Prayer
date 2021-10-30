@@ -908,7 +908,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
 		};
 		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -922,7 +922,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -936,7 +936,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which swiftgen > /dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

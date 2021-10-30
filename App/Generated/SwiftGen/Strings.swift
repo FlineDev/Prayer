@@ -14,6 +14,10 @@ internal enum L10n {
   internal enum AudioMode {
     /// Sound for position changes
     internal static let movementSound = L10n.tr("Localizable", "AUDIO_MODE.MOVEMENT_SOUND")
+    /// Both (sound + voice)
+    internal static let movementSoundAndSpeechSynthesizer = L10n.tr("Localizable", "AUDIO_MODE.MOVEMENT_SOUND_AND_SPEECH_SYNTHESIZER")
+    /// No audio (muted)
+    internal static let `none` = L10n.tr("Localizable", "AUDIO_MODE.NONE")
     /// Reading computer voice
     internal static let speechSynthesizer = L10n.tr("Localizable", "AUDIO_MODE.SPEECH_SYNTHESIZER")
   }
@@ -188,7 +192,7 @@ internal enum L10n {
       /// App Settings
       internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.TITLE")
       internal enum ChangeLanguageButton {
-        /// Change app language in ⚙️ Settings app
+        /// Change language in ⚙️ Settings
         internal static let title = L10n.tr("Localizable", "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE")
       }
     }
@@ -279,7 +283,7 @@ internal enum L10n {
       }
     }
     internal enum FeedbackButton {
-      /// Send Feedback
+      /// Feedback
       internal static let title = L10n.tr("Localizable", "SETTINGS.FEEDBACK_BUTTON.TITLE")
     }
     internal enum PrayerSection {
@@ -294,7 +298,7 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
       }
       internal enum AllowSplittingRecitations {
-        /// Include long surah by splitting them
+        /// Split & include lon surah
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
       }
       internal enum ChangingTextName {

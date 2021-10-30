@@ -1,4 +1,8 @@
-"AUDIO_MODE.MOVEMENT_SOUND" = "Konum değişiklik sesi";
+"AUDIO_MODE.MOVEMENT_SOUND" = "Konum değişiklik tonu";
+
+"AUDIO_MODE.MOVEMENT_SOUND_AND_SPEECH_SYNTHESIZER" = "Her ikisi de (ton + okuma)";
+
+"AUDIO_MODE.NONE" = "Sessiz";
 
 "AUDIO_MODE.SPEECH_SYNTHESIZER" = "Bilgisayar sesli okuma";
 

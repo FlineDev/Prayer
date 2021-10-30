@@ -39,8 +39,8 @@ class SettingsViewController: FormViewController {
 
   private var audioMode: AudioMode? {
     UIDevice.current.userInterfaceIdiom == .pad
-    ? (form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>).value
-    : (form.rowBy(tag: self.audioModeRowTag) as! PushRow<AudioMode>).value
+      ? (form.rowBy(tag: self.audioModeRowTag) as! SegmentedRow<AudioMode>).value
+      : (form.rowBy(tag: self.audioModeRowTag) as! PushRow<AudioMode>).value
   }
 
   init(
@@ -172,7 +172,9 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != AudioMode.none
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Fixed text speed had nil value."); return }
@@ -188,7 +190,9 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != AudioMode.none
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Changing text speed had nil value."); return }
@@ -252,7 +256,9 @@ class SettingsViewController: FormViewController {
       row.title = l10n.AudioSpeedSection.MovementSoundInstrument.title
       row.options = SettingsViewModel.availableMovementSoundInstruments
       row.value = viewModel.movementSoundInstrument
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .movementSound }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .movementSound && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
     }
     .cellSetup { cell, _ in
       cell.imageView?.image = UIImage(systemName: "guitars")
@@ -269,7 +275,9 @@ class SettingsViewController: FormViewController {
       row.options = SpeechSynthesizer.SupportedLanguage.current.voices
       row.value = viewModel.speechSynthesizerVoice
       row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
     }
     .cellSetup { cell, _ in
       cell.imageView?.image = UIImage(systemName: "person.wave.2")
@@ -294,7 +302,9 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Pitch multiplier had nil value."); return }
@@ -310,7 +320,9 @@ class SettingsViewController: FormViewController {
       row.cell.slider.minimumValue = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
       row.cell.slider.maximumValue = (AVSpeechUtteranceMaximumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
       row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.01)
-      row.hidden = Condition.function([audioModeRowTag]) { _ in self.audioMode != .speechSynthesizer }
+      row.hidden = Condition.function([audioModeRowTag]) { _ in
+        self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
+      }
     }
     .onChange { row in
       guard let rowValue = row.value else { log.error("Speech rate had nil value."); return }

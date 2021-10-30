@@ -45,17 +45,21 @@ class PrayerFlowController: FlowController {
     prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
     prayerViewCtrl.flowDelegate = self
 
-    // TODO: [cg_2021-10-21] use speech synthesizer instead of timer if exists
-
     // initialize countdown
     let countdownCount = 5
     countdown = Countdown(startValue: countdownCount)
-    countdown?.onCount { count in
-      self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
-      if case .speechSynthesizer = self.audioMode {
-        self.speechSynthesizer.speak(text: String(count))
+    countdown?
+      .onCount { count in
+        self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
+
+        switch self.audioMode {
+        case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
+          self.speechSynthesizer.speak(text: String(count))
+
+        case .movementSound, .none:
+          break
+        }
       }
-    }
 
     countdown?.onFinish { self.startPrayer() }
 
@@ -65,8 +69,13 @@ class PrayerFlowController: FlowController {
       self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
       self.countdown?.start()
 
-      if case .speechSynthesizer = self.audioMode {
+
+      switch self.audioMode {
+      case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
         self.speechSynthesizer.speak(text: String(countdownCount))
+
+      case .movementSound, .none:
+        break
       }
     }
   }
@@ -119,6 +128,20 @@ class PrayerFlowController: FlowController {
         completion: progressToNextStep,
         delayCompletion: prayerState.movementDelay
       )
+
+    case .movementSoundAndSpeechSynthesizer:
+      if let movementSoundUrl = prayerState.currentMovementSoundUrl {
+        AudioPlayer.shared.playSound(at: movementSoundUrl)
+      }
+
+      speechSynthesizer.speak(
+        text: prayerState.currentLine,
+        completion: progressToNextStep,
+        delayCompletion: prayerState.movementDelay
+      )
+
+    case .none:
+      timer = Timer.after(prayerState.currentLineReadingTime, progressToNextStep)
     }
   }
 
@@ -144,7 +167,7 @@ class PrayerFlowController: FlowController {
           self.prayerViewCtrl.viewModel = infoViewModel
 
           switch audioMode {
-          case .movementSound:
+          case .movementSound, .none:
             let rememberTime = Timespan.milliseconds(1_000)
             let waitTime = infoViewModel.currentLine.estimatedReadingTime + rememberTime
             delay(by: waitTime) {
@@ -152,7 +175,7 @@ class PrayerFlowController: FlowController {
               self.progressPrayer()
             }
 
-          case .speechSynthesizer:
+          case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
             speechSynthesizer.speak(text: infoViewModel.currentLine) {
               self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
               self.progressPrayer()
