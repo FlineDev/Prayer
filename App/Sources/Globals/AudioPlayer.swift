@@ -6,13 +6,19 @@
 import AVFoundation
 
 final class AudioPlayer {
-  // MARK: - Stored Type Properties
   static let shared = AudioPlayer()
 
-  // MARK: - Instance Properties
   private var audioPlayer: AVAudioPlayer?
 
-  // MARK: - Instance Methods
+  private init() {
+    try? AVAudioSession.sharedInstance()
+      .setCategory(
+        .playback,
+        mode: .voicePrompt,
+        options: [.mixWithOthers, .allowAirPlay, .allowBluetooth, .allowBluetoothA2DP]
+      )
+  }
+
   func movementSoundUrl(name: String, instrument: String) -> URL? {
     Bundle.main.url(forResource: instrument, withExtension: "caf", subdirectory: name)
   }

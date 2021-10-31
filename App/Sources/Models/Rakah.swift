@@ -13,7 +13,6 @@ typealias Rakat = [Rakah]
 /// "(A) single unit of Islamic prayers."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
 class Rakah {
-  // MARK: - Stored Instance Properties
   private let isBeginningOfPrayer: Bool
   private let includesSittingRecitation: Bool
   private let isEndOfPrayer: Bool
@@ -21,7 +20,6 @@ class Rakah {
 
   private var includesStandingRecitation: Bool { standingRecitationPart != nil }
 
-  // MARK: - Initializer
   init(
     isBeginningOfPrayer: Bool,
     standingRecitationPart: RecitationPart?,
@@ -34,7 +32,6 @@ class Rakah {
     self.standingRecitationPart = standingRecitationPart
   }
 
-  // MARK: - Instance Methods
   func components() -> [RakahComponent] {
     var components: [RakahComponent] = []
 
@@ -84,7 +81,6 @@ class Rakah {
   }
 }
 
-// MARK: - Sub Types
 extension Rakah {
   enum Component {
     case takbir(Position)

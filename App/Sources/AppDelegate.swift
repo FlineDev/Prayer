@@ -3,12 +3,12 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import Imperio
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  // MARK: - Stored Instance Properties
   var window: UIWindow?
   var initialFlowCtrl: InitialFlowController?
 
@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
+
+    // reset user defaults for UI Tests
+    if ProcessInfo.processInfo.arguments.contains("UI_TESTS") {
+      UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+    }
 
     // setup global stuff
     Logger.shared.setup()

@@ -3,17 +3,16 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
+import AVKit
 import SwiftyUserDefaults
 import UIKit
 
 class SettingsViewModel {
-  // MARK: - Stored Instance Properties
   static let availableMovementSoundInstruments: [String] = [
     "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
     "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth",
   ]
 
-  // MARK: - Computed Instance Properties
   var rakatCount: Int {
     get { Defaults.rakatCount }
     set { Defaults.rakatCount = newValue }
@@ -48,10 +47,40 @@ class SettingsViewModel {
     get { Defaults.movementSoundInstrument }
     set { Defaults.movementSoundInstrument = newValue }
   }
+
+  var speechSynthesizerVoice: AVSpeechSynthesisVoice {
+    get { AVSpeechSynthesisVoice(identifier: Defaults.speechSynthesizerVoiceId)! }
+    set { Defaults.speechSynthesizerVoiceId = newValue.identifier }
+  }
+
+  var speechSynthesizerPitchMultiplier: Float {
+    get { Float(Defaults.speechSynthesizerPitchMultiplier) }
+    set { Defaults.speechSynthesizerPitchMultiplier = Double(newValue) }
+  }
+
+  var speechSynthesizerSpeechRate: Float {
+    get { Float(Defaults.speechSynthesizerSpeechRate) }
+    set { Defaults.speechSynthesizerSpeechRate = Double(newValue) }
+  }
+
+  var speechSynthesizer: SpeechSynthesizer {
+    .init(
+      voice: speechSynthesizerVoice,
+      pitchMultiplier: speechSynthesizerPitchMultiplier,
+      speechRate: speechSynthesizerSpeechRate
+    )
+  }
+
+  var audioMode: AudioMode {
+    get { Defaults.audioMode }
+    set { Defaults.audioMode = newValue }
+  }
 }
 
 extension DefaultsKeys {
   private var defaultInstrument: String { SettingsViewModel.availableMovementSoundInstruments.first! }
+  private var defaultSpeechRate: Double { Double(AVSpeechUtteranceDefaultSpeechRate) }
+  private var defaultVoice: String { SpeechSynthesizer.SupportedLanguage.bestMatchingVoice.identifier }
 
   var rakatCount: DefaultsKey<Int> { .init("RakatCount", defaultValue: 4) }
   var fixedTextsSpeedFactor: DefaultsKey<Double> { .init("FixedTextsSpeedFactor", defaultValue: 1.0) }
@@ -60,4 +89,10 @@ extension DefaultsKeys {
   var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
   var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: false) }
   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument) }
+  var speechSynthesizerVoiceId: DefaultsKey<String> { .init("VoiceId", defaultValue: defaultVoice) }
+  var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }
+  var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: defaultSpeechRate) }
+  var audioMode: DefaultsKey<AudioMode> { .init("AudioMode", defaultValue: .movementSound) }
 }
+
+extension AudioMode: DefaultsSerializable {}

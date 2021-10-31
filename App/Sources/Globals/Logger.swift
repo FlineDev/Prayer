@@ -6,15 +6,11 @@
 import SwiftyBeaver
 import UIKit
 
-// MARK: - Global Objects
 let log = SwiftyBeaver.self
 
-// MARK: - Helper Class
 final class Logger {
-  // MARK: - Stored Type Properties
   static let shared = Logger()
 
-  // MARK: - Instance Properties
   func setup() {
     // log to console
     let consoleDestination = ConsoleDestination()

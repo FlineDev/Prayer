@@ -7,7 +7,6 @@
   import UIKit.UIImage
 #endif
 
-// MARK: - Asset Catalogs
 
 internal typealias Colors = Asset.Colors
 internal typealias Images = Asset.Images
@@ -27,6 +26,5 @@ internal enum Asset {
   }
 }
 
-// MARK: - Implementation Details
 
 private final class BundleToken {}

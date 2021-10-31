@@ -14,10 +14,8 @@ enum Position: Int {
   case salamRight = 49
   case salamLeft = 51
 
-  // MARK: - Type Properties
   private static let baseMovementDuration = Duration.milliseconds(1_400)
 
-  // MARK: - Case Methods
   func arrow(forChangingTo newPosition: Position?) -> Arrow? {
     guard let newPosition = newPosition else { return nil }
 
@@ -56,7 +54,6 @@ enum Position: Int {
   }
 }
 
-// MARK: - Sub Types
 extension Position {
   enum Arrow: String {
     case upwards = "↑"

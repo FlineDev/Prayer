@@ -1,2 +1,12 @@
-BEHOBEN:
-- Fixed an issue with the background color of the top bar in the prayer view.
+NEW:
+- Adds a new audio mode where a computer voice reads out loud the full text of the prayer.
+- Ensures the new spoken text audio mode continues to play when device is locked or app is in background.
+- Shows the currently connected audio device and adds a button to switch the device right within the app.
+- Adds detailed descriptions below each settings section to give some additional context.
+
+CHANGED:
+- Position change sound now ignores the systems Mute switch setting. Set audio mode to `muted` instead to pray without any sounds.
+- All settings entries now have an icon for faster recognition and to make the settings screen look nicer.
+
+FIXED:
+- Adjusted green accent color in dark mode to be brighter for more legible text on buttons.

@@ -81,6 +81,15 @@
           "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
           "version": "5.3.0"
         }
+      },
+      {
+        "package": "ViewRow",
+        "repositoryURL": "https://github.com/EurekaCommunity/ViewRow.git",
+        "state": {
+          "branch": null,
+          "revision": "3428a3b825a5641ae7fb65f3f787aba2b1b4dab9",
+          "version": "0.9.0"
+        }
       }
     ]
   },

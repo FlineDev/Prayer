@@ -9,11 +9,11 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/Flinesoft/Prayer/releases">
-        <img src="https://img.shields.io/badge/Version-1.2.1-blue.svg"
-             alt="Version: 1.2.1">
+        <img src="https://img.shields.io/badge/Version-1.3.0-blue.svg"
+             alt="Version: 1.3.0">
     </a>
-    <img src="https://img.shields.io/badge/Swift-5.4-FFAC45.svg"
-         alt="Swift: 5.4">
+    <img src="https://img.shields.io/badge/Swift-5.5-FFAC45.svg"
+         alt="Swift: 5.5">
     <img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg"
         alt="Platforms: iOS">
     <a href="https://github.com/Flinesoft/Prayer/blob/stable/LICENSE">
@@ -49,12 +49,12 @@
 
 You regularly pray your prayers in Arabic, but do **not really understand** what you're saying?
 
-This app will help you make your **prayers in English** (or German or Turkish) to make them more meaningful to you. To do this, leave your device lying in front of you during the prayer and simply read the text from there. The app is purposely kept simple and reduced to the basic functions so that it does not contain distracting elements such as animations or advertising.
+This app will help you make your **prayers in English** (or German or Turkish) to make them more meaningful to you. To do this, leave your device lying in front of you during the prayer and simply read the text from there. Or alternatively, configure the computer voice audio mode and listen to the text with your headphones during the prayer, while keeping your phone in your pocket. The app is purposely kept simple and reduced to the basic functions so that it does not contain distracting elements such as animations or advertising.
 
 
 ## Donation
 
-BartyCrouch was brought to you by [Cihat Gündüz](https://github.com/Jeehut) in his free time. If you want to thank me and support the development of this project, please **make a small donation on [PayPal](https://paypal.me/Dschee/5EUR)**. In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Jeehut), please consider motivating me by **becoming a sponsor on [GitHub](https://github.com/sponsors/Jeehut)** or a **patron on [Patreon](https://www.patreon.com/Jeehut)**.
+Prayer was brought to you by [Cihat Gündüz](https://github.com/Jeehut) in his free time. If you want to thank me and support the development of this project, please **make a small donation on [PayPal](https://paypal.me/Dschee/5EUR)**. In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Jeehut), please consider motivating me by **becoming a sponsor on [GitHub](https://github.com/sponsors/Jeehut)** or a **patron on [Patreon](https://www.patreon.com/Jeehut)**.
 
 Thank you very much for any donation, it really helps out a lot! 💯
 

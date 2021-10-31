@@ -15,7 +15,6 @@
   {% set imageType %}UIImage{% endset %}
 #endif
 
-// MARK: - Asset Catalogs
 
 {% macro enumBlock assets %}
   {% call casesBlock assets %}
@@ -82,7 +81,6 @@
   {% endif %}
 }
 
-// MARK: - Implementation Details
 
 private final class BundleToken {}
 {% else %}

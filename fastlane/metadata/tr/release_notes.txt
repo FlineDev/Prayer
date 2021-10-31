@@ -1,2 +1,12 @@
+YENİ:
+- Bir bilgisayar sesinin duanın tam metnini yüksek sesle okuduğu yeni bir ses modu ekler.
+- Cihaz kilitliyken veya uygulama arka plandayken yeni sözlü metin ses modunun oynamaya devam etmesini sağlar.
+- Halihazırda bağlı olan ses cihazını gösterir ve cihazı doğrudan uygulama içinde değiştirmek için bir düğme ekler.
+- Ek bağlam sağlamak için her ayar bölümünün altına ayrıntılı açıklamalar ekler.
+
+DEĞİŞEN:
+- Konum değiştirme sesi artık sistemin Sessiz anahtarı ayarını yok sayar. Sessiz dua etmek için ses modunu "sessiz" olarak ayarlayın.
+- Tüm ayar girişlerinde artık daha hızlı tanıma ve ayarlar ekranının daha güzel görünmesi için bir simge var.
+
 DÜZELTİLEN:
-- Dua görünümünde üst çubuğun arka plan rengiyle ilgili bir sorun düzeltildi.
+- Düğmelerde daha okunaklı metinler için koyu modda yeşil vurgu rengi daha parlak olacak şekilde ayarlandı.

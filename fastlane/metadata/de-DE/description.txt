@@ -1,8 +1,8 @@
 Du betest regelmäßig deine Gebete auf Arabisch, verstehst aber nicht wirklich, was du dabei sagst?
 
-Diese App hilft dir, deine Gebete auf Deutsch (oder Türkisch bzw. Englisch) zu machen, damit sie für dich wieder an Bedeutung gewinnen. Hierzu lässt du dein Gerät während des Gebetes vor dir liegen und liest den Text einfach mit. Die App ist absichtlich schlicht gehalten und auf die Grundfunktionen reduziert, damit sie keine ablenkenden Elemente wie Animationen oder Werbung enthält. Werbung ist übrigens sowieso kein Thema, da der gesamte Code mit einer Open Source-Lizenz auf GitHub veröffentlicht ist (unter https://github.com/Flinesoft/Prayer).
+Diese App hilft dir, deine Gebete auf Deutsch (oder Türkisch bzw. Englisch) zu machen, damit sie für dich wieder an Bedeutung gewinnen. Hierzu lässt du dein Gerät während des Gebetes vor dir liegen und liest den Text einfach mit. Alternativ kannst du die Computer-Vorlese-Stimme einstellen und den Text während des Gebets über deine Kopfhörer hören, während sich dein Telefon in der Hosentasche befindet. Die App ist absichtlich schlicht gehalten und auf die Grundfunktionen reduziert, damit sie keine ablenkenden Elemente wie Animationen oder Werbung enthält. Werbung ist übrigens sowieso kein Thema, da der gesamte Code mit einer Open Source-Lizenz auf GitHub veröffentlicht ist (unter https://github.com/Flinesoft/Prayer).
 
-Wir empfehlen, dass du beim Beten mit dieser App (sofern möglich) den Lautlos-Modus deines Gerätes ausschaltest, da die App je einen kurzen Ton bei Auf- und Abwärtsbewegungen abspielt. Dass du den Ablauf eines Gebets bereits kennst, wird übrigens voraus gesetzt. Für Gebets-Neulinge ist diese App daher nicht geeignet.
+Diese App setzt voraus, dass du den Ablauf eines Gebets bereits kennst. Für Gebets-Neulinge ist diese App daher nicht geeignet.
 
 Wir hoffen, dass du diese App nützlich findest. Wenn sie dir gefällt, freuen wir uns über eine entsprechende Bewertung im App Store. Für Fragen und Anregungen haben wir ein Forum eingerichtet: links.flinesoft.com/forum/prayer
 Dort findest du auch unsere Pläne für die Zukunft und kannst dich an der Diskussion beteiligen.
