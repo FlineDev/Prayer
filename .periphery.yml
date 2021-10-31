@@ -1,8 +1,0 @@
-project: Prayer.xcodeproj
-schemes: [App]
-targets: [App, Tests, UITests]
-report_exclude:
-  - App/Generated/SwiftGen/*.swift
-  - App/SupportingFiles/*.swift
-retain_public: false
-quiet: true
