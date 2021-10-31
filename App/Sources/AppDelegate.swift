@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
 
+    // reset user defaults for UI Tests
+    if ProcessInfo.processInfo.arguments.contains("UI_TESTS") {
+      UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+    }
+
     // setup global stuff
     Logger.shared.setup()
     ErrorHandler.shared.setup(window: window!)

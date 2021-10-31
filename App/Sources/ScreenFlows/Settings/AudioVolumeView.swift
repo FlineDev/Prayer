@@ -30,6 +30,13 @@ class AudioVolumeView: UIView {
 
     updateCurrentPortLabel()
     subscribeToRouteChangeNotification()
+
+    #if targetEnvironment(simulator)
+      let imageView = UIImageView(image: UIImage(systemName: "airplayvideo"))
+      imageView.contentMode = .scaleAspectFit
+      deviceChooserButton.addSubview(imageView)
+      imageView.bindEdgesToSuperview()
+    #endif
   }
 
   required init?(
