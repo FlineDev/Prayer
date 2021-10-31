@@ -250,7 +250,7 @@ internal enum L10n {
         /// 1. Becoming aware of what you are actually saying when you pray.
         /// 2. Use the regular prayers to read the Quran.
         /// 
-        /// Currently the app contains only the last twelve surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a planned solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.
+        /// Currently the app contains only the last 24 surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.
         /// 
         /// Specifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER")
@@ -260,7 +260,7 @@ internal enum L10n {
       internal enum IpadReading {
         /// In the end, this can only be answered by God, but we would like to ask all critics the following question: Are the prayers valid if you do not understand the meaning of your spoken words?
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER")
-        /// Are the prayers valid at all, if I read from the iPad?
+        /// Are the prayers valid at all, if I read or listen to a voice?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION")
       }
       internal enum Language {
@@ -271,16 +271,10 @@ internal enum L10n {
         /// Do prayers not have to be spoken in Arabic, the original language of the Koran?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION")
       }
-      internal enum LanguageMix {
-        /// Actually this app is meant to be able to get away from the Arabic language, if you did not master it. An alternative usage method would be to use the app as a supplement to prayers in Arabic, in order to be able to read the meaning next to it. Because we are convinced that prayers are all about meaning, we advise against it to not make the prayers unnecessarily complicated, but for some, this may be the only acceptable way what we can understand. We recommend setting the "Changing text name" setting for this application method.
-        internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER")
-        /// Can I also use the app if I want to continue to pray in Arabic?
-        internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION")
-      }
       internal enum TranslationProblem {
         /// We understand that regular prayers are something so important that you want to do everything as correct as possible. We also understand that in religion many different opinions about the meaning of the same text prevail, and it is important that you remain as close as possible to the original text.
         /// 
-        /// This is why we absolutely want you to read the Quran yourself, not the narratives and traditions of those who have studied the Quran for years and try to enlighten you (supposedly), and above all not those who try to teach you about "the real message of the Koran". We are convinced that this distinction is only possible if you read the Quran for yourself what this App tries to help with.
+        /// This is why we absolutely want you to read the Quran yourself, not the narratives and traditions of those who have studied the Quran for years and try to enlighten you (supposedly), and above all not those who try to teach you about "the real message of the Koran". We are convinced that one can make distinction only if one reads the Quran for oneself what this App tries to help with.
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER")
         /// Do translations not necessarily change the meaning of the original text?
         internal static let question = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.QUESTION")

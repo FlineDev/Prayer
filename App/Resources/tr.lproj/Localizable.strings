@@ -114,21 +114,17 @@
 
 "SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
 
-"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılaraken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son oniki sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de bir çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 24 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
 
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Bu soruya sonuçta sadece Tanrımız cevap verebilir, ama biz tüm eleştirmenlere şu soruyu sormak istiyoruz: Eğer namazda konuşulan kelimelerin anlamı bilinmez ise, namazın gerçekten kabul olabileceğini mi düşünüyorsunuz?";
 
-"SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Namazda kelimeler iPad den okunulursa, namaz hiç geçerli olabilirmi?";
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Namazda kelimeler cihaz dan okunulursa yada sesli dinlenilirse, namaz hiç geçerli olabilirmi?";
 
 "SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "Kuranı bizim içinde yazan şeylerden haberdar olmamız ve hayatımıza aktarmamız için indiğini düşünüyoruz. Anlamadığımız kelimeler ne bize yanlış yolu gösterir, nede bizi doğru yola iletir. Fakat bu Kuranın en büyük hedefidir.\n\nAllah günde beş vakit onun kelimelerinin anlamsız bir şekilde kulağa güzel gelen bir siir gibi dinlememizi istediğine inanamıyoruz. Kurandaki Arapça Allahın bize gönderdiği en doğru mesaj olmasına rağmen, Arapça diline hakim olmayan bir kişinin arapça okunan namazın kabul edildiğine inanamıyoruz. Bu tür bir namazda büyük bir eksiklik vardır. Üstelik bizim bilgimize göre Kuranda namazın Arapça dilde okunması meçbur olduğunu söğleğen bir ayet bulunmamaktadır.";
 
 "SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "Namaz daki sureler ve dualar Kuranın asıl dili Arapçadan okunması şart değilmidir?";
-
-"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.ANSWER" = "Aslında bu uygulamanın hedefi Arapçaya hakim olmadığınız sürece namazda kullanmamak. Kullanım alternatifi olarak namazı hala Arapça dilinde devam etmek isterseniz, bu uygulamayı ilaveten okuyarak da kullanmanız mümkündür. Bizce bu namazınızı boş yere zorlaştıracaktır, bu yüzden tavsiyemiz duaları veya sureleri bildiğiniz dilden okumak. Yinede yüzde yüz emin olamadıysanız Arapçadan okuma isteğinizi anlıyabiliriz. O zaman \"Değişen metin adı\" ayarını kullanınız.";
-
-"SETTINGS.FAQ_ENTRIES.LANGUAGE_MIX.QUESTION" = "Ben Arapça dua etmeye devam etmek istersem, uygulamayı kullanabilir miyim?";
 
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER" = "Biz namaz kılmanın çok önemli bir ibadet olduğu için, mümkün olduğu kadar doğru yapmak istediğinizi anlıyoruz. Bizde bu sebeple ayrıca dinde aynı metnin anlamları hakkında çok farklı görüşlerin olduğunu bildiğimiz için, sizler icin orijinala yakın bir meal kullanmayı tercih ettik.\n\nBu nedenle, biz de Kuranın kendisini okumanızın şart olduğunu düşünerek bu uygulamayı size bir yardım olarak hazırladık. Kuranın içindekilerine başkaların (sözde) hikayelerini ve hurafelerini dinleyerek onların size \"Kuranın gerçek mesajını\" öğretmesine engel olabilmeniz için Kuranın ta kendisini okumayı öneriyoruz. Onların dediklerinin doğru olup olmadığını sadece böylece ayrım edebileceğinize inanıyoruz.";
 
