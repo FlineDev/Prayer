@@ -7,7 +7,7 @@ import XCTest
 
 class AppStoreSnapshotUITests: XCTestCase {
   let app = XCUIApplication()
-  var uiMode: String = "light"
+  var uiMode: String = "1-light"
 
   override func setUp() {
     super.setUp()
@@ -15,9 +15,10 @@ class AppStoreSnapshotUITests: XCTestCase {
     continueAfterFailure = false
 
     setupSnapshot(app)
+    app.launchArguments += ["UI_TESTS"]
     app.launch()
 
-    uiMode = app.launchArguments.contains("DARK_MODE") ? "dark" : "light"
+    uiMode = app.launchArguments.contains("DARK_MODE") ? "2-dark" : "1-light"
     XCUIDevice.shared.orientation = UIDevice.current.userInterfaceIdiom == .pad ? .landscapeLeft : .portrait
   }
 
@@ -27,10 +28,36 @@ class AppStoreSnapshotUITests: XCTestCase {
       faqDoneButton.tap()
     }
 
-    snapshot("1-Settings-\(uiMode)")
+    if UIDevice.current.userInterfaceIdiom == .pad {
+      app.swipeUp()
+      snapshot("\(uiMode)-1-Settings")
+    }
+    else {
+      snapshot("\(uiMode)-1a-Settings-Top")
+
+      app.swipeUp()
+      snapshot("\(uiMode)-1b-Settings-Bottom")
+    }
+
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      // turn off sounds during test
+      let audioModeText = localizedString(key: "SETTINGS.AUDIO_SPEED_SECTION.AUDIO_MODE.TITLE")
+      app.tables.staticTexts[audioModeText].tap()
+
+      let audioModeNone = localizedString(key: "AUDIO_MODE.NONE")
+      app.tables.staticTexts[audioModeNone].tap()
+    }
+    else {
+      let audioModeNone = localizedString(key: "AUDIO_MODE.NONE")
+      app.tables.buttons[audioModeNone].tap()
+    }
+
+    // turn the text speed all up
+    app.sliders.element(boundBy: 0).adjust(toNormalizedSliderPosition: 1)
+    app.sliders.element(boundBy: 1).adjust(toNormalizedSliderPosition: 1)
 
     // Wait until starting Opening Prayer
-    let startPrayerText = localizedString(key: "SETTINGS.START_BUTTON.TITLE")
+    let startPrayerText = "🕋   " + localizedString(key: "SETTINGS.START_BUTTON.TITLE")
     app.tables.staticTexts[startPrayerText].tap()
 
     let openingPrayerExpectation = expectation(description: "Going to Opening Prayer")
@@ -43,8 +70,8 @@ class AppStoreSnapshotUITests: XCTestCase {
       openingPrayerExpectation.fulfill()
     }
 
-    waitForExpectations(timeout: 100, handler: nil)
-    snapshot("2-Opening-Prayer-\(uiMode)")
+    waitForExpectations(timeout: 60, handler: nil)
+    snapshot("\(uiMode)-2-Opening-Prayer")
 
     // Wait until going to Ruku
     let rukuExpectation = expectation(description: "Going to Ruku Screenshot")
@@ -57,8 +84,8 @@ class AppStoreSnapshotUITests: XCTestCase {
       rukuExpectation.fulfill()
     }
 
-    waitForExpectations(timeout: 100, handler: nil)
-    snapshot("3-Ruku-\(uiMode)")
+    waitForExpectations(timeout: 60, handler: nil)
+    snapshot("\(uiMode)-3-Ruku")
   }
 
   private func localizedString(key: String) -> String {

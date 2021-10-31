@@ -31,6 +31,18 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.3.0] - 2021-10-31
+### Added
+- Adds a new audio mode where a computer voice reads out loud the full text of the prayer.
+- Ensures the new spoken text audio mode continues to play when device is locked or app is in background.
+- Shows the currently connected audio device and adds a button to switch the device right within the app.
+- Adds detailed descriptions below each settings section to give some additional context.
+### Changed
+- Position change sound now ignores the systems Mute switch setting. Set audio mode to `muted` instead to pray without any sounds.
+- All settings entries now have an icon for faster recognition and to make the settings screen look nicer.
+### Fixed
+- Adjusted green accent color in dark mode to be brighter for more legible text on buttons.
+
 ## [1.2.1] - 2021-10-17
 ### Fixed
 - Fixed an issue where the navigation bar of the prayer view had a black background in light mode. Also fixes the animation when opening it up.

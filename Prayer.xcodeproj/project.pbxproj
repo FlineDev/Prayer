@@ -182,8 +182,6 @@
 		2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVolumeView.swift; sourceTree = "<group>"; };
 		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
-		A115CBEE2222E97100A7EB3A /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .periphery.yml; sourceTree = "<group>"; };
-		A115CBEF2222E97E00A7EB3A /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
 		A115CBF22222EA4000A7EB3A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A115CBF42222ECDD00A7EB3A /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
@@ -479,8 +477,6 @@
 			children = (
 				A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */,
 				A115CBF22222EA4000A7EB3A /* .gitignore */,
-				A115CBEE2222E97100A7EB3A /* .periphery.yml */,
-				A115CBEF2222E97E00A7EB3A /* .projlint.yml */,
 				2E6C0B5E2647315600A4D8E3 /* .swift-format */,
 				A161E36D1E7EF8B1009C6602 /* fastlane */,
 				A161E36B1E7EF826009C6602 /* Gemfile */,
@@ -1535,7 +1531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
@@ -1543,7 +1539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -1556,7 +1552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
@@ -1564,7 +1560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;

@@ -5,18 +5,17 @@
 
 import AVKit
 import UIKit
-import MediaPlayer
 import HandyUIKit
 
 class AudioVolumeView: UIView {
   private let currentPortLabel: UILabel
-  private let deviceChooserButton: MPVolumeView
+  private let deviceChooserButton: AVRoutePickerView
 
   override init(
     frame: CGRect
   ) {
     deviceChooserButton = .init(frame: .init(x: 36, y: 0, width: 25, height: frame.height))
-    deviceChooserButton.showsVolumeSlider = false
+    deviceChooserButton.prioritizesVideoDevices = false
 
     currentPortLabel = .init(frame: .init(size: frame.size))
     currentPortLabel.textColor = .secondaryLabel
