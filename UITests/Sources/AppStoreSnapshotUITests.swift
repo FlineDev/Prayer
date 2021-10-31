@@ -7,7 +7,7 @@ import XCTest
 
 class AppStoreSnapshotUITests: XCTestCase {
   let app = XCUIApplication()
-  var uiMode: String = "light"
+  var uiMode: String = "1-light"
 
   override func setUp() {
     super.setUp()
@@ -18,12 +18,11 @@ class AppStoreSnapshotUITests: XCTestCase {
     app.launchArguments += ["UI_TESTS"]
     app.launch()
 
-    uiMode = app.launchArguments.contains("DARK_MODE") ? "dark" : "light"
+    uiMode = app.launchArguments.contains("DARK_MODE") ? "2-dark" : "1-light"
     XCUIDevice.shared.orientation = UIDevice.current.userInterfaceIdiom == .pad ? .landscapeLeft : .portrait
   }
 
   func testTakeAppStoreScreenshots() {
-    var snapshotNum = 1
     let faqText = localizedString(key: "SETTINGS.FAQ_BUTTON.TITLE")
     if let faqDoneButton = app.navigationBars[faqText].buttons.allElementsBoundByIndex.first {
       faqDoneButton.tap()
@@ -31,16 +30,13 @@ class AppStoreSnapshotUITests: XCTestCase {
 
     if UIDevice.current.userInterfaceIdiom == .pad {
       app.swipeUp()
-      snapshot("\(snapshotNum)-Settings-\(uiMode)")
-      snapshotNum += 1
+      snapshot("\(uiMode)-1-Settings")
     }
     else {
-      snapshot("\(snapshotNum)-Settings-Top-\(uiMode)")
-      snapshotNum += 1
+      snapshot("\(uiMode)-1a-Settings-Top")
 
       app.swipeUp()
-      snapshot("\(snapshotNum)-Settings-Bottom-\(uiMode)")
-      snapshotNum += 1
+      snapshot("\(uiMode)-1b-Settings-Bottom")
     }
 
     if UIDevice.current.userInterfaceIdiom == .phone {
@@ -74,9 +70,8 @@ class AppStoreSnapshotUITests: XCTestCase {
       openingPrayerExpectation.fulfill()
     }
 
-    waitForExpectations(timeout: 30, handler: nil)
-    snapshot("\(snapshotNum)-Opening-Prayer-\(uiMode)")
-    snapshotNum += 1
+    waitForExpectations(timeout: 60, handler: nil)
+    snapshot("\(uiMode)-2-Opening-Prayer")
 
     // Wait until going to Ruku
     let rukuExpectation = expectation(description: "Going to Ruku Screenshot")
@@ -89,9 +84,8 @@ class AppStoreSnapshotUITests: XCTestCase {
       rukuExpectation.fulfill()
     }
 
-    waitForExpectations(timeout: 30, handler: nil)
-    snapshot("\(snapshotNum)-Ruku-\(uiMode)")
-    snapshotNum += 1
+    waitForExpectations(timeout: 60, handler: nil)
+    snapshot("\(uiMode)-3-Ruku")
   }
 
   private func localizedString(key: String) -> String {
