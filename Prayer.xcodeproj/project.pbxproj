@@ -10,6 +10,41 @@
 		2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06625A27243C9E001D8531 /* AudioMode.swift */; };
 		2E30457D27399B8F00B8BBD2 /* SoundInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */; };
 		2E30457F27399CF300B8BBD2 /* MovementSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30457E27399CF300B8BBD2 /* MovementSound.swift */; };
+		2E3044CD2736B88100B8BBD2 /* 055_The-Most-Gracious.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044CF2736B88100B8BBD2 /* 055_The-Most-Gracious.txt */; };
+		2E3044D22736B88900B8BBD2 /* 056_That-Which-Must-Come-to-Pass.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044D42736B88900B8BBD2 /* 056_That-Which-Must-Come-to-Pass.txt */; };
+		2E3044D52736B89500B8BBD2 /* 057_Iron.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044D72736B89500B8BBD2 /* 057_Iron.txt */; };
+		2E3044D82736B89A00B8BBD2 /* 059_The-Gathering.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044DA2736B89A00B8BBD2 /* 059_The-Gathering.txt */; };
+		2E3044DB2736B89F00B8BBD2 /* 060_The-Examined-One.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044DD2736B89F00B8BBD2 /* 060_The-Examined-One.txt */; };
+		2E3044DE2736B8A300B8BBD2 /* 061_The-Ranks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044E02736B8A300B8BBD2 /* 061_The-Ranks.txt */; };
+		2E3044E12736B8A800B8BBD2 /* 062_The-Congregation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044E32736B8A800B8BBD2 /* 062_The-Congregation.txt */; };
+		2E3044E42736B8AD00B8BBD2 /* 063_The-Hypocrites.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044E62736B8AD00B8BBD2 /* 063_The-Hypocrites.txt */; };
+		2E3044E72736B8B100B8BBD2 /* 064_Loss-and-Gain.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044E92736B8B100B8BBD2 /* 064_Loss-and-Gain.txt */; };
+		2E3044EA2736B8B600B8BBD2 /* 065_Divorce.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044EC2736B8B600B8BBD2 /* 065_Divorce.txt */; };
+		2E3044ED2736B8BC00B8BBD2 /* 066_Prohibition.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044EF2736B8BC00B8BBD2 /* 066_Prohibition.txt */; };
+		2E3044F02736B8C100B8BBD2 /* 067_Dominion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044F22736B8C100B8BBD2 /* 067_Dominion.txt */; };
+		2E3044F32736B8C600B8BBD2 /* 068_The-Pen.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044F52736B8C600B8BBD2 /* 068_The-Pen.txt */; };
+		2E3044F62736B8CB00B8BBD2 /* 069_The-Laying-Bare-of-the-Truth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044F82736B8CB00B8BBD2 /* 069_The-Laying-Bare-of-the-Truth.txt */; };
+		2E3044F92736B8D000B8BBD2 /* 070_The-Ways-of-Ascent.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044FB2736B8D000B8BBD2 /* 070_The-Ways-of-Ascent.txt */; };
+		2E3044FC2736B8D500B8BBD2 /* 071_Noah.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044FE2736B8D500B8BBD2 /* 071_Noah.txt */; };
+		2E3044FF2736B8DA00B8BBD2 /* 072_The-Unseen-Beings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045012736B8DA00B8BBD2 /* 072_The-Unseen-Beings.txt */; };
+		2E3045022736B8DE00B8BBD2 /* 073_The-Enwrapped-One.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045042736B8DE00B8BBD2 /* 073_The-Enwrapped-One.txt */; };
+		2E3045052736B8E300B8BBD2 /* 074_The-Enfolded-One.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045072736B8E300B8BBD2 /* 074_The-Enfolded-One.txt */; };
+		2E3045082736B8E900B8BBD2 /* 075_Resurrection.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30450A2736B8E900B8BBD2 /* 075_Resurrection.txt */; };
+		2E30450B2736B8EF00B8BBD2 /* 076_Man.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30450D2736B8EF00B8BBD2 /* 076_Man.txt */; };
+		2E30450E2736B8F300B8BBD2 /* 077_Those-Sent-Forth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045102736B8F300B8BBD2 /* 077_Those-Sent-Forth.txt */; };
+		2E3045112736B8F800B8BBD2 /* 078_The-Tiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045132736B8F800B8BBD2 /* 078_The-Tiding.txt */; };
+		2E3045142736B90C00B8BBD2 /* 079_Those-That-Rise.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045162736B90C00B8BBD2 /* 079_Those-That-Rise.txt */; };
+		2E3045172736B91100B8BBD2 /* 080_He-Frowned.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045192736B91100B8BBD2 /* 080_He-Frowned.txt */; };
+		2E30451A2736B91600B8BBD2 /* 081_Shrouding-in-Darkness.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30451C2736B91600B8BBD2 /* 081_Shrouding-in-Darkness.txt */; };
+		2E30451D2736B91A00B8BBD2 /* 082_The-Cleaving-Asunder.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30451F2736B91A00B8BBD2 /* 082_The-Cleaving-Asunder.txt */; };
+		2E3045202736B91E00B8BBD2 /* 083_Those-Who-Give-Short-Measure.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045222736B91E00B8BBD2 /* 083_Those-Who-Give-Short-Measure.txt */; };
+		2E3045232736B92200B8BBD2 /* 084_The-Splitting-Asunder.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045252736B92200B8BBD2 /* 084_The-Splitting-Asunder.txt */; };
+		2E3045262736B92600B8BBD2 /* 085_The-Great-Constellations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045282736B92600B8BBD2 /* 085_The-Great-Constellations.txt */; };
+		2E3045292736B92B00B8BBD2 /* 086_That-Which-Comes-in-the-Night.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30452B2736B92B00B8BBD2 /* 086_That-Which-Comes-in-the-Night.txt */; };
+		2E30452C2736B93000B8BBD2 /* 087_The-All-Highest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E30452E2736B93000B8BBD2 /* 087_The-All-Highest.txt */; };
+		2E30452F2736B93500B8BBD2 /* 088_The-Overshadowing-Event.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045312736B93500B8BBD2 /* 088_The-Overshadowing-Event.txt */; };
+		2E3045322736B93900B8BBD2 /* 089_The-Daybreak.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045342736B93900B8BBD2 /* 089_The-Daybreak.txt */; };
+		2E3045352736B96300B8BBD2 /* 058_The-Pleading.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3045372736B96300B8BBD2 /* 058_The-Pleading.txt */; };
 		2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B432646FD7A00A4D8E3 /* HandySwift */; };
 		2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B462646FD9200A4D8E3 /* HandyUIKit */; };
 		2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B492646FDC800A4D8E3 /* Eureka */; };
@@ -140,6 +175,111 @@
 		2E06625A27243C9E001D8531 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundInstrument.swift; sourceTree = "<group>"; };
 		2E30457E27399CF300B8BBD2 /* MovementSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementSound.swift; sourceTree = "<group>"; };
+		2E3044CE2736B88100B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/055_The-Most-Gracious.txt"; sourceTree = "<group>"; };
+		2E3044D02736B88300B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/055_The-Most-Gracious.txt"; sourceTree = "<group>"; };
+		2E3044D12736B88400B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/055_The-Most-Gracious.txt"; sourceTree = "<group>"; };
+		2E3044D32736B88900B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/056_That-Which-Must-Come-to-Pass.txt"; sourceTree = "<group>"; };
+		2E3044D62736B89500B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/057_Iron.txt; sourceTree = "<group>"; };
+		2E3044D92736B89A00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/059_The-Gathering.txt"; sourceTree = "<group>"; };
+		2E3044DC2736B89F00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/060_The-Examined-One.txt"; sourceTree = "<group>"; };
+		2E3044DF2736B8A300B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/061_The-Ranks.txt"; sourceTree = "<group>"; };
+		2E3044E22736B8A800B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/062_The-Congregation.txt"; sourceTree = "<group>"; };
+		2E3044E52736B8AD00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/063_The-Hypocrites.txt"; sourceTree = "<group>"; };
+		2E3044E82736B8B100B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/064_Loss-and-Gain.txt"; sourceTree = "<group>"; };
+		2E3044EB2736B8B600B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/065_Divorce.txt; sourceTree = "<group>"; };
+		2E3044EE2736B8BC00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/066_Prohibition.txt; sourceTree = "<group>"; };
+		2E3044F12736B8C100B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/067_Dominion.txt; sourceTree = "<group>"; };
+		2E3044F42736B8C600B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/068_The-Pen.txt"; sourceTree = "<group>"; };
+		2E3044F72736B8CB00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/069_The-Laying-Bare-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E3044FA2736B8D000B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/070_The-Ways-of-Ascent.txt"; sourceTree = "<group>"; };
+		2E3044FD2736B8D500B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/071_Noah.txt; sourceTree = "<group>"; };
+		2E3045002736B8DA00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/072_The-Unseen-Beings.txt"; sourceTree = "<group>"; };
+		2E3045032736B8DE00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/073_The-Enwrapped-One.txt"; sourceTree = "<group>"; };
+		2E3045062736B8E300B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/074_The-Enfolded-One.txt"; sourceTree = "<group>"; };
+		2E3045092736B8E900B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/075_Resurrection.txt; sourceTree = "<group>"; };
+		2E30450C2736B8EF00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/076_Man.txt; sourceTree = "<group>"; };
+		2E30450F2736B8F300B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/077_Those-Sent-Forth.txt"; sourceTree = "<group>"; };
+		2E3045122736B8F800B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/078_The-Tiding.txt"; sourceTree = "<group>"; };
+		2E3045152736B90C00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/079_Those-That-Rise.txt"; sourceTree = "<group>"; };
+		2E3045182736B91100B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/080_He-Frowned.txt"; sourceTree = "<group>"; };
+		2E30451B2736B91600B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/081_Shrouding-in-Darkness.txt"; sourceTree = "<group>"; };
+		2E30451E2736B91A00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/082_The-Cleaving-Asunder.txt"; sourceTree = "<group>"; };
+		2E3045212736B91E00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/083_Those-Who-Give-Short-Measure.txt"; sourceTree = "<group>"; };
+		2E3045242736B92200B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/084_The-Splitting-Asunder.txt"; sourceTree = "<group>"; };
+		2E3045272736B92600B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/085_The-Great-Constellations.txt"; sourceTree = "<group>"; };
+		2E30452A2736B92B00B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/086_That-Which-Comes-in-the-Night.txt"; sourceTree = "<group>"; };
+		2E30452D2736B93000B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/087_The-All-Highest.txt"; sourceTree = "<group>"; };
+		2E3045302736B93500B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/088_The-Overshadowing-Event.txt"; sourceTree = "<group>"; };
+		2E3045332736B93900B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/089_The-Daybreak.txt"; sourceTree = "<group>"; };
+		2E3045362736B96300B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/058_The-Pleading.txt"; sourceTree = "<group>"; };
+		2E3045382736B97900B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/089_The-Daybreak.txt"; sourceTree = "<group>"; };
+		2E3045392736B97A00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/089_The-Daybreak.txt"; sourceTree = "<group>"; };
+		2E30453A2736B97D00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/057_Iron.txt; sourceTree = "<group>"; };
+		2E30453B2736B97E00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/057_Iron.txt; sourceTree = "<group>"; };
+		2E30453C2736B98100B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/059_The-Gathering.txt"; sourceTree = "<group>"; };
+		2E30453D2736B98200B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/059_The-Gathering.txt"; sourceTree = "<group>"; };
+		2E30453E2736B98600B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/062_The-Congregation.txt"; sourceTree = "<group>"; };
+		2E30453F2736B98700B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/062_The-Congregation.txt"; sourceTree = "<group>"; };
+		2E3045402736B98A00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/061_The-Ranks.txt"; sourceTree = "<group>"; };
+		2E3045412736B98B00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/061_The-Ranks.txt"; sourceTree = "<group>"; };
+		2E3045422736B98E00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/060_The-Examined-One.txt"; sourceTree = "<group>"; };
+		2E3045432736B98F00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/060_The-Examined-One.txt"; sourceTree = "<group>"; };
+		2E3045442736B99100B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/058_The-Pleading.txt"; sourceTree = "<group>"; };
+		2E3045452736B99200B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/058_The-Pleading.txt"; sourceTree = "<group>"; };
+		2E3045462736B99400B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/056_That-Which-Must-Come-to-Pass.txt"; sourceTree = "<group>"; };
+		2E3045472736B99500B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/056_That-Which-Must-Come-to-Pass.txt"; sourceTree = "<group>"; };
+		2E3045482736B99800B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/063_The-Hypocrites.txt"; sourceTree = "<group>"; };
+		2E3045492736B99900B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/063_The-Hypocrites.txt"; sourceTree = "<group>"; };
+		2E30454A2736B99B00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/064_Loss-and-Gain.txt"; sourceTree = "<group>"; };
+		2E30454B2736B99C00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/064_Loss-and-Gain.txt"; sourceTree = "<group>"; };
+		2E30454C2736B99F00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/065_Divorce.txt; sourceTree = "<group>"; };
+		2E30454D2736B9A000B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/065_Divorce.txt; sourceTree = "<group>"; };
+		2E30454E2736B9A200B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/066_Prohibition.txt; sourceTree = "<group>"; };
+		2E30454F2736B9A300B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/066_Prohibition.txt; sourceTree = "<group>"; };
+		2E3045502736B9A600B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/067_Dominion.txt; sourceTree = "<group>"; };
+		2E3045512736B9A600B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/067_Dominion.txt; sourceTree = "<group>"; };
+		2E3045522736B9A900B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/068_The-Pen.txt"; sourceTree = "<group>"; };
+		2E3045532736B9AA00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/068_The-Pen.txt"; sourceTree = "<group>"; };
+		2E3045542736B9AC00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/069_The-Laying-Bare-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E3045552736B9AD00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/069_The-Laying-Bare-of-the-Truth.txt"; sourceTree = "<group>"; };
+		2E3045562736B9AF00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/070_The-Ways-of-Ascent.txt"; sourceTree = "<group>"; };
+		2E3045572736B9B000B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/070_The-Ways-of-Ascent.txt"; sourceTree = "<group>"; };
+		2E3045582736B9B300B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/071_Noah.txt; sourceTree = "<group>"; };
+		2E3045592736B9B400B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/071_Noah.txt; sourceTree = "<group>"; };
+		2E30455A2736B9B600B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/072_The-Unseen-Beings.txt"; sourceTree = "<group>"; };
+		2E30455B2736B9B700B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/072_The-Unseen-Beings.txt"; sourceTree = "<group>"; };
+		2E30455C2736B9BA00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/073_The-Enwrapped-One.txt"; sourceTree = "<group>"; };
+		2E30455D2736B9BB00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/073_The-Enwrapped-One.txt"; sourceTree = "<group>"; };
+		2E30455E2736B9BD00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/074_The-Enfolded-One.txt"; sourceTree = "<group>"; };
+		2E30455F2736B9BE00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/074_The-Enfolded-One.txt"; sourceTree = "<group>"; };
+		2E3045602736B9C000B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/075_Resurrection.txt; sourceTree = "<group>"; };
+		2E3045612736B9C200B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/075_Resurrection.txt; sourceTree = "<group>"; };
+		2E3045622736B9C500B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/076_Man.txt; sourceTree = "<group>"; };
+		2E3045632736B9C900B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/076_Man.txt; sourceTree = "<group>"; };
+		2E3045642736B9CB00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/077_Those-Sent-Forth.txt"; sourceTree = "<group>"; };
+		2E3045652736B9CC00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/077_Those-Sent-Forth.txt"; sourceTree = "<group>"; };
+		2E3045662736B9CF00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/078_The-Tiding.txt"; sourceTree = "<group>"; };
+		2E3045672736B9CF00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/078_The-Tiding.txt"; sourceTree = "<group>"; };
+		2E3045682736B9D200B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/079_Those-That-Rise.txt"; sourceTree = "<group>"; };
+		2E3045692736B9D200B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/079_Those-That-Rise.txt"; sourceTree = "<group>"; };
+		2E30456A2736B9D500B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/080_He-Frowned.txt"; sourceTree = "<group>"; };
+		2E30456B2736B9D600B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/080_He-Frowned.txt"; sourceTree = "<group>"; };
+		2E30456C2736B9D800B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/081_Shrouding-in-Darkness.txt"; sourceTree = "<group>"; };
+		2E30456D2736B9D900B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/081_Shrouding-in-Darkness.txt"; sourceTree = "<group>"; };
+		2E30456E2736B9DC00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/082_The-Cleaving-Asunder.txt"; sourceTree = "<group>"; };
+		2E30456F2736B9DD00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/082_The-Cleaving-Asunder.txt"; sourceTree = "<group>"; };
+		2E3045702736B9DF00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/083_Those-Who-Give-Short-Measure.txt"; sourceTree = "<group>"; };
+		2E3045712736B9E000B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/083_Those-Who-Give-Short-Measure.txt"; sourceTree = "<group>"; };
+		2E3045722736B9E200B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/084_The-Splitting-Asunder.txt"; sourceTree = "<group>"; };
+		2E3045732736B9E300B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/084_The-Splitting-Asunder.txt"; sourceTree = "<group>"; };
+		2E3045742736B9E500B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/085_The-Great-Constellations.txt"; sourceTree = "<group>"; };
+		2E3045752736B9E600B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/085_The-Great-Constellations.txt"; sourceTree = "<group>"; };
+		2E3045762736B9E900B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/086_That-Which-Comes-in-the-Night.txt"; sourceTree = "<group>"; };
+		2E3045772736B9EA00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/086_That-Which-Comes-in-the-Night.txt"; sourceTree = "<group>"; };
+		2E3045782736B9EC00B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/087_The-All-Highest.txt"; sourceTree = "<group>"; };
+		2E3045792736B9ED00B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/087_The-All-Highest.txt"; sourceTree = "<group>"; };
+		2E30457A2736B9F000B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = "tr.lproj/088_The-Overshadowing-Event.txt"; sourceTree = "<group>"; };
+		2E30457B2736B9F000B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = "de.lproj/088_The-Overshadowing-Event.txt"; sourceTree = "<group>"; };
 		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
 		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
 		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
@@ -498,6 +638,41 @@
 			isa = PBXGroup;
 			children = (
 				A1494B211E29452B00286EBF /* 001_The-Opening.txt */,
+				2E3044CF2736B88100B8BBD2 /* 055_The-Most-Gracious.txt */,
+				2E3044D42736B88900B8BBD2 /* 056_That-Which-Must-Come-to-Pass.txt */,
+				2E3044D72736B89500B8BBD2 /* 057_Iron.txt */,
+				2E3045372736B96300B8BBD2 /* 058_The-Pleading.txt */,
+				2E3044DA2736B89A00B8BBD2 /* 059_The-Gathering.txt */,
+				2E3044DD2736B89F00B8BBD2 /* 060_The-Examined-One.txt */,
+				2E3044E02736B8A300B8BBD2 /* 061_The-Ranks.txt */,
+				2E3044E32736B8A800B8BBD2 /* 062_The-Congregation.txt */,
+				2E3044E62736B8AD00B8BBD2 /* 063_The-Hypocrites.txt */,
+				2E3044E92736B8B100B8BBD2 /* 064_Loss-and-Gain.txt */,
+				2E3044EC2736B8B600B8BBD2 /* 065_Divorce.txt */,
+				2E3044EF2736B8BC00B8BBD2 /* 066_Prohibition.txt */,
+				2E3044F22736B8C100B8BBD2 /* 067_Dominion.txt */,
+				2E3044F52736B8C600B8BBD2 /* 068_The-Pen.txt */,
+				2E3044F82736B8CB00B8BBD2 /* 069_The-Laying-Bare-of-the-Truth.txt */,
+				2E3044FB2736B8D000B8BBD2 /* 070_The-Ways-of-Ascent.txt */,
+				2E3044FE2736B8D500B8BBD2 /* 071_Noah.txt */,
+				2E3045012736B8DA00B8BBD2 /* 072_The-Unseen-Beings.txt */,
+				2E3045042736B8DE00B8BBD2 /* 073_The-Enwrapped-One.txt */,
+				2E3045072736B8E300B8BBD2 /* 074_The-Enfolded-One.txt */,
+				2E30450A2736B8E900B8BBD2 /* 075_Resurrection.txt */,
+				2E30450D2736B8EF00B8BBD2 /* 076_Man.txt */,
+				2E3045102736B8F300B8BBD2 /* 077_Those-Sent-Forth.txt */,
+				2E3045132736B8F800B8BBD2 /* 078_The-Tiding.txt */,
+				2E3045162736B90C00B8BBD2 /* 079_Those-That-Rise.txt */,
+				2E3045192736B91100B8BBD2 /* 080_He-Frowned.txt */,
+				2E30451C2736B91600B8BBD2 /* 081_Shrouding-in-Darkness.txt */,
+				2E30451F2736B91A00B8BBD2 /* 082_The-Cleaving-Asunder.txt */,
+				2E3045222736B91E00B8BBD2 /* 083_Those-Who-Give-Short-Measure.txt */,
+				2E3045252736B92200B8BBD2 /* 084_The-Splitting-Asunder.txt */,
+				2E3045282736B92600B8BBD2 /* 085_The-Great-Constellations.txt */,
+				2E30452B2736B92B00B8BBD2 /* 086_That-Which-Comes-in-the-Night.txt */,
+				2E30452E2736B93000B8BBD2 /* 087_The-All-Highest.txt */,
+				2E3045312736B93500B8BBD2 /* 088_The-Overshadowing-Event.txt */,
+				2E3045342736B93900B8BBD2 /* 089_The-Daybreak.txt */,
 				2E9976DB2715A75400F61BFE /* 090_The-Land.txt */,
 				2E9976E02715A76100F61BFE /* 091_The-Sun.txt */,
 				2E9976E52715A76C00F61BFE /* 092_The-Night.txt */,
@@ -814,6 +989,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1494B251E29452B00286EBF /* 001_The-Opening.txt in Resources */,
+				2E3044CD2736B88100B8BBD2 /* 055_The-Most-Gracious.txt in Resources */,
+				2E3044D22736B88900B8BBD2 /* 056_That-Which-Must-Come-to-Pass.txt in Resources */,
+				2E3044D52736B89500B8BBD2 /* 057_Iron.txt in Resources */,
+				2E3045352736B96300B8BBD2 /* 058_The-Pleading.txt in Resources */,
+				2E3044D82736B89A00B8BBD2 /* 059_The-Gathering.txt in Resources */,
+				2E3044DB2736B89F00B8BBD2 /* 060_The-Examined-One.txt in Resources */,
+				2E3044DE2736B8A300B8BBD2 /* 061_The-Ranks.txt in Resources */,
+				2E3044E12736B8A800B8BBD2 /* 062_The-Congregation.txt in Resources */,
+				2E3044E42736B8AD00B8BBD2 /* 063_The-Hypocrites.txt in Resources */,
+				2E3044E72736B8B100B8BBD2 /* 064_Loss-and-Gain.txt in Resources */,
+				2E3044EA2736B8B600B8BBD2 /* 065_Divorce.txt in Resources */,
+				2E3044ED2736B8BC00B8BBD2 /* 066_Prohibition.txt in Resources */,
+				2E3044F02736B8C100B8BBD2 /* 067_Dominion.txt in Resources */,
+				2E3044F32736B8C600B8BBD2 /* 068_The-Pen.txt in Resources */,
+				2E3044F62736B8CB00B8BBD2 /* 069_The-Laying-Bare-of-the-Truth.txt in Resources */,
+				2E3044F92736B8D000B8BBD2 /* 070_The-Ways-of-Ascent.txt in Resources */,
+				2E3044FC2736B8D500B8BBD2 /* 071_Noah.txt in Resources */,
+				2E3044FF2736B8DA00B8BBD2 /* 072_The-Unseen-Beings.txt in Resources */,
+				2E3045022736B8DE00B8BBD2 /* 073_The-Enwrapped-One.txt in Resources */,
+				2E3045052736B8E300B8BBD2 /* 074_The-Enfolded-One.txt in Resources */,
+				2E3045082736B8E900B8BBD2 /* 075_Resurrection.txt in Resources */,
+				2E30450B2736B8EF00B8BBD2 /* 076_Man.txt in Resources */,
+				2E30450E2736B8F300B8BBD2 /* 077_Those-Sent-Forth.txt in Resources */,
+				2E3045112736B8F800B8BBD2 /* 078_The-Tiding.txt in Resources */,
+				2E3045142736B90C00B8BBD2 /* 079_Those-That-Rise.txt in Resources */,
+				2E3045172736B91100B8BBD2 /* 080_He-Frowned.txt in Resources */,
+				2E30451A2736B91600B8BBD2 /* 081_Shrouding-in-Darkness.txt in Resources */,
+				2E30451D2736B91A00B8BBD2 /* 082_The-Cleaving-Asunder.txt in Resources */,
+				2E3045202736B91E00B8BBD2 /* 083_Those-Who-Give-Short-Measure.txt in Resources */,
+				2E3045232736B92200B8BBD2 /* 084_The-Splitting-Asunder.txt in Resources */,
+				2E3045262736B92600B8BBD2 /* 085_The-Great-Constellations.txt in Resources */,
+				2E3045292736B92B00B8BBD2 /* 086_That-Which-Comes-in-the-Night.txt in Resources */,
+				2E30452C2736B93000B8BBD2 /* 087_The-All-Highest.txt in Resources */,
+				2E30452F2736B93500B8BBD2 /* 088_The-Overshadowing-Event.txt in Resources */,
+				2E3045322736B93900B8BBD2 /* 089_The-Daybreak.txt in Resources */,
 				2E9976D92715A75400F61BFE /* 090_The-Land.txt in Resources */,
 				2E9976DE2715A76100F61BFE /* 091_The-Sun.txt in Resources */,
 				2E9976E32715A76C00F61BFE /* 092_The-Night.txt in Resources */,
@@ -1024,6 +1234,356 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2E3044CF2736B88100B8BBD2 /* 055_The-Most-Gracious.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044CE2736B88100B8BBD2 /* en */,
+				2E3044D02736B88300B8BBD2 /* de */,
+				2E3044D12736B88400B8BBD2 /* tr */,
+			);
+			name = "055_The-Most-Gracious.txt";
+			sourceTree = "<group>";
+		};
+		2E3044D42736B88900B8BBD2 /* 056_That-Which-Must-Come-to-Pass.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044D32736B88900B8BBD2 /* en */,
+				2E3045462736B99400B8BBD2 /* tr */,
+				2E3045472736B99500B8BBD2 /* de */,
+			);
+			name = "056_That-Which-Must-Come-to-Pass.txt";
+			sourceTree = "<group>";
+		};
+		2E3044D72736B89500B8BBD2 /* 057_Iron.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044D62736B89500B8BBD2 /* en */,
+				2E30453A2736B97D00B8BBD2 /* de */,
+				2E30453B2736B97E00B8BBD2 /* tr */,
+			);
+			name = 057_Iron.txt;
+			sourceTree = "<group>";
+		};
+		2E3044DA2736B89A00B8BBD2 /* 059_The-Gathering.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044D92736B89A00B8BBD2 /* en */,
+				2E30453C2736B98100B8BBD2 /* de */,
+				2E30453D2736B98200B8BBD2 /* tr */,
+			);
+			name = "059_The-Gathering.txt";
+			sourceTree = "<group>";
+		};
+		2E3044DD2736B89F00B8BBD2 /* 060_The-Examined-One.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044DC2736B89F00B8BBD2 /* en */,
+				2E3045422736B98E00B8BBD2 /* de */,
+				2E3045432736B98F00B8BBD2 /* tr */,
+			);
+			name = "060_The-Examined-One.txt";
+			sourceTree = "<group>";
+		};
+		2E3044E02736B8A300B8BBD2 /* 061_The-Ranks.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044DF2736B8A300B8BBD2 /* en */,
+				2E3045402736B98A00B8BBD2 /* de */,
+				2E3045412736B98B00B8BBD2 /* tr */,
+			);
+			name = "061_The-Ranks.txt";
+			sourceTree = "<group>";
+		};
+		2E3044E32736B8A800B8BBD2 /* 062_The-Congregation.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044E22736B8A800B8BBD2 /* en */,
+				2E30453E2736B98600B8BBD2 /* de */,
+				2E30453F2736B98700B8BBD2 /* tr */,
+			);
+			name = "062_The-Congregation.txt";
+			sourceTree = "<group>";
+		};
+		2E3044E62736B8AD00B8BBD2 /* 063_The-Hypocrites.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044E52736B8AD00B8BBD2 /* en */,
+				2E3045482736B99800B8BBD2 /* tr */,
+				2E3045492736B99900B8BBD2 /* de */,
+			);
+			name = "063_The-Hypocrites.txt";
+			sourceTree = "<group>";
+		};
+		2E3044E92736B8B100B8BBD2 /* 064_Loss-and-Gain.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044E82736B8B100B8BBD2 /* en */,
+				2E30454A2736B99B00B8BBD2 /* tr */,
+				2E30454B2736B99C00B8BBD2 /* de */,
+			);
+			name = "064_Loss-and-Gain.txt";
+			sourceTree = "<group>";
+		};
+		2E3044EC2736B8B600B8BBD2 /* 065_Divorce.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044EB2736B8B600B8BBD2 /* en */,
+				2E30454C2736B99F00B8BBD2 /* tr */,
+				2E30454D2736B9A000B8BBD2 /* de */,
+			);
+			name = 065_Divorce.txt;
+			sourceTree = "<group>";
+		};
+		2E3044EF2736B8BC00B8BBD2 /* 066_Prohibition.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044EE2736B8BC00B8BBD2 /* en */,
+				2E30454E2736B9A200B8BBD2 /* tr */,
+				2E30454F2736B9A300B8BBD2 /* de */,
+			);
+			name = 066_Prohibition.txt;
+			sourceTree = "<group>";
+		};
+		2E3044F22736B8C100B8BBD2 /* 067_Dominion.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044F12736B8C100B8BBD2 /* en */,
+				2E3045502736B9A600B8BBD2 /* tr */,
+				2E3045512736B9A600B8BBD2 /* de */,
+			);
+			name = 067_Dominion.txt;
+			sourceTree = "<group>";
+		};
+		2E3044F52736B8C600B8BBD2 /* 068_The-Pen.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044F42736B8C600B8BBD2 /* en */,
+				2E3045522736B9A900B8BBD2 /* tr */,
+				2E3045532736B9AA00B8BBD2 /* de */,
+			);
+			name = "068_The-Pen.txt";
+			sourceTree = "<group>";
+		};
+		2E3044F82736B8CB00B8BBD2 /* 069_The-Laying-Bare-of-the-Truth.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044F72736B8CB00B8BBD2 /* en */,
+				2E3045542736B9AC00B8BBD2 /* tr */,
+				2E3045552736B9AD00B8BBD2 /* de */,
+			);
+			name = "069_The-Laying-Bare-of-the-Truth.txt";
+			sourceTree = "<group>";
+		};
+		2E3044FB2736B8D000B8BBD2 /* 070_The-Ways-of-Ascent.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044FA2736B8D000B8BBD2 /* en */,
+				2E3045562736B9AF00B8BBD2 /* tr */,
+				2E3045572736B9B000B8BBD2 /* de */,
+			);
+			name = "070_The-Ways-of-Ascent.txt";
+			sourceTree = "<group>";
+		};
+		2E3044FE2736B8D500B8BBD2 /* 071_Noah.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3044FD2736B8D500B8BBD2 /* en */,
+				2E3045582736B9B300B8BBD2 /* tr */,
+				2E3045592736B9B400B8BBD2 /* de */,
+			);
+			name = 071_Noah.txt;
+			sourceTree = "<group>";
+		};
+		2E3045012736B8DA00B8BBD2 /* 072_The-Unseen-Beings.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045002736B8DA00B8BBD2 /* en */,
+				2E30455A2736B9B600B8BBD2 /* tr */,
+				2E30455B2736B9B700B8BBD2 /* de */,
+			);
+			name = "072_The-Unseen-Beings.txt";
+			sourceTree = "<group>";
+		};
+		2E3045042736B8DE00B8BBD2 /* 073_The-Enwrapped-One.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045032736B8DE00B8BBD2 /* en */,
+				2E30455C2736B9BA00B8BBD2 /* tr */,
+				2E30455D2736B9BB00B8BBD2 /* de */,
+			);
+			name = "073_The-Enwrapped-One.txt";
+			sourceTree = "<group>";
+		};
+		2E3045072736B8E300B8BBD2 /* 074_The-Enfolded-One.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045062736B8E300B8BBD2 /* en */,
+				2E30455E2736B9BD00B8BBD2 /* tr */,
+				2E30455F2736B9BE00B8BBD2 /* de */,
+			);
+			name = "074_The-Enfolded-One.txt";
+			sourceTree = "<group>";
+		};
+		2E30450A2736B8E900B8BBD2 /* 075_Resurrection.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045092736B8E900B8BBD2 /* en */,
+				2E3045602736B9C000B8BBD2 /* tr */,
+				2E3045612736B9C200B8BBD2 /* de */,
+			);
+			name = 075_Resurrection.txt;
+			sourceTree = "<group>";
+		};
+		2E30450D2736B8EF00B8BBD2 /* 076_Man.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30450C2736B8EF00B8BBD2 /* en */,
+				2E3045622736B9C500B8BBD2 /* tr */,
+				2E3045632736B9C900B8BBD2 /* de */,
+			);
+			name = 076_Man.txt;
+			sourceTree = "<group>";
+		};
+		2E3045102736B8F300B8BBD2 /* 077_Those-Sent-Forth.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30450F2736B8F300B8BBD2 /* en */,
+				2E3045642736B9CB00B8BBD2 /* de */,
+				2E3045652736B9CC00B8BBD2 /* tr */,
+			);
+			name = "077_Those-Sent-Forth.txt";
+			sourceTree = "<group>";
+		};
+		2E3045132736B8F800B8BBD2 /* 078_The-Tiding.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045122736B8F800B8BBD2 /* en */,
+				2E3045662736B9CF00B8BBD2 /* tr */,
+				2E3045672736B9CF00B8BBD2 /* de */,
+			);
+			name = "078_The-Tiding.txt";
+			sourceTree = "<group>";
+		};
+		2E3045162736B90C00B8BBD2 /* 079_Those-That-Rise.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045152736B90C00B8BBD2 /* en */,
+				2E3045682736B9D200B8BBD2 /* tr */,
+				2E3045692736B9D200B8BBD2 /* de */,
+			);
+			name = "079_Those-That-Rise.txt";
+			sourceTree = "<group>";
+		};
+		2E3045192736B91100B8BBD2 /* 080_He-Frowned.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045182736B91100B8BBD2 /* en */,
+				2E30456A2736B9D500B8BBD2 /* tr */,
+				2E30456B2736B9D600B8BBD2 /* de */,
+			);
+			name = "080_He-Frowned.txt";
+			sourceTree = "<group>";
+		};
+		2E30451C2736B91600B8BBD2 /* 081_Shrouding-in-Darkness.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30451B2736B91600B8BBD2 /* en */,
+				2E30456C2736B9D800B8BBD2 /* tr */,
+				2E30456D2736B9D900B8BBD2 /* de */,
+			);
+			name = "081_Shrouding-in-Darkness.txt";
+			sourceTree = "<group>";
+		};
+		2E30451F2736B91A00B8BBD2 /* 082_The-Cleaving-Asunder.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30451E2736B91A00B8BBD2 /* en */,
+				2E30456E2736B9DC00B8BBD2 /* tr */,
+				2E30456F2736B9DD00B8BBD2 /* de */,
+			);
+			name = "082_The-Cleaving-Asunder.txt";
+			sourceTree = "<group>";
+		};
+		2E3045222736B91E00B8BBD2 /* 083_Those-Who-Give-Short-Measure.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045212736B91E00B8BBD2 /* en */,
+				2E3045702736B9DF00B8BBD2 /* tr */,
+				2E3045712736B9E000B8BBD2 /* de */,
+			);
+			name = "083_Those-Who-Give-Short-Measure.txt";
+			sourceTree = "<group>";
+		};
+		2E3045252736B92200B8BBD2 /* 084_The-Splitting-Asunder.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045242736B92200B8BBD2 /* en */,
+				2E3045722736B9E200B8BBD2 /* tr */,
+				2E3045732736B9E300B8BBD2 /* de */,
+			);
+			name = "084_The-Splitting-Asunder.txt";
+			sourceTree = "<group>";
+		};
+		2E3045282736B92600B8BBD2 /* 085_The-Great-Constellations.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045272736B92600B8BBD2 /* en */,
+				2E3045742736B9E500B8BBD2 /* tr */,
+				2E3045752736B9E600B8BBD2 /* de */,
+			);
+			name = "085_The-Great-Constellations.txt";
+			sourceTree = "<group>";
+		};
+		2E30452B2736B92B00B8BBD2 /* 086_That-Which-Comes-in-the-Night.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30452A2736B92B00B8BBD2 /* en */,
+				2E3045762736B9E900B8BBD2 /* tr */,
+				2E3045772736B9EA00B8BBD2 /* de */,
+			);
+			name = "086_That-Which-Comes-in-the-Night.txt";
+			sourceTree = "<group>";
+		};
+		2E30452E2736B93000B8BBD2 /* 087_The-All-Highest.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E30452D2736B93000B8BBD2 /* en */,
+				2E3045782736B9EC00B8BBD2 /* tr */,
+				2E3045792736B9ED00B8BBD2 /* de */,
+			);
+			name = "087_The-All-Highest.txt";
+			sourceTree = "<group>";
+		};
+		2E3045312736B93500B8BBD2 /* 088_The-Overshadowing-Event.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045302736B93500B8BBD2 /* en */,
+				2E30457A2736B9F000B8BBD2 /* tr */,
+				2E30457B2736B9F000B8BBD2 /* de */,
+			);
+			name = "088_The-Overshadowing-Event.txt";
+			sourceTree = "<group>";
+		};
+		2E3045342736B93900B8BBD2 /* 089_The-Daybreak.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045332736B93900B8BBD2 /* en */,
+				2E3045382736B97900B8BBD2 /* tr */,
+				2E3045392736B97A00B8BBD2 /* de */,
+			);
+			name = "089_The-Daybreak.txt";
+			sourceTree = "<group>";
+		};
+		2E3045372736B96300B8BBD2 /* 058_The-Pleading.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3045362736B96300B8BBD2 /* en */,
+				2E3045442736B99100B8BBD2 /* tr */,
+				2E3045452736B99200B8BBD2 /* de */,
+			);
+			name = "058_The-Pleading.txt";
+			sourceTree = "<group>";
+		};
 		2E9976DB2715A75400F61BFE /* 090_The-Land.txt */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -85,6 +85,14 @@ internal enum L10n {
       /// Al-Qadr (Destiny)
       internal static let name = L10n.tr("Localizable", "RECITATION.DESTINY.NAME")
     }
+    internal enum Divorce {
+      /// At-Talaq (Divorce)
+      internal static let name = L10n.tr("Localizable", "RECITATION.DIVORCE.NAME")
+    }
+    internal enum Dominion {
+      /// Al-Mulk (Dominion)
+      internal static let name = L10n.tr("Localizable", "RECITATION.DOMINION.NAME")
+    }
     internal enum GoodInAbundance {
       /// al-Kawthar (Good in Abundance)
       internal static let name = L10n.tr("Localizable", "RECITATION.GOOD_IN_ABUNDANCE.NAME")
@@ -93,17 +101,61 @@ internal enum L10n {
       /// At-Takathur (Greed For More And More)
       internal static let name = L10n.tr("Localizable", "RECITATION.GREED_FOR_MORE_AND_MORE.NAME")
     }
+    internal enum HeFrowned {
+      /// 'Abasa (He Frowned)
+      internal static let name = L10n.tr("Localizable", "RECITATION.HE_FROWNED.NAME")
+    }
+    internal enum Iron {
+      /// Al-Hadid (Iron)
+      internal static let name = L10n.tr("Localizable", "RECITATION.IRON.NAME")
+    }
+    internal enum LossAndGain {
+      /// At-Taghabun (Loss And Gain)
+      internal static let name = L10n.tr("Localizable", "RECITATION.LOSS_AND_GAIN.NAME")
+    }
+    internal enum Man {
+      /// Al-Insan (Man)
+      internal static let name = L10n.tr("Localizable", "RECITATION.MAN.NAME")
+    }
     internal enum Men {
       /// an-Nas (Men)
       internal static let name = L10n.tr("Localizable", "RECITATION.MEN.NAME")
+    }
+    internal enum Noah {
+      /// Nuh (Noah)
+      internal static let name = L10n.tr("Localizable", "RECITATION.NOAH.NAME")
+    }
+    internal enum Prohibition {
+      /// At-Tahrim (Prohibition)
+      internal static let name = L10n.tr("Localizable", "RECITATION.PROHIBITION.NAME")
     }
     internal enum Quraysh {
       /// Quraysch
       internal static let name = L10n.tr("Localizable", "RECITATION.QURAYSH.NAME")
     }
+    internal enum Resurrection {
+      /// Al-Qiyamah (Resurrection)
+      internal static let name = L10n.tr("Localizable", "RECITATION.RESURRECTION.NAME")
+    }
+    internal enum ShroudingInDarkness {
+      /// At-Takwir (Shrouding In Darkness)
+      internal static let name = L10n.tr("Localizable", "RECITATION.SHROUDING_IN_DARKNESS.NAME")
+    }
     internal enum Succour {
       /// an-Nasr (Succour)
       internal static let name = L10n.tr("Localizable", "RECITATION.SUCCOUR.NAME")
+    }
+    internal enum ThatWhichComesInTheNight {
+      /// At-Tariq (That Which Comes In The Night)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THAT_WHICH_COMES_IN_THE_NIGHT.NAME")
+    }
+    internal enum ThatWhichMustComeToPass {
+      /// Al-Waqiah (That Which Must Come To Pass)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THAT_WHICH_MUST_COME_TO_PASS.NAME")
+    }
+    internal enum TheAllHighest {
+      /// Al-A'La (The All-Highest)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_ALL_HIGHEST.NAME")
     }
     internal enum TheBrightMorningHours {
       /// Ad-Duha (The Bright Morning Hours)
@@ -112,6 +164,18 @@ internal enum L10n {
     internal enum TheChargers {
       /// Al-Adiyat (The Chargers)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_CHARGERS.NAME")
+    }
+    internal enum TheCleavingAsunder {
+      /// Al-Infitar (The Cleaving Asunder)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_CLEAVING_ASUNDER.NAME")
+    }
+    internal enum TheCongregation {
+      /// Al-Jumu'ah (The Congregation)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_CONGREGATION.NAME")
+    }
+    internal enum TheDaybreak {
+      /// Al-Fajr (The Daybreak)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_DAYBREAK.NAME")
     }
     internal enum TheDecleratiionOfGodsPerfection {
       /// al-Ikhlas (The Decleration Of [God's] Perfection)
@@ -125,9 +189,21 @@ internal enum L10n {
       /// al-Fil (The Elephant)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_ELEPHANT.NAME")
     }
+    internal enum TheEnfoldedOne {
+      /// Al-Muddaththir (The Enfolded One)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_ENFOLDED_ONE.NAME")
+    }
+    internal enum TheEnwrappedOne {
+      /// Al-Muzzammil (The Enwrapped One)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_ENWRAPPED_ONE.NAME")
+    }
     internal enum TheEvidenceOfTheTruth {
       /// Al-Bayyinah (The Evidence Of The Truth)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME")
+    }
+    internal enum TheExaminedOne {
+      /// Al-Mumtahanah (The Examined One)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_EXAMINED_ONE.NAME")
     }
     internal enum TheFig {
       /// At-Tin (The Fig)
@@ -137,13 +213,33 @@ internal enum L10n {
       /// al-'Asr (The Flight Of Time)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_FLIGHT_OF_TIME.NAME")
     }
+    internal enum TheGathering {
+      /// Al-Hashr (The Gathering)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_GATHERING.NAME")
+    }
     internal enum TheGermCell {
       /// Al-Alaq (The Germ-Cell)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_GERM_CELL.NAME")
     }
+    internal enum TheGreatConstellations {
+      /// Al-Buruj (The Great Constellations)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_GREAT_CONSTELLATIONS.NAME")
+    }
+    internal enum TheHypocrites {
+      /// Al-Munafiqun (The Hypocrites)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_HYPOCRITES.NAME")
+    }
     internal enum TheLand {
       /// Al-Balad (The Land)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_LAND.NAME")
+    }
+    internal enum TheLayingBareOfTheTruth {
+      /// Al-Haqqah (The Laying-Bare Of The Truth)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_LAYING_BARE_OF_THE_TRUTH.NAME")
+    }
+    internal enum TheMostGracious {
+      /// Ar-Rahman (The Most Gracious)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_MOST_GRACIOUS.NAME")
     }
     internal enum TheNight {
       /// Al-Layl (The Night)
@@ -157,6 +253,22 @@ internal enum L10n {
       /// Ash-Sharh (The Opening-Up Of The Heart)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME")
     }
+    internal enum TheOvershadowingEvent {
+      /// Al-Ghashiyah (The Overshadowing Event)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_OVERSHADOWING_EVENT.NAME")
+    }
+    internal enum ThePen {
+      /// Al-Qalam (The Pen)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_PEN.NAME")
+    }
+    internal enum ThePleading {
+      /// Al-Mujadalah (The Pleading)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_PLEADING.NAME")
+    }
+    internal enum TheRanks {
+      /// As-Saff (The Ranks)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_RANKS.NAME")
+    }
     internal enum TheRisingDawn {
       /// al-Falaq (The Rising Dawn)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_RISING_DAWN.NAME")
@@ -164,6 +276,10 @@ internal enum L10n {
     internal enum TheSlanderer {
       /// al-Humaza (The Slanderer)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_SLANDERER.NAME")
+    }
+    internal enum TheSplittingAsunder {
+      /// Al-Inshiqaq (The Splitting Asunder)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_SPLITTING_ASUNDER.NAME")
     }
     internal enum TheSuddenCalamity {
       /// Al-Qariah (The Sudden Calamity)
@@ -173,13 +289,37 @@ internal enum L10n {
       /// Ash-Shams (The Sun)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_SUN.NAME")
     }
+    internal enum TheTiding {
+      /// An-Naba (The Tiding)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_TIDING.NAME")
+    }
     internal enum TheTwistedStrands {
       /// al-Masad (The Twisted Strands)
       internal static let name = L10n.tr("Localizable", "RECITATION.THE_TWISTED_STRANDS.NAME")
     }
+    internal enum TheUnseenBeings {
+      /// Al-Jinn (The Unseen Beings)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_UNSEEN_BEINGS.NAME")
+    }
+    internal enum TheWaysOfAscent {
+      /// Al-Ma'Arij (The Ways Of Ascent)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THE_WAYS_OF_ASCENT.NAME")
+    }
+    internal enum ThoseSentForth {
+      /// Al-Mursalat (Those Sent Forth)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THOSE_SENT_FORTH.NAME")
+    }
+    internal enum ThoseThatRise {
+      /// An-Nazi'at (Those That Rise)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THOSE_THAT_RISE.NAME")
+    }
     internal enum ThoseWhoDenyTheTruth {
       /// al-Kafirun (Those Who Deny The Truth)
       internal static let name = L10n.tr("Localizable", "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME")
+    }
+    internal enum ThoseWhoGiveShortMeasure {
+      /// Al-Mutaffifin (Those Who Give Short Measure)
+      internal static let name = L10n.tr("Localizable", "RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME")
     }
   }
 

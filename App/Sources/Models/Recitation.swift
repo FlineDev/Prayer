@@ -19,6 +19,41 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
 
   case theOpening = 1
 
+  case theMostGracious = 55
+  case thatWhichMustComeToPass = 56
+  case iron = 57
+  case thePleading = 58
+  case theGathering = 59
+  case theExaminedOne = 60
+  case theRanks = 61
+  case theCongregation = 62
+  case theHypocrites = 63
+  case lossAndGain = 64
+  case divorce = 65
+  case prohibition = 66
+  case dominion = 67
+  case thePen = 68
+  case theLayingBareOfTheTruth = 69
+  case theWaysOfAscent = 70
+  case noah = 71
+  case theUnseenBeings = 72
+  case theEnwrappedOne = 73
+  case theEnfoldedOne = 74
+  case resurrection = 75
+  case man = 76
+  case thoseSentForth = 77
+  case theTiding = 78
+  case thoseThatRise = 79
+  case heFrowned = 80
+  case shroudingInDarkness = 81
+  case theCleavingAsunder = 82
+  case thoseWhoGiveShortMeasure = 83
+  case theSplittingAsunder = 84
+  case theGreatConstellations = 85
+  case thatWhichComesInTheNight = 86
+  case theAllHighest = 87
+  case theOvershadowingEvent = 88
+  case theDaybreak = 89
   case theLand = 90
   case theSun = 91
   case theNight = 92
@@ -60,6 +95,111 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
     switch self {
     case .theOpening:
       return l10n.TheOpening.name
+
+    case .theMostGracious:
+      return l10n.TheMostGracious.name
+
+    case .thatWhichMustComeToPass:
+      return l10n.ThatWhichMustComeToPass.name
+
+    case .iron:
+      return l10n.Iron.name
+
+    case .thePleading:
+      return l10n.ThePleading.name
+
+    case .theGathering:
+      return l10n.TheGathering.name
+
+    case .theExaminedOne:
+      return l10n.TheExaminedOne.name
+
+    case .theRanks:
+      return l10n.TheRanks.name
+
+    case .theCongregation:
+      return l10n.TheCongregation.name
+
+    case .theHypocrites:
+      return l10n.TheHypocrites.name
+
+    case .lossAndGain:
+      return l10n.LossAndGain.name
+
+    case .divorce:
+      return l10n.Divorce.name
+
+    case .prohibition:
+      return l10n.Prohibition.name
+
+    case .dominion:
+      return l10n.Dominion.name
+
+    case .thePen:
+      return l10n.ThePen.name
+
+    case .theLayingBareOfTheTruth:
+      return l10n.TheLayingBareOfTheTruth.name
+
+    case .theWaysOfAscent:
+      return l10n.TheWaysOfAscent.name
+
+    case .noah:
+      return l10n.Noah.name
+
+    case .theUnseenBeings:
+      return l10n.TheUnseenBeings.name
+
+    case .theEnwrappedOne:
+      return l10n.TheEnwrappedOne.name
+
+    case .theEnfoldedOne:
+      return l10n.TheEnfoldedOne.name
+
+    case .resurrection:
+      return l10n.Resurrection.name
+
+    case .man:
+      return l10n.Man.name
+
+    case .thoseSentForth:
+      return l10n.ThoseSentForth.name
+
+    case .theTiding:
+      return l10n.TheTiding.name
+
+    case .thoseThatRise:
+      return l10n.ThoseThatRise.name
+
+    case .heFrowned:
+      return l10n.HeFrowned.name
+
+    case .shroudingInDarkness:
+      return l10n.ShroudingInDarkness.name
+
+    case .theCleavingAsunder:
+      return l10n.TheCleavingAsunder.name
+
+    case .thoseWhoGiveShortMeasure:
+      return l10n.ThoseWhoGiveShortMeasure.name
+
+    case .theSplittingAsunder:
+      return l10n.TheSplittingAsunder.name
+
+    case .theGreatConstellations:
+      return l10n.TheGreatConstellations.name
+
+    case .thatWhichComesInTheNight:
+      return l10n.ThatWhichComesInTheNight.name
+
+    case .theAllHighest:
+      return l10n.TheAllHighest.name
+
+    case .theOvershadowingEvent:
+      return l10n.TheOvershadowingEvent.name
+
+    case .theDaybreak:
+      return l10n.TheDaybreak.name
 
     case .theLand:
       return l10n.TheLand.name
@@ -143,6 +283,111 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
     switch self {
     case .theOpening:  // 001
       return "The Opening"
+
+    case .theMostGracious:  // 055
+      return "The Most Gracious"
+
+    case .thatWhichMustComeToPass:  // 056
+      return "That Which Must Come to Pass"
+
+    case .iron:  // 057
+      return "Iron"
+
+    case .thePleading:  // 058
+      return "The Pleading"
+
+    case .theGathering:  // 059
+      return "The Gathering"
+
+    case .theExaminedOne:  // 060
+      return "The Examined One"
+
+    case .theRanks:  // 061
+      return "The Ranks"
+
+    case .theCongregation:  // 062
+      return "The Congregation"
+
+    case .theHypocrites:  // 063
+      return "The Hypocrites"
+
+    case .lossAndGain:  // 064
+      return "Loss and Gain"
+
+    case .divorce:  // 065
+      return "Divorce"
+
+    case .prohibition:  // 066
+      return "Prohibition"
+
+    case .dominion:  // 067
+      return "Dominion"
+
+    case .thePen:  // 068
+      return "The Pen"
+
+    case .theLayingBareOfTheTruth:  // 069
+      return "The Laying Bare of the Truth"
+
+    case .theWaysOfAscent:  // 070
+      return "The Ways of Ascent"
+
+    case .noah:  // 071
+      return "Noah"
+
+    case .theUnseenBeings:  // 072
+      return "The Unseen Beings"
+
+    case .theEnwrappedOne:  // 073
+      return "The Enwrapped One"
+
+    case .theEnfoldedOne:  // 074
+      return "The Enfolded One"
+
+    case .resurrection:  // 075
+      return "Resurrection"
+
+    case .man:  // 076
+      return "Man"
+
+    case .thoseSentForth:  // 077
+      return "Those Sent Forth"
+
+    case .theTiding:  // 078
+      return "The Tiding"
+
+    case .thoseThatRise:  // 079
+      return "Those That Rise"
+
+    case .heFrowned:  // 080
+      return "He Frowned"
+
+    case .shroudingInDarkness:  // 081
+      return "Shrouding in Darkness"
+
+    case .theCleavingAsunder:  // 082
+      return "The Cleaving Asunder"
+
+    case .thoseWhoGiveShortMeasure:  // 083
+      return "Those Who Give Short Measure"
+
+    case .theSplittingAsunder:  // 084
+      return "The Splitting Asunder"
+
+    case .theGreatConstellations:  // 085
+      return "The Great Constellations"
+
+    case .thatWhichComesInTheNight:  // 086
+      return "That Which Comes in the Night"
+
+    case .theAllHighest:  // 087
+      return "The All-Highest"
+
+    case .theOvershadowingEvent:  // 088
+      return "The Overshadowing Event"
+
+    case .theDaybreak:  // 089
+      return "The Daybreak"
 
     case .theLand:  // 90
       return "The Land"
