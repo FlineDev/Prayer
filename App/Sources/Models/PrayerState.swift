@@ -59,13 +59,13 @@ class PrayerState {
   }
 
   var movementDelay: TimeInterval? {
-    guard lineIndex == 0 && currentComponent.needsMovement else { return nil }
+    guard lineIndex == 0, currentComponent.needsMovement else { return nil }
     return previousPositon.movementDuration(forChangingTo: currentPosition)
   }
 
   var currentMovementSoundUrl: URL? {
-    guard let movementSound = currentComponent.movementSound else { return nil }
-    return AudioPlayer.shared.movementSoundUrl(name: movementSound, instrument: movementSoundInstrument)
+    guard lineIndex == 0, let movementSound = currentComponent.movementSound else { return nil }
+    return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: movementSoundInstrument)
   }
 
   var currentRecitationChapterNum: Int? { return currentComponent.chapterNumber }
@@ -94,7 +94,7 @@ class PrayerState {
     guard lineIndex == 0 else { return nil }
     guard let movementSound = currentComponent.movementSound else { return nil }
 
-    return AudioPlayer.shared.movementSoundUrl(name: movementSound, instrument: movementSoundInstrument)
+    return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: movementSoundInstrument)
   }
 
   func moveToNextLine() -> Bool {

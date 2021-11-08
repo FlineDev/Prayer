@@ -8,11 +8,6 @@ import SwiftyUserDefaults
 import UIKit
 
 class SettingsViewModel {
-  static let availableMovementSoundInstruments: [String] = [
-    "Baroque Organ", "Bleep City", "Erhu", "Flow Motion", "Grand Piano with Pad & Choir", "Infinite Space",
-    "Persian Santoor", "Soft Waves", "Turkish Saz Zither", "Tweed Picked Synth",
-  ]
-
   var rakatCount: Int {
     get { Defaults.rakatCount }
     set { Defaults.rakatCount = newValue }
@@ -78,7 +73,7 @@ class SettingsViewModel {
 }
 
 extension DefaultsKeys {
-  private var defaultInstrument: String { SettingsViewModel.availableMovementSoundInstruments.first! }
+  private var defaultInstrument: SoundInstrument { .grandPianoWithPadAndChoir }
   private var defaultSpeechRate: Double { Double(AVSpeechUtteranceDefaultSpeechRate) }
   private var defaultVoice: String { SpeechSynthesizer.SupportedLanguage.bestMatchingVoice.identifier }
 
@@ -88,7 +83,7 @@ extension DefaultsKeys {
   var showChangingTextName: DefaultsKey<Bool> { .init("ShowChangingTextName", defaultValue: true) }
   var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
   var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: false) }
-  var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument) }
+  var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument.rawValue) }
   var speechSynthesizerVoiceId: DefaultsKey<String> { .init("VoiceId", defaultValue: defaultVoice) }
   var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }
   var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: defaultSpeechRate) }
