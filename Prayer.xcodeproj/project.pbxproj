@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06625A27243C9E001D8531 /* AudioMode.swift */; };
+		2E30457D27399B8F00B8BBD2 /* SoundInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */; };
+		2E30457F27399CF300B8BBD2 /* MovementSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30457E27399CF300B8BBD2 /* MovementSound.swift */; };
 		2E6C0B442646FD7A00A4D8E3 /* HandySwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B432646FD7A00A4D8E3 /* HandySwift */; };
 		2E6C0B472646FD9200A4D8E3 /* HandyUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B462646FD9200A4D8E3 /* HandyUIKit */; };
 		2E6C0B4A2646FDC800A4D8E3 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6C0B492646FDC800A4D8E3 /* Eureka */; };
@@ -136,6 +138,8 @@
 
 /* Begin PBXFileReference section */
 		2E06625A27243C9E001D8531 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
+		2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundInstrument.swift; sourceTree = "<group>"; };
+		2E30457E27399CF300B8BBD2 /* MovementSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementSound.swift; sourceTree = "<group>"; };
 		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
 		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
 		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = "en.lproj/090_The-Land.txt"; sourceTree = "<group>"; };
@@ -394,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				2E06625A27243C9E001D8531 /* AudioMode.swift */,
+				2E30457E27399CF300B8BBD2 /* MovementSound.swift */,
 				A1A6A4651E3A819D00A909FF /* Position.swift */,
 				A16484E21E243AAC008EC78C /* Prayer.swift */,
 				A1D1EFC11E3937FC0029C009 /* PrayerState.swift */,
@@ -401,6 +406,7 @@
 				A16484E61E25503C008EC78C /* RakahComponent.swift */,
 				2E9976BD271585A500F61BFE /* Recitation.swift */,
 				2EAF6389271AAC9D00145D5D /* RecitationPart.swift */,
+				2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -961,6 +967,7 @@
 				A11830EB1E591EF600CBE087 /* FAQViewController.swift in Sources */,
 				A11830ED1E591F0A00CBE087 /* FAQViewModel.swift in Sources */,
 				A1370CD81E368DF300B55D9E /* Logger.swift in Sources */,
+				2E30457F27399CF300B8BBD2 /* MovementSound.swift in Sources */,
 				A1A6A4661E3A819D00A909FF /* Position.swift in Sources */,
 				A16484E31E243AAC008EC78C /* Prayer.swift in Sources */,
 				A1370CE91E37394600B55D9E /* PrayerFlowController.swift in Sources */,
@@ -974,6 +981,7 @@
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
 				A16484D51E243898008EC78C /* SettingsViewController.swift in Sources */,
 				A1D1EFB71E381FD00029C009 /* SettingsViewModel.swift in Sources */,
+				2E30457D27399B8F00B8BBD2 /* SoundInstrument.swift in Sources */,
 				2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
 				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
@@ -1539,7 +1547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -1560,7 +1568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;

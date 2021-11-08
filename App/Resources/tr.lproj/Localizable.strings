@@ -90,7 +90,7 @@
 
 "SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Çıkış cihazını seçin (AirPlay simgesi ile):";
 
-"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Pitch Çarpanı";
+"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Tonaj derecesi";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Konuşma hızı";
 
@@ -102,7 +102,7 @@
 
 "SETTINGS.AUDIO_SPEED_SECTION.FIXED_TEXTS.TITLE" = "Diğer metin hızı";
 
-"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Mevcut iki ses modundan birini seçin, yada ikisinide yada hiç birini. İlkinde, bir dua sırasında pozisyon değiştirildiğinde sadece kısa bir ses çalınır. İkinci modda, tüm metin yüksek sesle okunur, böylece yalnızca dinleyerek kılınabilir. Bu, cihaz cebinizde kilitliyken de çalışır. Bu mesela aynı mescitteki diğer kişiler farkında olmadan tercih edilen dilde kılmak için faydalı olabilir.";
+"SETTINGS.AUDIO_SPEED_SECTION.FOOTER" = "Mevcut iki ses modundan birini seçin, yada ikisinide yada hiç birini. İlkinde, bir dua sırasında pozisyon değiştirildiğinde sadece kısa bir ses çalınır. İkinci modda, tüm metin yüksek sesle okunur, böylece yalnızca dinleyerek kılınabilir. Bu, cihaz cebinizde ekran kilitliyken de çalışır. Bu mesela aynı mescid deki diğer kişiler farkında olmadan tercih edilen dilde kılmak için faydalı olabilir.";
 
 "SETTINGS.AUDIO_SPEED_SECTION.MOVEMENT_SOUND_INSTRUMENT.TITLE" = "Hareket tonu";
 
@@ -114,17 +114,17 @@
 
 "SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
 
-"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 24 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 24 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımımızdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
 
-"SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Bu soruya sonuçta sadece Tanrımız cevap verebilir, ama biz tüm eleştirmenlere şu soruyu sormak istiyoruz: Eğer namazda konuşulan kelimelerin anlamı bilinmez ise, namazın gerçekten kabul olabileceğini mi düşünüyorsunuz?";
+"SETTINGS.FAQ_ENTRIES.IPAD_READING.ANSWER" = "Bu soruya sonuçta sadece Tanrımız cevap verebilir, ama biz tüm eleştirmenlere şu soruyu sormak istiyoruz: Eğer namazda söylenen kelimelerin anlamı bilinmez ise, namazın gerçekten kabul olabileceğini mi düşünüyorsunuz?";
 
 "SETTINGS.FAQ_ENTRIES.IPAD_READING.QUESTION" = "Namazda kelimeler cihaz dan okunulursa yada sesli dinlenilirse, namaz hiç geçerli olabilirmi?";
 
-"SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "Kuranı bizim içinde yazan şeylerden haberdar olmamız ve hayatımıza aktarmamız için indiğini düşünüyoruz. Anlamadığımız kelimeler ne bize yanlış yolu gösterir, nede bizi doğru yola iletir. Fakat bu Kuranın en büyük hedefidir.\n\nAllah günde beş vakit onun kelimelerinin anlamsız bir şekilde kulağa güzel gelen bir siir gibi dinlememizi istediğine inanamıyoruz. Kurandaki Arapça Allahın bize gönderdiği en doğru mesaj olmasına rağmen, Arapça diline hakim olmayan bir kişinin arapça okunan namazın kabul edildiğine inanamıyoruz. Bu tür bir namazda büyük bir eksiklik vardır. Üstelik bizim bilgimize göre Kuranda namazın Arapça dilde okunması meçbur olduğunu söğleğen bir ayet bulunmamaktadır.";
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.ANSWER" = "Kuranı bizim içinde yazan şeylerden haberdar olmamız ve hayatımıza aktarmamız için indiğini düşünüyoruz. Anlamadığımız kelimeler ne bize yanlış yolu gösterir, nede bizi doğru yola iletir. Fakat bu Kuranın en büyük hedefidir.\n\nAllah günde beş vakit onun kelimelerinin anlamsız bir şekilde kulağa güzel gelen bir şiir gibi dinlememizi istediğine inanamıyoruz. Kurandaki Arapça Allahın bize gönderdiği en doğru mesaj olmasına rağmen, Arapça diline hakim olmayan bir kişinin arapça okunan namazın kabul edildiğine inanamıyoruz. Bu tür bir namazda büyük bir eksiklik vardır. Üstelik bizim bilgimize göre Kuranda namazın Arapça dilde okunması meçbur olduğunu söyleyen bir ayet bulunmamaktadır.";
 
-"SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "Namaz daki sureler ve dualar Kuranın asıl dili Arapçadan okunması şart değilmidir?";
+"SETTINGS.FAQ_ENTRIES.LANGUAGE.QUESTION" = "Namaz daki sureler ve dualar Kuranın asıl dili olan Arapça okunması şart değilmidir?";
 
 "SETTINGS.FAQ_ENTRIES.TRANSLATION_PROBLEM.ANSWER" = "Biz namaz kılmanın çok önemli bir ibadet olduğu için, mümkün olduğu kadar doğru yapmak istediğinizi anlıyoruz. Bizde bu sebeple ayrıca dinde aynı metnin anlamları hakkında çok farklı görüşlerin olduğunu bildiğimiz için, sizler icin orijinala yakın bir meal kullanmayı tercih ettik.\n\nBu nedenle, biz de Kuranın kendisini okumanızın şart olduğunu düşünerek bu uygulamayı size bir yardım olarak hazırladık. Kuranın içindekilerine başkaların (sözde) hikayelerini ve hurafelerini dinleyerek onların size \"Kuranın gerçek mesajını\" öğretmesine engel olabilmeniz için Kuranın ta kendisini okumayı öneriyoruz. Onların dediklerinin doğru olup olmadığını sadece böylece ayrım edebileceğinize inanıyoruz.";
 

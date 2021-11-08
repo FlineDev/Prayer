@@ -15,7 +15,7 @@ class RakahComponent {
   static var movementSoundInstrument: String {
     get {
       guard let instrument = UserDefaults.standard.string(forKey: "MovementSoundInstrument") else {
-        return "Baroque Organ"
+        return "Grand Piano with Pad & Choir"
       }
       return instrument
     }
@@ -31,7 +31,7 @@ class RakahComponent {
   let spokenTextLines: [String]
   let needsMovement: Bool
   let position: Position
-  let movementSound: String?
+  let movementSound: MovementSound?
   let isChangingText: Bool
 
   let l10n = L10n.RakahComponent.self
@@ -50,15 +50,15 @@ class RakahComponent {
       chapterNumber = nil
 
       if longSitting {
-        movementSound = "E-Long"
+        movementSound = .longSitting
       }
       else {
         switch pos {
         case .bending, .worship:
-          movementSound = "C-Short"
+          movementSound = .downwards
 
         case .standing, .sitting:
-          movementSound = "E-Short"
+          movementSound = .upwards
 
         default:
           movementSound = nil
@@ -112,7 +112,7 @@ class RakahComponent {
       spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
       needsMovement = true
       position = .standing
-      movementSound = "E-Short"
+      movementSound = .upwards
       isChangingText = false
       chapterNumber = nil
 
@@ -156,7 +156,7 @@ class RakahComponent {
       name = l10n.Salam.name
       spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
       needsMovement = true
-      movementSound = "G-Short"
+      movementSound = .salam
       isChangingText = false
       position = pos
       chapterNumber = nil
