@@ -258,7 +258,7 @@ class SettingsViewController: FormViewController {
   private func movementSoundInstrumentRow() -> PushRow<String> {
     PushRow<String> { row in
       row.title = l10n.AudioSpeedSection.MovementSoundInstrument.title
-      row.options = SettingsViewModel.availableMovementSoundInstruments
+      row.options = SoundInstrument.allCases.map(\.rawValue)
       row.value = viewModel.movementSoundInstrument
       row.hidden = Condition.function([audioModeRowTag]) { _ in
         self.audioMode != .movementSound && self.audioMode != .movementSoundAndSpeechSynthesizer
