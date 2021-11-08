@@ -31,6 +31,12 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.3.1] - 2021-11-08
+### Changed
+- Improved wording in Turkish translations.
+### Fixed
+- Fixed an issue with the movement sound played twice while standing.
+
 ## [1.3.0] - 2021-10-31
 ### Added
 - Adds a new audio mode where a computer voice reads out loud the full text of the prayer.

@@ -1,12 +1,5 @@
-NEU:
-- Fügt einen neuen Audiomodus hinzu, bei dem eine Computerstimme den vollständigen Text des Gebets laut vorliest.
-- Stellt sicher, dass der neue Audiomodus für gesprochenen Text weiter abgespielt wird, wenn das Gerät gesperrt ist oder die App im Hintergrund läuft.
-- Zeigt das aktuell verbundene Audiogerät an und fügt eine Schaltfläche zum Wechseln des Geräts direkt in der App hinzu.
-- Fügt detaillierte Beschreibungen unter jedem Einstellungsabschnitt hinzu, um zusätzlichen Kontext zu liefern.
-
 GEÄNDERT:
-- Der Ton beim Positionswechsel ignoriert jetzt die Einstellung des Stummschalters des Systems. Künftig den Audiomodus stattdessen auf "stumm" stellen.
-- Alle Einstellungseinträge haben jetzt ein Icon, um schneller erkannt zu werden und den Einstellungsbildschirm schöner aussehen zu lassen.
+- Verbesserte Formulierung in den türkischen Übersetzungen.
 
 BEHOBEN:
-- Die grüne Akzentfarbe im dunklen Modus wurde heller gestaltet, damit der Text auf den Schaltflächen besser lesbar ist.
+- Ein Problem wurde behoben, bei dem der Bewegungston im Stehen zweimal abgespielt wurde.
