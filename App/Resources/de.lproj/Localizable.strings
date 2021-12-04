@@ -34,19 +34,51 @@
 
 "RECITATION.DESTINY.NAME" = "al-Qadr (Schicksal)";
 
+"RECITATION.DIVORCE.NAME" = "at-Talaq (Scheidung)";
+
+"RECITATION.DOMINION.NAME" = "al-Mulk (Herrschaft)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Gutes in Fülle)";
 
 "RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "at-Takathur (Gier nach mehr und mehr)";
 
+"RECITATION.HE_FROWNED.NAME" = "'Abasa (Er runzelte die Stirn)";
+
+"RECITATION.IRON.NAME" = "al-Hadid (Eisen)";
+
+"RECITATION.LOSS_AND_GAIN.NAME" = "at-Taghabun (Verlust und Gewinn)";
+
+"RECITATION.MAN.NAME" = "al-Insan (Der Mensch)";
+
 "RECITATION.MEN.NAME" = "an-Nas (Die Menschen)";
+
+"RECITATION.NOAH.NAME" = "Nuh (Noah)";
+
+"RECITATION.PROHIBITION.NAME" = "at-Tahrim (Verbot)";
 
 "RECITATION.QURAYSH.NAME" = "Quraysch";
 
+"RECITATION.RESURRECTION.NAME" = "al-Qiyama (Die Auferstehung)";
+
+"RECITATION.SHROUDING_IN_DARKNESS.NAME" = "at-Takwir (Hüllen in Finsternis)";
+
 "RECITATION.SUCCOUR.NAME" = "an-Nasr (Beistand)";
+
+"RECITATION.THAT_WHICH_COMES_IN_THE_NIGHT.NAME" = "at-Tariq (Das, was in der Nacht kommt)";
+
+"RECITATION.THAT_WHICH_MUST_COME_TO_PASS.NAME" = "al-Waqi'a (Das, was eintreffen muss)";
+
+"RECITATION.THE_ALL_HIGHEST.NAME" = "al-A'la (Der Allerhöchste)";
 
 "RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "ad-Duha (Die hellen Morgenstunden)";
 
 "RECITATION.THE_CHARGERS.NAME" = "al-'Adiyat (Die Streitrosse)";
+
+"RECITATION.THE_CLEAVING_ASUNDER.NAME" = "al-Infitar (Das Auseinanderspalten)";
+
+"RECITATION.THE_CONGREGATION.NAME" = "al-Dschumu'a (Die Gemeindeversammlung)";
+
+"RECITATION.THE_DAYBREAK.NAME" = "al-Fadschr (Der Tagesanbruch)";
 
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (Die Erklärung von [Gottes] Vollkommenheit)";
 
@@ -54,15 +86,31 @@
 
 "RECITATION.THE_ELEPHANT.NAME" = "al-Fil (Der Elefant)";
 
+"RECITATION.THE_ENFOLDED_ONE.NAME" = "al-Muddaththir (Der Eingewickelte)";
+
+"RECITATION.THE_ENWRAPPED_ONE.NAME" = "al-Muzzammil (Der Eingehüllte)";
+
 "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "al-Bayyina (Der Beweis der Wahrheit)";
+
+"RECITATION.THE_EXAMINED_ONE.NAME" = "al-Mumtahana (Die Geprüfte)";
 
 "RECITATION.THE_FIG.NAME" = "at-Tin (Die Feige)";
 
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (Das Verfliegen der Zeit)";
 
+"RECITATION.THE_GATHERING.NAME" = "al-Haschr (Die Versammlung)";
+
 "RECITATION.THE_GERM_CELL.NAME" = "al-'Alaq (Die Keimzelle)";
 
+"RECITATION.THE_GREAT_CONSTELLATIONS.NAME" = "al-Burudsch (Die großen Sternbilder)";
+
+"RECITATION.THE_HYPOCRITES.NAME" = "al-Munafiqun (Die Heuchler)";
+
 "RECITATION.THE_LAND.NAME" = "al-Balad (Das Land)";
+
+"RECITATION.THE_LAYING_BARE_OF_THE_TRUTH.NAME" = "al-Haqqa (Das Offenlegen der Wahrheit)";
+
+"RECITATION.THE_MOST_GRACIOUS.NAME" = "ar-Rahman (Der Allergnädigste)";
 
 "RECITATION.THE_NIGHT.NAME" = "al-Layl (Die Nacht)";
 
@@ -70,17 +118,39 @@
 
 "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "asch-Scharh (Das Öffnen des Herzens)";
 
+"RECITATION.THE_OVERSHADOWING_EVENT.NAME" = "al-Ghaschiya (Das Überschattende Ereignis)";
+
+"RECITATION.THE_PEN.NAME" = "al-Qalam (Die Schreibfeder)";
+
+"RECITATION.THE_PLEADING.NAME" = "al-Mudschadala (Das Anflehen)";
+
+"RECITATION.THE_RANKS.NAME" = "as-Saff (Die Reihen)";
+
 "RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (Die aufgehende Morgendämmerung)";
 
 "RECITATION.THE_SLANDERER.NAME" = "al-Humaza (Der Verleumder)";
+
+"RECITATION.THE_SPLITTING_ASUNDER.NAME" = "al-Inschiqaq (Das Zerspalten)";
 
 "RECITATION.THE_SUDDEN_CALAMITY.NAME" = "al-Qari'a (Das plötzliche Unheil)";
 
 "RECITATION.THE_SUN.NAME" = "asch-Schams (Die Sonne)";
 
+"RECITATION.THE_TIDING.NAME" = "an-Naba' (Die Kunde)";
+
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (Die gedrehten Stränge)";
 
+"RECITATION.THE_UNSEEN_BEINGS.NAME" = "al-Dschinn (Die ungesehenen Wesen)";
+
+"RECITATION.THE_WAYS_OF_ASCENT.NAME" = "al-Ma'aridsch (Die Wege des Aufstiegs)";
+
+"RECITATION.THOSE_SENT_FORTH.NAME" = "al-Mursalat (Die Entsandten)";
+
+"RECITATION.THOSE_THAT_RISE.NAME" = "an-Nazi'at (Jene, die aufgehen)";
+
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Jene, welche die Wahrheit leugnen)";
+
+"RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME" = "al-Mutaffifin (Jene, die gekürztes Maß geben)";
 
 "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Sprache ändern in ⚙️ Einstellungen";
 
