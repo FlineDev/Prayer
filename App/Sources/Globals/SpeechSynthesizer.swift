@@ -37,8 +37,11 @@ final class SpeechSynthesizer: NSObject {
 
   let synthesizer: AVSpeechSynthesizer = .init()
 
-  fileprivate var completionBlock: (() -> Void)?
-  fileprivate var completionDelay: TimeInterval?
+  fileprivate var afterStart: (() -> Void)?
+  fileprivate var afterStartDelay: TimeInterval?
+
+  fileprivate var afterCompletion: (() -> Void)?
+  fileprivate var afterCompletionDelay: TimeInterval?
 
   init(
     voice: AVSpeechSynthesisVoice,
@@ -62,8 +65,10 @@ final class SpeechSynthesizer: NSObject {
 
   func speak(
     text: String,
-    completion: (() -> Void)? = nil,
-    delayCompletion: TimeInterval? = nil
+    afterStart: (() -> Void)? = nil,
+    afterStartDelay: TimeInterval? = nil,
+    afterCompletion: (() -> Void)? = nil,
+    afterCompletionDelay: TimeInterval? = nil
   ) {
     let textToSpeak: String = {
       if text.contains("📖") {
@@ -86,25 +91,39 @@ final class SpeechSynthesizer: NSObject {
     utterance.preUtteranceDelay = .zero
     utterance.postUtteranceDelay = .zero
 
-    self.completionBlock = completion
-    self.completionDelay = delayCompletion
+    self.afterStart = afterStart
+    self.afterStartDelay = afterStartDelay
+
+    self.afterCompletion = afterCompletion
+    self.afterCompletionDelay = afterCompletionDelay
 
     synthesizer.speak(utterance)
   }
 
   func stop() {
-    self.completionBlock = nil
+    self.afterStart = nil
+    self.afterCompletion = nil
     synthesizer.stopSpeaking(at: .immediate)
   }
 }
 
 extension SpeechSynthesizer: AVSpeechSynthesizerDelegate {
+  func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+    if let afterStart = afterStart {
+      delay(by: afterStartDelay ?? .zero) {
+        self.afterStart = nil
+        self.afterStartDelay = nil
+        afterStart()
+      }
+    }
+  }
+
   func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-    if let completionBlock = completionBlock {
-      delay(by: completionDelay ?? .zero) {
-        self.completionBlock = nil
-        self.completionDelay = nil
-        completionBlock()
+    if let afterCompletion = afterCompletion {
+      delay(by: afterCompletionDelay ?? .zero) {
+        self.afterCompletion = nil
+        self.afterCompletionDelay = nil
+        afterCompletion()
       }
     }
   }

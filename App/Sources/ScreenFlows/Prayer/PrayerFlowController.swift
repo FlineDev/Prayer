@@ -48,35 +48,33 @@ class PrayerFlowController: FlowController {
 
     // initialize countdown
     let countdownCount = 5
-    countdown = Countdown(startValue: countdownCount)
-    countdown?
-      .onCount { count in
-        self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
-
-        switch self.audioMode {
-        case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
-          self.speechSynthesizer.speak(text: String(count))
-
-        case .movementSound, .none:
-          break
+    switch audioMode {
+    case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
+      countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: nil)
+      countdown?
+        .onCount { count in
+          self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
+          self.speechSynthesizer.speak(
+            text: String(count),
+            afterStart: { [weak self] in self?.countdown?.stepDown() },
+            afterStartDelay: .seconds(1)
+          )
         }
-      }
+
+    case .movementSound, .none:
+      countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: .seconds(1))
+      countdown?
+        .onCount { count in
+          self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
+        }
+    }
 
     countdown?.onFinish { self.startPrayer() }
 
     let navCtrl = UINavigationController(rootViewController: prayerViewCtrl)
     navCtrl.modalPresentationStyle = .fullScreen
     presentingViewController.present(navCtrl, animated: true) {
-      self.prayerViewCtrl.viewModel = self.countdownViewModel(count: countdownCount)
       self.countdown?.start()
-
-      switch self.audioMode {
-      case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
-        self.speechSynthesizer.speak(text: String(countdownCount))
-
-      case .movementSound, .none:
-        break
-      }
     }
   }
 
@@ -126,8 +124,8 @@ class PrayerFlowController: FlowController {
     case .speechSynthesizer:
       speechSynthesizer.speak(
         text: prayerState.currentLine,
-        completion: progressToNextStep,
-        delayCompletion: prayerState.movementDelay
+        afterCompletion: progressToNextStep,
+        afterCompletionDelay: prayerState.movementDelay
       )
 
     case .movementSoundAndSpeechSynthesizer:
@@ -137,8 +135,8 @@ class PrayerFlowController: FlowController {
 
       speechSynthesizer.speak(
         text: prayerState.currentLine,
-        completion: progressToNextStep,
-        delayCompletion: prayerState.movementDelay
+        afterCompletion: progressToNextStep,
+        afterCompletionDelay: prayerState.movementDelay
       )
 
     case .none:
