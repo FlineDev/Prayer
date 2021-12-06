@@ -282,7 +282,13 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
   }
 
   func totalParts(maxWordsPerPart: MaxArabicWordsPerStanding) -> Int {
-    Int((Double(arabicWordsCount) / Double(maxWordsPerPart.rawValue)).rounded(.up))
+    Int(ceil(Double(contentString().components(separatedBy: Self.splitSeparator).count) / Double(maxWordsPerPart.factor)))
+  }
+
+  func contentString() -> String {
+    let spokenTextFilePath = Bundle.main.url(forResource: fileName, withExtension: "txt")!
+    let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
+    return contentString.stripped()
   }
 
   // Source: https://qurananalysis.com/analysis/basic-statistics.php?lang=AR

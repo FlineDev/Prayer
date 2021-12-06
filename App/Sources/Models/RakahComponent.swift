@@ -92,7 +92,7 @@ class RakahComponent {
       }
       name = "📖\(chapterNumber!): \(title)"
 
-      spokenTextLines = RakahComponent.readLinesFromRecitationFile(recitationPart: recitationPart)
+      spokenTextLines = recitationPart.recitationLines()
       needsMovement = false
       position = .standing
       movementSound = nil
@@ -167,21 +167,6 @@ class RakahComponent {
     let spokenTextFilePath = Bundle.main.url(forResource: name, withExtension: "txt")!
     let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
     return contentString.stripped().components(separatedBy: .newlines)
-  }
-
-  private static func readLinesFromRecitationFile(recitationPart: RecitationPart) -> [String] {
-    let spokenTextFilePath = Bundle.main.url(forResource: recitationPart.recitation.fileName, withExtension: "txt")!
-    var contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
-
-    if recitationPart.totalParts > 1 {
-      let indexLowerBound = (recitationPart.part - 1) * recitationPart.partLength.factor
-      let indexUpperBound = recitationPart.part * recitationPart.partLength.factor
-      let partIndexRange = indexLowerBound..<indexUpperBound
-      contentString = contentString.components(separatedBy: Recitation.splitSeparator)[partIndexRange].joined()
-    }
-
-    return contentString.components(separatedBy: .newlines)
-      .filter { !$0.replacingOccurrences(of: Recitation.splitSeparator, with: "").isBlank }
   }
 }
 

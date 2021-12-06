@@ -199,8 +199,6 @@ class PrayerFlowController: FlowController {
     timer?.invalidate()
     timer = nil
     speechSynthesizer.stop()
-    try? AVAudioSession.sharedInstance().setActive(false)
-    UIApplication.shared.isIdleTimerDisabled = false
   }
 }
 
@@ -208,7 +206,10 @@ extension PrayerFlowController: PrayerFlowDelegate {
   func doneButtonPressed() {
     countdown?.cancel()
     cleanup()
-    prayerViewCtrl.dismiss(animated: true, completion: nil)
+    prayerViewCtrl.dismiss(animated: true) {
+      try? AVAudioSession.sharedInstance().setActive(false)
+      UIApplication.shared.isIdleTimerDisabled = false
+    }
     removeFromSuperFlowController()
   }
 }
