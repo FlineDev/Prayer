@@ -1,5 +1,8 @@
+NEU:
+- 35 weitere Koranrezitationen (von Sure 55 bis 89) in allen drei unterstützten Sprachen hinzugefügt.
+
 GEÄNDERT:
-- Verbesserte Formulierung in den türkischen Übersetzungen.
+- In der Standardeinstellung ist jetzt die Aufteilung der Rezitationen erlaubt, damit neue Benutzer von mehr Kapiteln profitieren.
 
 BEHOBEN:
-- Ein Problem wurde behoben, bei dem der Bewegungston im Stehen zweimal abgespielt wurde.
+- Ein Problem wurde behoben, bei dem das Sperren des Telefons während des Countdowns die Audiowiedergabe des Gebets stoppte.

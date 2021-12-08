@@ -1,5 +1,8 @@
+EKLENTİLER:
+- Desteklenen her üç dilde 35 tane daha Kuran okunuşu (55'ten 89'a kadar) eklendi.
+
 DEĞİŞEN:
-- Türkçe çevirilerde düzeltilmeler.
+- Varsayılan ayarlar, yeni kullanıcılar için daha fazla bölümden faydalanmak amacıyla parçalı anlatımlara izin verecek şekilde değiştirildi.
 
 DÜZELTİLEN:
-- Ayakta dururken iki kez çalınan hareket sesiyle ilgili bir sorun düzeltildi.
+- Geri sayım sırasında telefonun kilitlenmesinin dua sesinin çalınmasını durdurmasına neden olan bir sorun düzeltildi.
