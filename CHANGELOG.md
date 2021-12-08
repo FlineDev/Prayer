@@ -31,6 +31,14 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.4.0] - 2021-12-08
+### Added
+- Added 35 more Quran recitations (from Surah 55 to 89) in all three supported languages.
+### Changed
+- Changed the default settings to allow splitting recitations to make use of more chapters for new users.
+### Fixed
+- Fixed an issue where locking the phone during the countdown stopped the prayer audio playback.
+
 ## [1.3.1] - 2021-11-08
 ### Changed
 - Improved wording in Turkish translations.

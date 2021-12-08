@@ -184,7 +184,7 @@
 
 "SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
 
-"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 24 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımımızdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 60 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımımızdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
 

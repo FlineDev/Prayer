@@ -1,5 +1,8 @@
+ADDED:
+- Added 35 more Quran recitations (from Surah 55 to 89) in all three supported languages.
+
 CHANGED:
-- Improved wording in Turkish translations.
+- Changed the default settings to allow splitting recitations to make use of more chapters for new users.
 
 FIXED:
-- Fixed an issue with the movement sound played twice while standing.
+- Fixed an issue where locking the phone during the countdown stopped the prayer audio playback.
