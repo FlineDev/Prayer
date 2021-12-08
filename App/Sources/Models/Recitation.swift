@@ -19,6 +19,41 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
 
   case theOpening = 1
 
+  case theMostGracious = 55
+  case thatWhichMustComeToPass = 56
+  case iron = 57
+  case thePleading = 58
+  case theGathering = 59
+  case theExaminedOne = 60
+  case theRanks = 61
+  case theCongregation = 62
+  case theHypocrites = 63
+  case lossAndGain = 64
+  case divorce = 65
+  case prohibition = 66
+  case dominion = 67
+  case thePen = 68
+  case theLayingBareOfTheTruth = 69
+  case theWaysOfAscent = 70
+  case noah = 71
+  case theUnseenBeings = 72
+  case theEnwrappedOne = 73
+  case theEnfoldedOne = 74
+  case resurrection = 75
+  case man = 76
+  case thoseSentForth = 77
+  case theTiding = 78
+  case thoseThatRise = 79
+  case heFrowned = 80
+  case shroudingInDarkness = 81
+  case theCleavingAsunder = 82
+  case thoseWhoGiveShortMeasure = 83
+  case theSplittingAsunder = 84
+  case theGreatConstellations = 85
+  case thatWhichComesInTheNight = 86
+  case theAllHighest = 87
+  case theOvershadowingEvent = 88
+  case theDaybreak = 89
   case theLand = 90
   case theSun = 91
   case theNight = 92
@@ -49,9 +84,7 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
   static let splitSeparator: String = "⁋"
 
   var fileName: String {
-    let normalizedNum = String(format: "%03d", rawValue)
-    let normalizedTitle = englishTitle.components(separatedBy: .whitespaces).joined(separator: "-")
-    return "\(normalizedNum)_\(normalizedTitle)"
+    return String(format: "%03d", rawValue)
   }
 
   var localizedTitle: String {
@@ -60,6 +93,111 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
     switch self {
     case .theOpening:
       return l10n.TheOpening.name
+
+    case .theMostGracious:
+      return l10n.TheMostGracious.name
+
+    case .thatWhichMustComeToPass:
+      return l10n.ThatWhichMustComeToPass.name
+
+    case .iron:
+      return l10n.Iron.name
+
+    case .thePleading:
+      return l10n.ThePleading.name
+
+    case .theGathering:
+      return l10n.TheGathering.name
+
+    case .theExaminedOne:
+      return l10n.TheExaminedOne.name
+
+    case .theRanks:
+      return l10n.TheRanks.name
+
+    case .theCongregation:
+      return l10n.TheCongregation.name
+
+    case .theHypocrites:
+      return l10n.TheHypocrites.name
+
+    case .lossAndGain:
+      return l10n.LossAndGain.name
+
+    case .divorce:
+      return l10n.Divorce.name
+
+    case .prohibition:
+      return l10n.Prohibition.name
+
+    case .dominion:
+      return l10n.Dominion.name
+
+    case .thePen:
+      return l10n.ThePen.name
+
+    case .theLayingBareOfTheTruth:
+      return l10n.TheLayingBareOfTheTruth.name
+
+    case .theWaysOfAscent:
+      return l10n.TheWaysOfAscent.name
+
+    case .noah:
+      return l10n.Noah.name
+
+    case .theUnseenBeings:
+      return l10n.TheUnseenBeings.name
+
+    case .theEnwrappedOne:
+      return l10n.TheEnwrappedOne.name
+
+    case .theEnfoldedOne:
+      return l10n.TheEnfoldedOne.name
+
+    case .resurrection:
+      return l10n.Resurrection.name
+
+    case .man:
+      return l10n.Man.name
+
+    case .thoseSentForth:
+      return l10n.ThoseSentForth.name
+
+    case .theTiding:
+      return l10n.TheTiding.name
+
+    case .thoseThatRise:
+      return l10n.ThoseThatRise.name
+
+    case .heFrowned:
+      return l10n.HeFrowned.name
+
+    case .shroudingInDarkness:
+      return l10n.ShroudingInDarkness.name
+
+    case .theCleavingAsunder:
+      return l10n.TheCleavingAsunder.name
+
+    case .thoseWhoGiveShortMeasure:
+      return l10n.ThoseWhoGiveShortMeasure.name
+
+    case .theSplittingAsunder:
+      return l10n.TheSplittingAsunder.name
+
+    case .theGreatConstellations:
+      return l10n.TheGreatConstellations.name
+
+    case .thatWhichComesInTheNight:
+      return l10n.ThatWhichComesInTheNight.name
+
+    case .theAllHighest:
+      return l10n.TheAllHighest.name
+
+    case .theOvershadowingEvent:
+      return l10n.TheOvershadowingEvent.name
+
+    case .theDaybreak:
+      return l10n.TheDaybreak.name
 
     case .theLand:
       return l10n.TheLand.name
@@ -138,96 +276,19 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
     }
   }
 
-  /// Use for looking up the file in resources.
-  private var englishTitle: String {
-    switch self {
-    case .theOpening:  // 001
-      return "The Opening"
-
-    case .theLand:  // 90
-      return "The Land"
-
-    case .theSun:  // 91
-      return "The Sun"
-
-    case .theNight:  // 92
-      return "The Night"
-
-    case .theBrightMorningHours:  // 93
-      return "The Bright Morning Hours"
-
-    case .theOpeningUpOfTheHeart:  // 94
-      return "The Opening Up of the Heart"
-
-    case .theFig:  // 95
-      return "The Fig"
-
-    case .theGermCell:  // 96
-      return "The Germ Cell"
-
-    case .destiny:  // 97
-      return "Destiny"
-
-    case .theEvidenceOfTheTruth:  // 98
-      return "The Evidence of the Truth"
-
-    case .theEarthquake:  // 99
-      return "The Earthquake"
-
-    case .theChargers:  // 100
-      return "The Chargers"
-
-    case .theSuddenCalamity:  // 101
-      return "The Sudden Calamity"
-
-    case .greedForMoreAndMore:  // 102
-      return "Greed for More and More"
-
-    case .theFlightOfTime:  // 103
-      return "The Flight of Time"
-
-    case .theSlanderer:  // 104
-      return "The Slanderer"
-
-    case .theElephant:  // 105
-      return "The Elephant"
-
-    case .quraysh:  // 106
-      return "Quraysh"
-
-    case .assistance:  // 107
-      return "Assistance"
-
-    case .goodInAbundance:  // 108
-      return "Good in Abundance"
-
-    case .thoseWhoDenyTheTruth:  // 109
-      return "Those Who Deny the Truth"
-
-    case .succour:  // 110
-      return "Succour"
-
-    case .theTwistedStrands:  // 111
-      return "The Twisted Strands"
-
-    case .theDeclarationOfGodsPerfection:  // 112
-      return "The Declaration of Gods Perfection"
-
-    case .theRisingDawn:  // 113
-      return "The Rising Dawn"
-
-    case .men:  // 114
-      return "Men"
-    }
-  }
-
   /// The number of words the Surah consists of in the Arabic original.
   var arabicWordsCount: Int {
     Self.chapterNumToWordsCount[rawValue]!
   }
 
   func totalParts(maxWordsPerPart: MaxArabicWordsPerStanding) -> Int {
-    Int((Double(arabicWordsCount) / Double(maxWordsPerPart.rawValue)).rounded(.up))
+    Int(ceil(Double(contentString().components(separatedBy: Self.splitSeparator).count) / Double(maxWordsPerPart.factor)))
+  }
+
+  func contentString() -> String {
+    let spokenTextFilePath = Bundle.main.url(forResource: fileName, withExtension: "txt")!
+    let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
+    return contentString.stripped()
   }
 
   // Source: https://qurananalysis.com/analysis/basic-statistics.php?lang=AR

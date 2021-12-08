@@ -34,19 +34,51 @@
 
 "RECITATION.DESTINY.NAME" = "Al-Qadr (Destiny)";
 
+"RECITATION.DIVORCE.NAME" = "At-Talaq (Divorce)";
+
+"RECITATION.DOMINION.NAME" = "Al-Mulk (Dominion)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "al-Kawthar (Good in Abundance)";
 
 "RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "At-Takathur (Greed For More And More)";
 
+"RECITATION.HE_FROWNED.NAME" = "'Abasa (He Frowned)";
+
+"RECITATION.IRON.NAME" = "Al-Hadid (Iron)";
+
+"RECITATION.LOSS_AND_GAIN.NAME" = "At-Taghabun (Loss And Gain)";
+
+"RECITATION.MAN.NAME" = "Al-Insan (Man)";
+
 "RECITATION.MEN.NAME" = "an-Nas (Men)";
+
+"RECITATION.NOAH.NAME" = "Nuh (Noah)";
+
+"RECITATION.PROHIBITION.NAME" = "At-Tahrim (Prohibition)";
 
 "RECITATION.QURAYSH.NAME" = "Quraysch";
 
+"RECITATION.RESURRECTION.NAME" = "Al-Qiyamah (Resurrection)";
+
+"RECITATION.SHROUDING_IN_DARKNESS.NAME" = "At-Takwir (Shrouding In Darkness)";
+
 "RECITATION.SUCCOUR.NAME" = "an-Nasr (Succour)";
+
+"RECITATION.THAT_WHICH_COMES_IN_THE_NIGHT.NAME" = "At-Tariq (That Which Comes In The Night)";
+
+"RECITATION.THAT_WHICH_MUST_COME_TO_PASS.NAME" = "Al-Waqiah (That Which Must Come To Pass)";
+
+"RECITATION.THE_ALL_HIGHEST.NAME" = "Al-A'La (The All-Highest)";
 
 "RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "Ad-Duha (The Bright Morning Hours)";
 
 "RECITATION.THE_CHARGERS.NAME" = "Al-Adiyat (The Chargers)";
+
+"RECITATION.THE_CLEAVING_ASUNDER.NAME" = "Al-Infitar (The Cleaving Asunder)";
+
+"RECITATION.THE_CONGREGATION.NAME" = "Al-Jumu'ah (The Congregation)";
+
+"RECITATION.THE_DAYBREAK.NAME" = "Al-Fajr (The Daybreak)";
 
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "al-Ikhlas (The Decleration Of [God's] Perfection)";
 
@@ -54,15 +86,31 @@
 
 "RECITATION.THE_ELEPHANT.NAME" = "al-Fil (The Elephant)";
 
+"RECITATION.THE_ENFOLDED_ONE.NAME" = "Al-Muddaththir (The Enfolded One)";
+
+"RECITATION.THE_ENWRAPPED_ONE.NAME" = "Al-Muzzammil (The Enwrapped One)";
+
 "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "Al-Bayyinah (The Evidence Of The Truth)";
+
+"RECITATION.THE_EXAMINED_ONE.NAME" = "Al-Mumtahanah (The Examined One)";
 
 "RECITATION.THE_FIG.NAME" = "At-Tin (The Fig)";
 
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "al-'Asr (The Flight Of Time)";
 
+"RECITATION.THE_GATHERING.NAME" = "Al-Hashr (The Gathering)";
+
 "RECITATION.THE_GERM_CELL.NAME" = "Al-Alaq (The Germ-Cell)";
 
+"RECITATION.THE_GREAT_CONSTELLATIONS.NAME" = "Al-Buruj (The Great Constellations)";
+
+"RECITATION.THE_HYPOCRITES.NAME" = "Al-Munafiqun (The Hypocrites)";
+
 "RECITATION.THE_LAND.NAME" = "Al-Balad (The Land)";
+
+"RECITATION.THE_LAYING_BARE_OF_THE_TRUTH.NAME" = "Al-Haqqah (The Laying-Bare Of The Truth)";
+
+"RECITATION.THE_MOST_GRACIOUS.NAME" = "Ar-Rahman (The Most Gracious)";
 
 "RECITATION.THE_NIGHT.NAME" = "Al-Layl (The Night)";
 
@@ -70,17 +118,39 @@
 
 "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "Ash-Sharh (The Opening-Up Of The Heart)";
 
+"RECITATION.THE_OVERSHADOWING_EVENT.NAME" = "Al-Ghashiyah (The Overshadowing Event)";
+
+"RECITATION.THE_PEN.NAME" = "Al-Qalam (The Pen)";
+
+"RECITATION.THE_PLEADING.NAME" = "Al-Mujadalah (The Pleading)";
+
+"RECITATION.THE_RANKS.NAME" = "As-Saff (The Ranks)";
+
 "RECITATION.THE_RISING_DAWN.NAME" = "al-Falaq (The Rising Dawn)";
 
 "RECITATION.THE_SLANDERER.NAME" = "al-Humaza (The Slanderer)";
+
+"RECITATION.THE_SPLITTING_ASUNDER.NAME" = "Al-Inshiqaq (The Splitting Asunder)";
 
 "RECITATION.THE_SUDDEN_CALAMITY.NAME" = "Al-Qariah (The Sudden Calamity)";
 
 "RECITATION.THE_SUN.NAME" = "Ash-Shams (The Sun)";
 
+"RECITATION.THE_TIDING.NAME" = "An-Naba (The Tiding)";
+
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "al-Masad (The Twisted Strands)";
 
+"RECITATION.THE_UNSEEN_BEINGS.NAME" = "Al-Jinn (The Unseen Beings)";
+
+"RECITATION.THE_WAYS_OF_ASCENT.NAME" = "Al-Ma'Arij (The Ways Of Ascent)";
+
+"RECITATION.THOSE_SENT_FORTH.NAME" = "Al-Mursalat (Those Sent Forth)";
+
+"RECITATION.THOSE_THAT_RISE.NAME" = "An-Nazi'at (Those That Rise)";
+
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "al-Kafirun (Those Who Deny The Truth)";
+
+"RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME" = "Al-Mutaffifin (Those Who Give Short Measure)";
 
 "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Change language in ⚙️ Settings";
 
@@ -114,7 +184,7 @@
 
 "SETTINGS.FAQ_BUTTON.TITLE" = "FAQ";
 
-"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "This App currently has two goals:\n1. Becoming aware of what you are actually saying when you pray.\n2. Use the regular prayers to read the Quran.\n\nCurrently the app contains only the last 24 surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.\n\nSpecifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).";
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "This App currently has two goals:\n1. Becoming aware of what you are actually saying when you pray.\n2. Use the regular prayers to read the Quran.\n\nCurrently the app contains only the last 60 surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.\n\nSpecifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).";
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "What is the purpose of this app?";
 

@@ -82,7 +82,7 @@ extension DefaultsKeys {
   var changingTextSpeedFactor: DefaultsKey<Double> { .init("ChangingTextSpeedFactor", defaultValue: 1.0) }
   var showChangingTextName: DefaultsKey<Bool> { .init("ShowChangingTextName", defaultValue: true) }
   var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
-  var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: false) }
+  var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: true) }
   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument.rawValue) }
   var speechSynthesizerVoiceId: DefaultsKey<String> { .init("VoiceId", defaultValue: defaultVoice) }
   var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }

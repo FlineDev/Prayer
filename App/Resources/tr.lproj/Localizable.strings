@@ -34,19 +34,51 @@
 
 "RECITATION.DESTINY.NAME" = "Kadr (Kudret)";
 
+"RECITATION.DIVORCE.NAME" = "Talak (Boşanma)";
+
+"RECITATION.DOMINION.NAME" = "Mulk (Yönetim)";
+
 "RECITATION.GOOD_IN_ABUNDANCE.NAME" = "Kevser (Bolluk)";
 
 "RECITATION.GREED_FOR_MORE_AND_MORE.NAME" = "Tekasür (Çoğaltma Yarışı)";
 
+"RECITATION.HE_FROWNED.NAME" = "Abese (Surat Astı)";
+
+"RECITATION.IRON.NAME" = "Hadid (Demir)";
+
+"RECITATION.LOSS_AND_GAIN.NAME" = "Teğabun (Aldanma)";
+
+"RECITATION.MAN.NAME" = "İnsan (İnsan)";
+
 "RECITATION.MEN.NAME" = "Nas (Halk)";
+
+"RECITATION.NOAH.NAME" = "Nuh (Nuh)";
+
+"RECITATION.PROHIBITION.NAME" = "Tahrim (Yasaklama)";
 
 "RECITATION.QURAYSH.NAME" = "Kureyş";
 
+"RECITATION.RESURRECTION.NAME" = "Kıyame (Diriliş)";
+
+"RECITATION.SHROUDING_IN_DARKNESS.NAME" = "Tekvir (Yuvarlama)";
+
 "RECITATION.SUCCOUR.NAME" = "Nasr (Yardım)";
+
+"RECITATION.THAT_WHICH_COMES_IN_THE_NIGHT.NAME" = "Tarık (Parlak Yıldız)";
+
+"RECITATION.THAT_WHICH_MUST_COME_TO_PASS.NAME" = "Vakıa (Kaçınılmaz Olay)";
+
+"RECITATION.THE_ALL_HIGHEST.NAME" = "A'la (Yüce)";
 
 "RECITATION.THE_BRIGHT_MORNING_HOURS.NAME" = "Duha (Kuşluk)";
 
 "RECITATION.THE_CHARGERS.NAME" = "Adiyat (Aşanlar)";
+
+"RECITATION.THE_CLEAVING_ASUNDER.NAME" = "İnfitar (Yarılma)";
+
+"RECITATION.THE_CONGREGATION.NAME" = "Cuma (Cuma)";
+
+"RECITATION.THE_DAYBREAK.NAME" = "Fecr (Tan)";
 
 "RECITATION.THE_DECLERATIION_OF_GODS_PERFECTION.NAME" = "İhlas";
 
@@ -54,15 +86,31 @@
 
 "RECITATION.THE_ELEPHANT.NAME" = "Fil";
 
+"RECITATION.THE_ENFOLDED_ONE.NAME" = "Muddessir (Gizlenen)";
+
+"RECITATION.THE_ENWRAPPED_ONE.NAME" = "Müzemmil (Bürünen)";
+
 "RECITATION.THE_EVIDENCE_OF_THE_TRUTH.NAME" = "Beyyine (Kanıt)";
+
+"RECITATION.THE_EXAMINED_ONE.NAME" = "Mumtahine (Sorgulanan)";
 
 "RECITATION.THE_FIG.NAME" = "Tin (İncir)";
 
 "RECITATION.THE_FLIGHT_OF_TIME.NAME" = "'Asr (Çağ)";
 
+"RECITATION.THE_GATHERING.NAME" = "Haşr (Sürgün)";
+
 "RECITATION.THE_GERM_CELL.NAME" = "Alak (Embriyo)";
 
+"RECITATION.THE_GREAT_CONSTELLATIONS.NAME" = "Buruc (Galaksiler)";
+
+"RECITATION.THE_HYPOCRITES.NAME" = "Munafikun (İkiyüzlüler)";
+
 "RECITATION.THE_LAND.NAME" = "Beled (Kent)";
+
+"RECITATION.THE_LAYING_BARE_OF_THE_TRUTH.NAME" = "Hakka (Gerçekleşen)";
+
+"RECITATION.THE_MOST_GRACIOUS.NAME" = "Rahman (Rahman)";
 
 "RECITATION.THE_NIGHT.NAME" = "Leyl (Gece)";
 
@@ -70,17 +118,39 @@
 
 "RECITATION.THE_OPENING_UP_OF_THE_HEART.NAME" = "Şarh (Sakinleştirme)";
 
+"RECITATION.THE_OVERSHADOWING_EVENT.NAME" = "Ğaşiye (Bunaltan)";
+
+"RECITATION.THE_PEN.NAME" = "Kalem (Kalem)";
+
+"RECITATION.THE_PLEADING.NAME" = "Mücadele (Tartışma)";
+
+"RECITATION.THE_RANKS.NAME" = "Saff (Düzenli Birlik)";
+
 "RECITATION.THE_RISING_DAWN.NAME" = "Felak (Şafak)";
 
 "RECITATION.THE_SLANDERER.NAME" = "Hümeze (Dedikoducu)";
+
+"RECITATION.THE_SPLITTING_ASUNDER.NAME" = "İnşikak (Çatlama)";
 
 "RECITATION.THE_SUDDEN_CALAMITY.NAME" = "Karia (Şok)";
 
 "RECITATION.THE_SUN.NAME" = "Şems (Güneş)";
 
+"RECITATION.THE_TIDING.NAME" = "Nebe (Haber)";
+
 "RECITATION.THE_TWISTED_STRANDS.NAME" = "Tebbet (Diken)";
 
+"RECITATION.THE_UNSEEN_BEINGS.NAME" = "Cin (Cin)";
+
+"RECITATION.THE_WAYS_OF_ASCENT.NAME" = "Mearic (Yükseliş Yolları)";
+
+"RECITATION.THOSE_SENT_FORTH.NAME" = "Murselat (Gönderilenler)";
+
+"RECITATION.THOSE_THAT_RISE.NAME" = "Naziat (Söküp Çıkaranlar)";
+
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Kafirun (İnkarcılar)";
+
+"RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME" = "Mutaffifin (Kandıranlar)";
 
 "SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "⚙️ Ayarlar'da dili değiştir";
 
@@ -114,7 +184,7 @@
 
 "SETTINGS.FAQ_BUTTON.TITLE" = "SSS";
 
-"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 24 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımımızdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
+"SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER" = "Bu uygulamanın şu anda iki hedefi vardır:\n1. Namaz kılarken ne söylenildiğinin farkında olunmasi.\n2. Namaz kılarken Kuranın hatim edilmesi.\n\nŞu anda uygulama sadece Kurandaki son 60 sûreyi içerir ve namazda kıyamda iken rastgele bir sure seçer. Ama bu sadece ilk adımımızdır. Tüm eksik olan sûreler güncelleştirmeler ile tamamen ilave edilecektir ki, namaz kılarken parça parça Kuranı okuyabilesiniz. Uzun sureler için de parça parça okuma çözümümüz var.\n\nBu uygulamanın amacı namaz kılmayı sıfırdan öğretmek DEĞİLDİR. Bu uygulama namazdaki sureleri yabanci dil (Arapça) yerine, bildiğiniz bir dilden okuyabilmeniz için hazırlanmıştır. Şu anda dil olarak Türkçe, Almanca ve İngilizce mevcuttur.";
 
 "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.QUESTION" = "Bu uygulamanın amacı nedir?";
 

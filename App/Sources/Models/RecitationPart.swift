@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import HandySwift
 import SwiftyUserDefaults
 
 struct RecitationPart: Codable, DefaultsSerializable {
@@ -38,5 +39,23 @@ struct RecitationPart: Codable, DefaultsSerializable {
       part: part + 1,
       totalParts: totalParts
     )
+  }
+
+  func recitationLines() -> [String] {
+    var contentString = recitation.contentString()
+
+    if totalParts > 1 {
+      let shortLengthTotalParts = recitation.totalParts(maxWordsPerPart: .short)
+
+      let separatorLowerBoundIndex = (part - 1) * partLength.factor
+      let separatorUpperBoundIndex = min(separatorLowerBoundIndex + partLength.factor, shortLengthTotalParts)
+      let partIndexRange = separatorLowerBoundIndex..<separatorUpperBoundIndex
+      contentString = contentString.components(separatedBy: Recitation.splitSeparator)[partIndexRange].joined()
+    }
+
+    return contentString.components(separatedBy: .newlines)
+      .filter { !$0.contains(Recitation.splitSeparator) }
+      .map { $0.stripped() }
+      .filter { !$0.isBlank }
   }
 }
