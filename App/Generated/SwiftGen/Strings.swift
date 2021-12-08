@@ -390,7 +390,7 @@ internal enum L10n {
         /// 1. Becoming aware of what you are actually saying when you pray.
         /// 2. Use the regular prayers to read the Quran.
         /// 
-        /// Currently the app contains only the last 24 surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.
+        /// Currently the app contains only the last 60 surahs of the Quran and randomly selects between them while one is staying during a prayer, but this is only the first step. With updates we are to follow all the missing surahs, and we also have a solution for longer surahs so that you can read them bit by bit to be able to pray and understand them without losing context.
         /// 
         /// Specifically NOT the purpose of this app is to teach praying from the ground up. Knowledge of the fundamentals of the prayers is already assumed, the app is intended primarily to move from doing your prayers in a foreign language (Arabic) to a language which you already mastered (currently: English, German and Turkish).
         internal static let answer = L10n.tr("Localizable", "SETTINGS.FAQ_ENTRIES.APP_MOTIVATION.ANSWER")
