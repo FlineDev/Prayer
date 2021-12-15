@@ -280,7 +280,21 @@
 		2E30457B2736B9F000B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/088.txt; sourceTree = "<group>"; };
 		2E30457C27399B8F00B8BBD2 /* SoundInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundInstrument.swift; sourceTree = "<group>"; };
 		2E30457E27399CF300B8BBD2 /* MovementSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementSound.swift; sourceTree = "<group>"; };
-		2E6C0B5E2647315600A4D8E3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".swift-format"; path = "../WhatNext-appleOS/.swift-format"; sourceTree = "<group>"; };
+		2E51B4E9276A6A6F001AEEFE /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		2E51B4EA276A6A6F001AEEFE /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
+		2E51B4EB276A6A6F001AEEFE /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		2E51B4EC276A6A6F001AEEFE /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
+		2E51B4EE276A6A6F001AEEFE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2E51B4EF276A6A6F001AEEFE /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
+		2E51B4F0276A6A6F001AEEFE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		2E51B4F1276A6A6F001AEEFE /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		2E51B4F2276A6A6F001AEEFE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		2E51B4F3276A6A6F001AEEFE /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		2E51B4F7276A6A6F001AEEFE /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
+		2E51B4F8276A6A6F001AEEFE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2E51B4F9276A6A6F001AEEFE /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
+		2E51B4FA276A6A6F001AEEFE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2E9976BD271585A500F61BFE /* Recitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recitation.swift; sourceTree = "<group>"; };
 		2E9976DA2715A75400F61BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/090.txt; sourceTree = "<group>"; };
 		2E9976DC2715A75B00F61BFE /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/090.txt; sourceTree = "<group>"; };
@@ -325,14 +339,10 @@
 		2EAF6389271AAC9D00145D5D /* RecitationPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitationPart.swift; sourceTree = "<group>"; };
 		2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVolumeView.swift; sourceTree = "<group>"; };
-		A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
-		A115CBF22222EA4000A7EB3A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		A115CBF42222ECDD00A7EB3A /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
 		A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		A115CBF92222EE5700A7EB3A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		A11783F521445EF600B41A1A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
 		A11830EA1E591EF600CBE087 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		A11830EC1E591F0A00CBE087 /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		A11830EE1E591FD900CBE087 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -341,8 +351,6 @@
 		A1370CD71E368DF300B55D9E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A1370CDA1E368FA600B55D9E /* SettingsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
 		A1370CE81E37394600B55D9E /* PrayerFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerFlowController.swift; sourceTree = "<group>"; };
-		A13B093B1E91AAB3003A375D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A13B093C1E91BB04003A375D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A1494AE61E25A9CE00286EBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AE81E25A9D500286EBF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494AEB1E25A9F000286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Takbir.txt; sourceTree = "<group>"; };
@@ -425,13 +433,8 @@
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
 		A1494BCC1E2ED79500286EBF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		A161E36B1E7EF826009C6602 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		A161E36E1E7EF8B1009C6602 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
-		A161E36F1E7EF8B1009C6602 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		A161E3701E7EFA30009C6602 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 		A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotUITests.swift; sourceTree = "<group>"; };
-		A161E3891E7F3DC0009C6602 /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deliverfile; sourceTree = "<group>"; };
 		A164848B1E243834008EC78C /* Prayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164849F1E243834008EC78C /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16484AA1E243834008EC78C /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -493,6 +496,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E51B4E8276A6A39001AEEFE /* RootFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */,
+				2E51B4F3276A6A6F001AEEFE /* .env */,
+				2E51B4EA276A6A6F001AEEFE /* .env.sample */,
+				2E51B4EB276A6A6F001AEEFE /* .github */,
+				2E51B4EE276A6A6F001AEEFE /* .gitignore */,
+				2E51B4F7276A6A6F001AEEFE /* .swift-format */,
+				2E51B4F2276A6A6F001AEEFE /* CHANGELOG.md */,
+				2E51B4F9276A6A6F001AEEFE /* fastlane */,
+				2E51B4F1276A6A6F001AEEFE /* Gemfile */,
+				2E51B4FA276A6A6F001AEEFE /* LICENSE */,
+				2E51B4F0276A6A6F001AEEFE /* Logo.png */,
+				2E51B4F8276A6A6F001AEEFE /* README.md */,
+				2E51B4E9276A6A6F001AEEFE /* Scripts */,
+				2E51B4EF276A6A6F001AEEFE /* Swiftgen-xcassets.stencil */,
+				2E51B4EC276A6A6F001AEEFE /* swiftgen.yml */,
+			);
+			name = RootFiles;
+			sourceTree = "<group>";
+		};
 		2EAF6391271AE0A400145D5D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,22 +643,6 @@
 			path = SpokenTexts;
 			sourceTree = "<group>";
 		};
-		A1494AEF1E27F3DF00286EBF /* RootFiles */ = {
-			isa = PBXGroup;
-			children = (
-				A115CBEC2222E94C00A7EB3A /* .bartycrouch.toml */,
-				A115CBF22222EA4000A7EB3A /* .gitignore */,
-				2E6C0B5E2647315600A4D8E3 /* .swift-format */,
-				A161E36D1E7EF8B1009C6602 /* fastlane */,
-				A161E36B1E7EF826009C6602 /* Gemfile */,
-				A13B093C1E91BB04003A375D /* LICENSE */,
-				A13B093B1E91AAB3003A375D /* README.md */,
-				A11784022144631900B41A1A /* Swiftgen-xcassets.stencil */,
-				A115CBF42222ECDD00A7EB3A /* swiftgen.yml */,
-			);
-			name = RootFiles;
-			sourceTree = "<group>";
-		};
 		A1494B201E29452B00286EBF /* Recitations */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,24 +719,13 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
-		A161E36D1E7EF8B1009C6602 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				A161E36E1E7EF8B1009C6602 /* Appfile */,
-				A161E3891E7F3DC0009C6602 /* Deliverfile */,
-				A161E36F1E7EF8B1009C6602 /* Fastfile */,
-				A161E3701E7EFA30009C6602 /* Snapfile */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
 		A16484821E243834008EC78C = {
 			isa = PBXGroup;
 			children = (
 				A16484BC1E243898008EC78C /* App */,
 				A16484C91E243898008EC78C /* Tests */,
 				A16484CE1E243898008EC78C /* UITests */,
-				A1494AEF1E27F3DF00286EBF /* RootFiles */,
+				2E51B4E8276A6A39001AEEFE /* RootFiles */,
 				A164848C1E243834008EC78C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2107,7 +2105,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -2128,7 +2126,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
