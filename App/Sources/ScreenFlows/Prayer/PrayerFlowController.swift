@@ -103,6 +103,9 @@ class PrayerFlowController: FlowController {
 
     // set audio session to this app
     try? AVAudioSession.sharedInstance().setActive(true)
+    if #available(iOS 14.5, *) {
+      try? AVAudioSession.sharedInstance().setPrefersNoInterruptionsFromSystemAlerts(true)
+    }
 
     // prevent screen from locking
     UIApplication.shared.isIdleTimerDisabled = true
@@ -164,6 +167,9 @@ extension PrayerFlowController: PrayerFlowDelegate {
     countdown?.cancel()
     cleanup()
     prayerViewCtrl.dismiss(animated: true) {
+      if #available(iOS 14.5, *) {
+        try? AVAudioSession.sharedInstance().setPrefersNoInterruptionsFromSystemAlerts(false)
+      }
       try? AVAudioSession.sharedInstance().setActive(false)
       UIApplication.shared.isIdleTimerDisabled = false
     }

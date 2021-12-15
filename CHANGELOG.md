@@ -31,6 +31,10 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.4.1] - 2021-12-15
+### Fixed
+- Fixed an issue where the current line didn't move correctly with screen text & sound if recitation names were turned on.
+
 ## [1.4.0] - 2021-12-08
 ### Added
 - Added 35 more Quran recitations (from Surah 55 to 89) in all three supported languages.
