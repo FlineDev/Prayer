@@ -39,11 +39,11 @@ extension SettingsFlowController: SettingsFlowDelegate {
   }
 
   func setChangingPartSpeed(_ changingPartSpeed: Double) {
-    settingsViewModel.changingTextSpeedFactor = changingPartSpeed
+    settingsViewModel.recitationSpeedFactor = changingPartSpeed
   }
 
   func setShowChangingTextName(_ showChangingTextName: Bool) {
-    settingsViewModel.showChangingTextName = showChangingTextName
+    settingsViewModel.showRecitationName = showChangingTextName
   }
 
   func setAllowLongerRecitations(_ allowLongerRecitations: Bool) {
@@ -95,14 +95,14 @@ extension SettingsFlowController: SettingsFlowDelegate {
     let prayer = Prayer(
       rakatCount: UInt(settingsViewModel.rakatCount),
       allowLongerRecitations: settingsViewModel.allowLongerRecitations,
-      allowSplittingRecitations: settingsViewModel.allowSplittingRecitations
+      allowSplittingRecitations: settingsViewModel.allowSplittingRecitations,
+      showStandingRecitationName: settingsViewModel.showRecitationName
     )
 
     let prayerFlowCtrl = PrayerFlowController(
       prayer: prayer,
       fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
-      changingTextSpeedFactor: settingsViewModel.changingTextSpeedFactor,
-      showChangingTextName: settingsViewModel.showChangingTextName,
+      recitationSpeedFactor: settingsViewModel.recitationSpeedFactor,
       audioMode: settingsViewModel.audioMode,
       movementSoundInstrument: settingsViewModel.movementSoundInstrument,
       speechSynthesizer: settingsViewModel.speechSynthesizer

@@ -125,7 +125,6 @@ class PrayerState {
       previousLine: previousLine,
       currentArrow: currentArrow,
       currentLine: currentLine,
-      isChapterName: false,
       currentIsComponentBeginning: lineIndex == 0,
       nextArrow: nextArrow,
       nextLine: nextLine,

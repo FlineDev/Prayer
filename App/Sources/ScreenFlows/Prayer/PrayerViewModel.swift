@@ -14,7 +14,6 @@ struct PrayerViewModel {
 
   let currentArrow: Position.Arrow?
   let currentLine: String
-  let isChapterName: Bool
   let currentIsComponentBeginning: Bool
 
   let nextArrow: Position.Arrow?

@@ -11,8 +11,7 @@ import UIKit
 class PrayerFlowController: FlowController {
   private let prayer: Prayer
   private let fixedTextSpeedsFactor: Double
-  private let changingTextSpeedFactor: Double
-  private let showChangingTextName: Bool
+  private let recitationSpeedFactor: Double
   private var audioMode: AudioMode
   private let movementSoundInstrument: String
 
@@ -26,16 +25,14 @@ class PrayerFlowController: FlowController {
   init(
     prayer: Prayer,
     fixedTextSpeedsFactor: Double,
-    changingTextSpeedFactor: Double,
-    showChangingTextName: Bool,
+    recitationSpeedFactor: Double,
     audioMode: AudioMode,
     movementSoundInstrument: String,
     speechSynthesizer: SpeechSynthesizer
   ) {
     self.prayer = prayer
     self.fixedTextSpeedsFactor = fixedTextSpeedsFactor
-    self.changingTextSpeedFactor = changingTextSpeedFactor
-    self.showChangingTextName = showChangingTextName
+    self.recitationSpeedFactor = recitationSpeedFactor
     self.audioMode = audioMode
     self.movementSoundInstrument = movementSoundInstrument
     self.speechSynthesizer = speechSynthesizer
@@ -85,7 +82,6 @@ class PrayerFlowController: FlowController {
       previousLine: nil,
       currentArrow: nil,
       currentLine: "\(count)",
-      isChapterName: false,
       currentIsComponentBeginning: false,
       nextArrow: nil,
       nextLine: nil,
@@ -96,7 +92,7 @@ class PrayerFlowController: FlowController {
   func startPrayer() {
     prayerState = PrayerState(
       prayer: prayer,
-      changingTextSpeedFactor: changingTextSpeedFactor,
+      changingTextSpeedFactor: recitationSpeedFactor,
       fixedTextsSpeedFactor: fixedTextSpeedsFactor,
       audioMode: audioMode,
       movementSoundInstrument: movementSoundInstrument,
@@ -107,6 +103,9 @@ class PrayerFlowController: FlowController {
 
     // set audio session to this app
     try? AVAudioSession.sharedInstance().setActive(true)
+    if #available(iOS 14.5, *) {
+      try? AVAudioSession.sharedInstance().setPrefersNoInterruptionsFromSystemAlerts(true)
+    }
 
     // prevent screen from locking
     UIApplication.shared.isIdleTimerDisabled = true
@@ -146,45 +145,6 @@ class PrayerFlowController: FlowController {
 
   private func progressToNextStep() {
     if prayerState.moveToNextLine() {
-      let viewModel = prayerState.prayerViewModel()
-
-      // show changing text info if chosen
-      if self.showChangingTextName && viewModel.currentIsComponentBeginning {
-        if let chapterNum = prayerState.currentRecitationChapterNum, chapterNum != 1 {
-          let infoViewModel = PrayerViewModel(
-            currentComponentName: viewModel.currentComponentName,
-            previousArrow: viewModel.previousArrow,
-            previousLine: viewModel.previousLine,
-            currentArrow: nil,
-            currentLine: viewModel.currentComponentName,
-            isChapterName: true,
-            currentIsComponentBeginning: true,
-            nextArrow: nil,
-            nextLine: viewModel.currentLine,
-            nextIsComponentBeginning: false
-          )
-          self.prayerViewCtrl.viewModel = infoViewModel
-
-          switch audioMode {
-          case .movementSound, .none:
-            let rememberTime = Timespan.milliseconds(1_000)
-            let waitTime = infoViewModel.currentLine.estimatedReadingTime + rememberTime
-            delay(by: waitTime) {
-              self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
-              self.progressPrayer()
-            }
-
-          case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
-            speechSynthesizer.speak(text: infoViewModel.currentLine) {
-              self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
-              self.progressPrayer()
-            }
-          }
-
-          return
-        }
-      }
-
       prayerViewCtrl.viewModel = prayerState.prayerViewModel()
       progressPrayer()
     }
@@ -207,6 +167,9 @@ extension PrayerFlowController: PrayerFlowDelegate {
     countdown?.cancel()
     cleanup()
     prayerViewCtrl.dismiss(animated: true) {
+      if #available(iOS 14.5, *) {
+        try? AVAudioSession.sharedInstance().setPrefersNoInterruptionsFromSystemAlerts(false)
+      }
       try? AVAudioSession.sharedInstance().setActive(false)
       UIApplication.shared.isIdleTimerDisabled = false
     }
