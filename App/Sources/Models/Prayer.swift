@@ -22,7 +22,8 @@ class Prayer {
   init(
     rakatCount: UInt,
     allowLongerRecitations: Bool,
-    allowSplittingRecitations: Bool
+    allowSplittingRecitations: Bool,
+    showStandingRecitationName: Bool
   ) {
     self.rakat = {
       var rakat: Rakat = []
@@ -63,6 +64,7 @@ class Prayer {
         let rakah = Rakah(
           isBeginningOfPrayer: num == 1,
           standingRecitationPart: standingRecitationPart,
+          showStandingRecitationName: showStandingRecitationName,
           includesSittingRecitation: num % 2 == 0 || num == rakatCount,
           isEndOfPrayer: num == rakatCount
         )

@@ -21,7 +21,7 @@ class PrayerViewController: UIViewController {
       updateArrowLabels()
       updateSeparators()
 
-      if viewModel.isChapterName {
+      if viewModel.currentLine.contains(String.recitationEmoji) {
         currentLineLabel.textColor = Colors.secondary
       }
       else {

@@ -71,7 +71,7 @@ final class SpeechSynthesizer: NSObject {
     afterCompletionDelay: TimeInterval? = nil
   ) {
     let textToSpeak: String = {
-      if text.contains("📖") {
+      if text.contains(String.recitationEmoji) {
         return text.replacingOccurrences(of: "📖", with: L10n.SpeechSynthesizer.bookEmojiReplacement)
       }
       else {

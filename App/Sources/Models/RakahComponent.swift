@@ -83,16 +83,16 @@ class RakahComponent {
       isChangingText = false
       chapterNumber = nil
 
-    case let .recitationPart(recitationPart):
+    case let .recitationPart(recitationPart, showName):
       chapterNumber = recitationPart.recitation.rawValue
 
       var title = recitationPart.recitation.localizedTitle
       if recitationPart.totalParts > 1 {
         title = l10n.splitRecitationTitle(title, recitationPart.part, recitationPart.totalParts)
       }
-      name = "📖\(chapterNumber!): \(title)"
+      name = "\(String.recitationEmoji)\(chapterNumber!): \(title)"
 
-      spokenTextLines = recitationPart.recitationLines()
+      spokenTextLines = showName ? [name] + recitationPart.recitationLines() : recitationPart.recitationLines()
       needsMovement = false
       position = .standing
       movementSound = nil
@@ -171,7 +171,10 @@ class RakahComponent {
 }
 
 extension String {
+  static var recitationEmoji: Character = "📖"
+
   var estimatedReadingTime: Timespan {
-    RakahComponent.durationPerCharacter * Double(utf8.count) + .milliseconds(500)  // add time for context switch
+    // 500 ms for context switch + 1s remember time for recitation name
+    RakahComponent.durationPerCharacter * Double(utf8.count) + .milliseconds(500) + .seconds(contains(Self.recitationEmoji) ? 1 : 0)
   }
 }

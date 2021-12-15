@@ -189,7 +189,7 @@ class SettingsViewController: FormViewController {
   private func changingTextSpeedRow() -> SliderRow {
     SliderRow { row in
       row.title = "🔀    " + l10n.AudioSpeedSection.ChangingText.title
-      row.value = Float(viewModel.changingTextSpeedFactor)
+      row.value = Float(viewModel.recitationSpeedFactor)
       row.displayValueFor = { String(format: "%.2f", $0!) }
       row.cell.slider.minimumValue = 0.5
       row.cell.slider.maximumValue = 2.0
@@ -207,7 +207,7 @@ class SettingsViewController: FormViewController {
   private func changingTextNameRow() -> SwitchRow {
     SwitchRow { row in
       row.title = l10n.PrayerSection.ChangingTextName.title
-      row.value = viewModel.showChangingTextName
+      row.value = viewModel.showRecitationName
     }
     .cellSetup { cell, _ in
       cell.imageView?.image = UIImage(systemName: "character.book.closed")
