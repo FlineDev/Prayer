@@ -1,2 +1,5 @@
+CHANGED:
+- Minor English UI text improvements.
+
 FIXED:
-- Fixed an issue where the current line didn't move correctly with screen text & sound if recitation names were turned on.
+- Fixed dozens of typos, mostly in German translations.

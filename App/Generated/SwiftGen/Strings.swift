@@ -12,7 +12,7 @@ import Foundation
 internal enum L10n {
 
   internal enum AudioMode {
-    /// Sound for position changes
+    /// Position change sound
     internal static let movementSound = L10n.tr("Localizable", "AUDIO_MODE.MOVEMENT_SOUND")
     /// Both (sound + voice)
     internal static let movementSoundAndSpeechSynthesizer = L10n.tr("Localizable", "AUDIO_MODE.MOVEMENT_SOUND_AND_SPEECH_SYNTHESIZER")
@@ -436,7 +436,7 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_LONGER_RECITATIONS.TITLE")
       }
       internal enum AllowSplittingRecitations {
-        /// Split & include lon surah
+        /// Split & include long surah
         internal static let title = L10n.tr("Localizable", "SETTINGS.PRAYER_SECTION.ALLOW_SPLITTING_RECITATIONS.TITLE")
       }
       internal enum ChangingTextName {
