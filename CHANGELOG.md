@@ -31,6 +31,14 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.4.2] - 2022-04-10
+### Changed
+- Updated dependencies to latest versions.
+- Minor English UI text improvements.
+### Fixed
+- Fixed dozens of typos, mostly in German translations.
+- Fixed a [SwiftyUserDefaults](https://github.com/sunshinejr/SwiftyUserDefaults) build issue with Xcode 13.3+.
+
 ## [1.4.1] - 2021-12-15
 ### Fixed
 - Fixed an issue where the current line didn't move correctly with screen text & sound if recitation names were turned on.

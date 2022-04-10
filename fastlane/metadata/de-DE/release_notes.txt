@@ -1,3 +1,5 @@
-BEHOBEN:
-- Ein Problem wurde behoben, bei dem sich die aktuelle Zeile nicht korrekt mit dem Bildschirmtext und dem Ton bewegte, wenn die Rezitationsnamen aktiviert waren.
+GEÄNDERT:
+- Kleinere Textverbesserungen der englischen Benutzeroberfläche.
 
+BEHOBEN:
+- Dutzende von Tippfehlern behoben, hauptsächlich in deutschen Übersetzungen.
