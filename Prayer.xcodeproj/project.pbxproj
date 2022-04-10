@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E06625B27243C9E001D8531 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06625A27243C9E001D8531 /* AudioMode.swift */; };
+		2E1493E62803282C000839A2 /* DefaultsSerializableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1493E52803282C000839A2 /* DefaultsSerializableExt.swift */; };
 		2E3044CD2736B88100B8BBD2 /* 055.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044CF2736B88100B8BBD2 /* 055.txt */; };
 		2E3044D22736B88900B8BBD2 /* 056.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044D42736B88900B8BBD2 /* 056.txt */; };
 		2E3044D52736B89500B8BBD2 /* 057.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E3044D72736B89500B8BBD2 /* 057.txt */; };
@@ -173,6 +174,7 @@
 
 /* Begin PBXFileReference section */
 		2E06625A27243C9E001D8531 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
+		2E1493E52803282C000839A2 /* DefaultsSerializableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsSerializableExt.swift; sourceTree = "<group>"; };
 		2E3044CE2736B88100B8BBD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/055.txt; sourceTree = "<group>"; };
 		2E3044D02736B88300B8BBD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/055.txt; sourceTree = "<group>"; };
 		2E3044D12736B88400B8BBD2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text; name = tr; path = tr.lproj/055.txt; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */,
+				2E1493E52803282C000839A2 /* DefaultsSerializableExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1169,6 +1172,7 @@
 				2ED15D71272DDCC3003BC370 /* AudioVolumeView.swift in Sources */,
 				A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */,
 				A1D1EFC41E393F080029C009 /* Countdown.swift in Sources */,
+				2E1493E62803282C000839A2 /* DefaultsSerializableExt.swift in Sources */,
 				A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */,
 				A11830F91E59BDE200CBE087 /* FAQCollectionViewCell.swift in Sources */,
 				A11830F11E5932BC00CBE087 /* FAQCollectionViewLayout.swift in Sources */,
@@ -2105,7 +2109,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -2126,7 +2130,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;

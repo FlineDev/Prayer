@@ -1,2 +1,5 @@
+DEĞİŞEN:
+- Küçük İngilizce UI metin iyileştirmeleri.
+
 DÜZELTİLEN:
-- Okuma adları açıksa mevcut satırın ekran metni ve sesiyle doğru şekilde hareket etmemesine engel olan bir sorun düzeltildi.
+- Çoğu Almanca çevirilerde olmak üzere düzinelerce yazım hatası düzeltildi.

@@ -1,97 +1,95 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Eureka",
-        "repositoryURL": "https://github.com/xmartlabs/Eureka",
-        "state": {
-          "branch": null,
-          "revision": "975e8d5e0ea3c86aff828537b2d4abe4430d6312",
-          "version": "5.3.4"
-        }
-      },
-      {
-        "package": "HandySwift",
-        "repositoryURL": "https://github.com/Flinesoft/HandySwift",
-        "state": {
-          "branch": null,
-          "revision": "5d6a6df5232eff28f9f71048e5745706d02be1f8",
-          "version": "3.4.0"
-        }
-      },
-      {
-        "package": "HandyUIKit",
-        "repositoryURL": "https://github.com/Flinesoft/HandyUIKit",
-        "state": {
-          "branch": null,
-          "revision": "e41084490bcee3dde900ea4af4901a197cf0c98c",
-          "version": "1.9.3"
-        }
-      },
-      {
-        "package": "Imperio",
-        "repositoryURL": "https://github.com/Flinesoft/Imperio",
-        "state": {
-          "branch": null,
-          "revision": "238b9bc7de239d3e99a03ba94157d49a4ecd8b61",
-          "version": "3.0.2"
-        }
-      },
-      {
-        "package": "MungoHealer",
-        "repositoryURL": "https://github.com/Flinesoft/MungoHealer",
-        "state": {
-          "branch": "main",
-          "revision": "8464370aa2cc23917458a7cee1d5ccd167daa7f5",
-          "version": null
-        }
-      },
-      {
-        "package": "NotificationToast",
-        "repositoryURL": "https://github.com/Jeehut/NotificationToast.git",
-        "state": {
-          "branch": "master",
-          "revision": "97eb48565211eb898b3547937d115336c3cbcd46",
-          "version": null
-        }
-      },
-      {
-        "package": "SwiftyBeaver",
-        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
-        "state": {
-          "branch": null,
-          "revision": "2c039501d6eeb4d4cd4aec4a8d884ad28862e044",
-          "version": "1.9.5"
-        }
-      },
-      {
-        "package": "SwiftyTimer",
-        "repositoryURL": "https://github.com/janlionly/SwiftyTimer",
-        "state": {
-          "branch": "master",
-          "revision": "cd1c75bc1b72b7a7224ad8e8197b97d367aadbcf",
-          "version": null
-        }
-      },
-      {
-        "package": "SwiftyUserDefaults",
-        "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
-        "state": {
-          "branch": null,
-          "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
-          "version": "5.3.0"
-        }
-      },
-      {
-        "package": "ViewRow",
-        "repositoryURL": "https://github.com/EurekaCommunity/ViewRow.git",
-        "state": {
-          "branch": null,
-          "revision": "3428a3b825a5641ae7fb65f3f787aba2b1b4dab9",
-          "version": "0.9.0"
-        }
+  "pins" : [
+    {
+      "identity" : "eureka",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/Eureka",
+      "state" : {
+        "revision" : "310bee0431ea2dcf43bb3154a8f1e0f44749aa12",
+        "version" : "5.3.5"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "handyswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/HandySwift",
+      "state" : {
+        "revision" : "5d6a6df5232eff28f9f71048e5745706d02be1f8",
+        "version" : "3.4.0"
+      }
+    },
+    {
+      "identity" : "handyuikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/HandyUIKit",
+      "state" : {
+        "revision" : "e41084490bcee3dde900ea4af4901a197cf0c98c",
+        "version" : "1.9.3"
+      }
+    },
+    {
+      "identity" : "imperio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/Imperio",
+      "state" : {
+        "revision" : "238b9bc7de239d3e99a03ba94157d49a4ecd8b61",
+        "version" : "3.0.2"
+      }
+    },
+    {
+      "identity" : "mungohealer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/MungoHealer",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6718c0233d73efa86da0802b346ecb3b189699ac"
+      }
+    },
+    {
+      "identity" : "notificationtoast",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jeehut/NotificationToast.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "97eb48565211eb898b3547937d115336c3cbcd46"
+      }
+    },
+    {
+      "identity" : "swiftybeaver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver",
+      "state" : {
+        "revision" : "2c039501d6eeb4d4cd4aec4a8d884ad28862e044",
+        "version" : "1.9.5"
+      }
+    },
+    {
+      "identity" : "swiftytimer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/janlionly/SwiftyTimer",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cd1c75bc1b72b7a7224ad8e8197b97d367aadbcf"
+      }
+    },
+    {
+      "identity" : "swiftyuserdefaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sunshinejr/SwiftyUserDefaults",
+      "state" : {
+        "revision" : "f66bcd04088582c8fbb5cb8554d577e303bae396",
+        "version" : "5.3.0"
+      }
+    },
+    {
+      "identity" : "viewrow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EurekaCommunity/ViewRow.git",
+      "state" : {
+        "revision" : "3428a3b825a5641ae7fb65f3f787aba2b1b4dab9",
+        "version" : "0.9.0"
+      }
+    }
+  ],
+  "version" : 2
 }
