@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Flinesoft/Prayer/stable/Logo.png"
+  <img src="https://raw.githubusercontent.com/FlineDev/Prayer/stable/Logo.png"
       width=500 alt="Prayer Logo">
 </p>
 
 <p align="center">
-    <a href="https://github.com/Flinesoft/Prayer/actions/workflows/main.yml">
-        <img src="https://github.com/Flinesoft/Prayer/actions/workflows/main.yml/badge.svg?branch=main"
+    <a href="https://github.com/FlineDev/Prayer/actions/workflows/main.yml">
+        <img src="https://github.com/FlineDev/Prayer/actions/workflows/main.yml/badge.svg?branch=main"
              alt="Build Status">
     </a>
-    <a href="https://github.com/Flinesoft/Prayer/releases">
+    <a href="https://github.com/FlineDev/Prayer/releases">
         <img src="https://img.shields.io/badge/Version-1.4.2-blue.svg"
              alt="Version: 1.4.2">
     </a>
@@ -16,7 +16,7 @@
          alt="Swift: 5.6">
     <img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg"
         alt="Platforms: iOS">
-    <a href="https://github.com/Flinesoft/Prayer/blob/stable/LICENSE">
+    <a href="https://github.com/FlineDev/Prayer/blob/stable/LICENSE">
         <img src="https://img.shields.io/badge/License-GPL--3.0-lightgrey.svg"
              alt="License: GPL-3.0">
     </a>
@@ -54,7 +54,7 @@ This app will help you make your **prayers in English** (or German or Turkish) t
 
 ## Donation
 
-Prayer was brought to you by [Cihat Gündüz](https://github.com/Jeehut) in his free time. If you want to thank me and support the development of this project, please **make a small donation on [PayPal](https://paypal.me/Dschee/5EUR)**. In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Jeehut), please consider motivating me by **becoming a sponsor on [GitHub](https://github.com/sponsors/Jeehut)** or a **patron on [Patreon](https://www.patreon.com/Jeehut)**.
+Prayer was brought to you by [Cihat Gündüz](https://github.com/Jeehut) in his free time. If you want to thank me and support the development of this project, please **make a small donation on [PayPal](https://paypal.me/Dschee/5EUR)**. In case you also like my other [open source contributions](https://github.com/FlineDev) and [articles](https://medium.com/@Jeehut), please consider motivating me by **becoming a sponsor on [GitHub](https://github.com/sponsors/Jeehut)** or a **patron on [Patreon](https://www.patreon.com/Jeehut)**.
 
 Thank you very much for any donation, it really helps out a lot! 💯
 
