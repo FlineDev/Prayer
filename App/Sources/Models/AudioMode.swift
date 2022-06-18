@@ -6,24 +6,24 @@
 import Foundation
 
 enum AudioMode: String, CaseIterable, Equatable {
-  case movementSound
-  case speechSynthesizer
-  case movementSoundAndSpeechSynthesizer
-  case none
+   case movementSound
+   case speechSynthesizer
+   case movementSoundAndSpeechSynthesizer
+   case none
 
-  var displayDescription: String {
-    switch self {
-    case .movementSound:
-      return L10n.AudioMode.movementSound
+   var displayDescription: String {
+      switch self {
+      case .movementSound:
+         return L10n.AudioMode.MovementSound.string
 
-    case .speechSynthesizer:
-      return L10n.AudioMode.speechSynthesizer
+      case .speechSynthesizer:
+         return L10n.AudioMode.SpeechSynthesizer.string
 
-    case .movementSoundAndSpeechSynthesizer:
-      return L10n.AudioMode.movementSoundAndSpeechSynthesizer
+      case .movementSoundAndSpeechSynthesizer:
+         return L10n.AudioMode.MovementSoundAndSpeechSynthesizer.string
 
-    case .none:
-      return L10n.AudioMode.none
-    }
-  }
+      case .none:
+         return L10n.AudioMode.None.string
+      }
+   }
 }

@@ -3,14 +3,15 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-@testable import App
 import XCTest
 
-class RakahComponentTests: XCTestCase {
-  func testInitializeTakbir() {
-    let takbir = RakahComponent(.takbir(.standing))
+@testable import App
 
-    XCTAssertEqual(takbir.spokenTextLines.count, 1)
-    XCTAssert(takbir.spokenTextLines.contains("God is greater"))
-  }
+class RakahComponentTests: XCTestCase {
+   func testInitializeTakbir() {
+      let takbir = RakahComponent(.takbir(.standing))
+
+      XCTAssertEqual(takbir.spokenTextLines.count, 1)
+      XCTAssert(takbir.spokenTextLines.contains("God is greater"))
+   }
 }

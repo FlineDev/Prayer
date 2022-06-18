@@ -74,6 +74,7 @@
 		2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */; };
 		2ED15D71272DDCC3003BC370 /* AudioVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */; };
 		2ED15D74272DDF16003BC370 /* ViewRow in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED15D73272DDF16003BC370 /* ViewRow */; };
+		2EEF729C285DDFF0000ACEA4 /* ReMafoX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEF729B285DDFF0000ACEA4 /* ReMafoX.swift */; };
 		A115CBF62222ED3800A7EB3A /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */; };
 		A115CBF82222EE0F00A7EB3A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */; };
 		A115CBFA2222EE5700A7EB3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115CBF92222EE5700A7EB3A /* Assets.swift */; };
@@ -115,7 +116,6 @@
 		A1494BB31E2EBF4F00286EBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1494BB51E2EBF4F00286EBF /* Localizable.strings */; };
 		A1494BBF1E2ED5CF00286EBF /* PrayerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1494BC11E2ED5CF00286EBF /* PrayerView.storyboard */; };
 		A1494BC91E2ED60500286EBF /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BC81E2ED60500286EBF /* PrayerViewController.swift */; };
-		A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCC1E2ED79500286EBF /* Strings.swift */; };
 		A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1494BCD1E2ED79500286EBF /* Storyboards.swift */; };
 		A161E3721E7EFA78009C6602 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */; };
 		A161E3751E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */; };
@@ -341,6 +341,7 @@
 		2EAF6389271AAC9D00145D5D /* RecitationPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitationPart.swift; sourceTree = "<group>"; };
 		2EAF6392271AE0B700145D5D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		2ED15D70272DDCC3003BC370 /* AudioVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVolumeView.swift; sourceTree = "<group>"; };
+		2EEF729B285DDFF0000ACEA4 /* ReMafoX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReMafoX.swift; sourceTree = "<group>"; };
 		A115CBF52222ED3800A7EB3A /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
 		A115CBF72222EE0F00A7EB3A /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		A115CBF92222EE5700A7EB3A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -433,7 +434,6 @@
 		A1494BBC1E2ED3C900286EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A1494BC01E2ED5CF00286EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PrayerView.storyboard; sourceTree = "<group>"; };
 		A1494BC81E2ED60500286EBF /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
-		A1494BCC1E2ED79500286EBF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A1494BCD1E2ED79500286EBF /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A161E3711E7EFA78009C6602 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		A161E3741E7EFB1B009C6602 /* AppStoreSnapshotUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotUITests.swift; sourceTree = "<group>"; };
@@ -557,7 +557,6 @@
 			children = (
 				A115CBF92222EE5700A7EB3A /* Assets.swift */,
 				A1494BCD1E2ED79500286EBF /* Storyboards.swift */,
-				A1494BCC1E2ED79500286EBF /* Strings.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
@@ -717,6 +716,7 @@
 		A1494BCB1E2ED79500286EBF /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				2EEF729B285DDFF0000ACEA4 /* ReMafoX.swift */,
 				A11783EC21445D8A00B41A1A /* SwiftGen */,
 			);
 			path = Generated;
@@ -852,7 +852,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A16484B31E243834008EC78C /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
-				A1494BB81E2EBFB800286EBF /* BartyCrouch */,
+				2EEF729D285DE016000ACEA4 /* ReMafoX */,
 				A1494BCA1E2ED74700286EBF /* SwiftGen */,
 				2E6C0B5D264730FA00A4D8E3 /* Swift-Format */,
 				2E2CB95F26473CAE00C4CFCC /* XCSort */,
@@ -1130,19 +1130,23 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which swift-format > /dev/null; then\n  swift-format lint --recursive App/Sources Tests/Sources UITests/Sources\nelse\n  echo \"warning: Swift-Format not installed, try `brew install swift-format`\"\nfi\n";
 		};
-		A1494BB81E2EBFB800286EBF /* BartyCrouch */ = {
+		2EEF729D285DE016000ACEA4 /* ReMafoX */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 			);
-			name = BartyCrouch;
+			name = ReMafoX;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=$PATH:/opt/homebrew/bin\n\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/Applications/ReMafoX.app/Contents/Resources\"\n\nif which remafox > /dev/null; then\n  remafox ibsync -c Prayer.remafox\n  remafox normalize -c Prayer.remafox\n  remafox lint -c Prayer.remafox\n  remafox generate -c Prayer.remafox\nelse\n  echo \"warning: ReMafoX command line tool not installed, download & setup app from https://remafox.app\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1188,6 +1192,7 @@
 				A1D1EFC01E391FBE0029C009 /* PrayerViewModel.swift in Sources */,
 				A16484E51E243B5F008EC78C /* Rakah.swift in Sources */,
 				A16484E71E25503C008EC78C /* RakahComponent.swift in Sources */,
+				2EEF729C285DDFF0000ACEA4 /* ReMafoX.swift in Sources */,
 				2E9976BE271585A500F61BFE /* Recitation.swift in Sources */,
 				2EAF638A271AAC9D00145D5D /* RecitationPart.swift in Sources */,
 				A1370CDB1E368FA600B55D9E /* SettingsFlowController.swift in Sources */,
@@ -1196,7 +1201,6 @@
 				2E30457D27399B8F00B8BBD2 /* SoundInstrument.swift in Sources */,
 				2EA2CDF6271D2AC7009172C3 /* SpeechSynthesizer.swift in Sources */,
 				A1494BCF1E2ED79500286EBF /* Storyboards.swift in Sources */,
-				A1494BCE1E2ED79500286EBF /* Strings.swift in Sources */,
 				2EAF6393271AE0B700145D5D /* UIViewControllerExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

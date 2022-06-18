@@ -3,18 +3,18 @@
 //  Copyright © 2021 Flinesoft. All rights reserved.
 //
 
-import UIKit
 import NotificationToast
+import UIKit
 
 extension UIViewController {
-  func showToast(message: String) {
-    let toastView = ToastView(
-      title: message,
-      titleFont: UIFont.systemFont(ofSize: UIFont.labelFontSize, weight: .regular),
-      position: .bottom
-    )
-    toastView.displayTime = TimeInterval.seconds(3)
-    toastView.hideOnTap = false
-    toastView.show()
-  }
+   func showToast(message: String) {
+      let toastView = ToastView(
+         title: message,
+         titleFont: UIFont.systemFont(ofSize: UIFont.labelFontSize, weight: .regular),
+         position: .bottom
+      )
+      toastView.displayTime = TimeInterval.seconds(3)
+      toastView.hideOnTap = false
+      toastView.show()
+   }
 }

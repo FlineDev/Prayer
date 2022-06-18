@@ -6,61 +6,61 @@
 import UIKit
 
 enum Position: Int {
-  // NOTE: Values reflect the approximate head position in centimeters
-  case standing = 180
-  case bending = 120
-  case sitting = 50
-  case worship = 10
-  case salamRight = 49
-  case salamLeft = 51
+   // NOTE: Values reflect the approximate head position in centimeters
+   case standing = 180
+   case bending = 120
+   case sitting = 50
+   case worship = 10
+   case salamRight = 49
+   case salamLeft = 51
 
-  private static let baseMovementDuration = Duration.milliseconds(1_400)
+   private static let baseMovementDuration = Duration.milliseconds(1_400)
 
-  func arrow(forChangingTo newPosition: Position?) -> Arrow? {
-    guard let newPosition = newPosition else { return nil }
+   func arrow(forChangingTo newPosition: Position?) -> Arrow? {
+      guard let newPosition = newPosition else { return nil }
 
-    switch self {
-    case .standing:
-      if newPosition == .bending { return .diagonalRightDown }
-      if newPosition == .worship { return .downwards }
+      switch self {
+      case .standing:
+         if newPosition == .bending { return .diagonalRightDown }
+         if newPosition == .worship { return .downwards }
 
-    case .bending:
-      if newPosition == .standing { return .diagonalLeftUp }
+      case .bending:
+         if newPosition == .standing { return .diagonalLeftUp }
 
-    case .sitting:
-      if newPosition == .worship { return .diagonalRightDown }
-      if newPosition == .salamRight { return .rightwards }
-      if newPosition == .standing { return .upwards }
+      case .sitting:
+         if newPosition == .worship { return .diagonalRightDown }
+         if newPosition == .salamRight { return .rightwards }
+         if newPosition == .standing { return .upwards }
 
-    case .worship:
-      if newPosition == .sitting { return .diagonalLeftUp }
-      if newPosition == .standing { return .upwards }
+      case .worship:
+         if newPosition == .sitting { return .diagonalLeftUp }
+         if newPosition == .standing { return .upwards }
 
-    case .salamRight:
-      if newPosition == .salamLeft { return .leftwards }
+      case .salamRight:
+         if newPosition == .salamLeft { return .leftwards }
 
-    default:
-      break
-    }
+      default:
+         break
+      }
 
-    return nil
-  }
+      return nil
+   }
 
-  func movementDuration(forChangingTo newPosition: Position) -> TimeInterval {
-    guard abs(self.rawValue - newPosition.rawValue) <= 100 else {
-      return 2.5 * Position.baseMovementDuration.timeInterval
-    }
-    return Position.baseMovementDuration.timeInterval
-  }
+   func movementDuration(forChangingTo newPosition: Position) -> TimeInterval {
+      guard abs(self.rawValue - newPosition.rawValue) <= 100 else {
+         return 2.5 * Position.baseMovementDuration.timeInterval
+      }
+      return Position.baseMovementDuration.timeInterval
+   }
 }
 
 extension Position {
-  enum Arrow: String {
-    case upwards = "↑"
-    case downwards = "↓"
-    case leftwards = "←"
-    case rightwards = "→"
-    case diagonalLeftUp = "↖"
-    case diagonalRightDown = "↘"
-  }
+   enum Arrow: String {
+      case upwards = "↑"
+      case downwards = "↓"
+      case leftwards = "←"
+      case rightwards = "→"
+      case diagonalLeftUp = "↖"
+      case diagonalRightDown = "↘"
+   }
 }

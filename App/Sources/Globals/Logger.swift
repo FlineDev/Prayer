@@ -9,21 +9,21 @@ import UIKit
 let log = SwiftyBeaver.self
 
 final class Logger {
-  static let shared = Logger()
+   static let shared = Logger()
 
-  func setup() {
-    // log to console
-    let consoleDestination = ConsoleDestination()
-    #if DEBUG
-      consoleDestination.minLevel = .debug
-    #else
-      consoleDestination.minLevel = .warning
-    #endif
-    log.addDestination(consoleDestination)
+   func setup() {
+      // log to console
+      let consoleDestination = ConsoleDestination()
+      #if DEBUG
+         consoleDestination.minLevel = .debug
+      #else
+         consoleDestination.minLevel = .warning
+      #endif
+      log.addDestination(consoleDestination)
 
-    // log to file
-    let fileDestination = FileDestination()
-    fileDestination.minLevel = .info
-    log.addDestination(fileDestination)
-  }
+      // log to file
+      let fileDestination = FileDestination()
+      fileDestination.minLevel = .info
+      log.addDestination(fileDestination)
+   }
 }

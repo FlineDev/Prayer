@@ -6,6 +6,6 @@
 import UIKit
 
 class FAQCollectionViewCell: UICollectionViewCell {
-  @IBOutlet var questionLabel: UILabel!
-  @IBOutlet var answerLabel: UILabel!
+   @IBOutlet var questionLabel: UILabel!
+   @IBOutlet var answerLabel: UILabel!
 }

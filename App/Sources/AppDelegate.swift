@@ -9,29 +9,29 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-  var initialFlowCtrl: InitialFlowController?
+   var window: UIWindow?
+   var initialFlowCtrl: InitialFlowController?
 
-  func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-  ) -> Bool {
-    window = UIWindow(frame: UIScreen.main.bounds)
-    window?.makeKeyAndVisible()
+   func application(
+      _ application: UIApplication,
+      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+   ) -> Bool {
+      window = UIWindow(frame: UIScreen.main.bounds)
+      window?.makeKeyAndVisible()
 
-    // reset user defaults for UI Tests
-    if ProcessInfo.processInfo.arguments.contains("UI_TESTS") {
-      UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-    }
+      // reset user defaults for UI Tests
+      if ProcessInfo.processInfo.arguments.contains("UI_TESTS") {
+         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+      }
 
-    // setup global stuff
-    Logger.shared.setup()
-    ErrorHandler.shared.setup(window: window!)
+      // setup global stuff
+      Logger.shared.setup()
+      ErrorHandler.shared.setup(window: window!)
 
-    // start initial flow
-    initialFlowCtrl = SettingsFlowController()
-    initialFlowCtrl?.start(from: window!)
+      // start initial flow
+      initialFlowCtrl = SettingsFlowController()
+      initialFlowCtrl?.start(from: window!)
 
-    return true
-  }
+      return true
+   }
 }
