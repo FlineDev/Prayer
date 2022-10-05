@@ -1,4 +1,5 @@
 // swiftlint:disable all
+// swiftformat:disable all
 // swift-format-ignore-file
 // AnyLint.skipInFile: All
 
@@ -61,6 +62,104 @@ internal enum Res {
 
             /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
             internal static var tableLookupKey: String { "AUDIO_MODE.SPEECH_SYNTHESIZER" }
+         }
+      }
+
+      internal enum Content {
+         /// 🇺🇸 English: "Hello, world!"
+         internal enum Greeting {
+            /// The translated `String` instance.
+            internal static var string: String { Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable") }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal static var locStringKey: LocalizedStringKey { LocalizedStringKey(self.tableLookupKey) }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal static var tableLookupKey: String { "Content.Greeting" }
+         }
+      }
+
+      internal enum Hello {
+         /// 🇺🇸 English: "Hit me baby, one more time!"
+         internal enum World {
+            /// The translated `String` instance.
+            internal static var string: String { Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable") }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal static var locStringKey: LocalizedStringKey { LocalizedStringKey(self.tableLookupKey) }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal static var tableLookupKey: String { "Hello.World" }
+
+            /// 🇺🇸 English: ""
+            internal enum Another {
+               /// The translated `String` instance.
+               internal static var string: String { Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable") }
+
+               /// The SwiftUI `LocalizedStringKey` instance.
+               internal static var locStringKey: LocalizedStringKey { LocalizedStringKey(self.tableLookupKey) }
+
+               /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+               internal static var tableLookupKey: String { "Hello.World.Another" }
+            }
+         }
+      }
+
+      internal enum Inbox {
+         /// 🇺🇸 English (plural case 'other'): "%d messages"
+         internal struct Unread {
+            internal let count: Int
+
+            internal init(count: Int) {
+               self.count = count
+            }
+
+            /// The translated `String` instance.
+            internal var string: String {
+               let localizedFormatString = Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable")
+               return String.localizedStringWithFormat(localizedFormatString, self.count)
+            }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal var locStringKey: LocalizedStringKey { LocalizedStringKey("Inbox.Unread(count: \(self.count))") }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal var tableLookupKey: String { "Inbox.Unread(count: %d)" }
+         }
+      }
+
+      /// 🇺🇸 English: "sdfasdfasdfafdaf"
+      internal enum KladsjLjqweopruqwporuqweporuqwelkdsjfAljopqwue {
+         /// The translated `String` instance.
+         internal static var string: String { Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable") }
+
+         /// The SwiftUI `LocalizedStringKey` instance.
+         internal static var locStringKey: LocalizedStringKey { LocalizedStringKey(self.tableLookupKey) }
+
+         /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+         internal static var tableLookupKey: String { "kladsj;ljqweopruqwporuqweporuqwelkdsjf;aljopqwue" }
+      }
+
+      internal enum Post {
+         /// 🇺🇸 English (plural case 'other'): "%d likes"
+         internal struct Likes {
+            internal let count: Int
+
+            internal init(count: Int) {
+               self.count = count
+            }
+
+            /// The translated `String` instance.
+            internal var string: String {
+               let localizedFormatString = Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable")
+               return String.localizedStringWithFormat(localizedFormatString, self.count)
+            }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal var locStringKey: LocalizedStringKey { LocalizedStringKey("Post.Likes(count: \(self.count))") }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal var tableLookupKey: String { "Post.Likes(count: %d)" }
          }
       }
 
@@ -1564,6 +1663,29 @@ internal enum Res {
          }
       }
 
+      internal enum Some {
+         /// 🇺🇸 English: "Oh, this is so %@!"
+         internal struct Key {
+            internal let count: String
+
+            internal init(count: String) {
+               self.count = count
+            }
+
+            /// The translated `String` instance.
+            internal var string: String {
+               let localizedFormatString = Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable")
+               return String.localizedStringWithFormat(localizedFormatString, self.count)
+            }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal var locStringKey: LocalizedStringKey { LocalizedStringKey("Some.Key(count: \(self.count))") }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal var tableLookupKey: String { "Some.Key(count: %@)" }
+         }
+      }
+
       internal enum SpeechSynthesizer {
          /// 🇺🇸 English: "Chapter "
          internal enum BookEmojiReplacement {
@@ -1575,6 +1697,20 @@ internal enum Res {
 
             /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
             internal static var tableLookupKey: String { "SPEECH_SYNTHESIZER.BOOK_EMOJI_REPLACEMENT" }
+         }
+      }
+
+      internal enum WelcomeBox {
+         /// 🇺🇸 English: "Welcome to this amazing app!"
+         internal enum Message {
+            /// The translated `String` instance.
+            internal static var string: String { Bundle.main.localizedString(forKey: self.tableLookupKey, value: nil, table: "Localizable") }
+
+            /// The SwiftUI `LocalizedStringKey` instance.
+            internal static var locStringKey: LocalizedStringKey { LocalizedStringKey(self.tableLookupKey) }
+
+            /// The lookup key in the translation table (= the key in the `.strings` or `.stringsdict` file).
+            internal static var tableLookupKey: String { "WelcomeBox.Message" }
          }
       }
    }

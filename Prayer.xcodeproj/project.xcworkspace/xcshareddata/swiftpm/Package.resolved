@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xmartlabs/Eureka",
       "state" : {
-        "revision" : "310bee0431ea2dcf43bb3154a8f1e0f44749aa12",
-        "version" : "5.3.5"
+        "revision" : "b6e35acf77a5551070afa6248935ec68e71f22af",
+        "version" : "5.4.0"
       }
     },
     {
@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver",
       "state" : {
-        "revision" : "2c039501d6eeb4d4cd4aec4a8d884ad28862e044",
-        "version" : "1.9.5"
+        "revision" : "12b5acf96d98f91d50de447369bd18df74600f1a",
+        "version" : "1.9.6"
       }
     },
     {

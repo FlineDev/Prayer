@@ -150,13 +150,13 @@
 
 "RECITATION.THOSE_WHO_DENY_THE_TRUTH.NAME" = "Kafirun (İnkarcılar)";
 
-"RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME" = "Mutaffifin (Kandıranlar)";
+"RECITATION.THOSE_WHO_GIVE_SHORT_MEASURE.NAME" = "Al-Mutaffifin (Kısa Ölçü Verenler)";
 
-"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "⚙️ Ayarlar'da dili değiştir";
+"SETTINGS.APP_SECTION.CHANGE_LANGUAGE_BUTTON.TITLE" = "Ayarlar'da ⚙️ dili değiştirme";
 
-"SETTINGS.APP_SECTION.FOOTER" = "Uygulamanın dili, bir dua sırasında gösterilen metinlerin dilini belirler. Apple, Ayarlar uygulamasında uygulamaya özel bir dil ayarı sağlar. Lütfen bu uygulamanın dilini ve duaları değiştirmek için o ayarı kullanın.";
+"SETTINGS.APP_SECTION.FOOTER" = "Uygulamanın dili, bir dua sırasında gösterilen metinlerin dilini belirler. Apple, Ayarlar uygulamasında uygulamaya özel bir dil ayarı sağlar. Lütfen bu uygulamanın dilini ve duaları değiştirmek için kullanın.";
 
-"SETTINGS.APP_SECTION.TITLE" = "Uygulama ayarları";
+"SETTINGS.APP_SECTION.TITLE" = "Uygulama Ayarları";
 
 "SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Çıkış cihazını seçin (AirPlay simgesi ile):";
 

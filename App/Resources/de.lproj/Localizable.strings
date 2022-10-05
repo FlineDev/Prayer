@@ -158,9 +158,9 @@
 
 "SETTINGS.APP_SECTION.TITLE" = "App-Einstellungen";
 
-"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Ausgabegerät festlegen (mit AirPlay-Icon):";
+"SETTINGS.AUDIO.OUTPUT_DEVICE.TITLE" = "Wählen Sie das Ausgabegerät (über das AirPlay-Symbol):";
 
-"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Tonhöhen-Multiplikator";
+"SETTINGS.AUDIO.SPEECH_SYNTHESIZER.PITCH_MULTIPLIER" = "Tonhöhenmultiplikator";
 
 "SETTINGS.AUDIO.SPEECH_SYNTHESIZER.SPEECH_RATE" = "Sprechgeschwindigkeit";
 
