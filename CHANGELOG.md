@@ -31,7 +31,7 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
-## [1.4.2] - 2022-04-10
+## [1.4.2] - 2022-10-07
 ### Changed
 - Updated dependencies to latest versions.
 - Minor English UI text improvements.
