@@ -1,14 +1,17 @@
-fastlane_version "2.196.0"
+# Docs: https://docs.fastlane.tools/advanced/Fastfile/
+fastlane_version "2.210.1"
 
 default_platform :ios
 
-platform :ios do
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    match(type: "appstore")
+
+desc "Deploy a new version to the App Store"
+lane :release do
+  match(type: "appstore")
+  if UI.confirm("Take new snapshots?")
     snapshot(localize_simulator: true, dark_mode: true, launch_arguments: "DARK_MODE", clear_previous_screenshots: true)
     snapshot(localize_simulator: true, dark_mode: false)
-    gym(include_bitcode: true)
-    deliver(force: true)
   end
+  gym(include_bitcode: true)
+  deliver(force: true)
 end
+
