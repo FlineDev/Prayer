@@ -11,7 +11,7 @@ lane :release do
     snapshot(localize_simulator: true, dark_mode: true, launch_arguments: "DARK_MODE", clear_previous_screenshots: true)
     snapshot(localize_simulator: true, dark_mode: false)
   end
-  gym(include_bitcode: true)
+  gym
   deliver(force: true)
 end
 
