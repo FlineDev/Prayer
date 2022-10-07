@@ -13,89 +13,87 @@ typealias Rakat = [Rakah]
 /// "(A) single unit of Islamic prayers."
 /// - Wikipedia (https://en.wikipedia.org/wiki/Rakat)
 class Rakah {
-  private let isBeginningOfPrayer: Bool
-  private let includesSittingRecitation: Bool
-  private let isEndOfPrayer: Bool
-  let standingRecitationPart: RecitationPart?
-  private let showStandingRecitationName: Bool
+   private let isBeginningOfPrayer: Bool
+   private let includesSittingRecitation: Bool
+   private let isEndOfPrayer: Bool
+   let standingRecitationPart: RecitationPart?
+   private let showStandingRecitationName: Bool
 
-  private var includesStandingRecitation: Bool { standingRecitationPart != nil }
+   private var includesStandingRecitation: Bool { standingRecitationPart != nil }
 
-  init(
-    isBeginningOfPrayer: Bool,
-    standingRecitationPart: RecitationPart?,
-    showStandingRecitationName: Bool,
-    includesSittingRecitation: Bool,
-    isEndOfPrayer: Bool
-  ) {
-    self.isBeginningOfPrayer = isBeginningOfPrayer
-    self.includesSittingRecitation = includesSittingRecitation
-    self.isEndOfPrayer = isEndOfPrayer
-    self.standingRecitationPart = standingRecitationPart
-    self.showStandingRecitationName = showStandingRecitationName
-  }
+   init(
+      isBeginningOfPrayer: Bool,
+      standingRecitationPart: RecitationPart?,
+      showStandingRecitationName: Bool,
+      includesSittingRecitation: Bool,
+      isEndOfPrayer: Bool
+   ) {
+      self.isBeginningOfPrayer = isBeginningOfPrayer
+      self.includesSittingRecitation = includesSittingRecitation
+      self.isEndOfPrayer = isEndOfPrayer
+      self.standingRecitationPart = standingRecitationPart
+      self.showStandingRecitationName = showStandingRecitationName
+   }
 
-  func components() -> [RakahComponent] {
-    var components: [RakahComponent] = []
+   func components() -> [RakahComponent] {
+      var components: [RakahComponent] = []
 
-    if isBeginningOfPrayer {
-      components.append(RakahComponent(.takbir(.standing)))
-      components.append(RakahComponent(.openingSupplication))
-      components.append(RakahComponent(.taawwudh))
-    }
+      if isBeginningOfPrayer {
+         components.append(RakahComponent(.takbir(.standing)))
+         components.append(RakahComponent(.openingSupplication))
+         components.append(RakahComponent(.taawwudh))
+      }
 
-    components.append(RakahComponent(.recitationPart(.init(recitation: .theOpening, partLength: .short), showName: false)))
+      components.append(RakahComponent(.recitationPart(.init(recitation: .theOpening, partLength: .short), showName: false)))
 
-    if let standingRecitationPart = standingRecitationPart {
-      let standingRecitationComponent = RakahComponent(.recitationPart(standingRecitationPart, showName: showStandingRecitationName))
-      components.append(standingRecitationComponent)
-    }
+      if let standingRecitationPart = standingRecitationPart {
+         let standingRecitationComponent = RakahComponent(.recitationPart(standingRecitationPart, showName: showStandingRecitationName))
+         components.append(standingRecitationComponent)
+      }
 
-    components.append(RakahComponent(.takbir(.bending)))
-    components.append(RakahComponent(.ruku))
-    components.append(RakahComponent(.straighteningUp))
+      components.append(RakahComponent(.takbir(.bending)))
+      components.append(RakahComponent(.ruku))
+      components.append(RakahComponent(.straighteningUp))
 
-    components.append(RakahComponent(.takbir(.worship)))
-    components.append(RakahComponent(.sajdah))
-    components.append(RakahComponent(.takbir(.sitting)))
+      components.append(RakahComponent(.takbir(.worship)))
+      components.append(RakahComponent(.sajdah))
+      components.append(RakahComponent(.takbir(.sitting)))
 
-    components.append(RakahComponent(.takbir(.worship)))
-    components.append(RakahComponent(.sajdah))
+      components.append(RakahComponent(.takbir(.worship)))
+      components.append(RakahComponent(.sajdah))
 
-    if includesSittingRecitation {
-      components.append(RakahComponent(.takbir(.sitting), longSitting: true))
-      components.append(RakahComponent(.tashahhud))
-    }
-    else {
-      components.append(RakahComponent(.takbir(.standing)))
-    }
+      if includesSittingRecitation {
+         components.append(RakahComponent(.takbir(.sitting), longSitting: true))
+         components.append(RakahComponent(.tashahhud))
+      } else {
+         components.append(RakahComponent(.takbir(.standing)))
+      }
 
-    if isEndOfPrayer {
-      components.append(RakahComponent(.salatulIbrahimiyyah))
-      components.append(RakahComponent(.rabbanagh))
-      components.append(RakahComponent(.salam(.salamRight)))
-      components.append(RakahComponent(.salam(.salamLeft)))
-    }
-    else if includesSittingRecitation {
-      components.append(RakahComponent(.takbir(.standing)))
-    }
+      if isEndOfPrayer {
+         components.append(RakahComponent(.salatulIbrahimiyyah))
+         components.append(RakahComponent(.rabbanagh))
+         components.append(RakahComponent(.salam(.salamRight)))
+         components.append(RakahComponent(.salam(.salamLeft)))
+      } else if includesSittingRecitation {
+         components.append(RakahComponent(.takbir(.standing)))
+      }
 
-    return components
-  }
+      return components
+   }
 }
 
 extension Rakah {
-  enum Component {
-    case takbir(Position)
-    case openingSupplication
-    case taawwudh
-    case recitationPart(RecitationPart, showName: Bool)
-    case ruku
-    case straighteningUp  // from Ruku
-    case sajdah
-    case tashahhud
-    case salatulIbrahimiyyah
-    case rabbanagh
-    case salam(Position)
-  }
+   enum Component {
+      case takbir(Position)
+      case openingSupplication
+      case taawwudh
+      case recitationPart(RecitationPart, showName: Bool)
+      case ruku
+      case straighteningUp  // from Ruku
+      case sajdah
+      case tashahhud
+      case salatulIbrahimiyyah
+      case rabbanagh
+      case salam(Position)
+   }
 }

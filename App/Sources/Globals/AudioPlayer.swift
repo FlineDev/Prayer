@@ -6,26 +6,26 @@
 import AVFoundation
 
 final class AudioPlayer {
-  static let shared = AudioPlayer()
+   static let shared = AudioPlayer()
 
-  private var audioPlayer: AVAudioPlayer?
+   private var audioPlayer: AVAudioPlayer?
 
-  private init() {
-    try? AVAudioSession.sharedInstance()
-      .setCategory(
-        .playback,
-        mode: .voicePrompt,
-        options: [.mixWithOthers, .allowAirPlay, .allowBluetooth, .allowBluetoothA2DP]
-      )
-  }
+   private init() {
+      try? AVAudioSession.sharedInstance()
+         .setCategory(
+            .playback,
+            mode: .voicePrompt,
+            options: [.mixWithOthers, .allowAirPlay, .allowBluetooth, .allowBluetoothA2DP]
+         )
+   }
 
-  func movementSoundUrl(name: String, instrument: String) -> URL? {
-    Bundle.main.url(forResource: instrument, withExtension: "caf", subdirectory: name)
-  }
+   func movementSoundUrl(name: String, instrument: String) -> URL? {
+      Bundle.main.url(forResource: instrument, withExtension: "caf", subdirectory: name)
+   }
 
-  func playSound(at url: URL) {
-    audioPlayer = try! AVAudioPlayer(contentsOf: url)
-    audioPlayer?.prepareToPlay()
-    audioPlayer?.play()
-  }
+   func playSound(at url: URL) {
+      audioPlayer = try! AVAudioPlayer(contentsOf: url)
+      audioPlayer?.prepareToPlay()
+      audioPlayer?.play()
+   }
 }

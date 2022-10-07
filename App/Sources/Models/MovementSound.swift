@@ -6,8 +6,8 @@
 import Foundation
 
 enum MovementSound: String {
-  case downwards = "C-Short"
-  case upwards = "E-Short"
-  case longSitting = "E-Long"
-  case salam = "G-Short"
+   case downwards = "C-Short"
+   case upwards = "E-Short"
+   case longSitting = "E-Long"
+   case salam = "G-Short"
 }

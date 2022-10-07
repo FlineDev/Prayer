@@ -1,0 +1,76 @@
+{
+  "androidStringsFilesSearch" : {
+    "excludeSubPathsContaining" : [
+      ".build/",
+      ".git/",
+      ".idea/",
+      "build/",
+      "docs/",
+      "gradle/"
+    ],
+    "pathsToSearch" : [
+
+    ]
+  },
+  "appleStringsFilesConfig" : {
+    "emptyLinesBetweenKeys" : 1
+  },
+  "appleStringsFilesSearch" : {
+    "excludeSubPathsContaining" : [
+      ".build/",
+      ".git/",
+      "build/",
+      "Carthage/",
+      "docs/",
+      "Pods/"
+    ],
+    "pathsToSearch" : [
+      "App/"
+    ]
+  },
+  "configFilePath" : "Prayer.remafox",
+  "id" : "561E6AD8-030F-4F6A-B13D-DB332C6E48CF",
+  "interfaceBuilderFilesSearch" : {
+    "excludeSubPathsContaining" : [
+      ".build/",
+      ".git/",
+      "build/",
+      "Carthage/",
+      "docs/",
+      "Pods/"
+    ],
+    "pathsToSearch" : [
+      "App/"
+    ]
+  },
+  "interfaceBuilderIgnoreTags" : [
+    "#bartycrouch-ignore!",
+    "#bc-ignore!",
+    "#i!",
+    "#non-translatable",
+    "#remafox-ignore"
+  ],
+  "lintTasks" : [
+    "duplicateKeys",
+    "emptyValues"
+  ],
+  "normalizeTasks" : [
+    "harmonizeWithSourceLanguage",
+    "sortByKeys"
+  ],
+  "projectName" : "Prayer",
+  "resourcesEnum" : {
+    "accessLevel" : "internal",
+    "bundleInstance" : "Bundle.main",
+    "enumName" : "Res",
+    "filePath" : "App/Generated/ReMafoX.swift",
+    "indent" : "   ",
+    "stringsEnumName" : "Str",
+    "stringsTopLevelAlias" : "L10n",
+    "useSwiftPackagePreviewsWorkaround" : false,
+    "useTopLevelAliases" : true
+  },
+  "sourceLanguage" : "en",
+  "version" : 1,
+  "xcodeProjectPath" : "Prayer.xcodeproj"
+}

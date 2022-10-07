@@ -6,7 +6,7 @@
 import UIKit
 
 struct FAQViewModel {
-  typealias FAQEntry = (question: String, answer: String)
+   typealias FAQEntry = (question: String, answer: String)
 
-  let entries: [FAQEntry]
+   let entries: [FAQEntry]
 }
