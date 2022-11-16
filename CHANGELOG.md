@@ -31,6 +31,10 @@ If needed, pluralize to `Issues`, `PRs` or `Authors` and list multiple separated
 ### Security
 - None.
 
+## [1.4.3] - 2022-11-16
+### Fixed
+- Fixed some links to Forums within the app.
+
 ## [1.4.2] - 2022-10-07
 ### Changed
 - Updated dependencies to latest versions.
