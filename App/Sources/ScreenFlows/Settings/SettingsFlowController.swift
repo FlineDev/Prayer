@@ -131,7 +131,7 @@ extension SettingsFlowController: SettingsFlowDelegate {
    }
 
    func showFeedbackCommunity() {
-      let communityUrl = URL(string: "https://links.flinesoft.com/forum/prayer")!
+      let communityUrl = URL(string: "https://github.com/FlineDev/Prayer/issues")!
       let safariViewCtrl = SFSafariViewController(url: communityUrl)
 
       settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)

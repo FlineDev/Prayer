@@ -285,7 +285,6 @@
 		2E51B4EA276A6A6F001AEEFE /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
 		2E51B4EB276A6A6F001AEEFE /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		2E51B4EC276A6A6F001AEEFE /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
 		2E51B4EE276A6A6F001AEEFE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E51B4EF276A6A6F001AEEFE /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
 		2E51B4F0276A6A6F001AEEFE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -499,7 +498,6 @@
 		2E51B4E8276A6A39001AEEFE /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
-				2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */,
 				2E51B4F3276A6A6F001AEEFE /* .env */,
 				2E51B4EA276A6A6F001AEEFE /* .env.sample */,
 				2E51B4EB276A6A6F001AEEFE /* .github */,
@@ -1146,7 +1144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xattr -d com.apple.quarantine ~/Library/Containers/dev.fline.Remafox/Data/bin/remafox\nexport PATH=\"$PATH:~/Library/Containers/dev.fline.Remafox/Data/bin\"\n\nif which remafox > /dev/null; then\n  remafox ibsync -c Prayer.remafox\n  remafox normalize -c Prayer.remafox\n  remafox translate -c Prayer.remafox\n  remafox lint -c Prayer.remafox\n  remafox generate -c Prayer.remafox\nelse\n  echo \"warning: ReMafoX command line tool not installed, download & setup app from https://remafox.app\"\nfi\n";
+			shellScript = "xattr -d com.apple.quarantine $HOME/Library/Containers/dev.fline.Remafox/Data/bin/remafox\nexport PATH=\"$PATH:$HOME/Library/Containers/dev.fline.Remafox/Data/bin\"\n\nif which remafox > /dev/null; then\n  remafox ibsync -c Prayer.remafox\n  remafox normalize -c Prayer.remafox\n  remafox translate -c Prayer.remafox\n  remafox lint -c Prayer.remafox\n  remafox generate -c Prayer.remafox\nelse\n  echo \"warning: ReMafoX command line tool not installed, download & set up app from https://remafox.app\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2105,15 +2103,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;
@@ -2126,15 +2124,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
-				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.prayer;
 				PRODUCT_MODULE_NAME = App;
 				PRODUCT_NAME = Prayer;

@@ -7,11 +7,13 @@ default_platform :ios
 desc "Deploy a new version to the App Store"
 lane :release do
   match(type: "appstore")
-  if UI.confirm("Take new snapshots?")
+  increment_build_number(xcodeproj: "Prayer.xcodeproj") if UI.confirm("Increment build number?")
+
+  if UI.confirm("Take new screenshots?")
     snapshot(localize_simulator: true, dark_mode: true, launch_arguments: "DARK_MODE", clear_previous_screenshots: true)
     snapshot(localize_simulator: true, dark_mode: false)
   end
-  gym
-  deliver(force: true)
-end
 
+  gym
+  deliver(force: true, overwrite_screenshots: UI.confirm("Override screenshots?"))
+end
