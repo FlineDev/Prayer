@@ -285,7 +285,6 @@
 		2E51B4EA276A6A6F001AEEFE /* .env.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env.sample; sourceTree = "<group>"; };
 		2E51B4EB276A6A6F001AEEFE /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		2E51B4EC276A6A6F001AEEFE /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
 		2E51B4EE276A6A6F001AEEFE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E51B4EF276A6A6F001AEEFE /* Swiftgen-xcassets.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Swiftgen-xcassets.stencil"; sourceTree = "<group>"; };
 		2E51B4F0276A6A6F001AEEFE /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -499,7 +498,6 @@
 		2E51B4E8276A6A39001AEEFE /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
-				2E51B4ED276A6A6F001AEEFE /* .bartycrouch.toml */,
 				2E51B4F3276A6A6F001AEEFE /* .env */,
 				2E51B4EA276A6A6F001AEEFE /* .env.sample */,
 				2E51B4EB276A6A6F001AEEFE /* .github */,
