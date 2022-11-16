@@ -12,6 +12,5 @@ lane :release do
     snapshot(localize_simulator: true, dark_mode: false)
   end
   gym
-  deliver(force: true)
+  deliver(force: true, overwrite_screenshots: UI.confirm("Override screenshots?"))
 end
-

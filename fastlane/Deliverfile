@@ -3,9 +3,9 @@
 # https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
 
 keywords(
-  "en-US" => "Prayer, English, Islam, Muslim",
-  "de-DE" => "Gebet, Deutsch, Islam, Muslim",
-  "tr" => "Namaz, Türkçe, Islam, Müslüman"
+  "en-US" => "Prayer, Pray, English, Islam, Muslim",
+  "de-DE" => "Gebet, Beten, Deutsch, Islam, Muslim",
+  "tr" => "Namaz, Dua, Türkçe, Islam, Müslüman"
 )
 
 copyright "2016-#{Time.now.year} Cihat Gündüz"
@@ -17,12 +17,10 @@ name(
 )
 
 support_url(
-  "de-DE" => "https://links.flinesoft.com/forum/prayer",
-  "en-US" => "https://links.flinesoft.com/forum/prayer",
-  "tr" => "https://links.flinesoft.com/forum/prayer"
+  "de-DE" => "https://github.com/FlineDev/Prayer/issues",
+  "en-US" => "https://github.com/FlineDev/Prayer/issues",
+  "tr" => "https://github.com/FlineDev/Prayer/issues"
 )
-
-overwrite_screenshots(true)
 
 phased_release(true)
 

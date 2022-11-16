@@ -4,7 +4,7 @@ Diese App hilft dir, deine Gebete auf Deutsch (oder Türkisch bzw. Englisch) zu 
 
 Diese App setzt voraus, dass du den Ablauf eines Gebets bereits kennst. Für Gebets-Neulinge ist diese App daher nicht geeignet.
 
-Wir hoffen, dass du diese App nützlich findest. Wenn sie dir gefällt, freuen wir uns über eine entsprechende Bewertung im App Store. Für Fragen und Anregungen haben wir ein Forum eingerichtet: links.flinesoft.com/forum/prayer
+Wir hoffen, dass du diese App nützlich findest. Wenn sie dir gefällt, freuen wir uns über eine entsprechende Bewertung im App Store. Für Fragen und Anregungen haben wir ein Forum eingerichtet: github.com/FlineDev/Prayer/discussions
 Dort findest du auch unsere Pläne für die Zukunft und kannst dich an der Diskussion beteiligen.
 
 

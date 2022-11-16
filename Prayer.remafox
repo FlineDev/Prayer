@@ -65,6 +65,7 @@
     "enumName" : "Res",
     "filePath" : "App/Generated/ReMafoX.swift",
     "indent" : "   ",
+    "objectiveCCompatible" : false,
     "stringsEnumName" : "Str",
     "stringsTopLevelAlias" : "L10n",
     "useSwiftPackagePreviewsWorkaround" : false,

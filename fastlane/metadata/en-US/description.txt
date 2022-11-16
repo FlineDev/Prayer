@@ -4,7 +4,7 @@ This app will help you make your prayers in English (or German or Turkish) to ma
 
 The app expects that you already know how a prayer is done. Therefore this app is not suitable for newcomers to prayers.
 
-We hope you find this app useful. If you like it, we would love to receive a rating in the App Store. For questions and suggestions, we have set up a forum: links.flinesoft.com/forum/prayer
+We hope you find this app useful. If you like it, we would love to receive a rating in the App Store. For questions and suggestions, we have set up a forum: github.com/FlineDev/Prayer/discussions
 There, you will also find our plans for the future and you can even participate in the discussion.
 
 

@@ -1144,7 +1144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xattr -d com.apple.quarantine ~/Library/Containers/dev.fline.Remafox/Data/bin/remafox\nexport PATH=\"$PATH:~/Library/Containers/dev.fline.Remafox/Data/bin\"\n\nif which remafox > /dev/null; then\n  remafox ibsync -c Prayer.remafox\n  remafox normalize -c Prayer.remafox\n  remafox translate -c Prayer.remafox\n  remafox lint -c Prayer.remafox\n  remafox generate -c Prayer.remafox\nelse\n  echo \"warning: ReMafoX command line tool not installed, download & setup app from https://remafox.app\"\nfi\n";
+			shellScript = "xattr -d com.apple.quarantine $HOME/Library/Containers/dev.fline.Remafox/Data/bin/remafox\nexport PATH=\"$PATH:$HOME/Library/Containers/dev.fline.Remafox/Data/bin\"\n\nif which remafox > /dev/null; then\n  remafox ibsync -c Prayer.remafox\n  remafox normalize -c Prayer.remafox\n  remafox translate -c Prayer.remafox\n  remafox lint -c Prayer.remafox\n  remafox generate -c Prayer.remafox\nelse\n  echo \"warning: ReMafoX command line tool not installed, download & set up app from https://remafox.app\"\nfi\n";
 		};
 		A1494BCA1E2ED74700286EBF /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
