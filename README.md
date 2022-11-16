@@ -9,8 +9,8 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/FlineDev/Prayer/releases">
-        <img src="https://img.shields.io/badge/Version-1.4.2-blue.svg"
-             alt="Version: 1.4.2">
+        <img src="https://img.shields.io/badge/Version-1.4.3-blue.svg"
+             alt="Version: 1.4.3">
     </a>
     <img src="https://img.shields.io/badge/Swift-5.6-FFAC45.svg"
          alt="Swift: 5.6">
