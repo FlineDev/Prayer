@@ -1,4 +1,5 @@
 {
+  "originHash" : "ca080a01b5a66d345af5d11e08ba27336d54ecd7008a23a98e953d15ef447c0f",
   "pins" : [
     {
       "identity" : "eureka",
@@ -55,6 +56,15 @@
       }
     },
     {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
+        "version" : "601.0.1"
+      }
+    },
+    {
       "identity" : "swiftybeaver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver",
@@ -82,6 +92,15 @@
       }
     },
     {
+      "identity" : "translatekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FlineDev/TranslateKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c0152440e1017854d6e6ff9cf6498d7cf86283e0"
+      }
+    },
+    {
       "identity" : "viewrow",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/EurekaCommunity/ViewRow.git",
@@ -91,5 +110,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -68,7 +68,7 @@ class PrayerState {
       return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: movementSoundInstrument)
    }
 
-   var currentRecitationChapterNum: Int? { return currentComponent.chapterNumber }
+   var currentRecitationChapterNum: Int? { currentComponent.chapterNumber }
 
    private var nextRakah: Rakah? {
       guard rakatIndex + 1 < prayer.rakat.count else { return nil }
@@ -128,7 +128,7 @@ class PrayerState {
    }
 
    func prayerViewModel() -> PrayerViewModel {
-      return PrayerViewModel(
+      PrayerViewModel(
          currentComponentName: currentComponent.name,
          previousArrow: previousArrow,
          previousLine: previousLine,

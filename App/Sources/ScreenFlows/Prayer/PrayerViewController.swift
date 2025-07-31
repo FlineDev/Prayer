@@ -52,7 +52,7 @@ class PrayerViewController: UIViewController {
       navigationItem.rightBarButtonItem = doneItem
    }
 
-   override var shouldAutorotate: Bool { return false }
+   override var shouldAutorotate: Bool { false }
    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
       switch UIApplication.shared.windows.first?.windowScene?.interfaceOrientation {
       case .portrait:

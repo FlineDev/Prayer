@@ -5,6 +5,7 @@
 
 import AVKit
 import Imperio
+import TranslateKit
 import UIKit
 
 @UIApplicationMain
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    ) -> Bool {
       window = UIWindow(frame: UIScreen.main.bounds)
       window?.makeKeyAndVisible()
+
+      _ = TK.Action.cancel
 
       // reset user defaults for UI Tests
       if ProcessInfo.processInfo.arguments.contains("UI_TESTS") {
@@ -34,4 +37,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       return true
    }
+}
+
+enum NetworkError: LocalizedError {
+   case noConnectionToServer
+   case parsingFailed
+
+   var errorDescription: String? {  // Note: Optional String
+      switch self {
+      case .noConnectionToServer:
+         return "No connection to the server."
+      case .parsingFailed:
+         return "Data parsing failed."
+      }
+   }
+
+   // There are also these optional properties that are rarely used
+   var failureReason: String? { nil }
+   var recoverySuggestion: String? { nil }
+   var helpAnchor: String? { nil }
 }

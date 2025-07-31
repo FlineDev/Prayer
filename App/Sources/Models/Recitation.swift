@@ -84,7 +84,7 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
    static let splitSeparator: String = "⁋"
 
    var fileName: String {
-      return String(format: "%03d", rawValue)
+      String(format: "%03d", rawValue)
    }
 
    var localizedTitle: String {

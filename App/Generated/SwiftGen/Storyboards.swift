@@ -12,77 +12,80 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum PrayerView: StoryboardType {
-    internal static let storyboardName = "PrayerView"
+   internal enum PrayerView: StoryboardType {
+      internal static let storyboardName = "PrayerView"
 
-    internal static let initialScene = InitialSceneType<App.PrayerViewController>(storyboard: PrayerView.self)
-  }
-  internal enum Settings: StoryboardType {
-    internal static let storyboardName = "Settings"
+      internal static let initialScene = InitialSceneType<App.PrayerViewController>(storyboard: PrayerView.self)
+   }
+   internal enum Settings: StoryboardType {
+      internal static let storyboardName = "Settings"
 
-    internal static let faqNavigationController = SceneType<UIKit.UINavigationController>(storyboard: Settings.self, identifier: "FAQNavigationController")
-  }
+      internal static let faqNavigationController = SceneType<UIKit.UINavigationController>(
+         storyboard: Settings.self,
+         identifier: "FAQNavigationController"
+      )
+   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 
 // MARK: - Implementation Details
 
 internal protocol StoryboardType {
-  static var storyboardName: String { get }
+   static var storyboardName: String { get }
 }
 
-internal extension StoryboardType {
-  static var storyboard: UIStoryboard {
-    let name = self.storyboardName
-    return UIStoryboard(name: name, bundle: BundleToken.bundle)
-  }
+extension StoryboardType {
+   static var storyboard: UIStoryboard {
+      let name = self.storyboardName
+      return UIStoryboard(name: name, bundle: BundleToken.bundle)
+   }
 }
 
 internal struct SceneType<T: UIViewController> {
-  internal let storyboard: StoryboardType.Type
-  internal let identifier: String
+   internal let storyboard: StoryboardType.Type
+   internal let identifier: String
 
-  internal func instantiate() -> T {
-    let identifier = self.identifier
-    guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
-      fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
-    }
-    return controller
-  }
+   internal func instantiate() -> T {
+      let identifier = self.identifier
+      guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+         fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
+      }
+      return controller
+   }
 
-  @available(iOS 13.0, tvOS 13.0, *)
-  internal func instantiate(creator block: @escaping (NSCoder) -> T?) -> T {
-    return storyboard.storyboard.instantiateViewController(identifier: identifier, creator: block)
-  }
+   @available(iOS 13.0, tvOS 13.0, *)
+   internal func instantiate(creator block: @escaping (NSCoder) -> T?) -> T {
+      storyboard.storyboard.instantiateViewController(identifier: identifier, creator: block)
+   }
 }
 
 internal struct InitialSceneType<T: UIViewController> {
-  internal let storyboard: StoryboardType.Type
+   internal let storyboard: StoryboardType.Type
 
-  internal func instantiate() -> T {
-    guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
-      fatalError("ViewController is not of the expected class \(T.self).")
-    }
-    return controller
-  }
+   internal func instantiate() -> T {
+      guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
+         fatalError("ViewController is not of the expected class \(T.self).")
+      }
+      return controller
+   }
 
-  @available(iOS 13.0, tvOS 13.0, *)
-  internal func instantiate(creator block: @escaping (NSCoder) -> T?) -> T {
-    guard let controller = storyboard.storyboard.instantiateInitialViewController(creator: block) else {
-      fatalError("Storyboard \(storyboard.storyboardName) does not have an initial scene.")
-    }
-    return controller
-  }
+   @available(iOS 13.0, tvOS 13.0, *)
+   internal func instantiate(creator block: @escaping (NSCoder) -> T?) -> T {
+      guard let controller = storyboard.storyboard.instantiateInitialViewController(creator: block) else {
+         fatalError("Storyboard \(storyboard.storyboardName) does not have an initial scene.")
+      }
+      return controller
+   }
 }
 
 // swiftlint:disable convenience_type
 private final class BundleToken {
-  static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
-  }()
+   static let bundle: Bundle = {
+      #if SWIFT_PACKAGE
+         return Bundle.module
+      #else
+         return Bundle(for: BundleToken.self)
+      #endif
+   }()
 }
 // swiftlint:enable convenience_type
