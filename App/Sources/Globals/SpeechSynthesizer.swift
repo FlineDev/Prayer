@@ -60,7 +60,7 @@ final class SpeechSynthesizer: NSObject {
          )
 
       super.init()
-      synthesizer.delegate = self
+      self.synthesizer.delegate = self
    }
 
    func speak(
@@ -83,10 +83,10 @@ final class SpeechSynthesizer: NSObject {
       }()
 
       let utterance = AVSpeechUtterance(string: textToSpeak)
-      utterance.voice = voice
-      utterance.pitchMultiplier = pitchMultiplier
+      utterance.voice = self.voice
+      utterance.pitchMultiplier = self.pitchMultiplier
       utterance.volume = 1.0
-      utterance.rate = speechRate
+      utterance.rate = self.speechRate
       utterance.preUtteranceDelay = .zero
       utterance.postUtteranceDelay = .zero
 
@@ -96,20 +96,20 @@ final class SpeechSynthesizer: NSObject {
       self.afterCompletion = afterCompletion
       self.afterCompletionDelay = afterCompletionDelay
 
-      synthesizer.speak(utterance)
+      self.synthesizer.speak(utterance)
    }
 
    func stop() {
       self.afterStart = nil
       self.afterCompletion = nil
-      synthesizer.stopSpeaking(at: .immediate)
+      self.synthesizer.stopSpeaking(at: .immediate)
    }
 }
 
 extension SpeechSynthesizer: AVSpeechSynthesizerDelegate {
    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
       if let afterStart = afterStart {
-         delay(by: afterStartDelay ?? .zero) {
+         delay(by: self.afterStartDelay ?? .zero) {
             self.afterStart = nil
             self.afterStartDelay = nil
             afterStart()
@@ -119,7 +119,7 @@ extension SpeechSynthesizer: AVSpeechSynthesizerDelegate {
 
    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
       if let afterCompletion = afterCompletion {
-         delay(by: afterCompletionDelay ?? .zero) {
+         delay(by: self.afterCompletionDelay ?? .zero) {
             self.afterCompletion = nil
             self.afterCompletionDelay = nil
             afterCompletion()

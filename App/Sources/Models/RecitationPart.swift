@@ -15,7 +15,7 @@ struct RecitationPart: Codable, DefaultsSerializable {
    // NOTE: Workaround for an issue with SwiftyUserDefaults where RawRepresentable enums can't be Codable, too.
    private let recitationRawValue: Recitation.RawValue
    var recitation: Recitation {
-      Recitation(rawValue: recitationRawValue)!
+      Recitation(rawValue: self.recitationRawValue)!
    }
 
    init(
@@ -31,24 +31,24 @@ struct RecitationPart: Codable, DefaultsSerializable {
    }
 
    func nextPart() -> RecitationPart? {
-      guard part < totalParts else { return nil }
+      guard self.part < self.totalParts else { return nil }
 
       return RecitationPart(
-         recitation: recitation,
-         partLength: partLength,
-         part: part + 1,
-         totalParts: totalParts
+         recitation: self.recitation,
+         partLength: self.partLength,
+         part: self.part + 1,
+         totalParts: self.totalParts
       )
    }
 
    func recitationLines() -> [String] {
-      var contentString = recitation.contentString()
+      var contentString = self.recitation.contentString()
 
-      if totalParts > 1 {
-         let shortLengthTotalParts = recitation.totalParts(maxWordsPerPart: .short)
+      if self.totalParts > 1 {
+         let shortLengthTotalParts = self.recitation.totalParts(maxWordsPerPart: .short)
 
-         let separatorLowerBoundIndex = (part - 1) * partLength.factor
-         let separatorUpperBoundIndex = min(separatorLowerBoundIndex + partLength.factor, shortLengthTotalParts)
+         let separatorLowerBoundIndex = (part - 1) * self.partLength.factor
+         let separatorUpperBoundIndex = min(separatorLowerBoundIndex + self.partLength.factor, shortLengthTotalParts)
          let partIndexRange = separatorLowerBoundIndex..<separatorUpperBoundIndex
          contentString = contentString.components(separatedBy: Recitation.splitSeparator)[partIndexRange].joined()
       }

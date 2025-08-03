@@ -39,17 +39,17 @@ class PrayerState {
       self.speechSynthesizer = speechSynthesizer
    }
 
-   private var currentRakah: Rakah { prayer.rakat[rakatIndex] }
-   private var currentComponent: RakahComponent { currentRakah.components()[componentIndex] }
-   var currentArrow: Position.Arrow? { previousPositon.arrow(forChangingTo: currentPosition) }
-   var currentLine: String { currentComponent.spokenTextLines[lineIndex] }
+   private var currentRakah: Rakah { self.prayer.rakat[self.rakatIndex] }
+   private var currentComponent: RakahComponent { self.currentRakah.components()[self.componentIndex] }
+   var currentArrow: Position.Arrow? { self.previousPositon.arrow(forChangingTo: self.currentPosition) }
+   var currentLine: String { self.currentComponent.spokenTextLines[self.lineIndex] }
 
    private var readingSpeedupFactor: Double {
-      currentComponent.isChangingText ? changingTextSpeedFactor : fixedTextsSpeedFactor
+      self.currentComponent.isChangingText ? self.changingTextSpeedFactor : self.fixedTextsSpeedFactor
    }
 
    var currentLineReadingTime: TimeInterval {
-      var readingTime = currentLine.estimatedReadingTime / readingSpeedupFactor
+      var readingTime = self.currentLine.estimatedReadingTime / self.readingSpeedupFactor
 
       if let movementDelay = movementDelay {
          readingTime += movementDelay
@@ -59,69 +59,69 @@ class PrayerState {
    }
 
    var movementDelay: TimeInterval? {
-      guard lineIndex == 0, currentComponent.needsMovement else { return nil }
-      return previousPositon.movementDuration(forChangingTo: currentPosition)
+      guard self.lineIndex == 0, self.currentComponent.needsMovement else { return nil }
+      return self.previousPositon.movementDuration(forChangingTo: self.currentPosition)
    }
 
    var currentMovementSoundUrl: URL? {
-      guard lineIndex == 0, let movementSound = currentComponent.movementSound else { return nil }
-      return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: movementSoundInstrument)
+      guard self.lineIndex == 0, let movementSound = currentComponent.movementSound else { return nil }
+      return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: self.movementSoundInstrument)
    }
 
-   var currentRecitationChapterNum: Int? { currentComponent.chapterNumber }
+   var currentRecitationChapterNum: Int? { self.currentComponent.chapterNumber }
 
    private var nextRakah: Rakah? {
-      guard rakatIndex + 1 < prayer.rakat.count else { return nil }
-      return prayer.rakat[rakatIndex + 1]
+      guard self.rakatIndex + 1 < self.prayer.rakat.count else { return nil }
+      return self.prayer.rakat[self.rakatIndex + 1]
    }
 
    private var nextComponent: RakahComponent? {
-      guard componentIndex + 1 < currentRakah.components().count else { return nextRakah?.components().first }
-      return currentRakah.components()[componentIndex + 1]
+      guard self.componentIndex + 1 < self.currentRakah.components().count else { return self.nextRakah?.components().first }
+      return self.currentRakah.components()[self.componentIndex + 1]
    }
 
    var nextArrow: Position.Arrow? {
-      guard lineIndex + 1 >= currentComponent.spokenTextLines.count else { return nil }
-      return currentPosition.arrow(forChangingTo: nextComponent?.position)
+      guard self.lineIndex + 1 >= self.currentComponent.spokenTextLines.count else { return nil }
+      return self.currentPosition.arrow(forChangingTo: self.nextComponent?.position)
    }
 
    var nextLine: String? {
-      guard lineIndex + 1 < currentComponent.spokenTextLines.count else { return nextComponent?.spokenTextLines.first }
-      return currentComponent.spokenTextLines[lineIndex + 1]
+      guard self.lineIndex + 1 < self.currentComponent.spokenTextLines.count else { return self.nextComponent?.spokenTextLines.first }
+      return self.currentComponent.spokenTextLines[self.lineIndex + 1]
    }
 
    private var movementSoundUrl: URL? {
-      guard lineIndex == 0 else { return nil }
+      guard self.lineIndex == 0 else { return nil }
       guard let movementSound = currentComponent.movementSound else { return nil }
 
-      return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: movementSoundInstrument)
+      return AudioPlayer.shared.movementSoundUrl(name: movementSound.rawValue, instrument: self.movementSoundInstrument)
    }
 
    func moveToNextLine() -> Bool {
-      previousLine = currentLine
+      self.previousLine = self.currentLine
 
       // update position
-      previousPositon = currentPosition
-      if lineIndex + 1 >= currentComponent.spokenTextLines.count {
+      self.previousPositon = self.currentPosition
+      if self.lineIndex + 1 >= self.currentComponent.spokenTextLines.count {
          if let nextComponent = nextComponent {
-            currentPosition = nextComponent.position
+            self.currentPosition = nextComponent.position
          }
       }
 
-      guard lineIndex + 1 >= currentComponent.spokenTextLines.count else {
-         lineIndex += 1
+      guard self.lineIndex + 1 >= self.currentComponent.spokenTextLines.count else {
+         self.lineIndex += 1
          return true
       }
-      lineIndex = 0
+      self.lineIndex = 0
 
-      guard componentIndex + 1 >= currentRakah.components().count else {
-         componentIndex += 1
+      guard self.componentIndex + 1 >= self.currentRakah.components().count else {
+         self.componentIndex += 1
          return true
       }
-      componentIndex = 0
+      self.componentIndex = 0
 
-      guard rakatIndex + 1 >= prayer.rakat.count else {
-         rakatIndex += 1
+      guard self.rakatIndex + 1 >= self.prayer.rakat.count else {
+         self.rakatIndex += 1
          return true
       }
       return false
@@ -129,15 +129,15 @@ class PrayerState {
 
    func prayerViewModel() -> PrayerViewModel {
       PrayerViewModel(
-         currentComponentName: currentComponent.name,
-         previousArrow: previousArrow,
-         previousLine: previousLine,
-         currentArrow: currentArrow,
-         currentLine: currentLine,
-         currentIsComponentBeginning: lineIndex == 0,
-         nextArrow: nextArrow,
-         nextLine: nextLine,
-         nextIsComponentBeginning: lineIndex + 1 == currentComponent.spokenTextLines.count
+         currentComponentName: self.currentComponent.name,
+         previousArrow: self.previousArrow,
+         previousLine: self.previousLine,
+         currentArrow: self.currentArrow,
+         currentLine: self.currentLine,
+         currentIsComponentBeginning: self.lineIndex == 0,
+         nextArrow: self.nextArrow,
+         nextLine: self.nextLine,
+         nextIsComponentBeginning: self.lineIndex + 1 == self.currentComponent.spokenTextLines.count
       )
    }
 }

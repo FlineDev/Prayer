@@ -40,15 +40,15 @@ class PrayerFlowController: FlowController {
 
    override func start(from presentingViewController: UIViewController) {
       // configure prayer view controller
-      prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
-      prayerViewCtrl.flowDelegate = self
+      self.prayerViewCtrl = StoryboardScene.PrayerView.initialScene.instantiate()
+      self.prayerViewCtrl.flowDelegate = self
 
       // initialize countdown
       let countdownCount = 5
-      switch audioMode {
+      switch self.audioMode {
       case .speechSynthesizer, .movementSoundAndSpeechSynthesizer:
-         countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: nil)
-         countdown?
+         self.countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: nil)
+         self.countdown?
             .onCount { count in
                self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
                self.speechSynthesizer.speak(
@@ -59,14 +59,14 @@ class PrayerFlowController: FlowController {
             }
 
       case .movementSound, .none:
-         countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: .seconds(1))
-         countdown?
+         self.countdown = Countdown(startValue: countdownCount, automaticallyCountEvery: .seconds(1))
+         self.countdown?
             .onCount { count in
                self.prayerViewCtrl.viewModel = self.countdownViewModel(count: count)
             }
       }
 
-      countdown?.onFinish { self.startPrayer() }
+      self.countdown?.onFinish { self.startPrayer() }
 
       let navCtrl = UINavigationController(rootViewController: prayerViewCtrl)
       navCtrl.modalPresentationStyle = .fullScreen
@@ -90,16 +90,16 @@ class PrayerFlowController: FlowController {
    }
 
    func startPrayer() {
-      prayerState = PrayerState(
-         prayer: prayer,
-         changingTextSpeedFactor: recitationSpeedFactor,
-         fixedTextsSpeedFactor: fixedTextSpeedsFactor,
-         audioMode: audioMode,
-         movementSoundInstrument: movementSoundInstrument,
-         speechSynthesizer: speechSynthesizer
+      self.prayerState = PrayerState(
+         prayer: self.prayer,
+         changingTextSpeedFactor: self.recitationSpeedFactor,
+         fixedTextsSpeedFactor: self.fixedTextSpeedsFactor,
+         audioMode: self.audioMode,
+         movementSoundInstrument: self.movementSoundInstrument,
+         speechSynthesizer: self.speechSynthesizer
       )
-      prayerViewCtrl.viewModel = prayerState.prayerViewModel()
-      progressPrayer()
+      self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
+      self.progressPrayer()
 
       // set audio session to this app
       try? AVAudioSession.sharedInstance().setActive(true)
@@ -112,19 +112,19 @@ class PrayerFlowController: FlowController {
    }
 
    func progressPrayer() {
-      switch audioMode {
+      switch self.audioMode {
       case .movementSound:
          if let movementSoundUrl = prayerState.currentMovementSoundUrl {
             AudioPlayer.shared.playSound(at: movementSoundUrl)
          }
 
-         timer = Timer.after(prayerState.currentLineReadingTime, progressToNextStep)
+         self.timer = Timer.after(self.prayerState.currentLineReadingTime, self.progressToNextStep)
 
       case .speechSynthesizer:
-         speechSynthesizer.speak(
-            text: prayerState.currentLine,
-            afterCompletion: progressToNextStep,
-            afterCompletionDelay: prayerState.movementDelay
+         self.speechSynthesizer.speak(
+            text: self.prayerState.currentLine,
+            afterCompletion: self.progressToNextStep,
+            afterCompletionDelay: self.prayerState.movementDelay
          )
 
       case .movementSoundAndSpeechSynthesizer:
@@ -132,40 +132,40 @@ class PrayerFlowController: FlowController {
             AudioPlayer.shared.playSound(at: movementSoundUrl)
          }
 
-         speechSynthesizer.speak(
-            text: prayerState.currentLine,
-            afterCompletion: progressToNextStep,
-            afterCompletionDelay: prayerState.movementDelay
+         self.speechSynthesizer.speak(
+            text: self.prayerState.currentLine,
+            afterCompletion: self.progressToNextStep,
+            afterCompletionDelay: self.prayerState.movementDelay
          )
 
       case .none:
-         timer = Timer.after(prayerState.currentLineReadingTime, progressToNextStep)
+         self.timer = Timer.after(self.prayerState.currentLineReadingTime, self.progressToNextStep)
       }
    }
 
    private func progressToNextStep() {
-      if prayerState.moveToNextLine() {
-         prayerViewCtrl.viewModel = prayerState.prayerViewModel()
-         progressPrayer()
+      if self.prayerState.moveToNextLine() {
+         self.prayerViewCtrl.viewModel = self.prayerState.prayerViewModel()
+         self.progressPrayer()
       } else {
-         cleanup()
-         prayerViewCtrl.dismiss(animated: true, completion: nil)
+         self.cleanup()
+         self.prayerViewCtrl.dismiss(animated: true, completion: nil)
          removeFromSuperFlowController()
       }
    }
 
    private func cleanup() {
-      timer?.invalidate()
-      timer = nil
-      speechSynthesizer.stop()
+      self.timer?.invalidate()
+      self.timer = nil
+      self.speechSynthesizer.stop()
    }
 }
 
 extension PrayerFlowController: PrayerFlowDelegate {
    func doneButtonPressed() {
-      countdown?.cancel()
-      cleanup()
-      prayerViewCtrl.dismiss(animated: true) {
+      self.countdown?.cancel()
+      self.cleanup()
+      self.prayerViewCtrl.dismiss(animated: true) {
          if #available(iOS 14.5, *) {
             try? AVAudioSession.sharedInstance().setPrefersNoInterruptionsFromSystemAlerts(false)
          }

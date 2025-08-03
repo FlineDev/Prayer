@@ -15,16 +15,16 @@ protocol PrayerFlowDelegate: AnyObject {
 class PrayerViewController: UIViewController {
    var viewModel: PrayerViewModel! {
       didSet {
-         title = viewModel.currentComponentName
+         title = self.viewModel.currentComponentName
 
-         updateLineLabels()
-         updateArrowLabels()
-         updateSeparators()
+         self.updateLineLabels()
+         self.updateArrowLabels()
+         self.updateSeparators()
 
-         if viewModel.currentLine.contains(String.recitationEmoji) {
-            currentLineLabel.textColor = Colors.secondary
+         if self.viewModel.currentLine.contains(String.recitationEmoji) {
+            self.currentLineLabel.textColor = Colors.secondary
          } else {
-            currentLineLabel.textColor = Colors.primary
+            self.currentLineLabel.textColor = Colors.primary
          }
       }
    }
@@ -47,7 +47,7 @@ class PrayerViewController: UIViewController {
 
       view.backgroundColor = Colors.contentBackground
 
-      let doneSelector = #selector(doneButtonPressed)
+      let doneSelector = #selector(self.doneButtonPressed)
       let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: doneSelector)
       navigationItem.rightBarButtonItem = doneItem
    }
@@ -74,51 +74,51 @@ class PrayerViewController: UIViewController {
 
    @objc
    func doneButtonPressed() {
-      flowDelegate?.doneButtonPressed()
+      self.flowDelegate?.doneButtonPressed()
    }
 
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
 
-      clearLineLabels()
-      clearArrowLabels()
-      clearSeparators()
+      self.clearLineLabels()
+      self.clearArrowLabels()
+      self.clearSeparators()
    }
 
    private func clearLineLabels() {
       // NOTE: a whitespace is added in order to have an intrinsic size for all labels
-      previousLineLabel.text = " "
-      currentLineLabel.text = " "
-      nextLineLabel.text = " "
+      self.previousLineLabel.text = " "
+      self.currentLineLabel.text = " "
+      self.nextLineLabel.text = " "
    }
 
    private func clearArrowLabels() {
-      previousArrowLabel.text = " "
-      currentArrowLabel.text = " "
-      nextArrowLabel.text = " "
+      self.previousArrowLabel.text = " "
+      self.currentArrowLabel.text = " "
+      self.nextArrowLabel.text = " "
    }
 
    private func clearSeparators() {
-      currentLineComponentSeparator.isHidden = true
-      nextLineComponentSeparator.isHidden = true
+      self.currentLineComponentSeparator.isHidden = true
+      self.nextLineComponentSeparator.isHidden = true
    }
 
    private func updateLineLabels() {
-      previousLineLabel.text = viewModel.previousLine ?? " "
-      currentLineLabel.text = viewModel.currentLine + " "
-      nextLineLabel.text = viewModel.nextLine ?? " "
+      self.previousLineLabel.text = self.viewModel.previousLine ?? " "
+      self.currentLineLabel.text = self.viewModel.currentLine + " "
+      self.nextLineLabel.text = self.viewModel.nextLine ?? " "
    }
 
    private func updateArrowLabels() {
-      previousArrowLabel.text = (viewModel.previousArrow?.rawValue ?? "") + " "
-      currentArrowLabel.text = (viewModel.currentArrow?.rawValue ?? "") + " "
-      nextArrowLabel.text = (viewModel.nextArrow?.rawValue ?? "") + " "
+      self.previousArrowLabel.text = (self.viewModel.previousArrow?.rawValue ?? "") + " "
+      self.currentArrowLabel.text = (self.viewModel.currentArrow?.rawValue ?? "") + " "
+      self.nextArrowLabel.text = (self.viewModel.nextArrow?.rawValue ?? "") + " "
    }
 
    private func updateSeparators() {
-      if viewModel.previousLine != nil || viewModel.nextLine != nil {
-         currentLineComponentSeparator.isHidden = !viewModel.currentIsComponentBeginning
-         nextLineComponentSeparator.isHidden = !viewModel.nextIsComponentBeginning
+      if self.viewModel.previousLine != nil || self.viewModel.nextLine != nil {
+         self.currentLineComponentSeparator.isHidden = !self.viewModel.currentIsComponentBeginning
+         self.nextLineComponentSeparator.isHidden = !self.viewModel.nextIsComponentBeginning
       }
    }
 }

@@ -282,11 +282,11 @@ enum Recitation: Int, CaseIterable, Equatable, DefaultsSerializable {
    }
 
    func totalParts(maxWordsPerPart: MaxArabicWordsPerStanding) -> Int {
-      Int(ceil(Double(contentString().components(separatedBy: Self.splitSeparator).count) / Double(maxWordsPerPart.factor)))
+      Int(ceil(Double(self.contentString().components(separatedBy: Self.splitSeparator).count) / Double(maxWordsPerPart.factor)))
    }
 
    func contentString() -> String {
-      let spokenTextFilePath = Bundle.main.url(forResource: fileName, withExtension: "txt")!
+      let spokenTextFilePath = Bundle.main.url(forResource: self.fileName, withExtension: "txt")!
       let contentString = try! String(contentsOf: spokenTextFilePath, encoding: .utf8)
       return contentString.stripped()
    }

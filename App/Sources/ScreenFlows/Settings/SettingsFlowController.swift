@@ -16,9 +16,9 @@ class SettingsFlowController: InitialFlowController {
    var faqViewCtrl: FAQViewController?
 
    override func start(from window: UIWindow) {
-      settingsViewModel = SettingsViewModel()
-      settingsViewCtrl = SettingsViewController(viewModel: settingsViewModel)
-      settingsViewCtrl?.flowDelegate = self
+      self.settingsViewModel = SettingsViewModel()
+      self.settingsViewCtrl = SettingsViewController(viewModel: self.settingsViewModel)
+      self.settingsViewCtrl?.flowDelegate = self
 
       let navCtrl = UINavigationController(rootViewController: settingsViewCtrl)
       window.rootViewController = navCtrl
@@ -31,43 +31,43 @@ class SettingsFlowController: InitialFlowController {
 
 extension SettingsFlowController: SettingsFlowDelegate {
    func setRakat(_ rakatCount: Int) {
-      settingsViewModel.rakatCount = rakatCount
+      self.settingsViewModel.rakatCount = rakatCount
    }
 
    func setFixedPartSpeed(_ fixedPartSpeed: Double) {
-      settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
+      self.settingsViewModel.fixedTextsSpeedFactor = fixedPartSpeed
    }
 
    func setChangingPartSpeed(_ changingPartSpeed: Double) {
-      settingsViewModel.recitationSpeedFactor = changingPartSpeed
+      self.settingsViewModel.recitationSpeedFactor = changingPartSpeed
    }
 
    func setShowChangingTextName(_ showChangingTextName: Bool) {
-      settingsViewModel.showRecitationName = showChangingTextName
+      self.settingsViewModel.showRecitationName = showChangingTextName
    }
 
    func setAllowLongerRecitations(_ allowLongerRecitations: Bool) {
-      settingsViewModel.allowLongerRecitations = allowLongerRecitations
+      self.settingsViewModel.allowLongerRecitations = allowLongerRecitations
    }
 
    func setAllowSplittingRecitations(_ allowSplittingRecitations: Bool) {
-      settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
+      self.settingsViewModel.allowSplittingRecitations = allowSplittingRecitations
    }
 
    func setSpeechSynthesizerVoice(_ voice: AVSpeechSynthesisVoice) {
-      settingsViewModel.speechSynthesizerVoice = voice
+      self.settingsViewModel.speechSynthesizerVoice = voice
    }
 
    func setSpeechSynthesizerSpeechRate(_ speechRate: Float) {
-      settingsViewModel.speechSynthesizerSpeechRate = speechRate
+      self.settingsViewModel.speechSynthesizerSpeechRate = speechRate
    }
 
    func setSpeechSynthesizerPitchMultiplier(_ pitchMultiplier: Float) {
-      settingsViewModel.speechSynthesizerPitchMultiplier = pitchMultiplier
+      self.settingsViewModel.speechSynthesizerPitchMultiplier = pitchMultiplier
    }
 
    func setAudioMode(_ audioMode: AudioMode) {
-      settingsViewModel.audioMode = audioMode
+      self.settingsViewModel.audioMode = audioMode
    }
 
    func showLanguageSettings() {
@@ -75,7 +75,7 @@ extension SettingsFlowController: SettingsFlowDelegate {
    }
 
    func chooseInstrument(_ instrument: String) {
-      settingsViewModel.movementSoundInstrument = instrument
+      self.settingsViewModel.movementSoundInstrument = instrument
 
       if let moveSoundUrl = AudioPlayer.shared.movementSoundUrl(name: "E-Short", instrument: instrument) {
          AudioPlayer.shared.playSound(at: moveSoundUrl)
@@ -83,41 +83,41 @@ extension SettingsFlowController: SettingsFlowDelegate {
    }
 
    func didPressFAQButton() {
-      showFAQ()
+      self.showFAQ()
    }
 
    func didPressFeedbackButton() {
-      showFeedbackCommunity()
+      self.showFeedbackCommunity()
    }
 
    func startPrayer() {
-      guard settingsViewModel.rakatCount > 0 else { return }
+      guard self.settingsViewModel.rakatCount > 0 else { return }
       let prayer = Prayer(
          rakatCount: UInt(settingsViewModel.rakatCount),
-         allowLongerRecitations: settingsViewModel.allowLongerRecitations,
-         allowSplittingRecitations: settingsViewModel.allowSplittingRecitations,
-         showStandingRecitationName: settingsViewModel.showRecitationName
+         allowLongerRecitations: self.settingsViewModel.allowLongerRecitations,
+         allowSplittingRecitations: self.settingsViewModel.allowSplittingRecitations,
+         showStandingRecitationName: self.settingsViewModel.showRecitationName
       )
 
       let prayerFlowCtrl = PrayerFlowController(
          prayer: prayer,
          fixedTextSpeedsFactor: settingsViewModel.fixedTextsSpeedFactor,
-         recitationSpeedFactor: settingsViewModel.recitationSpeedFactor,
-         audioMode: settingsViewModel.audioMode,
-         movementSoundInstrument: settingsViewModel.movementSoundInstrument,
-         speechSynthesizer: settingsViewModel.speechSynthesizer
+         recitationSpeedFactor: self.settingsViewModel.recitationSpeedFactor,
+         audioMode: self.settingsViewModel.audioMode,
+         movementSoundInstrument: self.settingsViewModel.movementSoundInstrument,
+         speechSynthesizer: self.settingsViewModel.speechSynthesizer
       )
 
       add(subFlowController: prayerFlowCtrl)
-      prayerFlowCtrl.start(from: settingsViewCtrl)
+      prayerFlowCtrl.start(from: self.settingsViewCtrl)
    }
 
    private func showFAQ() {
       let faqNavCtrl = StoryboardScene.Settings.faqNavigationController.instantiate()
-      faqViewCtrl = faqNavCtrl.topViewController as? FAQViewController
-      let localL10n = l10n.FaqEntries.self
+      self.faqViewCtrl = faqNavCtrl.topViewController as? FAQViewController
+      let localL10n = self.l10n.FaqEntries.self
 
-      faqViewCtrl?.viewModel = FAQViewModel(
+      self.faqViewCtrl?.viewModel = FAQViewModel(
          entries: [
             (question: localL10n.AppMotivation.Question.string, answer: localL10n.AppMotivation.Answer.string),
             (question: localL10n.IpadReading.Question.string, answer: localL10n.IpadReading.Answer.string),
@@ -126,22 +126,22 @@ extension SettingsFlowController: SettingsFlowDelegate {
          ]
       )
 
-      faqViewCtrl?.flowDelegate = self
-      settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
+      self.faqViewCtrl?.flowDelegate = self
+      self.settingsViewCtrl.present(faqNavCtrl, animated: true, completion: nil)
    }
 
    func showFeedbackCommunity() {
       let communityUrl = URL(string: "https://github.com/FlineDev/Prayer/issues")!
       let safariViewCtrl = SFSafariViewController(url: communityUrl)
 
-      settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
+      self.settingsViewCtrl.present(safariViewCtrl, animated: true, completion: nil)
    }
 }
 
 extension SettingsFlowController: FAQFlowDelegate {
    func doneButtonPressed() {
       Defaults.faqClosed = true
-      faqViewCtrl?.dismiss(animated: true, completion: nil)
+      self.faqViewCtrl?.dismiss(animated: true, completion: nil)
    }
 }
 

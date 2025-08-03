@@ -42,123 +42,123 @@ class RakahComponent {
    ) {
       switch component {
       case .takbir(let pos):
-         name = l10n.Takbir.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
-         needsMovement = true
-         position = pos
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Takbir.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Takbir")
+         self.needsMovement = true
+         self.position = pos
+         self.isChangingText = false
+         self.chapterNumber = nil
 
          if longSitting {
-            movementSound = .longSitting
+            self.movementSound = .longSitting
          } else {
             switch pos {
             case .bending, .worship:
-               movementSound = .downwards
+               self.movementSound = .downwards
 
             case .standing, .sitting:
-               movementSound = .upwards
+               self.movementSound = .upwards
 
             default:
-               movementSound = nil
+               self.movementSound = nil
             }
          }
 
       case .openingSupplication:
-         name = l10n.OpeningSupplication.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Opening-Supplication")
-         needsMovement = false
-         position = .standing
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.OpeningSupplication.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Opening-Supplication")
+         self.needsMovement = false
+         self.position = .standing
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .taawwudh:
-         name = l10n.Taawwudh.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Taawwudh")
-         needsMovement = false
-         position = .standing
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Taawwudh.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Taawwudh")
+         self.needsMovement = false
+         self.position = .standing
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .recitationPart(let recitationPart, let showName):
-         chapterNumber = recitationPart.recitation.rawValue
+         self.chapterNumber = recitationPart.recitation.rawValue
 
          var title = recitationPart.recitation.localizedTitle
          if recitationPart.totalParts > 1 {
-            title = l10n.SplitRecitationTitle(title, recitationPart.part, recitationPart.totalParts).string
+            title = self.l10n.SplitRecitationTitle(title, recitationPart.part, recitationPart.totalParts).string
          }
-         name = "\(String.recitationEmoji)\(chapterNumber!): \(title)"
+         self.name = "\(String.recitationEmoji)\(self.chapterNumber!): \(title)"
 
-         spokenTextLines = showName ? [name] + recitationPart.recitationLines() : recitationPart.recitationLines()
-         needsMovement = false
-         position = .standing
-         movementSound = nil
-         isChangingText = recitationPart.recitation != .theOpening
+         self.spokenTextLines = showName ? [self.name] + recitationPart.recitationLines() : recitationPart.recitationLines()
+         self.needsMovement = false
+         self.position = .standing
+         self.movementSound = nil
+         self.isChangingText = recitationPart.recitation != .theOpening
 
       case .ruku:
-         name = l10n.Ruku.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Ruku")
-         needsMovement = false
-         position = .bending
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Ruku.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Ruku")
+         self.needsMovement = false
+         self.position = .bending
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .straighteningUp:
-         name = l10n.StraighteningUp.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
-         needsMovement = true
-         position = .standing
-         movementSound = .upwards
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.StraighteningUp.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Straightening-Up")
+         self.needsMovement = true
+         self.position = .standing
+         self.movementSound = .upwards
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .sajdah:
-         name = l10n.Sajdah.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
-         needsMovement = false
-         position = .worship
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Sajdah.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Sajdah")
+         self.needsMovement = false
+         self.position = .worship
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .tashahhud:
-         name = l10n.Tashahhud.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Tashahhud")
-         needsMovement = false
-         position = .sitting
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Tashahhud.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Tashahhud")
+         self.needsMovement = false
+         self.position = .sitting
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .salatulIbrahimiyyah:
-         name = l10n.SalatulIbrahimiyyah.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Salatul-Ibrahimiyyah")
-         needsMovement = false
-         position = .sitting
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.SalatulIbrahimiyyah.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Salatul-Ibrahimiyyah")
+         self.needsMovement = false
+         self.position = .sitting
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .rabbanagh:
-         name = l10n.Rabbanagh.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
-         needsMovement = false
-         position = .sitting
-         movementSound = nil
-         isChangingText = false
-         chapterNumber = nil
+         self.name = self.l10n.Rabbanagh.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Rabbanagh")
+         self.needsMovement = false
+         self.position = .sitting
+         self.movementSound = nil
+         self.isChangingText = false
+         self.chapterNumber = nil
 
       case .salam(let pos):
-         name = l10n.Salam.Name.string
-         spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
-         needsMovement = true
-         movementSound = .salam
-         isChangingText = false
-         position = pos
-         chapterNumber = nil
+         self.name = self.l10n.Salam.Name.string
+         self.spokenTextLines = RakahComponent.readLinesFromFile(named: "Salam")
+         self.needsMovement = true
+         self.movementSound = .salam
+         self.isChangingText = false
+         self.position = pos
+         self.chapterNumber = nil
       }
    }
 

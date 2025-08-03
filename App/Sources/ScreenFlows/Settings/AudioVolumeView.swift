@@ -14,21 +14,21 @@ class AudioVolumeView: UIView {
    override init(
       frame: CGRect
    ) {
-      deviceChooserButton = .init(frame: .init(x: 36, y: 0, width: 25, height: frame.height))
-      deviceChooserButton.prioritizesVideoDevices = false
+      self.deviceChooserButton = .init(frame: .init(x: 36, y: 0, width: 25, height: frame.height))
+      self.deviceChooserButton.prioritizesVideoDevices = false
 
-      currentPortLabel = .init(frame: .init(size: frame.size))
-      currentPortLabel.textColor = .secondaryLabel
-      currentPortLabel.textAlignment = .right
+      self.currentPortLabel = .init(frame: .init(size: frame.size))
+      self.currentPortLabel.textColor = .secondaryLabel
+      self.currentPortLabel.textAlignment = .right
 
       super.init(frame: frame)
 
-      addSubview(deviceChooserButton)
-      addSubview(currentPortLabel)
-      currentPortLabel.bindEdgesToSuperview()
+      addSubview(self.deviceChooserButton)
+      addSubview(self.currentPortLabel)
+      self.currentPortLabel.bindEdgesToSuperview()
 
-      updateCurrentPortLabel()
-      subscribeToRouteChangeNotification()
+      self.updateCurrentPortLabel()
+      self.subscribeToRouteChangeNotification()
    }
 
    required init?(
@@ -43,13 +43,13 @@ class AudioVolumeView: UIView {
 
    @objc
    private func updateCurrentPortLabel() {
-      currentPortLabel.text = AVAudioSession.sharedInstance().currentRoute.outputs.first?.portName
+      self.currentPortLabel.text = AVAudioSession.sharedInstance().currentRoute.outputs.first?.portName
    }
 
    private func subscribeToRouteChangeNotification() {
       NotificationCenter.default.addObserver(
          self,
-         selector: #selector(updateCurrentPortLabel),
+         selector: #selector(self.updateCurrentPortLabel),
          name: AVAudioSession.routeChangeNotification,
          object: nil
       )

@@ -60,9 +60,9 @@ class SettingsViewModel {
 
    var speechSynthesizer: SpeechSynthesizer {
       .init(
-         voice: speechSynthesizerVoice,
-         pitchMultiplier: speechSynthesizerPitchMultiplier,
-         speechRate: speechSynthesizerSpeechRate
+         voice: self.speechSynthesizerVoice,
+         pitchMultiplier: self.speechSynthesizerPitchMultiplier,
+         speechRate: self.speechSynthesizerSpeechRate
       )
    }
 
@@ -83,10 +83,10 @@ extension DefaultsKeys {
    var showRecitationName: DefaultsKey<Bool> { .init("ShowChangingTextName", defaultValue: true) }
    var allowLongerRecitations: DefaultsKey<Bool> { .init("AllowLongerRecitations", defaultValue: false) }
    var allowSplittingRecitations: DefaultsKey<Bool> { .init("AllowSplittingRecitations", defaultValue: true) }
-   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: defaultInstrument.rawValue) }
-   var speechSynthesizerVoiceId: DefaultsKey<String> { .init("VoiceId", defaultValue: defaultVoice) }
+   var movementSoundInstrument: DefaultsKey<String> { .init("MovementSoundInstrument", defaultValue: self.defaultInstrument.rawValue) }
+   var speechSynthesizerVoiceId: DefaultsKey<String> { .init("VoiceId", defaultValue: self.defaultVoice) }
    var speechSynthesizerPitchMultiplier: DefaultsKey<Double> { .init("PitchMultiplier", defaultValue: 1.0) }
-   var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: defaultSpeechRate) }
+   var speechSynthesizerSpeechRate: DefaultsKey<Double> { .init("SpeechRate", defaultValue: self.defaultSpeechRate) }
    var audioMode: DefaultsKey<AudioMode> { .init("AudioMode", defaultValue: .movementSound) }
 }
 

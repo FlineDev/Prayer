@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       _ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
    ) -> Bool {
-      window = UIWindow(frame: UIScreen.main.bounds)
-      window?.makeKeyAndVisible()
+      self.window = UIWindow(frame: UIScreen.main.bounds)
+      self.window?.makeKeyAndVisible()
 
       _ = TK.Action.cancel
 
@@ -29,11 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       // setup global stuff
       Logger.shared.setup()
-      ErrorHandler.shared.setup(window: window!)
+      ErrorHandler.shared.setup(window: self.window!)
 
       // start initial flow
-      initialFlowCtrl = SettingsFlowController()
-      initialFlowCtrl?.start(from: window!)
+      self.initialFlowCtrl = SettingsFlowController()
+      self.initialFlowCtrl?.start(from: self.window!)
 
       return true
    }

@@ -29,10 +29,10 @@ class Countdown {
 
    /// Starts the automatic counting.
    func start() {
-      countClosure?(currentValue)
+      self.countClosure?(self.currentValue)
 
       if let automaticallyCountEvery = automaticallyCountEvery {
-         timer = Timer.after(automaticallyCountEvery) {
+         self.timer = Timer.after(automaticallyCountEvery) {
             self.currentValue -= 1
 
             if self.currentValue > 0 {
@@ -48,32 +48,32 @@ class Countdown {
 
    /// Only call this if `automaticallyCountEvery` was set to `nil` to manually count down.
    func stepDown() {
-      currentValue -= 1
+      self.currentValue -= 1
 
-      if currentValue > 0 {
-         countClosure?(currentValue)
+      if self.currentValue > 0 {
+         self.countClosure?(self.currentValue)
       } else {
-         finishClosure?()
-         cleanup()
+         self.finishClosure?()
+         self.cleanup()
       }
    }
 
    /// Cancels the automatic counting.
-   func cancel() { cleanup() }
+   func cancel() { self.cleanup() }
 
    func onCount(closure: @escaping (_ count: Int) -> Void) {
-      countClosure = closure
+      self.countClosure = closure
    }
 
    /// Called on both the automatic or manual counting when count reaches 0.
    func onFinish(closure: @escaping () -> Void) {
-      finishClosure = closure
+      self.finishClosure = closure
    }
 
    private func cleanup() {
-      timer?.invalidate()
-      timer = nil
-      countClosure = nil
-      finishClosure = nil
+      self.timer?.invalidate()
+      self.timer = nil
+      self.countClosure = nil
+      self.finishClosure = nil
    }
 }

@@ -24,8 +24,8 @@ final class AudioPlayer {
    }
 
    func playSound(at url: URL) {
-      audioPlayer = try! AVAudioPlayer(contentsOf: url)
-      audioPlayer?.prepareToPlay()
-      audioPlayer?.play()
+      self.audioPlayer = try! AVAudioPlayer(contentsOf: url)
+      self.audioPlayer?.prepareToPlay()
+      self.audioPlayer?.play()
    }
 }

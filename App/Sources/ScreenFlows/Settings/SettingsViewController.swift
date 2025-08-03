@@ -66,19 +66,19 @@ class SettingsViewController: FormViewController {
 
       title = L10n.Settings.Title.string
 
-      setupAppSection()
-      setupPrayerSection()
-      setupAudioAndSpeedSection()
-      setupStartSection()
-      setupFAQButton()
-      setupFeedbackButton()
+      self.setupAppSection()
+      self.setupPrayerSection()
+      self.setupAudioAndSpeedSection()
+      self.setupStartSection()
+      self.setupFAQButton()
+      self.setupFeedbackButton()
    }
 
    private func setupAppSection() {
       let appSection =
-         Section(header: l10n.AppSection.Title.string, footer: l10n.AppSection.Footer.string)
+         Section(header: l10n.AppSection.Title.string, footer: self.l10n.AppSection.Footer.string)
          <<< ButtonRow { row in
-            row.title = l10n.AppSection.ChangeLanguageButton.Title.string
+            row.title = self.l10n.AppSection.ChangeLanguageButton.Title.string
          }
          .cellSetup { cell, _ in
             cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -93,35 +93,35 @@ class SettingsViewController: FormViewController {
 
    private func setupPrayerSection() {
       let prayerSection =
-         Section(header: l10n.PrayerSection.Title.string, footer: l10n.PrayerSection.Footer.string)
-         <<< rakatCountRow()
-         <<< changingTextNameRow()
-         <<< allowLongerRecitationsRow()
-         <<< allowSplittingRecitationsRow()
+         Section(header: l10n.PrayerSection.Title.string, footer: self.l10n.PrayerSection.Footer.string)
+         <<< self.rakatCountRow()
+         <<< self.changingTextNameRow()
+         <<< self.allowLongerRecitationsRow()
+         <<< self.allowSplittingRecitationsRow()
 
       form.append(prayerSection)
    }
 
    private func setupAudioAndSpeedSection() {
       let audioAndSpeedSection =
-         Section(header: l10n.AudioSpeedSection.Title.string, footer: l10n.AudioSpeedSection.Footer.string)
-         <<< (UIDevice.current.userInterfaceIdiom == .pad ? audioModeSegmentedRow() : audioModePushRow())
-         <<< fixedTextSpeedRow()
-         <<< changingTextSpeedRow()
-         <<< movementSoundInstrumentRow()
-         <<< speechSynthesizerVoiceRow()
-         <<< speechSynthesizerSpeechRateRow()
-         <<< speechSynthesizerPitchMultiplierRow()
-         <<< volumeViewRow()
+         Section(header: l10n.AudioSpeedSection.Title.string, footer: self.l10n.AudioSpeedSection.Footer.string)
+         <<< (UIDevice.current.userInterfaceIdiom == .pad ? self.audioModeSegmentedRow() : self.audioModePushRow())
+         <<< self.fixedTextSpeedRow()
+         <<< self.changingTextSpeedRow()
+         <<< self.movementSoundInstrumentRow()
+         <<< self.speechSynthesizerVoiceRow()
+         <<< self.speechSynthesizerSpeechRateRow()
+         <<< self.speechSynthesizerPitchMultiplierRow()
+         <<< self.volumeViewRow()
 
       form.append(audioAndSpeedSection)
    }
 
    private func audioModePushRow() -> PushRow<AudioMode> {
-      PushRow<AudioMode>(audioModeRowTag) { row in
-         row.title = l10n.AudioSpeedSection.AudioMode.Title.string
+      PushRow<AudioMode>(self.audioModeRowTag) { row in
+         row.title = self.l10n.AudioSpeedSection.AudioMode.Title.string
          row.options = AudioMode.allCases
-         row.value = viewModel.audioMode
+         row.value = self.viewModel.audioMode
          row.displayValueFor = { $0?.displayDescription }
       }
       .cellSetup { cell, _ in
@@ -137,10 +137,10 @@ class SettingsViewController: FormViewController {
    }
 
    private func audioModeSegmentedRow() -> SegmentedRow<AudioMode> {
-      SegmentedRow<AudioMode>(audioModeRowTag) { row in
-         row.title = l10n.AudioSpeedSection.AudioMode.Title.string
+      SegmentedRow<AudioMode>(self.audioModeRowTag) { row in
+         row.title = self.l10n.AudioSpeedSection.AudioMode.Title.string
          row.options = AudioMode.allCases
-         row.value = viewModel.audioMode
+         row.value = self.viewModel.audioMode
          row.displayValueFor = { $0?.displayDescription }
       }
       .cellSetup { cell, _ in
@@ -157,8 +157,8 @@ class SettingsViewController: FormViewController {
 
    private func rakatCountRow() -> IntRow {
       IntRow { row in
-         row.title = l10n.PrayerSection.RakatCount.Title.string
-         row.value = viewModel.rakatCount
+         row.title = self.l10n.PrayerSection.RakatCount.Title.string
+         row.value = self.viewModel.rakatCount
       }
       .cellSetup { cell, _ in
          cell.imageView?.image = UIImage(systemName: "number")
@@ -179,13 +179,13 @@ class SettingsViewController: FormViewController {
 
    private func fixedTextSpeedRow() -> SliderRow {
       SliderRow { row in
-         row.title = "🔂    " + l10n.AudioSpeedSection.FixedTexts.Title.string
-         row.value = Float(viewModel.fixedTextsSpeedFactor)
+         row.title = "🔂    " + self.l10n.AudioSpeedSection.FixedTexts.Title.string
+         row.value = Float(self.viewModel.fixedTextsSpeedFactor)
          row.displayValueFor = { String(format: "%.2f", $0!) }
          row.cell.slider.minimumValue = 0.5
          row.cell.slider.maximumValue = 2.0
          row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .movementSound && self.audioMode != AudioMode.none
          }
       }
@@ -200,13 +200,13 @@ class SettingsViewController: FormViewController {
 
    private func changingTextSpeedRow() -> SliderRow {
       SliderRow { row in
-         row.title = "🔀    " + l10n.AudioSpeedSection.ChangingText.Title.string
-         row.value = Float(viewModel.recitationSpeedFactor)
+         row.title = "🔀    " + self.l10n.AudioSpeedSection.ChangingText.Title.string
+         row.value = Float(self.viewModel.recitationSpeedFactor)
          row.displayValueFor = { String(format: "%.2f", $0!) }
          row.cell.slider.minimumValue = 0.5
          row.cell.slider.maximumValue = 2.0
          row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .movementSound && self.audioMode != AudioMode.none
          }
       }
@@ -221,8 +221,8 @@ class SettingsViewController: FormViewController {
 
    private func changingTextNameRow() -> SwitchRow {
       SwitchRow { row in
-         row.title = l10n.PrayerSection.ChangingTextName.Title.string
-         row.value = viewModel.showRecitationName
+         row.title = self.l10n.PrayerSection.ChangingTextName.Title.string
+         row.value = self.viewModel.showRecitationName
       }
       .cellSetup { cell, _ in
          cell.imageView?.image = UIImage(systemName: "character.book.closed")
@@ -238,8 +238,8 @@ class SettingsViewController: FormViewController {
 
    private func allowLongerRecitationsRow() -> SwitchRow {
       SwitchRow { row in
-         row.title = l10n.PrayerSection.AllowLongerRecitations.Title.string
-         row.value = viewModel.allowLongerRecitations
+         row.title = self.l10n.PrayerSection.AllowLongerRecitations.Title.string
+         row.value = self.viewModel.allowLongerRecitations
       }
       .cellSetup { cell, _ in
          cell.imageView?.image = UIImage(systemName: "clock.badge.checkmark")
@@ -264,8 +264,8 @@ class SettingsViewController: FormViewController {
 
    private func allowSplittingRecitationsRow() -> SwitchRow {
       SwitchRow { row in
-         row.title = l10n.PrayerSection.AllowSplittingRecitations.Title.string
-         row.value = viewModel.allowSplittingRecitations
+         row.title = self.l10n.PrayerSection.AllowSplittingRecitations.Title.string
+         row.value = self.viewModel.allowSplittingRecitations
       }
       .cellSetup { cell, _ in
          cell.imageView?.image = UIImage(systemName: "scissors")
@@ -281,10 +281,10 @@ class SettingsViewController: FormViewController {
 
    private func movementSoundInstrumentRow() -> PushRow<String> {
       PushRow<String> { row in
-         row.title = l10n.AudioSpeedSection.MovementSoundInstrument.Title.string
+         row.title = self.l10n.AudioSpeedSection.MovementSoundInstrument.Title.string
          row.options = SoundInstrument.allCases.map(\.rawValue)
-         row.value = viewModel.movementSoundInstrument
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.value = self.viewModel.movementSoundInstrument
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .movementSound && self.audioMode != .movementSoundAndSpeechSynthesizer
          }
       }
@@ -302,11 +302,11 @@ class SettingsViewController: FormViewController {
 
    private func speechSynthesizerVoiceRow() -> PushRow<AVSpeechSynthesisVoice> {
       PushRow<AVSpeechSynthesisVoice> { row in
-         row.title = l10n.Audio.SpeechSynthesizer.Voice.string
+         row.title = self.l10n.Audio.SpeechSynthesizer.Voice.string
          row.options = SpeechSynthesizer.SupportedLanguage.current.voices
-         row.value = viewModel.speechSynthesizerVoice
+         row.value = self.viewModel.speechSynthesizerVoice
          row.displayValueFor = { $0 != nil ? "\($0!.name) (\($0!.language))" : nil }
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
          }
       }
@@ -330,13 +330,13 @@ class SettingsViewController: FormViewController {
 
    private func speechSynthesizerPitchMultiplierRow() -> SliderRow {
       SliderRow { row in
-         row.title = "↕️   " + l10n.Audio.SpeechSynthesizer.PitchMultiplier.string
-         row.value = viewModel.speechSynthesizerPitchMultiplier
+         row.title = "↕️   " + self.l10n.Audio.SpeechSynthesizer.PitchMultiplier.string
+         row.value = self.viewModel.speechSynthesizerPitchMultiplier
          row.displayValueFor = { String(format: "%.2f", $0!) }
          row.cell.slider.minimumValue = 0.5
          row.cell.slider.maximumValue = 2.0
          row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.05)
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
          }
       }
@@ -351,13 +351,13 @@ class SettingsViewController: FormViewController {
 
    private func speechSynthesizerSpeechRateRow() -> SliderRow {
       SliderRow { row in
-         row.title = "🐇   " + l10n.Audio.SpeechSynthesizer.SpeechRate.string
-         row.value = viewModel.speechSynthesizerSpeechRate
+         row.title = "🐇   " + self.l10n.Audio.SpeechSynthesizer.SpeechRate.string
+         row.value = self.viewModel.speechSynthesizerSpeechRate
          row.displayValueFor = { String(format: "%.2f", $0!) }
          row.cell.slider.minimumValue = (AVSpeechUtteranceMinimumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
          row.cell.slider.maximumValue = (AVSpeechUtteranceMaximumSpeechRate + AVSpeechUtteranceDefaultSpeechRate) / 2
          row.steps = UInt((row.cell.slider.maximumValue - row.cell.slider.minimumValue) / 0.01)
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode != .speechSynthesizer && self.audioMode != .movementSoundAndSpeechSynthesizer
          }
       }
@@ -372,8 +372,8 @@ class SettingsViewController: FormViewController {
 
    private func volumeViewRow() -> ViewRow<AudioVolumeView> {
       ViewRow<AudioVolumeView> { row in
-         row.title = "🔈   " + l10n.Audio.OutputDevice.Title.string
-         row.hidden = Condition.function([audioModeRowTag]) { _ in
+         row.title = "🔈   " + self.l10n.Audio.OutputDevice.Title.string
+         row.hidden = Condition.function([self.audioModeRowTag]) { _ in
             self.audioMode == nil || self.audioMode == AudioMode.none
          }
       }
@@ -416,19 +416,19 @@ class SettingsViewController: FormViewController {
 
    private func setupFAQButton() {
       navigationItem.leftBarButtonItem = UIBarButtonItem(
-         title: l10n.FaqButton.Title.string,
+         title: self.l10n.FaqButton.Title.string,
          style: .plain,
          target: self,
-         action: #selector(didPressFAQButton)
+         action: #selector(self.didPressFAQButton)
       )
    }
 
    private func setupFeedbackButton() {
       navigationItem.rightBarButtonItem = UIBarButtonItem(
-         title: l10n.FeedbackButton.Title.string,
+         title: self.l10n.FeedbackButton.Title.string,
          style: .plain,
          target: self,
-         action: #selector(didPressFeedbackButton)
+         action: #selector(self.didPressFeedbackButton)
       )
    }
 

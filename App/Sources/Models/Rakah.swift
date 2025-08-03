@@ -19,7 +19,7 @@ class Rakah {
    let standingRecitationPart: RecitationPart?
    private let showStandingRecitationName: Bool
 
-   private var includesStandingRecitation: Bool { standingRecitationPart != nil }
+   private var includesStandingRecitation: Bool { self.standingRecitationPart != nil }
 
    init(
       isBeginningOfPrayer: Bool,
@@ -38,7 +38,7 @@ class Rakah {
    func components() -> [RakahComponent] {
       var components: [RakahComponent] = []
 
-      if isBeginningOfPrayer {
+      if self.isBeginningOfPrayer {
          components.append(RakahComponent(.takbir(.standing)))
          components.append(RakahComponent(.openingSupplication))
          components.append(RakahComponent(.taawwudh))
@@ -62,19 +62,19 @@ class Rakah {
       components.append(RakahComponent(.takbir(.worship)))
       components.append(RakahComponent(.sajdah))
 
-      if includesSittingRecitation {
+      if self.includesSittingRecitation {
          components.append(RakahComponent(.takbir(.sitting), longSitting: true))
          components.append(RakahComponent(.tashahhud))
       } else {
          components.append(RakahComponent(.takbir(.standing)))
       }
 
-      if isEndOfPrayer {
+      if self.isEndOfPrayer {
          components.append(RakahComponent(.salatulIbrahimiyyah))
          components.append(RakahComponent(.rabbanagh))
          components.append(RakahComponent(.salam(.salamRight)))
          components.append(RakahComponent(.salam(.salamLeft)))
-      } else if includesSittingRecitation {
+      } else if self.includesSittingRecitation {
          components.append(RakahComponent(.takbir(.standing)))
       }
 

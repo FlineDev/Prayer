@@ -22,8 +22,8 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
    weak var delegate: FAQCollectionViewLayoutDelegate?
 
    var columns: Int {
-      var columns = Int(collectionView!.bounds.size.width) / preferredItemWidth
-      if Int(collectionView!.bounds.size.width) % preferredItemWidth > preferredItemWidth / 2 {
+      var columns = Int(collectionView!.bounds.size.width) / self.preferredItemWidth
+      if Int(collectionView!.bounds.size.width) % self.preferredItemWidth > self.preferredItemWidth / 2 {
          columns += 1  // round up
       }
 
@@ -32,7 +32,7 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
 
    var itemWidth: CGFloat {
       let columns = self.columns
-      let allGapsWidth = CGFloat(columns + 1) * gapWidth
+      let allGapsWidth = CGFloat(columns + 1) * self.gapWidth
 
       return (collectionView!.bounds.size.width - allGapsWidth) / CGFloat(columns)
    }
@@ -49,43 +49,43 @@ class FAQCollectionViewLayout: UICollectionViewLayout {
       let itemWidth = self.itemWidth
       let columns = self.columns
 
-      let xOffsets: [CGFloat] = (0..<columns).map { CGFloat($0) * (CGFloat(itemWidth) + gapWidth) + gapWidth }
+      let xOffsets: [CGFloat] = (0..<columns).map { CGFloat($0) * (CGFloat(itemWidth) + self.gapWidth) + self.gapWidth }
       var yOffsets = [CGFloat](repeating: gapWidth, count: columns)
       var column: Int = 0
-      contentHeight = 0
+      self.contentHeight = 0
 
       for item in 0..<collectionView.numberOfItems(inSection: 0) {
          let indexPath = IndexPath(item: item, section: 0)
 
-         let questionHeight = delegate?.question(at: indexPath).hyphenated()
-            .height(forFixedWidth: itemWidth, font: questionLabelFont)
-         let answerHeight = delegate?.answer(at: indexPath).hyphenated()
-            .height(forFixedWidth: itemWidth, font: answerLabelFont)
-         let verticalGaps = gapWidth / 4
+         let questionHeight = self.delegate?.question(at: indexPath).hyphenated()
+            .height(forFixedWidth: itemWidth, font: self.questionLabelFont)
+         let answerHeight = self.delegate?.answer(at: indexPath).hyphenated()
+            .height(forFixedWidth: itemWidth, font: self.answerLabelFont)
+         let verticalGaps = self.gapWidth / 4
 
          let height = questionHeight! + answerHeight! + verticalGaps
 
          let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
          attributes.frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: itemWidth, height: height)
-         cachedLayoutAttributes.append(attributes)
+         self.cachedLayoutAttributes.append(attributes)
 
-         contentHeight = max(contentHeight, attributes.frame.maxY + gapWidth)
-         yOffsets[column] += height + gapWidth
+         self.contentHeight = max(self.contentHeight, attributes.frame.maxY + self.gapWidth)
+         yOffsets[column] += height + self.gapWidth
 
          column = yOffsets.firstIndex(of: yOffsets.min()!)!
       }
    }
 
    override var collectionViewContentSize: CGSize {
-      CGSize(width: collectionView!.bounds.size.width, height: contentHeight)
+      CGSize(width: collectionView!.bounds.size.width, height: self.contentHeight)
    }
 
    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-      cachedLayoutAttributes.filter { $0.frame.intersects(rect) }
+      self.cachedLayoutAttributes.filter { $0.frame.intersects(rect) }
    }
 
    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-      cachedLayoutAttributes[indexPath.item]
+      self.cachedLayoutAttributes[indexPath.item]
    }
 
    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

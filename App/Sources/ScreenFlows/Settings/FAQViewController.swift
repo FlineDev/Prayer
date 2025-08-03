@@ -22,7 +22,7 @@ class FAQViewController: UIViewController {
    var viewModel: FAQViewModel! {
       didSet {
          if view != nil {
-            collectionView.reloadData()
+            self.collectionView.reloadData()
          }
       }
    }
@@ -30,30 +30,30 @@ class FAQViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
 
-      title = l10n.Title.string
-      (collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
+      title = self.l10n.Title.string
+      (self.collectionView.collectionViewLayout as! FAQCollectionViewLayout).delegate = self
    }
 
    @IBAction private func doneButtonPressed() {
-      flowDelegate?.doneButtonPressed()
+      self.flowDelegate?.doneButtonPressed()
    }
 }
 
 extension FAQViewController: UICollectionViewDataSource {
    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      viewModel.entries.count
+      self.viewModel.entries.count
    }
 
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell =
-         collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
+         collectionView.dequeueReusableCell(withReuseIdentifier: self.cellReuseIdentifier, for: indexPath)
          as! FAQCollectionViewCell
 
       cell.questionLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).questionLabelFont
       cell.answerLabel.font = (collectionView.collectionViewLayout as! FAQCollectionViewLayout).answerLabelFont
 
-      cell.questionLabel.attributedText = viewModel.entries[indexPath.item].question.hyphenated()
-      cell.answerLabel.attributedText = viewModel.entries[indexPath.item].answer.hyphenated()
+      cell.questionLabel.attributedText = self.viewModel.entries[indexPath.item].question.hyphenated()
+      cell.answerLabel.attributedText = self.viewModel.entries[indexPath.item].answer.hyphenated()
 
       return cell
    }
@@ -61,10 +61,10 @@ extension FAQViewController: UICollectionViewDataSource {
 
 extension FAQViewController: FAQCollectionViewLayoutDelegate {
    func question(at indexPath: IndexPath) -> String {
-      viewModel.entries[indexPath.item].question
+      self.viewModel.entries[indexPath.item].question
    }
 
    func answer(at indexPath: IndexPath) -> String {
-      viewModel.entries[indexPath.item].answer
+      self.viewModel.entries[indexPath.item].answer
    }
 }
